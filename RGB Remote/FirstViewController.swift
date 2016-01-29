@@ -10,16 +10,41 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    
+    
+}
+
+//MARK: - UIKit
+
+extension FirstViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
+
+
+//MARK: - IBActions
+
+extension FirstViewController {
+    
+    @IBAction func buttonTapped(sender: AnyObject) {
+        guard let tag = Command(rawValue: sender.tag) else { return }
+        
+        APIManager.sendCommand(tag)
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
 
