@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import ChameleonFramework
 
 class SecondViewController: UIViewController {
     private let actions = Command.all
@@ -17,7 +17,8 @@ extension SecondViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.setStatusBarStyle(UIStatusBarStyleContrast)
     }
     
 }
