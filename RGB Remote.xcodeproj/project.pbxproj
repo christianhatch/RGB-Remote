@@ -14,6 +14,7 @@
 		453C42861C5AE40B001D2D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453C42851C5AE40B001D2D7E /* Assets.xcassets */; };
 		453C42891C5AE40B001D2D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453C42871C5AE40B001D2D7E /* LaunchScreen.storyboard */; };
 		453C42911C5AE595001D2D7E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C42901C5AE595001D2D7E /* APIManager.swift */; };
+		458797C11C69B9D90075B511 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458797C01C69B9D90075B511 /* Util.swift */; };
 		AAD4E30CB671EF707E167041 /* Pods_RGB_Remote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF8EF924F78DA292CCB27CB /* Pods_RGB_Remote.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		453C42881C5AE40B001D2D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		453C428A1C5AE40B001D2D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		453C42901C5AE595001D2D7E /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		458797C01C69B9D90075B511 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		79AF15A5519E3D6CC49415EA /* Pods-RGB Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB Remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-RGB Remote/Pods-RGB Remote.release.xcconfig"; sourceTree = "<group>"; };
 		8EF8EF924F78DA292CCB27CB /* Pods_RGB_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 		453C427B1C5AE40B001D2D7E /* RGB Remote */ = {
 			isa = PBXGroup;
 			children = (
+				458797C01C69B9D90075B511 /* Util.swift */,
 				453C427C1C5AE40B001D2D7E /* AppDelegate.swift */,
 				453C42901C5AE595001D2D7E /* APIManager.swift */,
 				453C42821C5AE40B001D2D7E /* Main.storyboard */,
@@ -129,6 +132,7 @@
 				TargetAttributes = {
 					453C42781C5AE40B001D2D7E = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YWKER65N63;
 					};
 				};
 			};
@@ -218,6 +222,7 @@
 			files = (
 				453C42911C5AE595001D2D7E /* APIManager.swift in Sources */,
 				453C42811C5AE40B001D2D7E /* SecondViewController.swift in Sources */,
+				458797C11C69B9D90075B511 /* Util.swift in Sources */,
 				453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */,
 				453C427F1C5AE40B001D2D7E /* FirstViewController.swift in Sources */,
 			);
@@ -333,6 +338,7 @@
 			baseConfigurationReference = 2CA269D1232A2B21C0592F46 /* Pods-RGB Remote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "RGB Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knotlabs.RGB-Remote";
@@ -345,6 +351,7 @@
 			baseConfigurationReference = 79AF15A5519E3D6CC49415EA /* Pods-RGB Remote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "RGB Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knotlabs.RGB-Remote";

@@ -11,6 +11,7 @@ pod 'ObjectMapper', '~> 0.19'
 
 #UI stuff
 pod 'SVProgressHUD'
+pod 'ChameleonFramework/Swift'
 
 end
 

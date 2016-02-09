@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RGB Remote/Alamofire.framework"
+  install_framework "Pods-RGB Remote/ChameleonFramework.framework"
   install_framework "Pods-RGB Remote/ObjectMapper.framework"
   install_framework "Pods-RGB Remote/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RGB Remote/Alamofire.framework"
+  install_framework "Pods-RGB Remote/ChameleonFramework.framework"
   install_framework "Pods-RGB Remote/ObjectMapper.framework"
   install_framework "Pods-RGB Remote/SVProgressHUD.framework"
 fi

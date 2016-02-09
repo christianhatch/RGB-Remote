@@ -16,14 +16,16 @@ enum Command: Int {
     case On = 1
     case Off
     case BrightnessUp
-    case BrightnessDown
+    case BrightnessDown //4
+    
     case Red
     case Green
     case Blue
-    case White
+    case White //8
     
     case WhiteOn 
-    case WhiteOff
+    case WhiteOff //10
+    
     case WhiteUp 
     case WhiteDown
     case White25 
@@ -43,6 +45,7 @@ enum Command: Int {
     case Quick 
     case Slow
 }
+
 
 //MARK: - Friendly Description
 
@@ -171,13 +174,57 @@ extension Command {
 }
 
 class APIManager {
+    
+    private class func baseEndpoint() -> String {
+        return "http://10.0.0.17:3000"
+    }
 
+    class func startSendingCommand(command: Command) {
+        print(__FUNCTION__, command.apiKey())
+        
+        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgb_led/\(command.apiKey())/send_start")
+            .responseJSON { (response) -> Void in
+                print(response)
+        }
+    }
+    
+    class func stopSendingCommand(command: Command) {
+        print(__FUNCTION__, command.apiKey())
+
+        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgb_led/\(command.apiKey())/send_stop")
+                .responseJSON { (response) -> Void in
+                    print(response)
+        }
+    }
+    
     class func sendCommand(command: Command) {
-        Alamofire.request(.POST, "http://lights.local:3000/remotes/rgb_led/\(command.apiKey())")
-        .response { (request, response, data, error) -> Void in
-            print("error", error)
-            print("response", response)
-            print("data", data)
+        
+        switch command {
+//        case .On:
+//            APIManager.sendMacro("all_on")
+//            break
+//        case .Off:
+//            APIManager.sendMacro("all_off")
+//            break
+            
+        default:
+            print("sending command \(command.apiKey())")
+            
+            Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgb_led/\(command.apiKey())")
+                .responseJSON { (response) -> Void in
+                    print(response)
+            }
+            break
+        }
+
+    }
+    
+    private class func sendMacro(macro: String) {
+        print("sending macro \(macro)")
+
+        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/macros/\(macro)")
+            .responseJSON { (response) -> Void in
+                print(response)
         }
     }
     

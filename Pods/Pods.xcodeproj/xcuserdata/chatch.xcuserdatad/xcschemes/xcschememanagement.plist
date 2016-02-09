@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4B7C2EE3E5535B490D102627CA370B49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>513E7A4A7834A101FE662AF625BEA887</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5172ACAB7FEA22813859DC97CA0AA16F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E82421CBEE4F9A6C8D5D9FEC459CE24A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F010514D29A99A79155CF71AB4199A42</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC3C9068022102E1B5237D80C8083451</key>
 		<dict>
 			<key>primary</key>
 			<true/>
