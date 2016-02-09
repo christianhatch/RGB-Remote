@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Keypad-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="RGB_Remote" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,7 +235,7 @@
                             <constraint firstItem="446-Uk-jjr" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="15" id="sDx-2H-iwF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Keypad" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outletCollection property="buttons" destination="XzI-nO-uuX" collectionClass="NSMutableArray" id="ggk-IR-5m0"/>
                         <outletCollection property="buttons" destination="nJH-7u-caS" collectionClass="NSMutableArray" id="aBU-Mj-ZHQ"/>
@@ -253,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
+        <!--All Commands-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="RGB_Remote" customModuleProvider="target" sceneMemberID="viewController">
@@ -267,7 +267,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ndw-jP-vJX">
                                 <rect key="frame" x="30" y="50" width="260" height="351"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.60479998588562012" green="0.67535996437072754" blue="0.8399999737739563" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActionCell" textLabel="CPD-mL-lVC" rowHeight="60" style="IBUITableViewCellStyleDefault" id="q7N-2l-bm2">
                                         <rect key="frame" x="0.0" y="28" width="260" height="60"/>
@@ -286,8 +286,14 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.72200000286102295" green="0.79039996862411499" blue="0.94999998807907104" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.72200000286102295" green="0.79039996862411499" blue="0.94999998807907104" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="zEi-Qm-UYW"/>
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="eY1-7P-haS"/>
@@ -308,7 +314,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="All Commands" image="first" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -337,6 +343,5 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>

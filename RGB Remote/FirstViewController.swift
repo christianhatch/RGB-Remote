@@ -22,7 +22,7 @@ extension FirstViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        style()
+//        style()
     }
     
     private func style() {
@@ -45,6 +45,7 @@ extension FirstViewController {
                 button.setTitleColor(UIColor.flatYellowColor(), forState: .Normal)
                 break
             default:
+                button.setTitleColor(UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true), forState: .Normal)
                 break
             }
         }

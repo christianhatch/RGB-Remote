@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SecondViewController: UIViewController {
     private let actions = Command.all
 }
@@ -41,16 +42,16 @@ extension SecondViewController: UITableViewDataSource {
         cell.textLabel?.text = action.humanReadableDescription()
         switch action {
         case .Red:
-            cell.textLabel?.textColor = UIColor.redColor()
+            cell.textLabel?.textColor = UIColor.flatRedColor()
             break
         case .Green:
-            cell.textLabel?.textColor = UIColor.greenColor()
+            cell.textLabel?.textColor = UIColor.flatGreenColor()
             break
         case .Blue:
-            cell.textLabel?.textColor = UIColor.blueColor()
+            cell.textLabel?.textColor = UIColor.flatBlueColor()
             break
         default:
-            cell.textLabel?.textColor = UIColor.blackColor()
+            cell.textLabel?.textColor = UIColor(contrastingBlackOrWhiteColorOn: tableView.backgroundColor, isFlat: true)
         }
         return cell
     }
