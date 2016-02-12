@@ -39,8 +39,10 @@ extension SecondViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCellWithIdentifier("ActionCell") else { return UITableViewCell() }
+        
         let action = actions[indexPath.row]
         cell.textLabel?.text = action.humanReadableDescription()
+        
         switch action {
         case .Red:
             cell.textLabel?.textColor = UIColor.flatRedColor()
@@ -52,7 +54,9 @@ extension SecondViewController: UITableViewDataSource {
             cell.textLabel?.textColor = UIColor.flatBlueColor()
             break
         default:
-            cell.textLabel?.textColor = UIColor(contrastingBlackOrWhiteColorOn: tableView.backgroundColor, isFlat: true)
+            cell.textLabel?.textColor = UIColor(hexString: "FFFFFF", withAlpha: 0.6)
+            break
+//            cell.textLabel?.textColor = UIColor(contrastingBlackOrWhiteColorOn: tableView.backgroundColor, isFlat: true)
         }
         return cell
     }
