@@ -58,20 +58,14 @@ extension FirstViewController {
 
 extension FirstViewController {
     
-    @IBAction func brightnessUpTouchDown(sender: AnyObject) {
-        APIManager.startSendingCommand(.BrightnessUp)
+    @IBAction func buttonTouchDown(sender: AnyObject) {
+        guard let tag = Command(rawValue: sender.tag) else { return }
+        APIManager.startSendingCommand(tag)
     }
     
-    @IBAction func brightnessUpTouchUp(sender: AnyObject) {
-        APIManager.stopSendingCommand(.BrightnessUp)
-    }
-    
-    @IBAction func brightnessDownTouchDown(sender: AnyObject) {
-        APIManager.startSendingCommand(.BrightnessDown)
-    }
-    
-    @IBAction func brightnessDownTouchUp(sender: AnyObject) {
-        APIManager.stopSendingCommand(.BrightnessDown)
+    @IBAction func buttonTouchUp(sender: AnyObject) {
+        guard let tag = Command(rawValue: sender.tag) else { return }
+        APIManager.stopSendingCommand(tag)
     }
     
     

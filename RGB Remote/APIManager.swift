@@ -26,17 +26,17 @@ enum Command: Int {
     case WhiteOn 
     case WhiteOff //10
     
-    case WhiteUp 
+    case WhiteUp  //11
     case WhiteDown
     case White25 
     case White50 
     case White75 
-    case White100
+    case White100 //16
     
-    case Jump3
+    case Jump3 //17
     case Jump7 
     
-    case Fade3 
+    case Fade3 //19
     case Fade7 
     
     case Flash 
@@ -184,7 +184,7 @@ class APIManager {
         
         Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgb_led/\(command.apiKey())/send_start")
             .responseJSON { (response) -> Void in
-                print(response)
+//                print(response)
         }
     }
     
@@ -192,13 +192,14 @@ class APIManager {
         print(__FUNCTION__, command.apiKey())
 
         Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgb_led/\(command.apiKey())/send_stop")
-                .responseJSON { (response) -> Void in
-                    print(response)
+            .responseJSON { (response) -> Void in
+//                    print(response)
         }
     }
     
     class func sendCommand(command: Command) {
-        
+        print(__FUNCTION__, command.apiKey())
+
         switch command {
 //        case .On:
 //            APIManager.sendMacro("all_on")
@@ -206,13 +207,11 @@ class APIManager {
 //        case .Off:
 //            APIManager.sendMacro("all_off")
 //            break
-            
         default:
-            print("sending command \(command.apiKey())")
             
             Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgb_led/\(command.apiKey())")
                 .responseJSON { (response) -> Void in
-                    print(response)
+//                    print(response)
             }
             break
         }
@@ -220,11 +219,11 @@ class APIManager {
     }
     
     private class func sendMacro(macro: String) {
-        print("sending macro \(macro)")
+        print(__FUNCTION__, macro)
 
         Alamofire.request(.POST, "\(APIManager.baseEndpoint())/macros/\(macro)")
             .responseJSON { (response) -> Void in
-                print(response)
+//                print(response)
         }
     }
     

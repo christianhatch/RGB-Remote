@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Keypad-->
@@ -88,12 +89,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVu-4X-plL">
-                                <rect key="frame" x="15" y="241" width="141" height="50"/>
+                                <rect key="frame" x="15" y="241" width="69" height="50"/>
                                 <color key="backgroundColor" red="0.17000000178813934" green="0.17000000178813934" blue="0.17000000178813934" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="J5k-Vg-WNY"/>
                                 </constraints>
-                                <state key="normal" title="Brightness Up">
+                                <state key="normal" title="Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -102,18 +103,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="brightnessUpTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="RFv-r9-XIM"/>
-                                    <action selector="brightnessUpTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="SEz-rm-k93"/>
-                                    <action selector="brightnessUpTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="s3k-HR-aqt"/>
+                                    <action selector="buttonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="f5J-4t-enh"/>
+                                    <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="NYI-Wd-QXI"/>
+                                    <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="qoM-L0-gSk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGI-Ik-DqW">
-                                <rect key="frame" x="164" y="241" width="141" height="50"/>
+                                <rect key="frame" x="166" y="241" width="69" height="50"/>
                                 <color key="backgroundColor" red="0.17000000178813934" green="0.17000000178813934" blue="0.17000000178813934" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qxy-An-NtW"/>
                                 </constraints>
-                                <state key="normal" title="Brightness Down">
+                                <state key="normal" title="Down">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -122,9 +123,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="brightnessDownTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="lw8-7X-2NB"/>
-                                    <action selector="brightnessDownTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="TJm-sh-gRe"/>
-                                    <action selector="brightnessDownTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qGO-ce-C82"/>
+                                    <action selector="buttonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="BGa-qR-KX7"/>
+                                    <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="IaS-lA-INQ"/>
+                                    <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="M8c-0N-RXw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzI-nO-uuX">
@@ -200,11 +201,53 @@
                                     <action selector="buttonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="oO0-e6-Djq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yY-BE-wcF">
+                                <rect key="frame" x="90" y="241" width="69" height="50"/>
+                                <color key="backgroundColor" red="0.17000000179999999" green="0.17000000179999999" blue="0.17000000179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nkL-mv-HVm"/>
+                                </constraints>
+                                <state key="normal" title="WW Up">
+                                    <color key="titleColor" red="1" green="0.90649561180000005" blue="0.34161644029999999" alpha="0.93611723540000003" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="lIF-5V-hQg"/>
+                                    <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2FT-Tw-7fh"/>
+                                    <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="bqg-Kk-K2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-XL-Rud">
+                                <rect key="frame" x="241" y="242" width="69" height="50"/>
+                                <color key="backgroundColor" red="0.17000000179999999" green="0.17000000179999999" blue="0.17000000179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZAf-zR-7S1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="WW Down">
+                                    <color key="titleColor" red="1" green="0.90649561180000005" blue="0.34161644029999999" alpha="0.93611723540000003" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="FJ0-nB-BJC"/>
+                                    <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="1pY-eI-N34"/>
+                                    <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="ZLf-X5-f5D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15000000596046448" green="0.15000000596046448" blue="0.15000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zVu-4X-plL" firstAttribute="width" secondItem="bGI-Ik-DqW" secondAttribute="width" id="293-r4-Z9W"/>
+                            <constraint firstItem="bGI-Ik-DqW" firstAttribute="leading" secondItem="2yY-BE-wcF" secondAttribute="trailing" constant="7" id="0rl-Ls-Hge"/>
                             <constraint firstItem="zVu-4X-plL" firstAttribute="top" secondItem="XzI-nO-uuX" secondAttribute="bottom" constant="10" id="2Ji-VH-poB"/>
+                            <constraint firstItem="2yY-BE-wcF" firstAttribute="leading" secondItem="zVu-4X-plL" secondAttribute="trailing" constant="6" id="3jG-YI-Sac"/>
                             <constraint firstAttribute="trailing" secondItem="nJH-7u-caS" secondAttribute="trailing" constant="15" id="5ik-sR-Rbl"/>
                             <constraint firstItem="phu-l3-0Ch" firstAttribute="width" secondItem="446-Uk-jjr" secondAttribute="width" id="92m-HY-wLb"/>
                             <constraint firstItem="zVu-4X-plL" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="15" id="9tD-af-mCT"/>
@@ -218,21 +261,26 @@
                             <constraint firstItem="phu-l3-0Ch" firstAttribute="top" secondItem="bGI-Ik-DqW" secondAttribute="bottom" constant="20" id="Pm5-CY-CRf"/>
                             <constraint firstItem="iiE-uh-9S2" firstAttribute="width" secondItem="Y42-aT-cl6" secondAttribute="width" id="TLs-fl-NhB"/>
                             <constraint firstItem="bGI-Ik-DqW" firstAttribute="top" secondItem="nJH-7u-caS" secondAttribute="bottom" constant="10" id="VOE-Sm-Ce6"/>
+                            <constraint firstItem="2yY-BE-wcF" firstAttribute="width" secondItem="zVu-4X-plL" secondAttribute="width" id="YNZ-Lx-mbg"/>
+                            <constraint firstItem="wiM-XL-Rud" firstAttribute="leading" secondItem="bGI-Ik-DqW" secondAttribute="trailing" constant="6" id="ZRr-56-sSA"/>
                             <constraint firstAttribute="trailing" secondItem="rI4-xj-vlM" secondAttribute="trailing" constant="15" id="bCz-Cf-3pD"/>
                             <constraint firstItem="iiE-uh-9S2" firstAttribute="leading" secondItem="Rnp-nI-Z5V" secondAttribute="trailing" constant="7.5" id="bHr-Jj-Sfv"/>
                             <constraint firstItem="Y42-aT-cl6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="15" id="bTL-9I-TB6"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Rnp-nI-Z5V" secondAttribute="bottom" constant="10" id="bts-fA-TnH"/>
-                            <constraint firstAttribute="trailing" secondItem="bGI-Ik-DqW" secondAttribute="trailing" constant="15" id="cbN-4w-wQT"/>
+                            <constraint firstItem="bGI-Ik-DqW" firstAttribute="width" secondItem="zVu-4X-plL" secondAttribute="width" id="cFA-zy-C8Z"/>
                             <constraint firstItem="rI4-xj-vlM" firstAttribute="leading" secondItem="phu-l3-0Ch" secondAttribute="trailing" constant="8" id="dpE-vJ-kj9"/>
                             <constraint firstItem="Rnp-nI-Z5V" firstAttribute="width" secondItem="Y42-aT-cl6" secondAttribute="width" id="e5w-HO-r3H"/>
-                            <constraint firstItem="bGI-Ik-DqW" firstAttribute="leading" secondItem="zVu-4X-plL" secondAttribute="trailing" constant="8" id="eiE-5J-pJC"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Y42-aT-cl6" secondAttribute="bottom" constant="10" id="fk9-Dr-Pig"/>
                             <constraint firstItem="nJH-7u-caS" firstAttribute="width" secondItem="XzI-nO-uuX" secondAttribute="width" id="gLN-lC-3Ht"/>
                             <constraint firstItem="Rnp-nI-Z5V" firstAttribute="leading" secondItem="Y42-aT-cl6" secondAttribute="trailing" constant="6.5" id="jf5-HU-fFg"/>
+                            <constraint firstItem="wiM-XL-Rud" firstAttribute="top" secondItem="nJH-7u-caS" secondAttribute="bottom" constant="11" id="lDv-zB-gYx"/>
                             <constraint firstItem="Y42-aT-cl6" firstAttribute="top" secondItem="446-Uk-jjr" secondAttribute="bottom" constant="10" id="m6u-3R-6gt"/>
                             <constraint firstItem="446-Uk-jjr" firstAttribute="top" secondItem="zVu-4X-plL" secondAttribute="bottom" constant="20" id="mbc-32-IdA"/>
+                            <constraint firstItem="2yY-BE-wcF" firstAttribute="top" secondItem="XzI-nO-uuX" secondAttribute="bottom" constant="10" id="ndc-bp-6Ym"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wiM-XL-Rud" secondAttribute="trailing" constant="-6" id="o7b-pB-5M8"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="iiE-uh-9S2" secondAttribute="bottom" constant="10" id="pcx-At-z72"/>
                             <constraint firstItem="446-Uk-jjr" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="15" id="sDx-2H-iwF"/>
+                            <constraint firstItem="wiM-XL-Rud" firstAttribute="width" secondItem="zVu-4X-plL" secondAttribute="width" id="zS8-cp-m9O"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Keypad" image="first" id="acW-dT-cKf"/>
