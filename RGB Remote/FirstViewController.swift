@@ -71,7 +71,6 @@ extension FirstViewController {
     
     @IBAction func buttonTapped(sender: AnyObject) {
         guard let tag = Command(rawValue: sender.tag) else { return }
-        
         APIManager.sendCommand(tag)
     }
     

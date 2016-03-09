@@ -18,7 +18,7 @@ enum Command: Int {
     case BrightnessUp
     case BrightnessDown //4
     
-    case Red
+    case Red //5
     case Green
     case Blue
     case White //8
@@ -201,14 +201,7 @@ class APIManager {
         print(__FUNCTION__, command.apiKey())
 
         switch command {
-//        case .On:
-//            APIManager.sendMacro("all_on")
-//            break
-//        case .Off:
-//            APIManager.sendMacro("all_off")
-//            break
         default:
-            
             Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgb_led/\(command.apiKey())")
                 .responseJSON { (response) -> Void in
 //                    print(response)

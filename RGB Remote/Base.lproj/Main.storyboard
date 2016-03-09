@@ -72,7 +72,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7J5-ib-0aT">
                                 <rect key="frame" x="15" y="241" width="290" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVu-4X-plL">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVu-4X-plL">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="50"/>
                                         <color key="backgroundColor" red="0.17000000178813934" green="0.17000000178813934" blue="0.17000000178813934" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Up">
@@ -89,25 +89,8 @@
                                             <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="qoM-L0-gSk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yY-BE-wcF">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGI-Ik-DqW">
                                         <rect key="frame" x="74" y="0.0" width="68" height="50"/>
-                                        <color key="backgroundColor" red="0.17000000179999999" green="0.17000000179999999" blue="0.17000000179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="WW Up">
-                                            <color key="titleColor" red="1" green="0.90649561180000005" blue="0.34161644029999999" alpha="0.93611723540000003" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="buttonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="lIF-5V-hQg"/>
-                                            <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2FT-Tw-7fh"/>
-                                            <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="bqg-Kk-K2Z"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGI-Ik-DqW">
-                                        <rect key="frame" x="148" y="0.0" width="68" height="50"/>
                                         <color key="backgroundColor" red="0.17000000178813934" green="0.17000000178813934" blue="0.17000000178813934" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Down">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -123,7 +106,24 @@
                                             <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="M8c-0N-RXw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-XL-Rud">
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yY-BE-wcF">
+                                        <rect key="frame" x="148" y="0.0" width="68" height="50"/>
+                                        <color key="backgroundColor" red="0.17000000179999999" green="0.17000000179999999" blue="0.17000000179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="WW Up">
+                                            <color key="titleColor" red="1" green="0.90649561180000005" blue="0.34161644029999999" alpha="0.93611723540000003" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="lIF-5V-hQg"/>
+                                            <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2FT-Tw-7fh"/>
+                                            <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="bqg-Kk-K2Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-XL-Rud">
                                         <rect key="frame" x="222" y="0.0" width="68" height="50"/>
                                         <color key="backgroundColor" red="0.17000000179999999" green="0.17000000179999999" blue="0.17000000179999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -184,25 +184,8 @@
                                             <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="tnE-eK-UEf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjg-Su-ulb">
-                                        <rect key="frame" x="74" y="0.0" width="68" height="50"/>
-                                        <color key="backgroundColor" red="0.17000000179999999" green="0.17000000179999999" blue="0.17000000179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="WW On">
-                                            <color key="titleColor" red="1" green="0.90649561180000005" blue="0.34161644029999999" alpha="0.93611723540000003" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="buttonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="e4w-Gw-CzG"/>
-                                            <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="L1Y-un-k9x"/>
-                                            <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="jf9-hw-vCL"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81f-Uf-TgU">
-                                        <rect key="frame" x="148" y="0.0" width="68" height="50"/>
+                                        <rect key="frame" x="74" y="0.0" width="68" height="50"/>
                                         <color key="backgroundColor" red="0.17000000179999999" green="0.17000000179999999" blue="0.17000000179999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Off">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -216,6 +199,23 @@
                                             <action selector="buttonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="8b1-Tl-5uZ"/>
                                             <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bwp-pg-gd8"/>
                                             <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="cEk-cz-Mcq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjg-Su-ulb">
+                                        <rect key="frame" x="148" y="0.0" width="68" height="50"/>
+                                        <color key="backgroundColor" red="0.17000000179999999" green="0.17000000179999999" blue="0.17000000179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="WW On">
+                                            <color key="titleColor" red="1" green="0.90649561180000005" blue="0.34161644029999999" alpha="0.93611723540000003" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="e4w-Gw-CzG"/>
+                                            <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="L1Y-un-k9x"/>
+                                            <action selector="buttonTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="jf9-hw-vCL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAr-me-1qr">

@@ -1,10 +1,20 @@
-platform :ios, '8.0'
 
 use_frameworks!
 
 
-target 'RGB Remote' do
+target 'RGB Remote OSX' do
+    
+    platform :osx, '10.10'
 
+    pod 'OBMenuBarWindow'
+    pod 'Alamofire'
+
+end
+
+
+target 'RGB Remote' do
+    
+    platform :ios, '8.0'
 
 
 #internal stuff
