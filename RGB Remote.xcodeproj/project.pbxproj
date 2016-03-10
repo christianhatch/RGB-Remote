@@ -118,8 +118,8 @@
 			children = (
 				4501F7D91C8FDE4900386E55 /* AppDelegate.swift */,
 				4501F7E41C8FEB6D00386E55 /* MainWindow.swift */,
-				4501F7DB1C8FDE4900386E55 /* Assets.xcassets */,
 				4501F7DD1C8FDE4900386E55 /* MainMenu.xib */,
+				4501F7DB1C8FDE4900386E55 /* Assets.xcassets */,
 				4501F7E01C8FDE4900386E55 /* Info.plist */,
 			);
 			path = "RGB Remote OSX";
@@ -720,6 +720,7 @@
 				4501F7FF1C8FFC3600386E55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		453C42741C5AE40B001D2D7E /* Build configuration list for PBXProject "RGB Remote" */ = {
 			isa = XCConfigurationList;

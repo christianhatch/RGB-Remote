@@ -17,4 +17,8 @@ class MainWindow: OBMenuBarWindow {
         APIManager.sendCommand(tag)
     }
     
+    @IBAction func powerButtonClicked(sender: AnyObject) {
+        NSApp.terminate(self)
+    }
+    
 }
