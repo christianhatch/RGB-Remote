@@ -716,23 +716,13 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="D3e-bT-UXG">
-                        <rect key="frame" x="176" y="113" width="89" height="32"/>
+                        <rect key="frame" x="2" y="87" width="93" height="32"/>
                         <buttonCell key="cell" type="push" title="Up" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VCg-KI-PR0">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <action selector="buttonClicked:" target="QvC-M9-y7g" id="2Gv-Nc-cJw"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="7VT-k6-cru">
-                        <rect key="frame" x="256" y="113" width="95" height="32"/>
-                        <buttonCell key="cell" type="push" title="Down" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nq7-ci-94Y">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="buttonClicked:" target="QvC-M9-y7g" id="sQO-mJ-dKu"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-Z4-p20">
@@ -776,7 +766,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-Di-WoZ">
-                        <rect key="frame" x="2" y="87" width="93" height="32"/>
+                        <rect key="frame" x="176" y="113" width="89" height="32"/>
                         <buttonCell key="cell" type="push" title="WW On" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B5i-X7-xxP">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -786,7 +776,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="9IN-R6-3cT">
-                        <rect key="frame" x="87" y="87" width="81" height="32"/>
+                        <rect key="frame" x="256" y="113" width="94" height="32"/>
                         <buttonCell key="cell" type="push" title="WW Off" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kAO-Ut-Rao">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -803,6 +793,16 @@
                         </buttonCell>
                         <connections>
                             <action selector="powerButtonClicked:" target="QvC-M9-y7g" id="L5k-xh-Q9u"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="7VT-k6-cru">
+                        <rect key="frame" x="87" y="87" width="81" height="32"/>
+                        <buttonCell key="cell" type="push" title="Down" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nq7-ci-94Y">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buttonClicked:" target="QvC-M9-y7g" id="sQO-mJ-dKu"/>
                         </connections>
                     </button>
                 </subviews>
