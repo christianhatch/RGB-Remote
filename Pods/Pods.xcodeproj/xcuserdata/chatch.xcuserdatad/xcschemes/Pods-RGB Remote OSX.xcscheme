@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B4C7985A8E498CB7E689AE92'
+               BlueprintIdentifier = 'F7A4BCE0C7BE23EE67D5139B'
                BlueprintName = 'Pods-RGB Remote OSX'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_RGB_Remote_OSX.framework'>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4501425C1CA0BEB200DE77E6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501425B1CA0BEB200DE77E6 /* Command.swift */; };
+		4501425D1CA0BEB200DE77E6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501425B1CA0BEB200DE77E6 /* Command.swift */; };
+		4501425E1CA0BEB200DE77E6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501425B1CA0BEB200DE77E6 /* Command.swift */; };
+		450142601CA0D0F100DE77E6 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */; };
 		4501F7DA1C8FDE4900386E55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501F7D91C8FDE4900386E55 /* AppDelegate.swift */; };
 		4501F7DC1C8FDE4900386E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4501F7DB1C8FDE4900386E55 /* Assets.xcassets */; };
 		4501F7DF1C8FDE4900386E55 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4501F7DD1C8FDE4900386E55 /* MainMenu.xib */; };
@@ -55,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		2CA269D1232A2B21C0592F46 /* Pods-RGB Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB Remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RGB Remote/Pods-RGB Remote.debug.xcconfig"; sourceTree = "<group>"; };
+		4501425B1CA0BEB200DE77E6 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		4501F7D71C8FDE4900386E55 /* RGB Remote OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RGB Remote OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4501F7D91C8FDE4900386E55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4501F7DB1C8FDE4900386E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				453C42901C5AE595001D2D7E /* APIManager.swift */,
+				4501425B1CA0BEB200DE77E6 /* Command.swift */,
 			);
 			name = Common;
 			path = "RGB Remote";
@@ -158,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				4501F7E71C8FEF6100386E55 /* Common */,
-				453C427B1C5AE40B001D2D7E /* RGB Remote */,
+				453C427B1C5AE40B001D2D7E /* RGB Remote iOS */,
 				4501F7D81C8FDE4900386E55 /* RGB Remote OSX */,
 				4501F7EF1C8FFC3600386E55 /* RGB Remote Widget */,
 				453C427A1C5AE40B001D2D7E /* Products */,
@@ -177,18 +184,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		453C427B1C5AE40B001D2D7E /* RGB Remote */ = {
+		453C427B1C5AE40B001D2D7E /* RGB Remote iOS */ = {
 			isa = PBXGroup;
 			children = (
 				458797C01C69B9D90075B511 /* Util.swift */,
 				453C427C1C5AE40B001D2D7E /* AppDelegate.swift */,
 				453C42821C5AE40B001D2D7E /* Main.storyboard */,
+				4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */,
 				453C427E1C5AE40B001D2D7E /* FirstViewController.swift */,
 				453C42801C5AE40B001D2D7E /* SecondViewController.swift */,
 				453C42851C5AE40B001D2D7E /* Assets.xcassets */,
 				453C42871C5AE40B001D2D7E /* LaunchScreen.storyboard */,
 				453C428A1C5AE40B001D2D7E /* Info.plist */,
 			);
+			name = "RGB Remote iOS";
 			path = "RGB Remote";
 			sourceTree = "<group>";
 		};
@@ -343,6 +352,7 @@
 				453C42891C5AE40B001D2D7E /* LaunchScreen.storyboard in Resources */,
 				453C42861C5AE40B001D2D7E /* Assets.xcassets in Resources */,
 				453C42841C5AE40B001D2D7E /* Main.storyboard in Resources */,
+				450142601CA0D0F100DE77E6 /* ButtonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +459,7 @@
 				4501F7E61C8FEF5800386E55 /* APIManager.swift in Sources */,
 				4501F7E51C8FEB6D00386E55 /* MainWindow.swift in Sources */,
 				4501F7DA1C8FDE4900386E55 /* AppDelegate.swift in Sources */,
+				4501425D1CA0BEB200DE77E6 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4501F7F31C8FFC3600386E55 /* TodayViewController.swift in Sources */,
+				4501425E1CA0BEB200DE77E6 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +481,7 @@
 				458797C11C69B9D90075B511 /* Util.swift in Sources */,
 				453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */,
 				453C427F1C5AE40B001D2D7E /* FirstViewController.swift in Sources */,
+				4501425C1CA0BEB200DE77E6 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

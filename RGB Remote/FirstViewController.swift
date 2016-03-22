@@ -11,6 +11,7 @@ import ChameleonFramework
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet var buttons: [UIButton]!
     
 }
@@ -22,11 +23,12 @@ extension FirstViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setStatusBarStyle(UIStatusBarStyleContrast)
-//        style()
+        self.collectionView.registerNib(UINib(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCell")
+        style()
     }
     
     private func style() {
+        self.setStatusBarStyle(UIStatusBarStyleContrast)
         for button in buttons {
             guard let command = Command(rawValue: button.tag) else { return }
             switch command {
@@ -51,6 +53,7 @@ extension FirstViewController {
             }
         }
     }
+
 }
 
 
@@ -75,6 +78,57 @@ extension FirstViewController {
     }
     
 }
+
+
+//MARK: - UICollectionView DataSource 
+
+extension FirstViewController: UICollectionViewDataSource {
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ButtonCell", forIndexPath: indexPath) as! ButtonCell
+        let command = Command.rgbwwColors[indexPath.item]
+     
+        cell.button.setTitle(command.humanReadableDescription(), forState: .Normal)
+        cell.button.addTarget(self, action: #selector(FirstViewController.buttonTapped(_:)), forControlEvents: .TouchUpInside)
+        cell.button.tag = command.rawValue
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Command.rgbwwColors.count
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
+}
+
+extension FirstViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 6
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let width = collectionView.bounds.width / 4
+        return CGSize(width: width, height: 50)
+    }
+}
+
+
+class ButtonCell: UICollectionViewCell {
+    @IBOutlet weak var button: UIButton!
+}
+
+
+
 
 
 
