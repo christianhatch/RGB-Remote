@@ -29,31 +29,36 @@ extension FirstViewController {
     
     private func style() {
         self.setStatusBarStyle(UIStatusBarStyleContrast)
+        
         for button in buttons {
             guard let command = Command(rawValue: button.tag) else { return }
-            switch command {
-            case .Red:
-                button.setTitleColor(UIColor.flatRedColor(), forState: .Normal)
-                break
-            case .Green:
-                button.setTitleColor(UIColor.flatGreenColor(), forState: .Normal)
-                break
-            case .Blue:
-                button.setTitleColor(UIColor.flatBlueColor(), forState: .Normal)
-                break
-            case .White:
-                button.setTitleColor(UIColor.flatWhiteColor(), forState: .Normal)
-                break
-            case .WhiteOn, .WhiteOff:
-                button.setTitleColor(UIColor.flatYellowColor(), forState: .Normal)
-                break
-            default:
-                button.setTitleColor(UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true), forState: .Normal)
-                break
-            }
+            button.setTitleColor(command.color(view.backgroundColor), forState: .Normal)
         }
     }
 
+}
+
+extension Command {
+    
+    func color(contrasting: UIColor? = UIColor.blackColor()) -> UIColor {
+        
+        switch self {
+        case .Red:
+            return UIColor.flatRedColor()
+        case .Green:
+            return UIColor.flatGreenColor()
+        case .Blue:
+            return UIColor.flatBlueColor()
+        case .White:
+            return UIColor.flatWhiteColor()
+        case .WhiteOn, .WhiteOff:
+            return UIColor.flatYellowColor()
+        default:
+            return UIColor(contrastingBlackOrWhiteColorOn: contrasting, isFlat: true)
+        }
+
+    }
+    
 }
 
 
@@ -92,6 +97,7 @@ extension FirstViewController: UICollectionViewDataSource {
         cell.button.setTitle(command.humanReadableDescription(), forState: .Normal)
         cell.button.addTarget(self, action: #selector(FirstViewController.buttonTapped(_:)), forControlEvents: .TouchUpInside)
         cell.button.tag = command.rawValue
+        cell.button.titleLabel?.textColor = command.color(cell.contentView.backgroundColor)
         
         return cell
     }
@@ -109,7 +115,7 @@ extension FirstViewController: UICollectionViewDataSource {
 extension FirstViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 6
+        return 0
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
@@ -117,7 +123,10 @@ extension FirstViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width = collectionView.bounds.width / 4
+
+        let desiredButtonsPerRow: CGFloat = 4
+        let width = collectionView.bounds.width / desiredButtonsPerRow
+        
         return CGSize(width: width, height: 50)
     }
 }
@@ -125,6 +134,13 @@ extension FirstViewController: UICollectionViewDelegateFlowLayout {
 
 class ButtonCell: UICollectionViewCell {
     @IBOutlet weak var button: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        button.titleLabel?.numberOfLines = 2
+        button.titleLabel?.textAlignment = .Center
+    }
 }
 
 

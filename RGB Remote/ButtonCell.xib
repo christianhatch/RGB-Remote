@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9w-N7-cNZ">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <rect key="frame" x="3" y="3" width="44" height="44"/>
                         <color key="backgroundColor" red="0.17000000179999999" green="0.17000000179999999" blue="0.17000000179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" title="On">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -30,10 +30,10 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="T9w-N7-cNZ" firstAttribute="top" secondItem="vS8-Qd-687" secondAttribute="top" id="JJb-tf-cne"/>
-                <constraint firstItem="T9w-N7-cNZ" firstAttribute="leading" secondItem="vS8-Qd-687" secondAttribute="leading" id="U54-wf-n23"/>
-                <constraint firstAttribute="trailing" secondItem="T9w-N7-cNZ" secondAttribute="trailing" id="ktB-d5-UMe"/>
-                <constraint firstAttribute="bottom" secondItem="T9w-N7-cNZ" secondAttribute="bottom" id="mZa-wV-lDc"/>
+                <constraint firstItem="T9w-N7-cNZ" firstAttribute="top" secondItem="vS8-Qd-687" secondAttribute="top" constant="3" id="JJb-tf-cne"/>
+                <constraint firstItem="T9w-N7-cNZ" firstAttribute="leading" secondItem="vS8-Qd-687" secondAttribute="leading" constant="3" id="U54-wf-n23"/>
+                <constraint firstAttribute="trailing" secondItem="T9w-N7-cNZ" secondAttribute="trailing" constant="3" id="ktB-d5-UMe"/>
+                <constraint firstAttribute="bottom" secondItem="T9w-N7-cNZ" secondAttribute="bottom" constant="3" id="mZa-wV-lDc"/>
             </constraints>
             <connections>
                 <outlet property="button" destination="T9w-N7-cNZ" id="nuZ-DE-Oqf"/>

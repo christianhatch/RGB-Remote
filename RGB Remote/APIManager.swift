@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//import Alamofire
+import Alamofire
 
 
 class APIManager {
@@ -19,19 +19,19 @@ class APIManager {
     class func startSendingCommand(command: Command) {
         print(#function, command.apiKey())
         
-//        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start")
-//            .responseJSON { (response) -> Void in
-////                print(response)
-//        }
+        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start")
+            .responseString(completionHandler: { (response) in
+                print(response)
+            })
     }
     
     class func stopSendingCommand(command: Command) {
         print(#function, command.apiKey())
 
-//        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop")
-//            .responseJSON { (response) -> Void in
-////                    print(response)
-//        }
+        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop")
+            .responseString(completionHandler: { (response) in
+                print(response)
+            })
     }
     
     class func sendCommand(command: Command) {
@@ -39,10 +39,10 @@ class APIManager {
 
         switch command {
         default:
-//            Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())")
-//                .responseJSON { (response) -> Void in
-////                    print(response)
-//            }
+            Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())")
+                .responseString(completionHandler: { (response) in
+                    print(response)
+                })
             break
         }
 
@@ -51,10 +51,10 @@ class APIManager {
     private class func sendMacro(macro: String) {
         print(#function, macro)
 
-//        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/macros/\(macro)")
-//            .responseJSON { (response) -> Void in
-////                print(response)
-//        }
+        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/macros/\(macro)")
+            .responseJSON { (response) -> Void in
+                print(response)
+        }
     }
     
 }

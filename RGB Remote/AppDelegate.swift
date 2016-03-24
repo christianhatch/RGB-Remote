@@ -12,12 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let tabbarManager = TabbarManager()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         if let tabbar = self.window?.rootViewController as? UITabBarController {
-            tabbar.selectedIndex = 0
+            tabbar.delegate = tabbarManager
+            tabbar.selectedIndex = TabbarManager.lastSelectedIndex()
         }
         
         return true
@@ -47,4 +48,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+
+class TabbarManager: NSObject, UITabBarControllerDelegate {
+    private static let userDefaultsKey = "TabbarManagerLastSelectedIndexKey"
+    
+    static func lastSelectedIndex() -> Int {
+        let index = NSUserDefaults.standardUserDefaults().integerForKey(TabbarManager.userDefaultsKey)
+        return index
+    }
+    
+    static private func setLastSelectedIndex(index: Int) {
+        NSUserDefaults.standardUserDefaults().setInteger(index, forKey: TabbarManager.userDefaultsKey)
+    }
+    
+    
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        TabbarManager.setLastSelectedIndex(tabBarController.selectedIndex)
+    }
+    
+}
+
+
+
+
 

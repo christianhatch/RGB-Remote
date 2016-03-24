@@ -314,7 +314,7 @@ extension Command {
         case .WhiteOn:
             return "white_on"
         case .WhiteOff:
-            return "white_on"
+            return "white_off"
         case .WhiteUp:
             return "white_up"
         case .WhiteDown:

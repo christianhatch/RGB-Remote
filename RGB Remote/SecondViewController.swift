@@ -56,7 +56,6 @@ extension SecondViewController: UITableViewDataSource {
         default:
             cell.textLabel?.textColor = UIColor(hexString: "FFFFFF", withAlpha: 0.6)
             break
-//            cell.textLabel?.textColor = UIColor(contrastingBlackOrWhiteColorOn: tableView.backgroundColor, isFlat: true)
         }
         return cell
     }
