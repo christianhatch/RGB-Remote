@@ -33,6 +33,7 @@
 		453C42891C5AE40B001D2D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453C42871C5AE40B001D2D7E /* LaunchScreen.storyboard */; };
 		453C42911C5AE595001D2D7E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C42901C5AE595001D2D7E /* APIManager.swift */; };
 		458797C11C69B9D90075B511 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458797C01C69B9D90075B511 /* Util.swift */; };
+		45C604921CA3C453007E18D7 /* RGBWWDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C604911CA3C453007E18D7 /* RGBWWDataSource.swift */; };
 		AAD4E30CB671EF707E167041 /* Pods_RGB_Remote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF8EF924F78DA292CCB27CB /* Pods_RGB_Remote.framework */; };
 		ED100EBE68704AD084636EDF /* Pods_RGB_Remote_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9045D85BE0368338D923EC5E /* Pods_RGB_Remote_OSX.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		453C428A1C5AE40B001D2D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		453C42901C5AE595001D2D7E /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		458797C01C69B9D90075B511 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		45C604911CA3C453007E18D7 /* RGBWWDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBWWDataSource.swift; sourceTree = "<group>"; };
 		76C80206D164753EDD78625F /* Pods-RGB Remote OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB Remote OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-RGB Remote OSX/Pods-RGB Remote OSX.release.xcconfig"; sourceTree = "<group>"; };
 		79AF15A5519E3D6CC49415EA /* Pods-RGB Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB Remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-RGB Remote/Pods-RGB Remote.release.xcconfig"; sourceTree = "<group>"; };
 		82CB5DEB576A4058D3B224EE /* Pods-RGB Remote OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB Remote OSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RGB Remote OSX/Pods-RGB Remote OSX.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				453C42821C5AE40B001D2D7E /* Main.storyboard */,
 				4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */,
 				453C427E1C5AE40B001D2D7E /* FirstViewController.swift */,
+				45C604911CA3C453007E18D7 /* RGBWWDataSource.swift */,
 				453C42801C5AE40B001D2D7E /* SecondViewController.swift */,
 				4506E54D1CA36F24006F5694 /* LogViewController.swift */,
 				4506E54F1CA3867F006F5694 /* TextViewController.swift */,
@@ -492,6 +495,7 @@
 				458797C11C69B9D90075B511 /* Util.swift in Sources */,
 				453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */,
 				4506E5521CA3869F006F5694 /* Logger.swift in Sources */,
+				45C604921CA3C453007E18D7 /* RGBWWDataSource.swift in Sources */,
 				453C427F1C5AE40B001D2D7E /* FirstViewController.swift in Sources */,
 				4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */,
 				4501425C1CA0BEB200DE77E6 /* Command.swift in Sources */,
