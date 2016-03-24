@@ -44,21 +44,8 @@ extension SecondViewController: UITableViewDataSource {
         
         let action = actions[indexPath.row]
         cell.textLabel?.text = action.humanReadableDescription()
-        
-        switch action {
-        case .Red:
-            cell.textLabel?.textColor = UIColor.flatRedColor()
-            break
-        case .Green:
-            cell.textLabel?.textColor = UIColor.flatGreenColor()
-            break
-        case .Blue:
-            cell.textLabel?.textColor = UIColor.flatBlueColor()
-            break
-        default:
-            cell.textLabel?.textColor = UIColor(hexString: "FFFFFF", withAlpha: 0.6)
-            break
-        }
+        cell.textLabel?.textColor = action.color()
+
         return cell
     }
 }

@@ -64,6 +64,25 @@ extension Command {
             return UIColor.flatWhiteColor()
         case .WhiteOn, .WhiteOff:
             return UIColor.flatYellowColor()
+        case .YellowOrange, .YellowGreen, .GreenYellow:
+            return UIColor.flatOrangeColor()
+        case .RedOrange, .Orange, .OrangeYellow, .Yellow:
+            return UIColor.flatOrangeColor()
+        case .TealBlue, .IndigoBlue:
+            return UIColor.flatBlueColor().colorWithAlphaComponent(0.7)
+        case .MossGreen, .Turquoise:
+            return UIColor.flatGreenColor()
+        case .LightBlue, .LightBlueWW, .SkyBlue, .SkyBlueWW:
+            return UIColor.flatBlueColor().colorWithAlphaComponent(0.7)
+        case .DeepPurple, .Indigo, .Violet, .Purple:
+            return UIColor.flatPurpleColor()
+        case .UV, .IndigoWW, .VioletWW, .PurpleWW:
+            return UIColor.flatPurpleColor()
+        case .PinkWhite, .PurpleWhite, .TealWhite, .IndigoWhite:
+            return UIColor.flatPinkColor().colorWithAlphaComponent(0.6)
+        case .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW:
+            return UIColor.flatPinkColor().colorWithAlphaComponent(0.6)
+            
         default:
             return UIColor(contrastingBlackOrWhiteColorOn: contrasting, isFlat: true)
         }
@@ -108,7 +127,7 @@ extension FirstViewController: UICollectionViewDataSource {
         cell.button.setTitle(command.humanReadableDescription(), forState: .Normal)
         cell.button.addTarget(self, action: #selector(FirstViewController.buttonTapped(_:)), forControlEvents: .TouchUpInside)
         cell.button.tag = command.rawValue
-        cell.button.titleLabel?.textColor = command.color(cell.contentView.backgroundColor)
+        cell.button.setTitleColor(command.color(cell.contentView.backgroundColor), forState: .Normal)
         
         return cell
     }
