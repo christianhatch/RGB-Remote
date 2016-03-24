@@ -13,6 +13,9 @@ import ChameleonFramework
 class LogViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+}
+
+extension LogViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,93 +88,6 @@ extension LogViewController: UITableViewDataSource {
     }
     
 }
-
-
-
-
-
-class TextViewController: UIViewController {
-    
-    var text: String?
-    
-    private var textView: UITextView!
-    
-    
-    init(string: String?) {
-        super.init(nibName: nil, bundle: nil)
-        text = string
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-}
-
-extension TextViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.title = "Message"
-        
-        textView = UITextView(frame: view.frame)
-        view.addSubview(textView)
-        textView.editable = false
-        textView.font = UIFont.systemFontOfSize(16)
-        textView.backgroundColor = Style.Color.BackgroundColor.uicolor()
-        textView.textColor = Style.Color.TextColor.uicolor()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        textView.text = text
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
-}
-
-
-
-
-class RGBNavigationController: UINavigationController {
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
-}
-
-
-
-
-
-
-
-enum LoggerNotification: String {
-    case NewMessage
-}
-
-class Logger: NSObject {
-    
-    static let sharedLogger = Logger()
-
-    var messages: [String] = []
-
-    func printMessage(message: String) {
-        Logger.sharedLogger.messages.append(message)
-        
-        NSNotificationCenter.defaultCenter().postNotificationName(LoggerNotification.NewMessage.rawValue, object: nil)
-    }
-
-}
-
-
-
 
 
 

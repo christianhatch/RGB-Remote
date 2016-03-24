@@ -31,7 +31,6 @@ enum Style {
             switch self {
             case .TextColor, .TintColor:
                 return UIColor(hexString: "FFFFFF", withAlpha: 0.66)
-//                return UIColor(hexString: "#BABABA")
             case .BackgroundColor:
                 return UIColor(hexString: "#333333")
             }
@@ -39,3 +38,15 @@ enum Style {
     }
     
 }
+
+
+
+class RGBNavigationController: UINavigationController {
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+}
+
+
+
+

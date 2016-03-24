@@ -22,6 +22,9 @@
 		4501F7FA1C8FFC3600386E55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4501F7F81C8FFC3600386E55 /* InfoPlist.strings */; };
 		4501F7FD1C8FFC3600386E55 /* RGB Remote Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4501F7EC1C8FFC3600386E55 /* RGB Remote Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E54D1CA36F24006F5694 /* LogViewController.swift */; };
+		4506E5501CA3867F006F5694 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E54F1CA3867F006F5694 /* TextViewController.swift */; };
+		4506E5521CA3869F006F5694 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E5511CA3869F006F5694 /* Logger.swift */; };
+		4506E5531CA3869F006F5694 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E5511CA3869F006F5694 /* Logger.swift */; };
 		453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C427C1C5AE40B001D2D7E /* AppDelegate.swift */; };
 		453C427F1C5AE40B001D2D7E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C427E1C5AE40B001D2D7E /* FirstViewController.swift */; };
 		453C42811C5AE40B001D2D7E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C42801C5AE40B001D2D7E /* SecondViewController.swift */; };
@@ -76,6 +79,8 @@
 		4501F7F71C8FFC3600386E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4501F7F91C8FFC3600386E55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4506E54D1CA36F24006F5694 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		4506E54F1CA3867F006F5694 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		4506E5511CA3869F006F5694 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		453C42791C5AE40B001D2D7E /* RGB Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RGB Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		453C427C1C5AE40B001D2D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		453C427E1C5AE40B001D2D7E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +143,7 @@
 			children = (
 				453C42901C5AE595001D2D7E /* APIManager.swift */,
 				4501425B1CA0BEB200DE77E6 /* Command.swift */,
+				4506E5511CA3869F006F5694 /* Logger.swift */,
 			);
 			name = Common;
 			path = "RGB Remote";
@@ -196,6 +202,7 @@
 				453C427E1C5AE40B001D2D7E /* FirstViewController.swift */,
 				453C42801C5AE40B001D2D7E /* SecondViewController.swift */,
 				4506E54D1CA36F24006F5694 /* LogViewController.swift */,
+				4506E54F1CA3867F006F5694 /* TextViewController.swift */,
 				453C42851C5AE40B001D2D7E /* Assets.xcassets */,
 				453C42871C5AE40B001D2D7E /* LaunchScreen.storyboard */,
 				453C428A1C5AE40B001D2D7E /* Info.plist */,
@@ -459,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4506E5531CA3869F006F5694 /* Logger.swift in Sources */,
 				4501F7E61C8FEF5800386E55 /* APIManager.swift in Sources */,
 				4501F7E51C8FEB6D00386E55 /* MainWindow.swift in Sources */,
 				4501F7DA1C8FDE4900386E55 /* AppDelegate.swift in Sources */,
@@ -483,9 +491,11 @@
 				453C42811C5AE40B001D2D7E /* SecondViewController.swift in Sources */,
 				458797C11C69B9D90075B511 /* Util.swift in Sources */,
 				453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */,
+				4506E5521CA3869F006F5694 /* Logger.swift in Sources */,
 				453C427F1C5AE40B001D2D7E /* FirstViewController.swift in Sources */,
 				4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */,
 				4501425C1CA0BEB200DE77E6 /* Command.swift in Sources */,
+				4506E5501CA3867F006F5694 /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
