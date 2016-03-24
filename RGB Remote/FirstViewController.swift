@@ -9,12 +9,27 @@
 import UIKit
 import ChameleonFramework
 
+private enum SectionType {
+    case BasicControls
+    case BasicColors
+    case WWControls
+    case RGBWWColors
+}
+private struct Section {
+    var type: SectionType
+    var items: [Command]
+}
+
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet var buttons: [UIButton]!
     
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    
+    private var collectionViewSections: [Section] = [Section(type: .RGBWWColors, items: Command.rgbwwColors),
+                                                     Section(type: .WWControls, items: Command.wwControls),
+                                                     Section(type: .BasicControls, items: Command.basicControls),
+                                                     Section(type: .BasicColors, items: Command.basicColors)]
 }
 
 //MARK: - UIKit
@@ -25,7 +40,7 @@ extension FirstViewController {
         super.viewDidLoad()
         
         self.collectionView.registerNib(UINib(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCell")
-        style()
+        collectionView.backgroundColor = view.backgroundColor
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -37,60 +52,7 @@ extension FirstViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
-    
-    private func style() {
-        collectionView.backgroundColor = view.backgroundColor
-        
-        for button in buttons {
-            guard let command = Command(rawValue: button.tag) else { return }
-            button.setTitleColor(command.color(view.backgroundColor), forState: .Normal)
-        }
-    }
-
 }
-
-extension Command {
-    
-    func color(contrasting: UIColor? = UIColor.blackColor()) -> UIColor {
-        
-        switch self {
-        case .Red:
-            return UIColor.flatRedColor()
-        case .Green:
-            return UIColor.flatGreenColor()
-        case .Blue:
-            return UIColor.flatBlueColor()
-        case .White:
-            return UIColor.flatWhiteColor()
-        case .WhiteOn, .WhiteOff:
-            return UIColor.flatYellowColor()
-        case .YellowOrange, .YellowGreen, .GreenYellow:
-            return UIColor.flatOrangeColor()
-        case .RedOrange, .Orange, .OrangeYellow, .Yellow:
-            return UIColor.flatOrangeColor()
-        case .TealBlue, .IndigoBlue:
-            return UIColor.flatBlueColor().colorWithAlphaComponent(0.7)
-        case .MossGreen, .Turquoise:
-            return UIColor.flatGreenColor()
-        case .LightBlue, .LightBlueWW, .SkyBlue, .SkyBlueWW:
-            return UIColor.flatBlueColor().colorWithAlphaComponent(0.7)
-        case .DeepPurple, .Indigo, .Violet, .Purple:
-            return UIColor.flatPurpleColor()
-        case .UV, .IndigoWW, .VioletWW, .PurpleWW:
-            return UIColor.flatPurpleColor()
-        case .PinkWhite, .PurpleWhite, .TealWhite, .IndigoWhite:
-            return UIColor.flatPinkColor().colorWithAlphaComponent(0.6)
-        case .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW:
-            return UIColor.flatPinkColor().colorWithAlphaComponent(0.6)
-            
-        default:
-            return UIColor(contrastingBlackOrWhiteColorOn: contrasting, isFlat: true)
-        }
-
-    }
-    
-}
-
 
 //MARK: - IBActions
 
@@ -122,7 +84,7 @@ extension FirstViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ButtonCell", forIndexPath: indexPath) as! ButtonCell
-        let command = Command.rgbwwColors[indexPath.item]
+        let command = collectionViewSections[indexPath.section].items[indexPath.item]
      
         cell.button.setTitle(command.humanReadableDescription(), forState: .Normal)
         cell.button.addTarget(self, action: #selector(FirstViewController.buttonTapped(_:)), forControlEvents: .TouchUpInside)
@@ -133,16 +95,20 @@ extension FirstViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Command.rgbwwColors.count
+        return collectionViewSections[section].items.count
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+        return collectionViewSections.count
     }
 
 }
 
 extension FirstViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 10)
+    }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
@@ -154,10 +120,22 @@ extension FirstViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 
-        let desiredButtonsPerRow: CGFloat = 4
-        let width = collectionView.bounds.width / desiredButtonsPerRow
+        var desiredButtonsPerRow: CGFloat = 4
         
-        return CGSize(width: width, height: 50)
+        let command = collectionViewSections[indexPath.section].items[indexPath.row]
+        switch command {
+        case .Red, .Green, .Blue:
+            desiredButtonsPerRow = 3
+            break
+        case .White:
+            desiredButtonsPerRow = 1
+            break
+        default:
+            desiredButtonsPerRow = 4
+            break
+        }
+        
+        return CGSize(width: collectionView.bounds.width / desiredButtonsPerRow, height: 50)
     }
 }
 
