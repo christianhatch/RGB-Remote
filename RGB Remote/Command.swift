@@ -9,32 +9,23 @@
 import Foundation
 
 enum Command: Int {
-        
-    static let rgb: [Command] = Command.basicControls +
-                                Command.basicColors +
-                                Command.rgbControls +
-                                Command.rgbColors +
-                                Command.effects
     
-    static let rgbww: [Command] =   Command.basicControls +
-                                    Command.basicColors +
-                                    Command.wwControls +
-                                    Command.rgbwwColors +
-                                    Command.effects
-    
-    
+//    static var rgb: [Command] = Command.basicControls + Command.basicColors + Command.rgbControls + Command.rgbColors + Command.effects
+//    
+    static let rgbww: [Command] = Command.basicControls + Command.basicColors + Command.wwControls + Command.rgbwwColors + Command.effects
+
     static let effects: [Command] = [.Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
     static let basicControls: [Command] = [.On, .Off, .BrightnessUp, .BrightnessDown]
     static let basicColors: [Command] = [.Red, .Blue, .Green, .White]
-    
+
     static let wwControls: [Command] = [.WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown, .White100, .White75, .White50, .White25]
-    static let rgbControls: [Command] = [.DIY1, .DIY2, .DIY3, .DIY4, .DIY5, .DIY6, .RedUp, .RedDown, .GreenUp, .GreenDown, .BlueUp, .BlueDown]
-
-    static let rgbColors: [Command] = [.OrangeYellow, .YellowOrange, .YellowGreen, .GreenYellow,
-                                       .TealBlue, .SkyBlue, .IndigoBlue, .LightBlue,
-                                       .Indigo, .Violet, .Purple, .DeepPurple,
-                                       .PinkWhite, .PurpleWhite, .TealWhite, .IndigoWhite]
-
+//    static let rgbControls: [Command] = [.DIY1, .DIY2, .DIY3, .DIY4, .DIY5, .DIY6, .RedUp, .RedDown, .GreenUp, .GreenDown, .BlueUp, .BlueDown]
+//
+//    static let rgbColors: [Command] = [.OrangeYellow, .YellowOrange, .YellowGreen, .GreenYellow,
+//                                       .TealBlue, .SkyBlue, .IndigoBlue, .LightBlue,
+//                                       .Indigo, .Violet, .Purple, .DeepPurple,
+//                                       .PinkWhite, .PurpleWhite, .TealWhite, .IndigoWhite]
+//
     static let rgbwwColors: [Command] = [.RedOrange, .Orange, .OrangeYellow, .Yellow,
                                          .MossGreen, .Turquoise, .LightBlueWW, .SkyBlueWW,
                                          .UV, .IndigoWW, .VioletWW, .PurpleWW,
