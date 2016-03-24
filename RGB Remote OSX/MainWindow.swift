@@ -11,6 +11,13 @@ import OBMenuBarWindow
 
 class MainWindow: OBMenuBarWindow {
     
+    @IBOutlet weak var collectionView: NSCollectionView!
+    
+}
+
+//MARK: - IBAction
+
+extension MainWindow {
     
     @IBAction func buttonClicked(sender: NSButton) {
         guard let tag = Command(rawValue: sender.tag) else { return }

@@ -832,6 +832,9 @@
                     </scrollView>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="collectionView" destination="Krm-gC-WlK" id="8aw-DS-lgY"/>
+            </connections>
             <point key="canvasLocation" x="399.5" y="457.5"/>
         </window>
         <collectionViewItem id="Z3W-rB-2at">
