@@ -10,7 +10,7 @@ import UIKit
 import ChameleonFramework
 
 class SecondViewController: UIViewController {
-    private let actions = Command.all
+    private let actions = Command.rgbww
 }
 
 extension SecondViewController {
@@ -18,9 +18,11 @@ extension SecondViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setStatusBarStyle(UIStatusBarStyleContrast)
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
 }
 
 
@@ -38,7 +40,7 @@ extension SecondViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("ActionCell") else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCellWithIdentifier("ActionCell", forIndexPath: indexPath)
         
         let action = actions[indexPath.row]
         cell.textLabel?.text = action.humanReadableDescription()

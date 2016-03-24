@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet var buttons: [UIButton]!
     
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
 }
 
 //MARK: - UIKit
@@ -27,8 +28,18 @@ extension FirstViewController {
         style()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        collectionViewHeight.constant = collectionView.collectionViewLayout.collectionViewContentSize().height
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
     private func style() {
-        self.setStatusBarStyle(UIStatusBarStyleContrast)
+        collectionView.backgroundColor = view.backgroundColor
         
         for button in buttons {
             guard let command = Command(rawValue: button.tag) else { return }

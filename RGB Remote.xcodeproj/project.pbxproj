@@ -21,6 +21,7 @@
 		4501F7F61C8FFC3600386E55 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4501F7F41C8FFC3600386E55 /* TodayViewController.xib */; };
 		4501F7FA1C8FFC3600386E55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4501F7F81C8FFC3600386E55 /* InfoPlist.strings */; };
 		4501F7FD1C8FFC3600386E55 /* RGB Remote Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4501F7EC1C8FFC3600386E55 /* RGB Remote Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E54D1CA36F24006F5694 /* LogViewController.swift */; };
 		453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C427C1C5AE40B001D2D7E /* AppDelegate.swift */; };
 		453C427F1C5AE40B001D2D7E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C427E1C5AE40B001D2D7E /* FirstViewController.swift */; };
 		453C42811C5AE40B001D2D7E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C42801C5AE40B001D2D7E /* SecondViewController.swift */; };
@@ -74,6 +75,7 @@
 		4501F7F51C8FFC3600386E55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
 		4501F7F71C8FFC3600386E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4501F7F91C8FFC3600386E55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4506E54D1CA36F24006F5694 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		453C42791C5AE40B001D2D7E /* RGB Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RGB Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		453C427C1C5AE40B001D2D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		453C427E1C5AE40B001D2D7E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */,
 				453C427E1C5AE40B001D2D7E /* FirstViewController.swift */,
 				453C42801C5AE40B001D2D7E /* SecondViewController.swift */,
+				4506E54D1CA36F24006F5694 /* LogViewController.swift */,
 				453C42851C5AE40B001D2D7E /* Assets.xcassets */,
 				453C42871C5AE40B001D2D7E /* LaunchScreen.storyboard */,
 				453C428A1C5AE40B001D2D7E /* Info.plist */,
@@ -481,6 +484,7 @@
 				458797C11C69B9D90075B511 /* Util.swift in Sources */,
 				453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */,
 				453C427F1C5AE40B001D2D7E /* FirstViewController.swift in Sources */,
+				4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */,
 				4501425C1CA0BEB200DE77E6 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
