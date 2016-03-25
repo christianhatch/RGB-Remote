@@ -21,8 +21,8 @@ class Logger: NSObject {
     var messages: [String] = []
     
     func printMessage(message: String) {
+        print(message)
         Logger.sharedLogger.messages.append(message)
-        
         NSNotificationCenter.defaultCenter().postNotificationName(LoggerNotification.NewMessage.rawValue, object: nil)
     }
     

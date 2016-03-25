@@ -29,38 +29,32 @@ class APIManager {
     class func startSendingCommand(command: Command) {
         let logMessage = "\(#function) \(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
-        print(logMessage)
         
         sharedManager.manager.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start")
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
-                print(response)
             })
     }
     
     class func stopSendingCommand(command: Command) {
         let logMessage = "\(#function) \(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
-        print(logMessage)
 
         sharedManager.manager.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop")
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
-                print(response)
             })
     }
     
     class func sendCommand(command: Command) {
         let logMessage = "\(#function) \(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
-        print(logMessage)
 
         switch command {
         default:
             sharedManager.manager.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())")
                 .responseString(completionHandler: { (response) in
                     Logger.sharedLogger.printMessage(response.description)
-                    print(response)
                 })
             break
         }
