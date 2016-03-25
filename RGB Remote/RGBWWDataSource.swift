@@ -27,9 +27,9 @@ class RGBWWDataSource: NSObject {
     }
     
     private var sections: [Section] = [Section(type: .RGBWWColors, items: Command.rgbwwColors),
-                                                     Section(type: .WWControls, items: Command.wwControls),
-                                                     Section(type: .BasicControls, items: Command.basicControls),
-                                                     Section(type: .BasicColors, items: Command.basicColors)]
+                                       Section(type: .WWControls, items: Command.wwControls),
+                                       Section(type: .BasicControls, items: Command.basicControls),
+                                       Section(type: .BasicColors, items: Command.basicColors)]
     
     func register(collectionView: UICollectionView) {
         collectionView.registerNib(UINib(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCell")
@@ -40,16 +40,15 @@ class RGBWWDataSource: NSObject {
 
 extension RGBWWDataSource {
     
-//    func buttonTouchDown(sender: AnyObject) {
-//        guard let tag = Command(rawValue: sender.tag) else { return }
-//        APIManager.startSendingCommand(tag)
-//    }
-//    
-//    func buttonTouchUp(sender: AnyObject) {
-//        guard let tag = Command(rawValue: sender.tag) else { return }
-//        APIManager.stopSendingCommand(tag)
-//    }
+    func buttonTouchDown(sender: AnyObject) {
+        guard let tag = Command(rawValue: sender.tag) else { return }
+        APIManager.startSendingCommand(tag)
+    }
     
+    func buttonTouchUp(sender: AnyObject) {
+        guard let tag = Command(rawValue: sender.tag) else { return }
+        APIManager.stopSendingCommand(tag)
+    }
     
     func buttonTapped(sender: AnyObject) {
         guard let tag = Command(rawValue: sender.tag) else { return }
@@ -68,10 +67,18 @@ extension RGBWWDataSource: UICollectionViewDataSource {
         let command = sections[indexPath.section].items[indexPath.item]
         
         cell.button.setTitle(command.humanReadableDescription(), forState: .Normal)
-        cell.button.addTarget(self, action: #selector(RGBWWDataSource.buttonTapped(_:)), forControlEvents: .TouchUpInside)
         cell.button.tag = command.rawValue
         cell.button.setTitleColor(command.color(cell.contentView.backgroundColor), forState: .Normal)
         
+        switch command {
+        case .BrightnessUp, .BrightnessDown, .WhiteUp, .WhiteDown:
+            cell.button.addTarget(self, action: #selector(RGBWWDataSource.buttonTouchDown(_:)), forControlEvents: .TouchDown)
+            cell.button.addTarget(self, action: #selector(RGBWWDataSource.buttonTouchUp(_:)), forControlEvents: .TouchUpOutside)
+            cell.button.addTarget(self, action: #selector(RGBWWDataSource.buttonTouchUp(_:)), forControlEvents: .TouchUpInside)
+        default:
+            cell.button.addTarget(self, action: #selector(RGBWWDataSource.buttonTapped(_:)), forControlEvents: .TouchUpInside)
+            break
+        }
         return cell
     }
     

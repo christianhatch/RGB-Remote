@@ -19,14 +19,15 @@ enum Command: Int {
                                     .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW, .Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
     
 //    static var rgb: [Command] = Command.basicControls + Command.basicColors + Command.rgbControls + Command.rgbColors + Command.effects
-//
+
 //    static let rgbww: [Command] = Command.basicControls + Command.basicColors + Command.wwControls + Command.rgbwwColors + Command.effects
 
     static let effects: [Command] = [.Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
     static let basicControls: [Command] = [.On, .Off, .BrightnessUp, .BrightnessDown]
     static let basicColors: [Command] = [.Red, .Blue, .Green, .White]
 
-    static let wwControls: [Command] = [.WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown, .White100, .White75, .White50, .White25]
+    static let wwControlsFull: [Command] = [.WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown, .White100, .White75, .White50, .White25]
+    static let wwControls: [Command] = [.WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown]
     static let rgbControls: [Command] = [.DIY1, .DIY2, .DIY3, .DIY4, .DIY5, .DIY6, .RedUp, .RedDown, .GreenUp, .GreenDown, .BlueUp, .BlueDown]
 
     static let rgbColors: [Command] = [.OrangeYellow, .YellowOrange, .YellowGreen, .GreenYellow,
@@ -467,7 +468,7 @@ extension Command {
         case .Blue:
             return UIColor.flatBlueColor()
         case .White:
-            return UIColor.flatWhiteColor()
+            return UIColor.flatWhiteColor().darkenByPercentage(0.1)
             
         case .WhiteOn, .WhiteOff:
             return UIColor.flatYellowColor()
@@ -479,28 +480,28 @@ extension Command {
             return UIColor.flatOrangeColor()
             
         case .TealBlue, .IndigoBlue:
-            return UIColor.flatBlueColor().colorWithAlphaComponent(0.7)
+            return UIColor.flatPowderBlueColor()
             
         case .MossGreen, .Turquoise:
             return UIColor.flatGreenColor()
             
         case .LightBlue, .LightBlueWW, .SkyBlue, .SkyBlueWW:
-            return UIColor.flatBlueColor().colorWithAlphaComponent(0.7)
+            return UIColor.flatBlueColor().lightenByPercentage(0.5)
             
         case .DeepPurple, .Indigo, .Violet, .Purple:
-            return UIColor.flatPurpleColor()
+            return UIColor.flatPurpleColor().lightenByPercentage(0.3)
             
         case .UV, .IndigoWW, .VioletWW, .PurpleWW:
-            return UIColor.flatPurpleColor()
+            return UIColor.flatPurpleColor().lightenByPercentage(0.3)
             
-        case .PinkWhite, .PurpleWhite, .TealWhite, .IndigoWhite:
-            return UIColor.flatPinkColor().colorWithAlphaComponent(0.6)
+        case .TealWhite, .IndigoWhite, .TealWhiteWW, .IndigoWhiteWW:
+            return UIColor.flatTealColor().lightenByPercentage(0.2)
             
-        case .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW:
-            return UIColor.flatPinkColor().colorWithAlphaComponent(0.6)
-            
+        case .PinkWhite, .PurpleWhite, .PinkWhiteWW, .PurpleWhiteWW:
+            return UIColor.flatPinkColor().lightenByPercentage(0.5)
+
         default:
-            return UIColor(contrastingBlackOrWhiteColorOn: contrasting, isFlat: true)
+            return UIColor(contrastingBlackOrWhiteColorOn: contrasting, isFlat: true).darkenByPercentage(0.1)
         }
         
     }

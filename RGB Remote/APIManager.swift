@@ -12,6 +12,16 @@ import Alamofire
 
 class APIManager {
     
+    static let sharedManager = APIManager()
+    
+    private lazy var manager: Manager = {
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        config.timeoutIntervalForRequest = 2
+        
+        let man = Manager(configuration: config)
+        return man
+    }()
+    
     private class func baseEndpoint() -> String {
         return "http://10.0.0.17:3000"
     }
@@ -21,7 +31,7 @@ class APIManager {
         Logger.sharedLogger.printMessage(logMessage)
         print(logMessage)
         
-        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start")
+        sharedManager.manager.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start")
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
                 print(response)
@@ -33,7 +43,7 @@ class APIManager {
         Logger.sharedLogger.printMessage(logMessage)
         print(logMessage)
 
-        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop")
+        sharedManager.manager.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop")
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
                 print(response)
@@ -47,7 +57,7 @@ class APIManager {
 
         switch command {
         default:
-            Alamofire.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())")
+            sharedManager.manager.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())")
                 .responseString(completionHandler: { (response) in
                     Logger.sharedLogger.printMessage(response.description)
                     print(response)
