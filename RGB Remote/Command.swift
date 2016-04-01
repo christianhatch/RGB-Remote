@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import UIKit
-
 
 enum Command: Int {
     
@@ -455,57 +453,5 @@ extension Command {
 }
 
 
-
-extension Command {
-    
-    func color(contrasting: UIColor? = UIColor.blackColor()) -> UIColor {
-        
-        switch self {
-        case .Red:
-            return UIColor.flatRedColor()
-        case .Green:
-            return UIColor.flatGreenColor()
-        case .Blue:
-            return UIColor.flatBlueColor()
-        case .White:
-            return UIColor.flatWhiteColor().darkenByPercentage(0.1)
-            
-        case .WhiteOn, .WhiteOff:
-            return UIColor.flatYellowColor()
-            
-        case .YellowOrange, .YellowGreen, .GreenYellow:
-            return UIColor.flatOrangeColor()
-            
-        case .RedOrange, .Orange, .OrangeYellow, .Yellow:
-            return UIColor.flatOrangeColor()
-            
-        case .TealBlue, .IndigoBlue:
-            return UIColor.flatPowderBlueColor()
-            
-        case .MossGreen, .Turquoise:
-            return UIColor.flatGreenColor()
-            
-        case .LightBlue, .LightBlueWW, .SkyBlue, .SkyBlueWW:
-            return UIColor.flatBlueColor().lightenByPercentage(0.5)
-            
-        case .DeepPurple, .Indigo, .Violet, .Purple:
-            return UIColor.flatPurpleColor().lightenByPercentage(0.3)
-            
-        case .UV, .IndigoWW, .VioletWW, .PurpleWW:
-            return UIColor.flatPurpleColor().lightenByPercentage(0.3)
-            
-        case .TealWhite, .IndigoWhite, .TealWhiteWW, .IndigoWhiteWW:
-            return UIColor.flatTealColor().lightenByPercentage(0.2)
-            
-        case .PinkWhite, .PurpleWhite, .PinkWhiteWW, .PurpleWhiteWW:
-            return UIColor.flatPinkColor().lightenByPercentage(0.5)
-
-        default:
-            return UIColor(contrastingBlackOrWhiteColorOn: contrasting, isFlat: true).darkenByPercentage(0.1)
-        }
-        
-    }
-    
-}
 
 

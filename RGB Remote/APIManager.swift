@@ -23,7 +23,7 @@ class APIManager {
     }()
     
     private class func baseEndpoint() -> String {
-        return "http://10.0.0.17:3000"
+        return "http://lights.local:3000"
     }
 
     class func startSendingCommand(command: Command) {

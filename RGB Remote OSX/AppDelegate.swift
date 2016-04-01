@@ -12,17 +12,20 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: MainWindow!
-
     
+    private let dataSource = OSXDataSource()
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
 
-        self.window.menuBarIcon = NSImage(named: "MenuBarIcon")
-        self.window.highlightedMenuBarIcon = NSImage(named: "MenuBarIcon_highlighted")
-        self.window.hasMenuBarIcon = true
-        self.window.isDetachable = false
-        self.window.attachedToMenuBar = true
+        window.menuBarIcon = NSImage(named: "MenuBarIcon")
+        window.highlightedMenuBarIcon = NSImage(named: "MenuBarIcon_highlighted")
+        window.hasMenuBarIcon = true
+        window.isDetachable = false
+        window.attachedToMenuBar = true
         
+        window.collectionView.dataSource = dataSource
+        window.collectionView.delegate = dataSource
+        dataSource.register(window.collectionView)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -31,4 +34,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
 

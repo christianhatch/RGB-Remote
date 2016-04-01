@@ -16,7 +16,7 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     
-    let dataSource = RGBWWDataSource()
+    let dataSource = iOSDataSource()
 }
 
 //MARK: - UIKit

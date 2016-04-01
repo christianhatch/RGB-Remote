@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
     </dependencies>
     <objects>
@@ -669,14 +670,14 @@
         <window title="RGB Remote OSX" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="MainWindow" customModule="RGB_Remote_OSX" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="355" height="251"/>
+            <rect key="contentRect" x="335" y="390" width="355" height="266"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="355" height="251"/>
+                <rect key="frame" x="0.0" y="0.0" width="355" height="266"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="EXR-dB-6cZ">
-                        <rect key="frame" x="54" y="30" width="128" height="32"/>
+                        <rect key="frame" x="54" y="45" width="128" height="32"/>
                         <buttonCell key="cell" type="push" title="Red" bezelStyle="rounded" alignment="center" borderStyle="border" tag="5" imageScaling="proportionallyDown" inset="2" id="5l5-Ii-aGN">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -686,7 +687,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="g90-TC-6sR">
-                        <rect key="frame" x="54" y="8" width="128" height="32"/>
+                        <rect key="frame" x="54" y="23" width="128" height="32"/>
                         <buttonCell key="cell" type="push" title="Green" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OTt-Se-Je1">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -696,7 +697,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="IXt-1Z-x9u">
-                        <rect key="frame" x="173" y="30" width="128" height="32"/>
+                        <rect key="frame" x="173" y="45" width="128" height="32"/>
                         <buttonCell key="cell" type="push" title="Blue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AP1-ma-qpw">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -706,7 +707,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="pPW-at-3uH">
-                        <rect key="frame" x="173" y="8" width="128" height="32"/>
+                        <rect key="frame" x="173" y="23" width="128" height="32"/>
                         <buttonCell key="cell" type="push" title="White" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kzF-ZU-S7O">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -716,7 +717,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="D3e-bT-UXG">
-                        <rect key="frame" x="2" y="177" width="93" height="32"/>
+                        <rect key="frame" x="2" y="192" width="93" height="32"/>
                         <buttonCell key="cell" type="push" title="Up" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VCg-KI-PR0">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -726,7 +727,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="u9Q-Z4-p20">
-                        <rect key="frame" x="176" y="177" width="89" height="32"/>
+                        <rect key="frame" x="176" y="192" width="89" height="32"/>
                         <buttonCell key="cell" type="push" title="WW Up" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iJI-Wd-fLQ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -736,7 +737,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="OYl-nN-SDi">
-                        <rect key="frame" x="256" y="177" width="95" height="32"/>
+                        <rect key="frame" x="256" y="192" width="95" height="32"/>
                         <buttonCell key="cell" type="push" title="WW Down" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gvp-1s-o24">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -746,7 +747,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="MNz-RE-ufI">
-                        <rect key="frame" x="2" y="203" width="93" height="32"/>
+                        <rect key="frame" x="2" y="218" width="93" height="32"/>
                         <buttonCell key="cell" type="push" title="On" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DZ6-pX-w17">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -756,7 +757,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="kZi-om-V6H">
-                        <rect key="frame" x="87" y="203" width="81" height="32"/>
+                        <rect key="frame" x="87" y="218" width="81" height="32"/>
                         <buttonCell key="cell" type="push" title="Off" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ap5-KO-SN5">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -766,7 +767,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="mrG-Di-WoZ">
-                        <rect key="frame" x="176" y="203" width="89" height="32"/>
+                        <rect key="frame" x="176" y="218" width="89" height="32"/>
                         <buttonCell key="cell" type="push" title="WW On" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B5i-X7-xxP">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -776,7 +777,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="9IN-R6-3cT">
-                        <rect key="frame" x="256" y="203" width="94" height="32"/>
+                        <rect key="frame" x="256" y="218" width="94" height="32"/>
                         <buttonCell key="cell" type="push" title="WW Off" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kAO-Ut-Rao">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -786,7 +787,7 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzd-Ib-5To">
-                        <rect key="frame" x="314" y="5" width="31" height="31"/>
+                        <rect key="frame" x="314" y="20" width="31" height="31"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="power" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="rCn-qU-bVx">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -796,7 +797,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="7VT-k6-cru">
-                        <rect key="frame" x="87" y="177" width="81" height="32"/>
+                        <rect key="frame" x="87" y="192" width="81" height="32"/>
                         <buttonCell key="cell" type="push" title="Down" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nq7-ci-94Y">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -806,7 +807,7 @@
                         </connections>
                     </button>
                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krm-gC-WlK">
-                        <rect key="frame" x="8" y="64" width="337" height="116"/>
+                        <rect key="frame" x="8" y="79" width="337" height="116"/>
                         <clipView key="contentView" ambiguous="YES" id="uJd-5K-6LE">
                             <rect key="frame" x="1" y="1" width="335" height="114"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -833,19 +834,11 @@
                 </subviews>
             </view>
             <connections>
-                <outlet property="collectionView" destination="Krm-gC-WlK" id="8aw-DS-lgY"/>
+                <outlet property="collectionView" destination="x1a-9S-8M5" id="aV5-1j-ebc"/>
             </connections>
-            <point key="canvasLocation" x="399.5" y="457.5"/>
+            <point key="canvasLocation" x="399.5" y="465"/>
         </window>
-        <collectionViewItem id="Z3W-rB-2at">
-            <connections>
-                <outlet property="view" destination="oej-G3-VVB" id="SBp-3n-tem"/>
-            </connections>
-        </collectionViewItem>
-        <view id="oej-G3-VVB">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-            <autoresizingMask key="autoresizingMask"/>
-        </view>
+        <collectionViewItem id="Z3W-rB-2at"/>
     </objects>
     <resources>
         <image name="power" width="491.51998901367188" height="491.51998901367188"/>
