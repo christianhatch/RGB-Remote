@@ -11,7 +11,11 @@ import UIKit
 
 class TextViewController: UIViewController {
     
-    var text: String?
+    var text: String? {
+        didSet {
+            textView.text = text
+        }
+    }
     
     private var textView: UITextView!
     

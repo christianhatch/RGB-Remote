@@ -9,11 +9,11 @@
 import UIKit
 import ChameleonFramework
 
-class SecondViewController: UIViewController {
+class ButtonListViewController: UIViewController {
     private let actions = Command.rgbww
 }
 
-extension SecondViewController {
+extension ButtonListViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ extension SecondViewController {
 
 //MARK: - TableView Delegate
 
-extension SecondViewController: UITableViewDataSource {
+extension ButtonListViewController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -53,11 +53,12 @@ extension SecondViewController: UITableViewDataSource {
 
 //MARK: - TableView DataSource 
 
-extension SecondViewController: UITableViewDelegate {
+extension ButtonListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        APIManager.sendCommand(actions[indexPath.row])
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
+        APIManager.sendCommand(actions[indexPath.row])
     }
 }
 

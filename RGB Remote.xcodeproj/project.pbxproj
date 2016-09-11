@@ -29,11 +29,10 @@
 		45372E901CAE53BB0063C288 /* ButtonCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45372E8E1CAE53BB0063C288 /* ButtonCollectionViewItem.xib */; };
 		45372E941CAE56F30063C288 /* RGBWWDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* RGBWWDataSource.swift */; };
 		45372E951CAE56F30063C288 /* RGBWWDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* RGBWWDataSource.swift */; };
-		45372E971CAECDFF0063C288 /* OSXDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E961CAECDFF0063C288 /* OSXDataSource.swift */; };
 		45372E981CAECDFF0063C288 /* OSXDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E961CAECDFF0063C288 /* OSXDataSource.swift */; };
 		453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C427C1C5AE40B001D2D7E /* AppDelegate.swift */; };
-		453C427F1C5AE40B001D2D7E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C427E1C5AE40B001D2D7E /* FirstViewController.swift */; };
-		453C42811C5AE40B001D2D7E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C42801C5AE40B001D2D7E /* SecondViewController.swift */; };
+		453C427F1C5AE40B001D2D7E /* ButtonGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C427E1C5AE40B001D2D7E /* ButtonGridViewController.swift */; };
+		453C42811C5AE40B001D2D7E /* ButtonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C42801C5AE40B001D2D7E /* ButtonListViewController.swift */; };
 		453C42841C5AE40B001D2D7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453C42821C5AE40B001D2D7E /* Main.storyboard */; };
 		453C42861C5AE40B001D2D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453C42851C5AE40B001D2D7E /* Assets.xcassets */; };
 		453C42891C5AE40B001D2D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453C42871C5AE40B001D2D7E /* LaunchScreen.storyboard */; };
@@ -94,8 +93,8 @@
 		45372E961CAECDFF0063C288 /* OSXDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSXDataSource.swift; sourceTree = "<group>"; };
 		453C42791C5AE40B001D2D7E /* RGB Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RGB Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		453C427C1C5AE40B001D2D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		453C427E1C5AE40B001D2D7E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		453C42801C5AE40B001D2D7E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		453C427E1C5AE40B001D2D7E /* ButtonGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGridViewController.swift; sourceTree = "<group>"; };
+		453C42801C5AE40B001D2D7E /* ButtonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonListViewController.swift; sourceTree = "<group>"; };
 		453C42831C5AE40B001D2D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		453C42851C5AE40B001D2D7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453C42881C5AE40B001D2D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -145,10 +144,8 @@
 				45372E961CAECDFF0063C288 /* OSXDataSource.swift */,
 				4501F7E41C8FEB6D00386E55 /* MainWindow.swift */,
 				4501F7DD1C8FDE4900386E55 /* MainMenu.xib */,
-				45372E8D1CAE53BB0063C288 /* ButtonCollectionViewItem.swift */,
-				45372E8E1CAE53BB0063C288 /* ButtonCollectionViewItem.xib */,
-				4501F7DB1C8FDE4900386E55 /* Assets.xcassets */,
-				4501F7E01C8FDE4900386E55 /* Info.plist */,
+				455DF02C1D349A4E00B5FB6B /* Views */,
+				455DF02D1D349A5300B5FB6B /* Supprting Files */,
 			);
 			path = "RGB Remote OSX";
 			sourceTree = "<group>";
@@ -157,9 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				45372E931CAE56F30063C288 /* RGBWWDataSource.swift */,
-				453C42901C5AE595001D2D7E /* APIManager.swift */,
-				4501425B1CA0BEB200DE77E6 /* Command.swift */,
-				4506E5511CA3869F006F5694 /* Logger.swift */,
+				455DF0291D349A0E00B5FB6B /* Controllers */,
+				455DF0281D349A0500B5FB6B /* Models */,
 			);
 			name = Common;
 			path = "RGB Remote";
@@ -213,19 +209,70 @@
 			children = (
 				458797C01C69B9D90075B511 /* Util.swift */,
 				453C427C1C5AE40B001D2D7E /* AppDelegate.swift */,
+				45C604911CA3C453007E18D7 /* iOSDataSource.swift */,
 				453C42821C5AE40B001D2D7E /* Main.storyboard */,
 				4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */,
-				453C427E1C5AE40B001D2D7E /* FirstViewController.swift */,
-				45C604911CA3C453007E18D7 /* iOSDataSource.swift */,
-				453C42801C5AE40B001D2D7E /* SecondViewController.swift */,
+				455DF0271D3499F700B5FB6B /* ViewControllers */,
+				455DF02B1D349A3A00B5FB6B /* Supporting Files */,
+			);
+			name = "RGB Remote iOS";
+			path = "RGB Remote";
+			sourceTree = "<group>";
+		};
+		455DF0271D3499F700B5FB6B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				453C427E1C5AE40B001D2D7E /* ButtonGridViewController.swift */,
+				453C42801C5AE40B001D2D7E /* ButtonListViewController.swift */,
 				4506E54D1CA36F24006F5694 /* LogViewController.swift */,
 				4506E54F1CA3867F006F5694 /* TextViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		455DF0281D349A0500B5FB6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4501425B1CA0BEB200DE77E6 /* Command.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		455DF0291D349A0E00B5FB6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				453C42901C5AE595001D2D7E /* APIManager.swift */,
+				4506E5511CA3869F006F5694 /* Logger.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		455DF02B1D349A3A00B5FB6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				453C42851C5AE40B001D2D7E /* Assets.xcassets */,
 				453C42871C5AE40B001D2D7E /* LaunchScreen.storyboard */,
 				453C428A1C5AE40B001D2D7E /* Info.plist */,
 			);
-			name = "RGB Remote iOS";
-			path = "RGB Remote";
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		455DF02C1D349A4E00B5FB6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45372E8D1CAE53BB0063C288 /* ButtonCollectionViewItem.swift */,
+				45372E8E1CAE53BB0063C288 /* ButtonCollectionViewItem.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		455DF02D1D349A5300B5FB6B /* Supprting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4501F7DB1C8FDE4900386E55 /* Assets.xcassets */,
+				4501F7E01C8FDE4900386E55 /* Info.plist */,
+			);
+			name = "Supprting Files";
 			sourceTree = "<group>";
 		};
 		77534B22B64C8C48D4AFB8F9 /* Frameworks */ = {
@@ -509,17 +556,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				453C42911C5AE595001D2D7E /* APIManager.swift in Sources */,
-				453C42811C5AE40B001D2D7E /* SecondViewController.swift in Sources */,
+				453C42811C5AE40B001D2D7E /* ButtonListViewController.swift in Sources */,
 				458797C11C69B9D90075B511 /* Util.swift in Sources */,
 				453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */,
 				4506E5521CA3869F006F5694 /* Logger.swift in Sources */,
 				45C604921CA3C453007E18D7 /* iOSDataSource.swift in Sources */,
-				453C427F1C5AE40B001D2D7E /* FirstViewController.swift in Sources */,
+				453C427F1C5AE40B001D2D7E /* ButtonGridViewController.swift in Sources */,
 				4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */,
 				4501425C1CA0BEB200DE77E6 /* Command.swift in Sources */,
 				45372E941CAE56F30063C288 /* RGBWWDataSource.swift in Sources */,
 				4506E5501CA3867F006F5694 /* TextViewController.swift in Sources */,
-				45372E971CAECDFF0063C288 /* OSXDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +634,7 @@
 				INFOPLIST_FILE = "RGB Remote OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knotlabs.RGB-Remote-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -605,6 +652,7 @@
 				INFOPLIST_FILE = "RGB Remote OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knotlabs.RGB-Remote-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

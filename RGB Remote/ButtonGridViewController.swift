@@ -10,7 +10,7 @@ import UIKit
 import ChameleonFramework
 
 
-class FirstViewController: UIViewController {
+class ButtonGridViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -21,7 +21,7 @@ class FirstViewController: UIViewController {
 
 //MARK: - UIKit
 
-extension FirstViewController {
+extension ButtonGridViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

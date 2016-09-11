@@ -16,6 +16,10 @@ enum Command: Int {
                                     .UV, .IndigoWW, .VioletWW, .PurpleWW,
                                     .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW, .Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
     
+    static func rgb() -> [Command] {
+        return Command.basicControls + Command.basicColors + Command.rgbControls + Command.rgbColors + Command.effects
+    }
+    
 //    static var rgb: [Command] = Command.basicControls + Command.basicColors + Command.rgbControls + Command.rgbColors + Command.effects
 
 //    static let rgbww: [Command] = Command.basicControls + Command.basicColors + Command.wwControls + Command.rgbwwColors + Command.effects
@@ -126,6 +130,10 @@ enum Command: Int {
     case BlueUp
     case BlueDown
 }
+
+
+
+
 
 
 //MARK: - Friendly Description
