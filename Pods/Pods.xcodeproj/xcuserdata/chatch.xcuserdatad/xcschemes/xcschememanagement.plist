@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OBMenuBarWindow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,11 +42,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>10E8F3E167EAAF7A31E5F13AC22DE639</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>37139FF5A7A7004CCAEAF86EFE0014A6</key>
 		<dict>
 			<key>primary</key>
@@ -52,17 +52,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64EA2E017EE1093C758D0751DA68F58C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>89C69EB624EC8137588D9568F2E11964</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8A46F3686C46DC9D9C11D7DE4BDDBB54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9B57F4EE4746045CEAE2D933A3C8EC9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BFFCBB164E74B4AA50B2E66B53D05C55</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6E2C467CEE14FECBC13E2F3C5094ACC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

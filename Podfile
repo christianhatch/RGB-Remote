@@ -22,7 +22,7 @@ target 'RGB Remote' do
 
     #UI stuff
     pod 'SVProgressHUD'
-#    pod 'ChameleonFramework/Swift'
+    pod 'ChameleonFramework'
 
 end
 
