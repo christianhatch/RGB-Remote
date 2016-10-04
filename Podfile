@@ -7,7 +7,7 @@ target 'RGB Remote OSX' do
     platform :osx, '10.10'
 
     pod 'OBMenuBarWindow'
-    pod 'Alamofire'
+    pod 'Alamofire', '~> 3.5.0'
 
 end
 
@@ -17,13 +17,12 @@ target 'RGB Remote' do
     platform :ios, '8.0'
 
 
-#internal stuff
-pod 'Alamofire'
-pod 'ObjectMapper', '~> 0.19'
+    #internal stuff
+    pod 'Alamofire', '~> 3.5.0'
 
-#UI stuff
-pod 'SVProgressHUD'
-pod 'ChameleonFramework/Swift'
+    #UI stuff
+    pod 'SVProgressHUD'
+#    pod 'ChameleonFramework/Swift'
 
 end
 

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3335E62AEB32F1E49E9E2914'
+               BlueprintIdentifier = '399F5CDC37A3AD9F1475B8044305EDC3'
                BlueprintName = 'OBMenuBarWindow'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'OBMenuBarWindow.framework'>

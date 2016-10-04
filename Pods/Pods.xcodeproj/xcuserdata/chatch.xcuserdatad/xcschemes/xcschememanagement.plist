@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ChameleonFramework.xcscheme</key>
+		<key>Alamofire-OSX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Alamofire-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -14,22 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ObjectMapper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-RGB Remote OSX-Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-RGB Remote OSX.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-RGB Remote-Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,7 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0ED189FE2D9FF1DB006374C963F1F0F0</key>
+		<key>10E8F3E167EAAF7A31E5F13AC22DE639</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37139FF5A7A7004CCAEAF86EFE0014A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,32 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5172ACAB7FEA22813859DC97CA0AA16F</key>
+		<key>64EA2E017EE1093C758D0751DA68F58C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BE9E5C4A8CA637577FB33597ECB6101</key>
+		<key>89C69EB624EC8137588D9568F2E11964</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65F91882795A3DEAA66E2AB268209BB6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6FC3DC2CFF8643D867B7BD1BE02F9626</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AC063DC5BC0DCA4DB82ABBA3B46210CB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E82421CBEE4F9A6C8D5D9FEC459CE24A</key>
+		<key>8A46F3686C46DC9D9C11D7DE4BDDBB54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
