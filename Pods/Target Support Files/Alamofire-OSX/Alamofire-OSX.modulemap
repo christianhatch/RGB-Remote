@@ -1,5 +1,5 @@
 framework module Alamofire {
-  umbrella header "Pods-RGB Remote-Alamofire-umbrella.h"
+  umbrella header "Alamofire-OSX-umbrella.h"
 
   export *
   module * { export * }

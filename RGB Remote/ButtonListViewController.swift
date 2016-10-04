@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ChameleonFramework
 
 class ButtonListViewController: UIViewController {
     private let actions = Command.rgbww

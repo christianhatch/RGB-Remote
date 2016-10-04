@@ -52,7 +52,7 @@ extension iOSDataSource: UICollectionViewDataSource {
         
         cell.button.setTitle(command.humanReadableDescription(), forState: .Normal)
         cell.button.tag = command.rawValue
-        cell.button.setTitleColor(command.color(cell.contentView.backgroundColor), forState: .Normal)
+        cell.button.setTitleColor(command.color(), forState: .Normal)
         
         switch command {
         case .BrightnessUp, .BrightnessDown, .WhiteUp, .WhiteDown:
@@ -139,13 +139,13 @@ class ButtonCell: UICollectionViewCell {
 
 
 
-
+import ChameleonFramework
 
 //MARK: - Color Model
 
 extension Command {
     
-    func color(contrasting: UIColor? = UIColor.blackColor()) -> UIColor {
+    func color() -> UIColor {
         
         switch self {
         case .Red:
@@ -188,9 +188,8 @@ extension Command {
             return UIColor.flatPinkColor().lightenByPercentage(0.5)
             
         default:
-            return UIColor(contrastingBlackOrWhiteColorOn: contrasting, isFlat: true).darkenByPercentage(0.1)
+            return UIColor.whiteColor()
         }
-        
     }
     
 }
