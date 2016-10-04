@@ -23,9 +23,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.isDetachable = false
         window.attachedToMenuBar = true
         
-        window.collectionView.dataSource = dataSource
-        window.collectionView.delegate = dataSource
-        dataSource.register(window.collectionView)
+//        window.collectionView.dataSource = dataSource
+//        window.collectionView.delegate = dataSource
+//        dataSource.register(window.collectionView)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

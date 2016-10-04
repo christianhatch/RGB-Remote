@@ -25,8 +25,6 @@
 		4506E5501CA3867F006F5694 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E54F1CA3867F006F5694 /* TextViewController.swift */; };
 		4506E5521CA3869F006F5694 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E5511CA3869F006F5694 /* Logger.swift */; };
 		4506E5531CA3869F006F5694 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E5511CA3869F006F5694 /* Logger.swift */; };
-		45372E8F1CAE53BB0063C288 /* ButtonCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E8D1CAE53BB0063C288 /* ButtonCollectionViewItem.swift */; };
-		45372E901CAE53BB0063C288 /* ButtonCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45372E8E1CAE53BB0063C288 /* ButtonCollectionViewItem.xib */; };
 		45372E941CAE56F30063C288 /* RGBWWDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* RGBWWDataSource.swift */; };
 		45372E951CAE56F30063C288 /* RGBWWDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* RGBWWDataSource.swift */; };
 		45372E981CAECDFF0063C288 /* OSXDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E961CAECDFF0063C288 /* OSXDataSource.swift */; };
@@ -88,8 +86,6 @@
 		4506E54D1CA36F24006F5694 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		4506E54F1CA3867F006F5694 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		4506E5511CA3869F006F5694 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		45372E8D1CAE53BB0063C288 /* ButtonCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewItem.swift; sourceTree = "<group>"; };
-		45372E8E1CAE53BB0063C288 /* ButtonCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCollectionViewItem.xib; sourceTree = "<group>"; };
 		45372E931CAE56F30063C288 /* RGBWWDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBWWDataSource.swift; sourceTree = "<group>"; };
 		45372E961CAECDFF0063C288 /* OSXDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSXDataSource.swift; sourceTree = "<group>"; };
 		453C42791C5AE40B001D2D7E /* RGB Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RGB Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,7 +140,6 @@
 				45372E961CAECDFF0063C288 /* OSXDataSource.swift */,
 				4501F7E41C8FEB6D00386E55 /* MainWindow.swift */,
 				4501F7DD1C8FDE4900386E55 /* MainMenu.xib */,
-				455DF02C1D349A4E00B5FB6B /* Views */,
 				455DF02D1D349A5300B5FB6B /* Supprting Files */,
 			);
 			path = "RGB Remote OSX";
@@ -255,15 +250,6 @@
 				453C428A1C5AE40B001D2D7E /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		455DF02C1D349A4E00B5FB6B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				45372E8D1CAE53BB0063C288 /* ButtonCollectionViewItem.swift */,
-				45372E8E1CAE53BB0063C288 /* ButtonCollectionViewItem.xib */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		455DF02D1D349A5300B5FB6B /* Supprting Files */ = {
@@ -408,7 +394,6 @@
 			files = (
 				4501F7DC1C8FDE4900386E55 /* Assets.xcassets in Resources */,
 				4501F7DF1C8FDE4900386E55 /* MainMenu.xib in Resources */,
-				45372E901CAE53BB0063C288 /* ButtonCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +524,6 @@
 				4501F7E51C8FEB6D00386E55 /* MainWindow.swift in Sources */,
 				4501F7DA1C8FDE4900386E55 /* AppDelegate.swift in Sources */,
 				4501425D1CA0BEB200DE77E6 /* Command.swift in Sources */,
-				45372E8F1CAE53BB0063C288 /* ButtonCollectionViewItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +623,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knotlabs.RGB-Remote-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -657,6 +642,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knotlabs.RGB-Remote-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -673,6 +659,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -689,6 +676,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -731,6 +719,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -772,6 +761,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

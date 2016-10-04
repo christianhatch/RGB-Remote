@@ -56,7 +56,6 @@ class APIManager {
                 .responseString(completionHandler: { (response) in
                     Logger.sharedLogger.printMessage(response.description)
                 })
-            break
         }
 
     }

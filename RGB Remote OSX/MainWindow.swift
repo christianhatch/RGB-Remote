@@ -23,12 +23,12 @@ class MainWindow: OBMenuBarWindow {
 
 extension MainWindow {
     
-    @IBAction func buttonClicked(sender: NSButton) {
+    @IBAction func buttonClickedWithSender(sender: NSButton) {
         guard let tag = Command(rawValue: sender.tag) else { return }
         APIManager.sendCommand(tag)
     }
     
-    @IBAction func powerButtonClicked(sender: AnyObject) {
+    @IBAction func powerButtonClickedWithSender(sender: AnyObject) {
         NSApp.terminate(self)
     }
     
