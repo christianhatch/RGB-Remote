@@ -17,7 +17,7 @@ class TextViewController: UIViewController {
         }
     }
     
-    private var textView: UITextView!
+    fileprivate var textView: UITextView!
     
     
     init(string: String?) {
@@ -29,7 +29,7 @@ class TextViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 }
@@ -43,20 +43,20 @@ extension TextViewController {
         
         textView = UITextView(frame: view.frame)
         view.addSubview(textView)
-        textView.editable = false
-        textView.font = UIFont.systemFontOfSize(16)
-        textView.backgroundColor = Style.Color.BackgroundColor.uicolor()
-        textView.textColor = Style.Color.TextColor.uicolor()
+        textView.isEditable = false
+        textView.font = UIFont.systemFont(ofSize: 16)
+        textView.backgroundColor = Style.Color.backgroundColor.color()
+        textView.textColor = Style.Color.textColor.color()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         textView.text = text
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 }
 

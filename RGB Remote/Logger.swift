@@ -20,10 +20,10 @@ class Logger: NSObject {
     
     var messages: [String] = []
     
-    func printMessage(message: String) {
+    func printMessage(_ message: String) {
         print(message)
         Logger.sharedLogger.messages.append(message)
-        NSNotificationCenter.defaultCenter().postNotificationName(LoggerNotification.NewMessage.rawValue, object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: LoggerNotification.NewMessage.rawValue), object: nil)
     }
     
 }

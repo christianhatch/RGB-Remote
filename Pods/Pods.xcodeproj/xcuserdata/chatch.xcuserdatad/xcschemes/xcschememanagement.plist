@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ChameleonFramework.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>OBMenuBarWindow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,12 +24,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-RGB Remote Widget iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RGB Remote.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SnapKit-OSX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SnapKit-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,6 +62,31 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4181F51F77819190EE61755F7CC050DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>46817F5AEE1F52308F756F106730C3C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66BE16F7EFF8DCC2E960F341354024C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A413915981CCF0B736FAC0AFF7D9090</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8530253909CC812ECC6BD9B05A187DED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>89C69EB624EC8137588D9568F2E11964</key>
 		<dict>
 			<key>primary</key>
@@ -63,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>9B57F4EE4746045CEAE2D933A3C8EC9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD2F60F4E656CC45ACEC7CC8EFF829E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

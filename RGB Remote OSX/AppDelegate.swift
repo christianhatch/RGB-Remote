@@ -13,22 +13,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: MainWindow!
     
-    private let dataSource = OSXDataSource()
+    fileprivate let dataSource = OSXDataSource()
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
 
         window.menuBarIcon = NSImage(named: "MenuBarIcon")
         window.highlightedMenuBarIcon = NSImage(named: "MenuBarIcon_highlighted")
         window.hasMenuBarIcon = true
         window.isDetachable = false
         window.attachedToMenuBar = true
+        window.titleBarHeight = 0
         
 //        window.collectionView.dataSource = dataSource
 //        window.collectionView.delegate = dataSource
 //        dataSource.register(window.collectionView)
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
 

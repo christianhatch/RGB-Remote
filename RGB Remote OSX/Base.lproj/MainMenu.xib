@@ -819,7 +819,7 @@
                             <action selector="buttonClickedWithSender:" target="QvC-M9-y7g" id="NYx-tI-39J"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="do0-aD-mX2">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="25" translatesAutoresizingMaskIntoConstraints="NO" id="do0-aD-mX2">
                         <rect key="frame" x="125" y="1" width="126" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Candlelight" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="F9i-Tp-nCn">

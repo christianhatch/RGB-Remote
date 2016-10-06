@@ -14,45 +14,45 @@ class APIManager {
     
     static let sharedManager = APIManager()
     
-    private lazy var manager: Manager = {
-        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+    fileprivate lazy var manager: SessionManager = {
+        let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 2
         
-        let man = Manager(configuration: config)
+        let man = SessionManager(configuration: config)
         return man
     }()
     
-    private class func baseEndpoint() -> String {
-        return "http://lights.local:3000"
+    fileprivate class func baseEndpoint() -> String {
+        return "http://10.0.0.51:3000"
     }
 
-    class func startSendingCommand(command: Command) {
+    class func startSendingCommand(_ command: Command) {
         let logMessage = "\(#function) \(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
         
-        sharedManager.manager.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start")
+        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start", method: .post)
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
             })
     }
     
-    class func stopSendingCommand(command: Command) {
+    class func stopSendingCommand(_ command: Command) {
         let logMessage = "\(#function) \(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
 
-        sharedManager.manager.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop")
+        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop", method: .post)
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
             })
     }
     
-    class func sendCommand(command: Command) {
+    class func sendCommand(_ command: Command) {
         let logMessage = "\(#function) \(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
 
         switch command {
         default:
-            sharedManager.manager.request(.POST, "\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())")
+            sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())", method: .post)
                 .responseString(completionHandler: { (response) in
                     Logger.sharedLogger.printMessage(response.description)
                 })
