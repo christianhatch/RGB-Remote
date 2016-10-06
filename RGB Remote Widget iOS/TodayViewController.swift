@@ -50,7 +50,6 @@ extension TodayViewController {
     
     override func viewDidLayoutSubviews() {
         preferredContentSize = collectionView.collectionViewLayout.collectionViewContentSize
-
         super.viewDidLayoutSubviews()
     }
 }
