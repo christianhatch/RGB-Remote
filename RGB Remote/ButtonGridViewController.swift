@@ -56,7 +56,7 @@ extension ButtonGridViewController {
             
             let tapper = UITapGestureRecognizer(target: self, action: #selector(self.showList))
             tapper.numberOfTapsRequired = 2
-            collectionView.addGestureRecognizer(tapper)
+            view.addGestureRecognizer(tapper)
         }
         
         setupView()

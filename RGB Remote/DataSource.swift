@@ -82,7 +82,7 @@ class RGBWWDataSource: DataSource {
 class CoreDataSource: DataSource {
     
     let sections: [Section] = [Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: Command.basicColors)]
+                               Section(type: .basicColors, items: [.white, .candle])]
 }
 
 

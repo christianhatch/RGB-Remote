@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.hasMenuBarIcon = true
         window.isDetachable = false
         window.attachedToMenuBar = true
+        window.titleBarHeight = 0
         
 //        window.collectionView.dataSource = dataSource
 //        window.collectionView.delegate = dataSource

@@ -49,6 +49,10 @@
 		45EE26E21DA6345600ED634C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C42901C5AE595001D2D7E /* APIManager.swift */; };
 		45EE26E31DA6345600ED634C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E5511CA3869F006F5694 /* Logger.swift */; };
 		45EE26E41DA6345600ED634C /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* DataSource.swift */; };
+		45EE26E51DA63B6600ED634C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458797C01C69B9D90075B511 /* Util.swift */; };
+		45EE26E61DA63B6E00ED634C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458797C01C69B9D90075B511 /* Util.swift */; };
+		45EE26E71DA63B7000ED634C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458797C01C69B9D90075B511 /* Util.swift */; };
+		45EE26E81DA63F0600ED634C /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */; };
 		A98A9B4C3437E1EBF4C7BFFA /* Pods_RGB_Remote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC028D39F11A0341D1609F90 /* Pods_RGB_Remote.framework */; };
 		B1FD473662C3A234F7D1874C /* Pods_RGB_Remote_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173ABFBA79792066695492FA /* Pods_RGB_Remote_OSX.framework */; };
 /* End PBXBuildFile section */
@@ -500,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4521EB451DA6029700042458 /* MainInterface.storyboard in Resources */,
+				45EE26E81DA63F0600ED634C /* ButtonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +652,7 @@
 				45372E951CAE56F30063C288 /* DataSource.swift in Sources */,
 				4506E5531CA3869F006F5694 /* Logger.swift in Sources */,
 				4501F7E61C8FEF5800386E55 /* APIManager.swift in Sources */,
+				45EE26E71DA63B7000ED634C /* Util.swift in Sources */,
 				45372E981CAECDFF0063C288 /* OSXDataSource.swift in Sources */,
 				4501F7E51C8FEB6D00386E55 /* MainWindow.swift in Sources */,
 				4501F7DA1C8FDE4900386E55 /* AppDelegate.swift in Sources */,
@@ -659,6 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45EE26E21DA6345600ED634C /* APIManager.swift in Sources */,
+				45EE26E61DA63B6E00ED634C /* Util.swift in Sources */,
 				4501F7F31C8FFC3600386E55 /* TodayViewController.swift in Sources */,
 				4501425E1CA0BEB200DE77E6 /* Command.swift in Sources */,
 				45EE26E41DA6345600ED634C /* DataSource.swift in Sources */,
@@ -674,6 +681,7 @@
 				4521EB421DA6029700042458 /* TodayViewController.swift in Sources */,
 				45EE26DD1DA6344A00ED634C /* iOSCollectionViewDataSource.swift in Sources */,
 				45EE26E01DA6345300ED634C /* DataSource.swift in Sources */,
+				45EE26E51DA63B6600ED634C /* Util.swift in Sources */,
 				45EE26DF1DA6345300ED634C /* Logger.swift in Sources */,
 				45EE26E11DA6345300ED634C /* Command.swift in Sources */,
 			);

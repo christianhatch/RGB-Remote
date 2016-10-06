@@ -45,8 +45,8 @@ extension TextViewController {
         view.addSubview(textView)
         textView.isEditable = false
         textView.font = UIFont.systemFont(ofSize: 16)
-        textView.backgroundColor = Style.Color.backgroundColor.uicolor()
-        textView.textColor = Style.Color.textColor.uicolor()
+        textView.backgroundColor = Style.Color.backgroundColor.color()
+        textView.textColor = Style.Color.textColor.color()
     }
     
     override func viewWillAppear(_ animated: Bool) {

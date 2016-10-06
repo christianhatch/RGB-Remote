@@ -31,6 +31,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="yQQ-24-8M8" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="EgT-Ph-aBH"/>
+                            <constraint firstItem="yQQ-24-8M8" firstAttribute="height" secondItem="S3S-Oj-5AN" secondAttribute="height" id="aQT-yg-ea6"/>
                             <constraint firstAttribute="trailing" secondItem="yQQ-24-8M8" secondAttribute="trailing" id="bCV-nh-tmt"/>
                             <constraint firstAttribute="bottom" secondItem="yQQ-24-8M8" secondAttribute="bottom" id="jL0-nk-p0X"/>
                             <constraint firstItem="yQQ-24-8M8" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="vcY-7w-2aD"/>
@@ -43,7 +44,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="50"/>
                     <connections>
-                        <outlet property="collectionView" destination="yQQ-24-8M8" id="F07-Pv-LKP"/>
+                        <outlet property="collectionView" destination="yQQ-24-8M8" id="kdd-IH-Bnp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

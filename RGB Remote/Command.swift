@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Command: Int {
     
@@ -280,6 +281,7 @@ extension Command {
     
 }
 
+
 //MARK: - Color Model
 
 extension Command {
@@ -290,53 +292,53 @@ extension Command {
         case .red:
             return Style.Color.red.color()
         case .green:
-            return .flatGreen()
+            return Style.Color.green.color()
         case .blue:
-            return .flatBlue()
+            return Style.Color.blue.color()
         case .white:
-            return UIColor.flatWhite().darken(byPercentage: 0.1)
+            return Style.Color.white.color().darken(byPercentage: 0.1)!
             
         case .whiteOn, .whiteOff:
-            return .flatYellow()
+            return Style.Color.yellow.color()
             
         case .yellowOrange, .yellowGreen, .greenYellow:
-            return .flatOrange()
+            return Style.Color.orange.color()
             
         case .candle, .orange, .orangeYellow, .yellow:
-            return .flatOrange()
+            return Style.Color.orange.color()
             
         case .tealBlue, .indigoBlue:
-            return .flatPowderBlue()
+            return Style.Color.powderBlue.color()
             
         case .mossGreen, .turquoise:
-            return .flatGreen()
+            return Style.Color.green.color()
             
         case .lightBlue, .lightBlueWW, .skyBlue, .skyBlueWW:
-            return UIColor.flatBlue().lighten(byPercentage: 0.5)
+            return Style.Color.blue.color().lighten(byPercentage: 0.5)!
             
         case .deepPurple, .indigo, .violet, .purple:
-            return UIColor.flatPurple().lighten(byPercentage: 0.3)
+            return Style.Color.purple.color().lighten(byPercentage: 0.3)!
             
         case .uv, .indigoWW, .violetWW, .purpleWW:
-            return UIColor.flatPurple().lighten(byPercentage: 0.3)
+            return Style.Color.purple.color().lighten(byPercentage: 0.3)!
             
         case .tealWhite, .indigoWhite, .tealWhiteWW, .indigoWhiteWW:
-            return UIColor.flatTeal().lighten(byPercentage: 0.2)
+            return Style.Color.teal.color().lighten(byPercentage: 0.2)!
             
         case .pinkWhite, .purpleWhite, .pinkWhiteWW, .purpleWhiteWW:
-            return UIColor.flatPink().lighten(byPercentage: 0.5)
+            return Style.Color.pink.color().lighten(byPercentage: 0.5)!
             
         case .redUp, .redDown:
-            return .flatRed()
+            return Style.Color.red.color()
             
         case .greenUp, .greenDown:
-            return .flatGreen()
+            return Style.Color.green.color()
             
         case .blueUp, .blueDown:
-            return .flatBlue()
+            return Style.Color.blue.color()
             
         default:
-            return .white
+            return Style.Color.white.color()
         }
     }
     

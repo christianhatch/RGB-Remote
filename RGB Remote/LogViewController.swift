@@ -19,8 +19,8 @@ extension LogViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = Style.Color.backgroundColor.uicolor()
-        tableView.backgroundColor = Style.Color.backgroundColor.uicolor()
+        view.backgroundColor = Style.Color.backgroundColor.color()
+        tableView.backgroundColor = Style.Color.backgroundColor.color()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadAndScrollToBottom), name: NSNotification.Name(rawValue: LoggerNotification.NewMessage.rawValue), object: nil)
     }
@@ -75,10 +75,10 @@ extension LogViewController: UITableViewDataSource {
         
         let text = Logger.sharedLogger.messages[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = text
-        cell.textLabel?.textColor = Style.Color.textColor.uicolor()
+        cell.textLabel?.textColor = Style.Color.textColor.color()
         
-        cell.contentView.backgroundColor = Style.Color.backgroundColor.uicolor()
-        cell.backgroundColor = Style.Color.backgroundColor.uicolor()
+        cell.contentView.backgroundColor = Style.Color.backgroundColor.color()
+        cell.backgroundColor = Style.Color.backgroundColor.color()
         return cell
     }
     
