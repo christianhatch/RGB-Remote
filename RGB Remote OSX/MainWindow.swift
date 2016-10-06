@@ -25,7 +25,7 @@ extension MainWindow {
     
     @IBAction func buttonClickedWithSender(_ sender: NSButton) {
         guard let tag = Command(rawValue: sender.tag) else { return }
-        APIManager.sendCommand(tag)
+        APIManager.send(command: tag, forRemote: .rgbww)
     }
     
     @IBAction func powerButtonClickedWithSender(_ sender: AnyObject) {

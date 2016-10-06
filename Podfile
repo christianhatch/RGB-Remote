@@ -7,6 +7,7 @@ def rgb_pods
     pod 'Alamofire', '~> 4.0'
 end
 
+#macos
 
 target 'RGB Remote OSX' do
     
@@ -20,6 +21,16 @@ target 'RGB Remote OSX' do
 
 end
 
+target 'RGB Remote Widget' do
+    
+    platform :osx, '10.12'
+    
+    rgb_pods
+    
+end
+
+
+#ios
 
 target 'RGB Remote' do
     
@@ -40,9 +51,3 @@ target 'RGB Remote Widget iOS' do
     rgb_pods
 
 end
-
-
-#post_install do | installer |
-#require 'fileutils'
-#FileUtils.cp_r('Pods/Target Support Files/Pods-Dockwa/Pods-Dockwa-acknowledgements.plist', 'Dockwa/Supporting Files/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
-#end

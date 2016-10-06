@@ -69,7 +69,7 @@ extension TodayViewController: NCWidgetProviding {
             dataSource = CoreCollectionViewDataSource()
 
         case .expanded:
-            dataSource = iOSCollectionViewDataSource(dataSource: RGBWWNoEffectsDataSource())
+            dataSource = TodayWidgetCollectionViewDataSource(remoteControl: RGBWWNoEffectsRemoteControl())
         }
     }
 }
@@ -82,17 +82,25 @@ extension TodayViewController: NCWidgetProviding {
 
 
 
-class CoreCollectionViewDataSource: iOSCollectionViewDataSource {
+class CoreCollectionViewDataSource: TodayWidgetCollectionViewDataSource {
     init() {
-        super.init(dataSource: CoreDataSource())
+        super.init(remoteControl: CoreRemoteControl())
     }
+    //we dont want any spacing, because the today widget has a fixed small size
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 0)
     }
 }
 
 
-
+class TodayWidgetCollectionViewDataSource: iOSCollectionViewDataSource {
+    //make the cells a bit lighter color to match the today widget color scheme
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! ButtonCell
+        cell.button.backgroundColor = Style.Color.darkGray.color()
+        return cell
+    }
+}
 
 
 

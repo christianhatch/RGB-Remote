@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 
         window.menuBarIcon = NSImage(named: "MenuBarIcon")
-        window.highlightedMenuBarIcon = NSImage(named: "MenuBarIcon_highlighted")
+//        window.highlightedMenuBarIcon = NSImage(named: "MenuBarIcon_highlighted")
         window.hasMenuBarIcon = true
         window.isDetachable = false
         window.attachedToMenuBar = true

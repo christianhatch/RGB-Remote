@@ -7,7 +7,11 @@
 //
 
 import Foundation
-import UIKit
+
+enum Macro: String {
+    case on
+    case off
+}
 
 enum Command: Int {
     
@@ -283,8 +287,12 @@ extension Command {
 
 
 //MARK: - Color Model
-
+#if !os(macOS)
+    import UIKit
+#endif
 extension Command {
+    
+    #if !os(macOS)
     
     func color() -> UIColor {
         
@@ -342,6 +350,7 @@ extension Command {
         }
     }
     
+    #endif
 }
 
 
@@ -504,6 +513,99 @@ extension Command {
     }
     
 }
+
+//proposed new organization:
+
+//enum CommandLED: Int {
+//    case on = 1
+//    case off
+//    case brightnessUp
+//    case brightnessDown //4
+//    
+//    case red //5
+//    case green
+//    case blue
+//    case white //8
+//    
+//    case whiteOn
+//    case whiteOff //10
+//    case whiteUp  //11
+//    case whiteDown
+//    case white25
+//    case white50
+//    case white75
+//    case white100 //16
+//    
+//    case jump3 //17
+//    case jump7
+//    
+//    case fade3 //19
+//    case fade7
+//    
+//    case flash //21
+//    case auto
+//    
+//    case quick //23
+//    case slow
+//}
+//
+//enum CommandRGB: Int {
+//    //    case RichOrange
+//    case yellowOrange
+//    case yellowGreen
+//    case greenYellow
+//    
+//    case tealBlue
+//    case skyBlue
+//    case indigoBlue
+//    case lightBlue
+//    
+//    case indigo
+//    case violet
+//    case purple
+//    case deepPurple
+//    
+//    case pinkWhite
+//    case purpleWhite
+//    case tealWhite
+//    case indigoWhite
+//    
+//    case diy1
+//    case diy2
+//    case diy3
+//    case diy4
+//    case diy5
+//    case diy6
+//    
+//    case redUp
+//    case redDown
+//    case greenUp
+//    case greenDown
+//    case blueUp
+//    case blueDown
+//}
+//
+//enum CommandRGBWW: Int {
+//    case candle //25
+//    case orange
+//    case orangeYellow
+//    case yellow
+//    
+//    case mossGreen
+//    case turquoise
+//    case lightBlueWW
+//    case skyBlueWW
+//    
+//    case uv
+//    case indigoWW
+//    case violetWW
+//    case purpleWW
+//    
+//    case pinkWhiteWW
+//    case purpleWhiteWW
+//    case tealWhiteWW
+//    case indigoWhiteWW
+//}
 
 
 

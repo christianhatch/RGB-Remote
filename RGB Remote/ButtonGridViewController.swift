@@ -23,7 +23,7 @@ class ButtonGridViewController: UIViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.dataSource = iOSCollectionViewDataSource(dataSource: RGBWWDataSource())
+        self.dataSource = iOSCollectionViewDataSource(remoteControl: RGBWWRemoteControl())
         self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         super.init(coder: aDecoder)
     }
@@ -54,9 +54,9 @@ extension ButtonGridViewController {
             }
             collectionView.reloadData()
             
-            let tapper = UITapGestureRecognizer(target: self, action: #selector(self.showList))
-            tapper.numberOfTapsRequired = 2
-            view.addGestureRecognizer(tapper)
+            let swiper = UISwipeGestureRecognizer(target: self, action: #selector(self.showList))
+            swiper.direction = [.left, .right]
+            view.addGestureRecognizer(swiper)
         }
         
         setupView()
@@ -66,7 +66,7 @@ extension ButtonGridViewController {
         super.viewDidAppear(animated)
         view.setNeedsUpdateConstraints()
         
-        collectionView.scrollToItem(at: dataSource.dataSource.lastIndexPath, at: .bottom, animated: false)
+        collectionView.scrollToItem(at: dataSource.lastIndexPath(), at: .bottom, animated: false)
     }
     
     override func updateViewConstraints() {

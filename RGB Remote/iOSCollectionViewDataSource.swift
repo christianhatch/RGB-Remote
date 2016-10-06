@@ -21,11 +21,11 @@ class iOSCollectionViewDataSource: NSObject {
             collectionViewRef?.reloadData()
         }
     }
-    let dataSource: DataSource
+    fileprivate let remoteControl: RemoteControl
     fileprivate var collectionViewRef: UICollectionView?
     
-    init(dataSource: DataSource) {
-        self.dataSource = dataSource
+    init(remoteControl: RemoteControl) {
+        self.remoteControl = remoteControl
         super.init()
     }
 }
@@ -35,6 +35,12 @@ class iOSCollectionViewDataSource: NSObject {
 
 extension iOSCollectionViewDataSource {
     
+    func lastIndexPath() -> IndexPath {
+        let section = remoteControl.sections.count-1
+        let item = remoteControl.sections[section].items.count-1
+        return IndexPath(item: item, section: section)
+    }
+    
     func register(_ collectionView: UICollectionView) {
         self.collectionViewRef = collectionView
         collectionView.register(UINib(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCell")
@@ -42,17 +48,17 @@ extension iOSCollectionViewDataSource {
     
     func buttonTouchDown(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
-        dataSource.buttonTouchDown(command)
+        remoteControl.buttonTouchDown(command)
     }
     
     func buttonTouchUp(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
-        dataSource.buttonTouchUp(command)
+        remoteControl.buttonTouchUp(command)
     }
     
     func buttonTapped(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
-        dataSource.buttonTapped(command)
+        remoteControl.buttonTapped(command)
     }
 }
 
@@ -64,7 +70,7 @@ extension iOSCollectionViewDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
-        let command = dataSource.sections[(indexPath as NSIndexPath).section].items[(indexPath as NSIndexPath).item]
+        let command = remoteControl.sections[indexPath.section].items[indexPath.item]
         
         cell.button.setTitle(command.humanReadableDescription(), for: UIControlState())
         cell.button.tag = command.rawValue
@@ -82,11 +88,11 @@ extension iOSCollectionViewDataSource: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.sections[section].items.count
+        return remoteControl.sections[section].items.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return dataSource.sections.count
+        return remoteControl.sections.count
     }
     
 }
@@ -113,7 +119,7 @@ extension iOSCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
         
         var desiredButtonsPerRow: CGFloat = 4
         
-        let section = dataSource.sections[indexPath.section]
+        let section = remoteControl.sections[indexPath.section]
         let command = section.items[indexPath.item]
         
         

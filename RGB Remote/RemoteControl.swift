@@ -9,6 +9,7 @@
 import Foundation
 
 
+//A SectionType is a generic way to organize groups of Commands, based on what those Commands are controlling.
 enum SectionType {
     case basicControls
     case basicColors
@@ -18,37 +19,43 @@ enum SectionType {
     case specialColors
 }
 
+//A Section is a collection of Commands organized by a particular type.
 struct Section {
     var type: SectionType
     var items: [Command]
 }
 
-
-
-protocol DataSource {
-    var sections: [Section] { get }
-    var lastIndexPath: IndexPath { get }
+//A RemoteControlDevice is the device to which the Commands of that RemoteControl will be directed.
+enum RemoteControlDevice: String {
+    case rgb
+    case rgbww
 }
 
-extension DataSource {
+
+//A Remote Control is a collection of sections of Commands, and a device type. Think of it as the physical remote control that you would hold in your hand. 
+protocol RemoteControl {
+    var sections: [Section] { get }
+    var device: RemoteControlDevice { get }
+    
+    func buttonTouchDown(_ command: Command)
+    func buttonTouchUp(_ command: Command)
+    func buttonTapped(_ command: Command)
+}
+
+extension RemoteControl {
     
     func buttonTouchDown(_ command: Command) {
-        APIManager.startSendingCommand(command)
+        APIManager.startSending(command: command, forRemote: device)
     }
     
     func buttonTouchUp(_ command: Command) {
-        APIManager.stopSendingCommand(command)
+        APIManager.stopSending(command: command, forRemote: device)
     }
     
     func buttonTapped(_ command: Command) {
-        APIManager.sendCommand(command)
+        APIManager.send(command: command, forRemote: device)
     }
     
-    var lastIndexPath: IndexPath {
-        let section = sections.count-1
-        let item = sections[section].items.count-1
-        return IndexPath(item: item, section: section)
-    }
 }
 
 
@@ -58,39 +65,43 @@ extension DataSource {
 
 //MARK: - RGB
 
-class RGBDataSource: DataSource {
+class RGBRemoteControl: RemoteControl {
     
     let sections: [Section] = [Section(type: .effects, items: Command.effects),
                                Section(type: .specialColors, items: Command.rgbColors),
                                Section(type: .specialControls, items: Command.rgbControls),
                                Section(type: .basicControls, items: Command.basicControls),
                                Section(type: .basicColors, items: Command.basicColors)]
+    let device: RemoteControlDevice = .rgb
 }
 
 //MARK: - RGBWW
 
-class RGBWWDataSource: DataSource {
+class RGBWWRemoteControl: RemoteControl {
     
     let sections: [Section] = [Section(type: .effects, items: Command.effects),
                                Section(type: .specialColors, items: Command.rgbwwColors),
                                Section(type: .specialControls, items: Command.wwControls),
                                Section(type: .basicControls, items: Command.basicControls),
                                Section(type: .basicColors, items: Command.basicColors)]
+    let device: RemoteControlDevice = .rgbww
 }
 
-class RGBWWNoEffectsDataSource: DataSource {
+class RGBWWNoEffectsRemoteControl: RemoteControl {
     
     let sections: [Section] = [Section(type: .specialColors, items: Command.rgbwwColors),
                                Section(type: .specialControls, items: Command.wwControls),
                                Section(type: .basicControls, items: Command.basicControls),
                                Section(type: .basicColors, items: Command.basicColors)]
+    let device: RemoteControlDevice = .rgbww
 }
 
 
-class CoreDataSource: DataSource {
+class CoreRemoteControl: RemoteControl {
     
     let sections: [Section] = [Section(type: .basicControls, items: Command.basicControls),
                                Section(type: .basicColors, items: [.white, .candle])]
+    let device: RemoteControlDevice = .rgbww
 }
 
 

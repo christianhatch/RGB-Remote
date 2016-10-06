@@ -24,8 +24,9 @@ extension UIView {
 enum Style {
     enum Color {
         case textColor
-        case backgroundColor
         case tintColor
+        case backgroundColor
+        case darkGray
         
         case red
         case green
@@ -44,7 +45,9 @@ enum Style {
                 return Style.Color.white.color().withAlphaComponent(0.66)
             case .backgroundColor:
                 return UIColor.hsb(h: 0, s: 0, b: 20)
-                
+            case .darkGray:
+                return UIColor.hsb(h: 0, s: 0, b: 35)
+            
             case .red:
                 return UIColor.hsb(h: 6, s: 74, b: 91)
             case .green:
@@ -76,56 +79,6 @@ extension UIColor {
     static func hsb(h: CGFloat, s: CGFloat, b: CGFloat) -> UIColor {
         return UIColor(hue: h/360, saturation: s/100, brightness: b/100, alpha: 1)
     }
-
-//    convenience init(hexString: String, withAlpha: CGFloat = 1.0) {
-//        var red:   CGFloat = 0.0
-//        var green: CGFloat = 0.0
-//        var blue:  CGFloat = 0.0
-//        var alpha: CGFloat = withAlpha
-//        
-//        guard hexString.hasPrefix("#") else {
-//            print("Invalid RGB string, missing '#' as prefix", terminator: "")
-//            self.init(red:red, green:green, blue:blue, alpha:alpha)
-//            return
-//        }
-//        
-//        let index   = hexString.startIndex.advancedBy(1)
-//        let hex     = hexString.substringFromIndex(index)
-//        let scanner = NSScanner(string: hex)
-//        var hexValue: CUnsignedLongLong = 0
-//        
-//        guard scanner.scanHexLongLong(&hexValue) else {
-//            print("Scan hex error")
-//            self.init(red:red, green:green, blue:blue, alpha:alpha)
-//            return
-//        }
-//        
-//        switch (hex.characters.count) {
-//        case 3:
-//            red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
-//            green = CGFloat((hexValue & 0x0F0) >> 4)       / 15.0
-//            blue  = CGFloat(hexValue & 0x00F)              / 15.0
-//        case 4:
-//            red   = CGFloat((hexValue & 0xF000) >> 12)     / 15.0
-//            green = CGFloat((hexValue & 0x0F00) >> 8)      / 15.0
-//            blue  = CGFloat((hexValue & 0x00F0) >> 4)      / 15.0
-//            alpha = CGFloat(hexValue & 0x000F)             / 15.0
-//        case 6:
-//            red   = CGFloat((hexValue & 0xFF0000) >> 16)   / 255.0
-//            green = CGFloat((hexValue & 0x00FF00) >> 8)    / 255.0
-//            blue  = CGFloat(hexValue & 0x0000FF)           / 255.0
-//        case 8:
-//            red   = CGFloat((hexValue & 0xFF000000) >> 24) / 255.0
-//            green = CGFloat((hexValue & 0x00FF0000) >> 16) / 255.0
-//            blue  = CGFloat((hexValue & 0x0000FF00) >> 8)  / 255.0
-//            alpha = CGFloat(hexValue & 0x000000FF)         / 255.0
-//        default:
-//            print("Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8", terminator: "")
-//        }
-//        
-//        self.init(red:red, green:green, blue:blue, alpha:alpha)
-//    }
-    
     
     func darken(byPercentage percentage: CGFloat) -> UIColor? {
         //Define HSBA values

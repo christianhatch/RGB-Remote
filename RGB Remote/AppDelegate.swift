@@ -67,9 +67,9 @@ class TabbarManager: NSObject, UITabBarControllerDelegate {
     
     func setup(tabBarController tabbar: UITabBarController) {
         
-        let rgb = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(dataSource: RGBDataSource()))
+        let rgb = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(remoteControl: RGBRemoteControl()))
         rgb.title = "RGB"
-        let rgbww = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(dataSource: RGBWWDataSource()))
+        let rgbww = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(remoteControl: RGBWWRemoteControl()))
         rgbww.title = "RGBWW"
         
         var vcs = tabbar.viewControllers

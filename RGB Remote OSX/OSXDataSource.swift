@@ -11,7 +11,7 @@ import Cocoa
 
 class OSXDataSource: NSObject {
     
-    fileprivate var dataSource = RGBWWDataSource()
+    fileprivate var dataSource = RGBWWRemoteControl()
     
 }
 

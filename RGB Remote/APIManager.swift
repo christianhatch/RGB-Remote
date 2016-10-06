@@ -22,37 +22,37 @@ class APIManager {
         return man
     }()
     
-    fileprivate class func baseEndpoint() -> String {
+    fileprivate static func baseEndpoint() -> String {
         return "http://10.0.0.51:3000"
     }
 
-    class func startSendingCommand(_ command: Command) {
-        let logMessage = "\(#function) \(command.apiKey())"
+    static func startSending(command: Command, forRemote: RemoteControlDevice) {
+        let logMessage = "\(#function) \(forRemote.rawValue)/\(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
         
-        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start", method: .post)
+        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/\(forRemote.rawValue)/\(command.apiKey())/send_start", method: .post)
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
             })
     }
     
-    class func stopSendingCommand(_ command: Command) {
-        let logMessage = "\(#function) \(command.apiKey())"
+    static func stopSending(command: Command, forRemote: RemoteControlDevice) {
+        let logMessage = "\(#function) \(forRemote.rawValue)/\(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
 
-        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop", method: .post)
+        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/\(forRemote.rawValue)/\(command.apiKey())/send_stop", method: .post)
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
             })
     }
     
-    class func sendCommand(_ command: Command) {
-        let logMessage = "\(#function) \(command.apiKey())"
+    static func send(command: Command, forRemote: RemoteControlDevice) {
+        let logMessage = "\(#function) \(forRemote.rawValue)/\(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
 
         switch command {
         default:
-            sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())", method: .post)
+            sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/\(forRemote.rawValue)/\(command.apiKey())", method: .post)
                 .responseString(completionHandler: { (response) in
                     Logger.sharedLogger.printMessage(response.description)
                 })
@@ -60,14 +60,15 @@ class APIManager {
 
     }
     
-//    private class func sendMacro(macro: String) {
-//        print(#function, macro)
-//
-//        Alamofire.request(.POST, "\(APIManager.baseEndpoint())/macros/\(macro)")
-//            .responseJSON { (response) -> Void in
-//                print(response)
-//        }
-//    }
+    static func sendMacro(macro: String) {
+        let logMessage = "\(#function) \(macro)"
+        Logger.sharedLogger.printMessage(logMessage)
+
+        Alamofire.request("\(APIManager.baseEndpoint())/macros/\(macro)", method: .post)
+            .responseJSON { (response) -> Void in
+                Logger.sharedLogger.printMessage(response.description)
+        }
+    }
     
 }
 

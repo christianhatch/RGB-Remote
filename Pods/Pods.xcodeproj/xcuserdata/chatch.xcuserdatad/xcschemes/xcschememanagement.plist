@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-RGB Remote Widget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RGB Remote.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,17 +57,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>37139FF5A7A7004CCAEAF86EFE0014A6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>399F5CDC37A3AD9F1475B8044305EDC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>4181F51F77819190EE61755F7CC050DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>418B353000AFCF83F6099EFDA45386BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,22 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B57F4EE4746045CEAE2D933A3C8EC9E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>AD2F60F4E656CC45ACEC7CC8EFF829E7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BFFCBB164E74B4AA50B2E66B53D05C55</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D6E2C467CEE14FECBC13E2F3C5094ACC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
