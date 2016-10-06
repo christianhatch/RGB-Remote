@@ -18,12 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSB-EP-EPQ">
-                                <frame key="frameInset" minX="16" minY="10" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yQQ-24-8M8">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yCK-iR-GDl">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="yQQ-24-8M8" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="EgT-Ph-aBH"/>
+                            <constraint firstAttribute="trailing" secondItem="yQQ-24-8M8" secondAttribute="trailing" id="bCV-nh-tmt"/>
+                            <constraint firstAttribute="bottom" secondItem="yQQ-24-8M8" secondAttribute="bottom" id="jL0-nk-p0X"/>
+                            <constraint firstItem="yQQ-24-8M8" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="vcY-7w-2aD"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -31,6 +42,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="50"/>
+                    <connections>
+                        <outlet property="collectionView" destination="yQQ-24-8M8" id="F07-Pv-LKP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

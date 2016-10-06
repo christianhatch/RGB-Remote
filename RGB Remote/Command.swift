@@ -11,121 +11,121 @@ import Foundation
 enum Command: Int {
     
     //generic
-    static let basicControls: [Command] = [.On, .Off, .BrightnessUp, .BrightnessDown]
-    static let basicColors: [Command] = [.Red, .Blue, .Green, .White, .Candle]
-    static let effects: [Command] = [.Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
-    
+    static let basicControls: [Command] = [.on, .off, .brightnessUp, .brightnessDown]
+    static let basicColors: [Command] = [.red, .blue, .green, .white, .candle]
+    static let effects: [Command] = [.jump3, .jump7, .fade3, .fade7, .flash, .auto, .quick, .slow]
 
+    
     //rgb
-    static let rgbControls: [Command] = [.DIY1, .DIY2, .DIY3, .DIY4, .DIY5, .DIY6,
-                                         .RedUp, .RedDown, .GreenUp, .GreenDown, .BlueUp, .BlueDown]
-    static let rgbColors: [Command] = [.Candle, .YellowOrange, .YellowGreen, .GreenYellow,
-                                       .TealBlue, .SkyBlue, .IndigoBlue, .LightBlue,
-                                       .Indigo, .Violet, .Purple, .DeepPurple,
-                                       .PinkWhite, .PurpleWhite, .TealWhite, .IndigoWhite]
+    static let rgbControls: [Command] = [.diy1, .diy2, .diy3, .diy4, .diy5, .diy6,
+                                         .redUp, .greenUp, .blueUp, .redDown, .greenDown, .blueDown]
+    static let rgbColors: [Command] = [.candle, .yellowOrange, .yellowGreen, .greenYellow,
+                                       .tealBlue, .skyBlue, .indigoBlue, .lightBlue,
+                                       .indigo, .violet, .purple, .deepPurple,
+                                       .pinkWhite, .purpleWhite, .tealWhite, .indigoWhite]
 
     //rgbww
-    static let wwControls: [Command] = [.WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown]
-    static let wwControlsFull: [Command] = wwControls + [.White100, .White75, .White50, .White25]
-    static let rgbwwColors: [Command] = [.Candle, .Orange, .OrangeYellow, .Yellow,
-                                         .MossGreen, .Turquoise, .LightBlueWW, .SkyBlueWW,
-                                         .UV, .IndigoWW, .VioletWW, .PurpleWW,
-                                         .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW]
+    static let wwControls: [Command] = [.whiteOn, .whiteOff, .whiteUp, .whiteDown]
+    static let wwControlsFull: [Command] = wwControls + [.white100, .white75, .white50, .white25]
+    static let rgbwwColors: [Command] = [.candle, .orange, .orangeYellow, .yellow,
+                                         .mossGreen, .turquoise, .lightBlueWW, .skyBlueWW,
+                                         .uv, .indigoWW, .violetWW, .purpleWW,
+                                         .pinkWhiteWW, .purpleWhiteWW, .tealWhiteWW, .indigoWhiteWW]
 
-//    static let rgbww: [Command] = basicControls + basicColors + effects + wwControlsFull + rgbwwColors
-    static let rgbww: [Command] = [.On, .Off, .BrightnessUp, .BrightnessDown, .Red, .Blue, .Green, .White, .WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown, .White100, .White75, .White50, .White25,
-                                   .Candle, .Orange, .OrangeYellow, .Yellow,
-                                   .MossGreen, .Turquoise, .LightBlueWW, .SkyBlueWW,
-                                   .UV, .IndigoWW, .VioletWW, .PurpleWW,
-                                   .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW, .Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
+    static let rgbww: [Command] = [.on, .off, .brightnessUp, .brightnessDown, .red, .blue, .green, .white,
+                                   .whiteOn, .whiteOff, .whiteUp, .whiteDown, .white100, .white75, .white50, .white25,
+                                   .candle, .orange, .orangeYellow, .yellow,
+                                   .mossGreen, .turquoise, .lightBlueWW, .skyBlueWW,
+                                   .uv, .indigoWW, .violetWW, .purpleWW,
+                                   .pinkWhiteWW, .purpleWhiteWW, .tealWhiteWW, .indigoWhiteWW, .jump3, .jump7, .fade3, .fade7, .flash, .auto, .quick, .slow]
 
-    case On = 1
-    case Off
-    case BrightnessUp
-    case BrightnessDown //4
+    case on = 1
+    case off
+    case brightnessUp
+    case brightnessDown //4
     
-    case Red //5
-    case Green
-    case Blue
-    case White //8
+    case red //5
+    case green
+    case blue
+    case white //8
     
-    case WhiteOn
-    case WhiteOff //10
-    case WhiteUp  //11
-    case WhiteDown
-    case White25
-    case White50
-    case White75
-    case White100 //16
+    case whiteOn
+    case whiteOff //10
+    case whiteUp  //11
+    case whiteDown
+    case white25
+    case white50
+    case white75
+    case white100 //16
     
-    case Jump3 //17
-    case Jump7
+    case jump3 //17
+    case jump7
     
-    case Fade3 //19
-    case Fade7
+    case fade3 //19
+    case fade7
     
-    case Flash //21
-    case Auto
+    case flash //21
+    case auto
     
-    case Quick //23
-    case Slow
+    case quick //23
+    case slow
     
     //rgbww
-    case Candle //25
-    case Orange
-    case OrangeYellow
-    case Yellow
+    case candle //25
+    case orange
+    case orangeYellow
+    case yellow
     
-    case MossGreen
-    case Turquoise
-    case LightBlueWW
-    case SkyBlueWW
+    case mossGreen
+    case turquoise
+    case lightBlueWW
+    case skyBlueWW
     
-    case UV
-    case IndigoWW
-    case VioletWW
-    case PurpleWW
+    case uv
+    case indigoWW
+    case violetWW
+    case purpleWW
     
-    case PinkWhiteWW
-    case PurpleWhiteWW
-    case TealWhiteWW
-    case IndigoWhiteWW
+    case pinkWhiteWW
+    case purpleWhiteWW
+    case tealWhiteWW
+    case indigoWhiteWW
     
     
     //rgb
 //    case RichOrange
-    case YellowOrange
-    case YellowGreen
-    case GreenYellow
+    case yellowOrange
+    case yellowGreen
+    case greenYellow
     
-    case TealBlue
-    case SkyBlue
-    case IndigoBlue
-    case LightBlue
+    case tealBlue
+    case skyBlue
+    case indigoBlue
+    case lightBlue
     
-    case Indigo
-    case Violet
-    case Purple
-    case DeepPurple
+    case indigo
+    case violet
+    case purple
+    case deepPurple
     
-    case PinkWhite
-    case PurpleWhite
-    case TealWhite
-    case IndigoWhite
+    case pinkWhite
+    case purpleWhite
+    case tealWhite
+    case indigoWhite
     
-    case DIY1
-    case DIY2
-    case DIY3
-    case DIY4
-    case DIY5
-    case DIY6
+    case diy1
+    case diy2
+    case diy3
+    case diy4
+    case diy5
+    case diy6
     
-    case RedUp
-    case RedDown
-    case GreenUp
-    case GreenDown
-    case BlueUp
-    case BlueDown
+    case redUp
+    case redDown
+    case greenUp
+    case greenDown
+    case blueUp
+    case blueDown
 }
 
 
@@ -139,140 +139,140 @@ extension Command {
     
     func humanReadableDescription() -> String {
         switch self {
-        case .On:
+        case .on:
             return "On"
-        case .Off:
+        case .off:
             return "Off"
-        case .BrightnessUp:
-            return "Brightness Up"
-        case .BrightnessDown:
-            return "Brightness Down"
-        case .Red:
+        case .brightnessUp:
+            return "Brighter"
+        case .brightnessDown:
+            return "Dimmer"
+        case .red:
             return "Red"
-        case .Green:
+        case .green:
             return "Green"
-        case .Blue:
+        case .blue:
             return "Blue"
-        case .White:
+        case .white:
             return "White"
             
-        case .WhiteOn:
+        case .whiteOn:
             return "WW On"
-        case .WhiteOff:
+        case .whiteOff:
             return "WW Off"
-        case .WhiteUp:
-            return "WW Up"
-        case .WhiteDown:
-            return "WW Down"
-        case .White25:
+        case .whiteUp:
+            return "WW Brighter"
+        case .whiteDown:
+            return "WW Dimmer"
+        case .white25:
             return "WW 25%"
-        case .White50:
+        case .white50:
             return "WW 50%"
-        case .White75:
+        case .white75:
             return "WW 75%"
-        case .White100:
+        case .white100:
             return "WW 100%"
             
-        case .Jump3:
+        case .jump3:
             return "Jump 3"
-        case .Jump7:
+        case .jump7:
             return "Jump 7"
             
-        case .Fade3:
+        case .fade3:
             return "Fade 3"
-        case .Fade7:
+        case .fade7:
             return "Fade 7"
             
-        case .Flash:
+        case .flash:
             return "Flash"
-        case .Auto:
+        case .auto:
             return "Auto"
             
-        case .Quick:
+        case .quick:
             return "Faster"
-        case .Slow:
+        case .slow:
             return "Slower"
             
             
         //rgbww
-        case .Candle:
+        case .candle:
             return "Candle"
-        case .Orange:
+        case .orange:
             return "Orange"
-        case .OrangeYellow:
+        case .orangeYellow:
             return "Orange Yellow"
-        case .Yellow:
+        case .yellow:
             return "Yellow"
             
-        case .MossGreen:
+        case .mossGreen:
             return "Moss Green"
-        case .Turquoise:
+        case .turquoise:
             return "Turquoise"
             
-        case .UV:
+        case .uv:
             return "UV"
             
         //rgb
 //        case .RichOrange:
 //            return "Rich Orange"
-        case .YellowOrange:
+        case .yellowOrange:
             return "Yellow Orange"
-        case .YellowGreen:
+        case .yellowGreen:
             return "Yellow Green"
-        case .GreenYellow:
+        case .greenYellow:
             return "Green Yellow"
             
-        case .TealBlue:
+        case .tealBlue:
             return "Teal Blue"
-        case .SkyBlue, .SkyBlueWW:
+        case .skyBlue, .skyBlueWW:
             return "Sky Blue"
-        case .IndigoBlue:
+        case .indigoBlue:
             return "Indigo Blue"
-        case .LightBlue, .LightBlueWW:
+        case .lightBlue, .lightBlueWW:
             return "Light Blue"
             
-        case .Indigo, .IndigoWW:
+        case .indigo, .indigoWW:
             return "Indigo"
-        case .Violet, .VioletWW:
+        case .violet, .violetWW:
             return "Violet"
-        case .Purple, .PurpleWW:
+        case .purple, .purpleWW:
             return "Purple"
-        case .DeepPurple:
+        case .deepPurple:
             return "Deep Purple"
             
-        case .PinkWhite, .PinkWhiteWW:
+        case .pinkWhite, .pinkWhiteWW:
             return "Pink White"
-        case .PurpleWhite, .PurpleWhiteWW:
+        case .purpleWhite, .purpleWhiteWW:
             return "Purple White"
-        case .TealWhite, .TealWhiteWW:
+        case .tealWhite, .tealWhiteWW:
             return "Teal White"
-        case .IndigoWhite, .IndigoWhiteWW:
+        case .indigoWhite, .indigoWhiteWW:
             return "Indigo White"
             
-        case .DIY1:
+        case .diy1:
             return "DIY 1"
-        case .DIY2:
+        case .diy2:
             return "DIY 2"
-        case .DIY3:
+        case .diy3:
             return "DIY 3"
-        case .DIY4:
+        case .diy4:
             return "DIY 4"
-        case .DIY5:
+        case .diy5:
             return "DIY 5"
-        case .DIY6:
+        case .diy6:
             return "DIY 6"
             
-        case .RedUp:
+        case .redUp:
             return "Red Up"
-        case .RedDown:
+        case .redDown:
             return "Red Down"
-        case .GreenUp:
+        case .greenUp:
             return "Green Up"
-        case .GreenDown:
+        case .greenDown:
             return "Green Down"
-        case .BlueUp:
+        case .blueUp:
             return "Blue Up"
-        case .BlueDown:
+        case .blueDown:
             return "Blue Down"
             
         }
@@ -280,156 +280,222 @@ extension Command {
     
 }
 
+//MARK: - Color Model
+
+extension Command {
+    
+    func color() -> UIColor {
+        
+        switch self {
+        case .red:
+            return Style.Color.red.color()
+        case .green:
+            return .flatGreen()
+        case .blue:
+            return .flatBlue()
+        case .white:
+            return UIColor.flatWhite().darken(byPercentage: 0.1)
+            
+        case .whiteOn, .whiteOff:
+            return .flatYellow()
+            
+        case .yellowOrange, .yellowGreen, .greenYellow:
+            return .flatOrange()
+            
+        case .candle, .orange, .orangeYellow, .yellow:
+            return .flatOrange()
+            
+        case .tealBlue, .indigoBlue:
+            return .flatPowderBlue()
+            
+        case .mossGreen, .turquoise:
+            return .flatGreen()
+            
+        case .lightBlue, .lightBlueWW, .skyBlue, .skyBlueWW:
+            return UIColor.flatBlue().lighten(byPercentage: 0.5)
+            
+        case .deepPurple, .indigo, .violet, .purple:
+            return UIColor.flatPurple().lighten(byPercentage: 0.3)
+            
+        case .uv, .indigoWW, .violetWW, .purpleWW:
+            return UIColor.flatPurple().lighten(byPercentage: 0.3)
+            
+        case .tealWhite, .indigoWhite, .tealWhiteWW, .indigoWhiteWW:
+            return UIColor.flatTeal().lighten(byPercentage: 0.2)
+            
+        case .pinkWhite, .purpleWhite, .pinkWhiteWW, .purpleWhiteWW:
+            return UIColor.flatPink().lighten(byPercentage: 0.5)
+            
+        case .redUp, .redDown:
+            return .flatRed()
+            
+        case .greenUp, .greenDown:
+            return .flatGreen()
+            
+        case .blueUp, .blueDown:
+            return .flatBlue()
+            
+        default:
+            return .white
+        }
+    }
+    
+}
+
+
+
+//MARK: - API 
+
 extension Command {
     
     func apiKey() -> String {
         switch self {
-        case .On:
+        case .on:
             return "on"
-        case .Off:
+        case .off:
             return "off"
-        case .BrightnessUp:
+        case .brightnessUp:
             return "up"
-        case .BrightnessDown:
+        case .brightnessDown:
             return "down"
-        case .Red:
+        case .red:
             return "red"
-        case .Green:
+        case .green:
             return "green"
-        case .Blue:
+        case .blue:
             return "blue"
-        case .White:
+        case .white:
             return "white"
             
-        case .WhiteOn:
+        case .whiteOn:
             return "white_on"
-        case .WhiteOff:
+        case .whiteOff:
             return "white_off"
-        case .WhiteUp:
+        case .whiteUp:
             return "white_up"
-        case .WhiteDown:
+        case .whiteDown:
             return "white_down"
-        case .White25:
+        case .white25:
             return "white_25"
-        case .White50:
+        case .white50:
             return "white_50"
-        case .White75:
+        case .white75:
             return "white_75"
-        case .White100:
+        case .white100:
             return "white_100"
             
-        case .Jump3:
+        case .jump3:
             return "jump_3"
-        case .Jump7:
+        case .jump7:
             return "jump_7"
             
-        case .Fade3:
+        case .fade3:
             return "fade_3"
-        case .Fade7:
+        case .fade7:
             return "fade_7"
             
-        case .Flash:
+        case .flash:
             return "flash"
-        case .Auto:
+        case .auto:
             return "auto"
             
-        case .Quick:
+        case .quick:
             return "quick"
-        case .Slow:
+        case .slow:
             return "slow"
             
             
             
         //rgbww
-        case .Candle:
+        case .candle:
             return "1"
-        case .Orange:
+        case .orange:
             return "5"
-        case .OrangeYellow:
+        case .orangeYellow:
             return "9"
-        case .Yellow:
+        case .yellow:
             return "13"
             
-        case .MossGreen:
+        case .mossGreen:
             return "2"
-        case .Turquoise:
+        case .turquoise:
             return "6"
-        case .LightBlueWW:
+        case .lightBlueWW:
             return "10"
-        case .SkyBlueWW:
+        case .skyBlueWW:
             return "14"
             
-        case .UV:
+        case .uv:
             return "3"
-        case .IndigoWW:
+        case .indigoWW:
             return "7"
-        case .VioletWW:
+        case .violetWW:
             return "11"
-        case .PurpleWW:
+        case .purpleWW:
             return "15"
             
             
         //rgb
 //        case .RichOrange:
 //            return "1"
-        case .YellowOrange:
+        case .yellowOrange:
             return "5"
-        case .YellowGreen:
+        case .yellowGreen:
             return "9"
-        case .GreenYellow:
+        case .greenYellow:
             return "13"
             
-        case .TealBlue:
+        case .tealBlue:
             return "2"
-        case .SkyBlue:
+        case .skyBlue:
             return "6"
-        case .IndigoBlue:
+        case .indigoBlue:
             return "10"
-        case .LightBlue:
+        case .lightBlue:
             return "14"
             
-        case .Indigo:
+        case .indigo:
             return "3"
-        case .Violet:
+        case .violet:
             return "7"
-        case .Purple:
+        case .purple:
             return "11"
-        case .DeepPurple:
+        case .deepPurple:
             return "15"
             
-        case .PinkWhite, .PinkWhiteWW:
+        case .pinkWhite, .pinkWhiteWW:
             return "4"
-        case .PurpleWhite, .PurpleWhiteWW:
+        case .purpleWhite, .purpleWhiteWW:
             return "8"
-        case .TealWhite, .TealWhiteWW:
+        case .tealWhite, .tealWhiteWW:
             return "12"
-        case .IndigoWhite, .IndigoWhiteWW:
+        case .indigoWhite, .indigoWhiteWW:
             return "16"
             
-        case .DIY1:
+        case .diy1:
             return "diy_1"
-        case .DIY2:
+        case .diy2:
             return "diy_2"
-        case .DIY3:
+        case .diy3:
             return "diy_3"
-        case .DIY4:
+        case .diy4:
             return "diy_4"
-        case .DIY5:
+        case .diy5:
             return "diy_5"
-        case .DIY6:
+        case .diy6:
             return "diy_6"
             
-        case .RedUp:
+        case .redUp:
             return "red_up"
-        case .RedDown:
+        case .redDown:
             return "red_down"
-        case .GreenUp:
+        case .greenUp:
             return "green_up"
-        case .GreenDown:
+        case .greenDown:
             return "green_down"
-        case .BlueUp:
+        case .blueUp:
             return "blue_up"
-        case .BlueDown:
+        case .blueDown:
             return "blue_down"
             
         }

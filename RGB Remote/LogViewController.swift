@@ -19,20 +19,20 @@ extension LogViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = Style.Color.BackgroundColor.uicolor()
-        tableView.backgroundColor = Style.Color.BackgroundColor.uicolor()
+        view.backgroundColor = Style.Color.backgroundColor.uicolor()
+        tableView.backgroundColor = Style.Color.backgroundColor.uicolor()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LogViewController.reloadAndScrollToBottom), name: LoggerNotification.NewMessage.rawValue, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadAndScrollToBottom), name: NSNotification.Name(rawValue: LoggerNotification.NewMessage.rawValue), object: nil)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         reloadAndScrollToBottom()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 }
 
@@ -44,16 +44,16 @@ extension LogViewController {
         
         guard Logger.sharedLogger.messages.count > 0 else { return }
         
-        let indexPath = NSIndexPath(forRow: Logger.sharedLogger.messages.count-1, inSection: 0)
-        tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Bottom, animated: true)
+        let indexPath = IndexPath(row: Logger.sharedLogger.messages.count-1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
 }
 
 
 extension LogViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let text = Logger.sharedLogger.messages[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let text = Logger.sharedLogger.messages[(indexPath as NSIndexPath).row]
 
         let textvc = TextViewController(string: text)
         navigationController?.pushViewController(textvc, animated: true)
@@ -62,31 +62,36 @@ extension LogViewController: UITableViewDelegate {
 
 extension LogViewController: UITableViewDataSource {
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Logger.sharedLogger.messages.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("LoggerCell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LoggerCell", for: indexPath)
         
-        let text = Logger.sharedLogger.messages[indexPath.row]
+        let text = Logger.sharedLogger.messages[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = text
-        cell.textLabel?.textColor = Style.Color.TextColor.uicolor()
+        cell.textLabel?.textColor = Style.Color.textColor.uicolor()
         
-        cell.contentView.backgroundColor = Style.Color.BackgroundColor.uicolor()
-        cell.backgroundColor = Style.Color.BackgroundColor.uicolor()
+        cell.contentView.backgroundColor = Style.Color.backgroundColor.uicolor()
+        cell.backgroundColor = Style.Color.backgroundColor.uicolor()
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    @objc(tableView:heightForRowAtIndexPath:) func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-    
 }
+
+
+
+
+
+
 
 
 

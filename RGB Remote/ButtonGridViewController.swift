@@ -8,29 +8,25 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 class ButtonGridViewController: UIViewController {
     
-    @IBOutlet private weak var collectionView: UICollectionView! {
-        didSet {
-            collectionView.backgroundColor = view.backgroundColor
-        }
+    fileprivate let dataSource: iOSCollectionViewDataSource
+    fileprivate let collectionView: UICollectionView
+
+    
+    init(dataSource: iOSCollectionViewDataSource) {
+        self.dataSource = dataSource
+        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        super.init(nibName: nil, bundle: nil)
     }
-    @IBOutlet private weak var collectionViewHeight: NSLayoutConstraint!
     
-    internal var dataSource: iOSCollectionViewDataSource!
-    
-//    init(dataSource: iOSCollectionViewDataSource) {
-//        self.dataSource = dataSource
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//    }
-//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//    }
+    required init?(coder aDecoder: NSCoder) {
+        self.dataSource = iOSCollectionViewDataSource(dataSource: RGBWWDataSource())
+        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        super.init(coder: aDecoder)
+    }
 }
 
 
@@ -41,20 +37,64 @@ extension ButtonGridViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = dataSource
-        collectionView.delegate = dataSource
-        dataSource.register(collectionView)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+        func setupView() {
+            collectionView.backgroundColor = view.backgroundColor
+            
+            collectionView.dataSource = dataSource
+            collectionView.delegate = dataSource
+            dataSource.register(collectionView)
+            
+            view.addSubview(collectionView)
+            collectionView.snp.makeConstraints { (make) in
+                make.leading.equalToSuperview()
+                make.trailing.equalToSuperview()
+                make.top.greaterThanOrEqualTo(topLayoutGuide.snp.bottom)
+                make.bottom.equalTo(bottomLayoutGuide.snp.top)
+                make.height.equalTo(collectionView.collectionViewLayout.collectionViewContentSize.height)
+            }
+            collectionView.reloadData()
+            
+            let tapper = UITapGestureRecognizer(target: self, action: #selector(self.showList))
+            tapper.numberOfTapsRequired = 2
+            collectionView.addGestureRecognizer(tapper)
+        }
         
-        collectionViewHeight.constant = collectionView.collectionViewLayout.collectionViewContentSize().height
+        setupView()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        view.setNeedsUpdateConstraints()
+        
+        collectionView.scrollToItem(at: dataSource.dataSource.lastIndexPath, at: .bottom, animated: false)
     }
+    
+    override func updateViewConstraints() {
+        collectionView.snp.updateConstraints { (make) in
+            make.height.equalTo(collectionView.collectionViewLayout.collectionViewContentSize.height)
+        }
+        super.updateViewConstraints()
+    }
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
+
+
+extension ButtonGridViewController {
+    
+    func showList() {
+        if case .list = dataSource.displayType {
+            dataSource.displayType = .grid
+        }
+        else {
+            dataSource.displayType = .list
+        }
+        view.setNeedsUpdateConstraints()
+    }
+    
 }
 
 
@@ -63,24 +103,6 @@ extension ButtonGridViewController {
 
 
 
-
-
-class RGBButtonGridViewController: ButtonGridViewController {
-    
-    override var dataSource: iOSCollectionViewDataSource! {
-        set {}
-        get { return iOSCollectionViewDataSource(dataSource: RGBDataSource()) }
-    }
-}
-
-
-class RGBWWButtonGridViewController: ButtonGridViewController {
-    
-    override var dataSource: iOSCollectionViewDataSource! {
-        set {}
-        get { return iOSCollectionViewDataSource(dataSource: RGBWWDataSource()) }
-    }
-}
 
 
 

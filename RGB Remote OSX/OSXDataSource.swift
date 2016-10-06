@@ -11,7 +11,7 @@ import Cocoa
 
 class OSXDataSource: NSObject {
     
-    private var dataSource = RGBWWDataSource()
+    fileprivate var dataSource = RGBWWDataSource()
     
 }
 
@@ -19,29 +19,29 @@ class OSXDataSource: NSObject {
 
 extension OSXDataSource {
     
-    func register(collectionView: NSCollectionView) {
-        collectionView.registerNib(NSNib(nibNamed: "ButtonCollectionViewItem", bundle: nil), forItemWithIdentifier: "ButtonCollectionViewItem")
+    func register(_ collectionView: NSCollectionView) {
+        collectionView.register(NSNib(nibNamed: "ButtonCollectionViewItem", bundle: nil), forItemWithIdentifier: "ButtonCollectionViewItem")
         
         let gridLayout = NSCollectionViewGridLayout()
         gridLayout.minimumItemSize = NSSize(width: 100, height: 100)
         gridLayout.maximumItemSize = NSSize(width: 175, height: 175)
         gridLayout.minimumInteritemSpacing = 0
-        gridLayout.margins = NSEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        gridLayout.margins = EdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         collectionView.collectionViewLayout = gridLayout
     }
     
     
-    func buttonTouchDown(sender: AnyObject) {
+    func buttonTouchDown(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
         dataSource.buttonTouchDown(command)
     }
     
-    func buttonTouchUp(sender: AnyObject) {
+    func buttonTouchUp(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
         dataSource.buttonTouchUp(command)
     }
     
-    func buttonTapped(sender: AnyObject) {
+    func buttonTapped(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
         dataSource.buttonTapped(command)
     }
@@ -51,17 +51,17 @@ extension OSXDataSource {
 
 extension OSXDataSource: NSCollectionViewDataSource {
     
-    func numberOfSectionsInCollectionView(collectionView: NSCollectionView) -> Int {
+    func numberOfSections(in collectionView: NSCollectionView) -> Int {
         return dataSource.sections.count
     }
     
-    func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.sections[section].items.count
     }
     
-    func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
+    func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
-        let item = collectionView.makeItemWithIdentifier("ButtonCollectionViewItem", forIndexPath: indexPath) as! ButtonCollectionViewItem
+        let item = collectionView.makeItem(withIdentifier: "ButtonCollectionViewItem", for: indexPath) as! ButtonCollectionViewItem
         
 //        let command = dataSource.sections[indexPath.section].items[indexPath.item]
 //        
