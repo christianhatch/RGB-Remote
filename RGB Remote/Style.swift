@@ -23,8 +23,9 @@ enum Style {
     enum Color {
         case textColor
         case tintColor
-        case backgroundColor
+        case mediumGray
         case darkGray
+        case black
         
         case red
         case green
@@ -41,10 +42,12 @@ enum Style {
             switch self {
             case .textColor, .tintColor:
                 return Style.Color.white.color().withAlphaComponent(0.66)
-            case .backgroundColor:
-                return XColor.hsb(h: 0, s: 0, b: 20)
-            case .darkGray:
+            case .mediumGray:
                 return XColor.hsb(h: 0, s: 0, b: 35)
+            case .darkGray:
+                return XColor.hsb(h: 0, s: 0, b: 20)
+            case .black:
+                return .black
                 
             case .red:
                 return XColor.hsb(h: 6, s: 74, b: 91)
@@ -95,7 +98,6 @@ extension XColor {
         if percentage > 0 {
             b = min(b - percentage, 1.0)
         }
-        //Return darker color
         return XColor(hue: h, saturation: s, brightness: b, alpha: a)
     }
     
@@ -116,7 +118,6 @@ extension XColor {
         if percentage > 0 {
             b = min(b + percentage, 1.0)
         }
-        //Return lighter color
         return XColor(hue: h, saturation: s, brightness: b, alpha: a)
     }
 }

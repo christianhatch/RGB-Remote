@@ -53,9 +53,9 @@ extension MacOSDataSource: NSCollectionViewDataSource {
         let command = remoteControl.sections[indexPath.section].items[indexPath.item]
 
         item.textField?.stringValue = command.humanReadableDescription()
-        item.textField?.tag = command.rawValue
         item.textField?.textColor = command.color()
-
+        item.tag = command.rawValue
+        
         return item
     }
 }
@@ -100,31 +100,71 @@ extension MacOSDataSource: NSCollectionViewDelegateFlowLayout {
             desiredButtonsPerRow = 4
         }
         
-        let size = NSSize(width: collectionView.bounds.width / desiredButtonsPerRow, height: 50)
+        let width = collectionView.bounds.width / desiredButtonsPerRow
+        let size = NSSize(width: width, height: 50)
         return size
     }
 }
 
 extension MacOSDataSource: NSCollectionViewDelegate {
     
-//    func collectionView(collectionView: NSCollectionView, didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>) {
-//        guard let indexPath = indexPaths.first else {return}
-//        guard let item = collectionView.itemAtIndexPath(indexPath) else {return}
-//        (item as! CollectionViewItem).setHighlight(true)
-//    }
-//    
-//    func collectionView(collectionView: NSCollectionView, didDeselectItemsAtIndexPaths indexPaths: Set<NSIndexPath>) {
-//        guard let indexPath = indexPaths.first else {return}
-//        guard let item = collectionView.itemAtIndexPath(indexPath) else {return}
-//        (item as! CollectionViewItem).setHighlight(false)
-//    }
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        guard let indexPath = indexPaths.first else { return }
+        guard let item = collectionView.item(at: indexPath) as? ButtonCollectionViewItem else { return }
+        buttonTapped(item)
+    }
     
+    func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
+        
+    }
+}
+
+
+
+
+class ButtonCollectionViewItem: NSCollectionViewItem {
+    
+    var tag: Int?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.wantsLayer = true
+        view.layer?.backgroundColor = Style.Color.black.color().cgColor
+        textField?.backgroundColor = Style.Color.darkGray.color()
+    }
 }
 
 
 
 
 
+
+
+
+//MARK: - RGBWW
+
+class RGBWWRemoteControl: RemoteControl {
+    
+    let sections: [Section] = [Section(type: .basicColors, items: Command.basicColors),
+                               Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .specialControls, items: Command.wwControls),
+                               Section(type: .specialColors, items: Command.rgbwwColors),
+                               Section(type: .effects, items: Command.effects)]
+    let device: RemoteControlDevice = .rgbww
+}
+
+//MARK: - RGB
+
+class RGBRemoteControl: RemoteControl {
+    
+    let sections: [Section] = [Section(type: .basicColors, items: Command.basicColors),
+                               Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .specialControls, items: Command.rgbControls),
+                               Section(type: .specialColors, items: Command.rgbColors),
+                               Section(type: .effects, items: Command.effects)]
+    let device: RemoteControlDevice = .rgb
+}
 
 
 

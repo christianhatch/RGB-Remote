@@ -63,55 +63,6 @@ extension RemoteControl {
 
 
 
-//MARK: - RGB
-
-class RGBRemoteControl: RemoteControl {
-    
-    let sections: [Section] = [Section(type: .effects, items: Command.effects),
-                               Section(type: .specialColors, items: Command.rgbColors),
-                               Section(type: .specialControls, items: Command.rgbControls),
-                               Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: Command.basicColors)]
-    let device: RemoteControlDevice = .rgb
-}
-
-//MARK: - RGBWW
-
-class RGBWWRemoteControl: RemoteControl {
-    
-    let sections: [Section] = [Section(type: .effects, items: Command.effects),
-                               Section(type: .specialColors, items: Command.rgbwwColors),
-                               Section(type: .specialControls, items: Command.wwControls),
-                               Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: Command.basicColors)]
-    let device: RemoteControlDevice = .rgbww
-}
-
-class RGBWWNoEffectsRemoteControl: RemoteControl {
-    
-    let sections: [Section] = [Section(type: .specialColors, items: Command.rgbwwColors),
-                               Section(type: .specialControls, items: Command.wwControls),
-                               Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: Command.basicColors)]
-    let device: RemoteControlDevice = .rgbww
-}
-
-
-class CoreRemoteControl: RemoteControl {
-    
-    let sections: [Section] = [Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: [.white, .candle])]
-    let device: RemoteControlDevice = .rgbww
-}
-
-
-
-
-
-
-
-
-
 
 
 

@@ -45,7 +45,7 @@ extension TextViewController {
         view.addSubview(textView)
         textView.isEditable = false
         textView.font = UIFont.systemFont(ofSize: 16)
-        textView.backgroundColor = Style.Color.backgroundColor.color()
+        textView.backgroundColor = Style.Color.darkGray.color()
         textView.textColor = Style.Color.textColor.color()
     }
     

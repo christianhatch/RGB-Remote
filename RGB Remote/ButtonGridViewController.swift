@@ -37,9 +37,7 @@ extension ButtonGridViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        func setupView() {
-            collectionView.backgroundColor = view.backgroundColor
-            
+        func setupView() {            
             collectionView.dataSource = dataSource
             collectionView.delegate = dataSource
             dataSource.register(collectionView)
@@ -96,6 +94,33 @@ extension ButtonGridViewController {
     }
     
 }
+
+
+
+//MARK: - RemoteControl
+
+class RGBRemoteControl: RemoteControl {
+    
+    let sections: [Section] = [Section(type: .effects, items: Command.effects),
+                               Section(type: .specialColors, items: Command.rgbColors),
+                               Section(type: .specialControls, items: Command.rgbControls),
+                               Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .basicColors, items: Command.basicColors)]
+    let device: RemoteControlDevice = .rgb
+}
+
+class RGBWWRemoteControl: RemoteControl {
+    
+    let sections: [Section] = [Section(type: .effects, items: Command.effects),
+                               Section(type: .specialColors, items: Command.rgbwwColors),
+                               Section(type: .specialControls, items: Command.wwControls),
+                               Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .basicColors, items: Command.basicColors)]
+    let device: RemoteControlDevice = .rgbww
+}
+
+
+
 
 
 
