@@ -1,6 +1,0 @@
-framework module Pods_RGB_Remote {
-  umbrella header "Pods-RGB Remote-umbrella.h"
-
-  export *
-  module * { export * }
-}

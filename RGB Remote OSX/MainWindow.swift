@@ -10,9 +10,7 @@ import Cocoa
 import OBMenuBarWindow
 
 class MainWindow: OBMenuBarWindow {
-    
-    @IBOutlet weak var collectionView: NSCollectionView!
-    
+        
 }
 
 

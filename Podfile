@@ -9,7 +9,7 @@ end
 
 #macos
 
-target 'RGB Remote OSX' do
+target 'RGB Remote macOS' do
     
     platform :osx, '10.12'
 
