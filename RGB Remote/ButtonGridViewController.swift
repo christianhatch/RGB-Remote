@@ -11,12 +11,12 @@ import UIKit
 
 class ButtonGridViewController: UIViewController {
     
-    @IBOutlet private weak var collectionView: UICollectionView! {
+    @IBOutlet fileprivate weak var collectionView: UICollectionView! {
         didSet {
             collectionView.backgroundColor = view.backgroundColor
         }
     }
-    @IBOutlet private weak var collectionViewHeight: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var collectionViewHeight: NSLayoutConstraint!
     
     internal var dataSource: iOSCollectionViewDataSource!
     
@@ -46,14 +46,14 @@ extension ButtonGridViewController {
         dataSource.register(collectionView)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        collectionViewHeight.constant = collectionView.collectionViewLayout.collectionViewContentSize().height
+        collectionViewHeight.constant = collectionView.collectionViewLayout.collectionViewContentSize.height
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 }
 

@@ -23,15 +23,15 @@ extension UIView {
 
 enum Style {
     enum Color {
-        case TextColor
-        case BackgroundColor
-        case TintColor
+        case textColor
+        case backgroundColor
+        case tintColor
         
         func uicolor() -> UIColor {
             switch self {
-            case .TextColor, .TintColor:
+            case .textColor, .tintColor:
                 return UIColor(hexString: "FFFFFF", withAlpha: 0.66)
-            case .BackgroundColor:
+            case .backgroundColor:
                 return UIColor(hexString: "#333333")
             }
         }
@@ -43,8 +43,8 @@ enum Style {
 
 
 class RGBNavigationController: UINavigationController {
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 }
 

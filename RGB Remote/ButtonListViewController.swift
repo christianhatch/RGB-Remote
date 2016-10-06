@@ -9,7 +9,7 @@
 import UIKit
 
 class ButtonListViewController: UIViewController {
-    private let actions = Command.rgbww
+    fileprivate let actions = Command.rgbww
 }
 
 extension ButtonListViewController {
@@ -19,8 +19,8 @@ extension ButtonListViewController {
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 }
 
@@ -30,18 +30,18 @@ extension ButtonListViewController {
 
 extension ButtonListViewController: UITableViewDataSource {
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return actions.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ActionCell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell", for: indexPath)
         
-        let action = actions[indexPath.row]
+        let action = actions[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = action.humanReadableDescription()
         cell.textLabel?.textColor = action.color()
 
@@ -54,10 +54,10 @@ extension ButtonListViewController: UITableViewDataSource {
 
 extension ButtonListViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
 
-        APIManager.sendCommand(actions[indexPath.row])
+        APIManager.sendCommand(actions[(indexPath as NSIndexPath).row])
     }
 }
 

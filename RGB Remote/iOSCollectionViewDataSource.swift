@@ -12,7 +12,7 @@ import UIKit
 
 class iOSCollectionViewDataSource: NSObject {
     
-    private let dataSource: DataSource
+    fileprivate let dataSource: DataSource
     
     init(dataSource: DataSource) {
         self.dataSource = dataSource
@@ -25,22 +25,22 @@ class iOSCollectionViewDataSource: NSObject {
 
 extension iOSCollectionViewDataSource {
     
-    func register(collectionView: UICollectionView) {
-        collectionView.registerNib(UINib(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCell")
+    func register(_ collectionView: UICollectionView) {
+        collectionView.register(UINib(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCell")
     }
     
     
-    func buttonTouchDown(sender: AnyObject) {
+    func buttonTouchDown(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
         dataSource.buttonTouchDown(command)
     }
     
-    func buttonTouchUp(sender: AnyObject) {
+    func buttonTouchUp(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
         dataSource.buttonTouchUp(command)
     }
     
-    func buttonTapped(sender: AnyObject) {
+    func buttonTapped(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
         dataSource.buttonTapped(command)
     }
@@ -52,31 +52,31 @@ extension iOSCollectionViewDataSource {
 
 extension iOSCollectionViewDataSource: UICollectionViewDataSource {
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ButtonCell", forIndexPath: indexPath) as! ButtonCell
-        let command = dataSource.sections[indexPath.section].items[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
+        let command = dataSource.sections[(indexPath as NSIndexPath).section].items[(indexPath as NSIndexPath).item]
         
-        cell.button.setTitle(command.humanReadableDescription(), forState: .Normal)
+        cell.button.setTitle(command.humanReadableDescription(), for: UIControlState())
         cell.button.tag = command.rawValue
-        cell.button.setTitleColor(command.color(), forState: .Normal)
+        cell.button.setTitleColor(command.color(), for: UIControlState())
         
         switch command {
-        case .BrightnessUp, .BrightnessDown, .WhiteUp, .WhiteDown:
-            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchDown(_:)), forControlEvents: .TouchDown)
-            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchUp(_:)), forControlEvents: .TouchUpOutside)
-            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchUp(_:)), forControlEvents: .TouchUpInside)
+        case .brightnessUp, .brightnessDown, .whiteUp, .whiteDown:
+            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchDown(_:)), for: .touchDown)
+            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchUp(_:)), for: .touchUpOutside)
+            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchUp(_:)), for: .touchUpInside)
         default:
-            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTapped(_:)), forControlEvents: .TouchUpInside)
+            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTapped(_:)), for: .touchUpInside)
         }
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.sections[section].items.count
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return dataSource.sections.count
     }
     
@@ -88,28 +88,28 @@ extension iOSCollectionViewDataSource: UICollectionViewDataSource {
 
 extension iOSCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 10)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var desiredButtonsPerRow: CGFloat = 4
         
-        let command = dataSource.sections[indexPath.section].items[indexPath.item]
+        let command = dataSource.sections[(indexPath as NSIndexPath).section].items[(indexPath as NSIndexPath).item]
         switch command {
-        case .Red, .Green, .Blue:
+        case .red, .green, .blue:
             desiredButtonsPerRow = 3
 
-        case .White:
+        case .white:
             desiredButtonsPerRow = 1
 
         default:
@@ -129,7 +129,7 @@ class ButtonCell: UICollectionViewCell {
     @IBOutlet weak var button: UIButton! {
         didSet {
             button.titleLabel?.numberOfLines = 2
-            button.titleLabel?.textAlignment = .Center
+            button.titleLabel?.textAlignment = .center
         }
     }
 }
@@ -152,47 +152,47 @@ extension Command {
     func color() -> UIColor {
         
         switch self {
-        case .Red:
-            return UIColor.flatRedColor()
-        case .Green:
-            return UIColor.flatGreenColor()
-        case .Blue:
-            return UIColor.flatBlueColor()
-        case .White:
-            return UIColor.flatWhiteColor().darkenByPercentage(0.1)
+        case .red:
+            return UIColor.flatRed()
+        case .green:
+            return UIColor.flatGreen()
+        case .blue:
+            return UIColor.flatBlue()
+        case .white:
+            return UIColor.flatWhite().darken(byPercentage: 0.1)
             
-        case .WhiteOn, .WhiteOff:
-            return UIColor.flatYellowColor()
+        case .whiteOn, .whiteOff:
+            return UIColor.flatYellow()
             
-        case .YellowOrange, .YellowGreen, .GreenYellow:
-            return UIColor.flatOrangeColor()
+        case .yellowOrange, .yellowGreen, .greenYellow:
+            return UIColor.flatOrange()
             
-        case .Candle, .Orange, .OrangeYellow, .Yellow:
-            return UIColor.flatOrangeColor()
+        case .candle, .orange, .orangeYellow, .yellow:
+            return UIColor.flatOrange()
             
-        case .TealBlue, .IndigoBlue:
-            return UIColor.flatPowderBlueColor()
+        case .tealBlue, .indigoBlue:
+            return UIColor.flatPowderBlue()
             
-        case .MossGreen, .Turquoise:
-            return UIColor.flatGreenColor()
+        case .mossGreen, .turquoise:
+            return UIColor.flatGreen()
             
-        case .LightBlue, .LightBlueWW, .SkyBlue, .SkyBlueWW:
-            return UIColor.flatBlueColor().lightenByPercentage(0.5)
+        case .lightBlue, .lightBlueWW, .skyBlue, .skyBlueWW:
+            return UIColor.flatBlue().lighten(byPercentage: 0.5)
             
-        case .DeepPurple, .Indigo, .Violet, .Purple:
-            return UIColor.flatPurpleColor().lightenByPercentage(0.3)
+        case .deepPurple, .indigo, .violet, .purple:
+            return UIColor.flatPurple().lighten(byPercentage: 0.3)
             
-        case .UV, .IndigoWW, .VioletWW, .PurpleWW:
-            return UIColor.flatPurpleColor().lightenByPercentage(0.3)
+        case .uv, .indigoWW, .violetWW, .purpleWW:
+            return UIColor.flatPurple().lighten(byPercentage: 0.3)
             
-        case .TealWhite, .IndigoWhite, .TealWhiteWW, .IndigoWhiteWW:
-            return UIColor.flatTealColor().lightenByPercentage(0.2)
+        case .tealWhite, .indigoWhite, .tealWhiteWW, .indigoWhiteWW:
+            return UIColor.flatTeal().lighten(byPercentage: 0.2)
             
-        case .PinkWhite, .PurpleWhite, .PinkWhiteWW, .PurpleWhiteWW:
-            return UIColor.flatPinkColor().lightenByPercentage(0.5)
+        case .pinkWhite, .purpleWhite, .pinkWhiteWW, .purpleWhiteWW:
+            return UIColor.flatPink().lighten(byPercentage: 0.5)
             
         default:
-            return UIColor.whiteColor()
+            return UIColor.white
         }
     }
     

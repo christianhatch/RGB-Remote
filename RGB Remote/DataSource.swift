@@ -10,11 +10,11 @@ import Foundation
 
 
 enum SectionType {
-    case BasicControls
-    case BasicColors
-    case Effects
-    case SpecialControls
-    case SpecialColors
+    case basicControls
+    case basicColors
+    case effects
+    case specialControls
+    case specialColors
 }
 
 struct Section {
@@ -30,15 +30,15 @@ protocol DataSource {
 
 extension DataSource {
     
-    func buttonTouchDown(command: Command) {
+    func buttonTouchDown(_ command: Command) {
         APIManager.startSendingCommand(command)
     }
     
-    func buttonTouchUp(command: Command) {
+    func buttonTouchUp(_ command: Command) {
         APIManager.stopSendingCommand(command)
     }
     
-    func buttonTapped(command: Command) {
+    func buttonTapped(_ command: Command) {
         APIManager.sendCommand(command)
     }
     
@@ -55,11 +55,11 @@ extension DataSource {
 
 class RGBWWDataSource: DataSource {
     
-    let sections: [Section] = [Section(type: .Effects, items: Command.effects),
-                               Section(type: .SpecialColors, items: Command.rgbwwColors),
-                               Section(type: .SpecialControls, items: Command.wwControls),
-                               Section(type: .BasicControls, items: Command.basicControls),
-                               Section(type: .BasicColors, items: Command.basicColors)]
+    let sections: [Section] = [Section(type: .effects, items: Command.effects),
+                               Section(type: .specialColors, items: Command.rgbwwColors),
+                               Section(type: .specialControls, items: Command.wwControls),
+                               Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .basicColors, items: Command.basicColors)]
 }
 
 
@@ -67,11 +67,11 @@ class RGBWWDataSource: DataSource {
 
 class RGBDataSource: DataSource {
     
-    let sections: [Section] = [Section(type: .Effects, items: Command.effects),
-                               Section(type: .SpecialColors, items: Command.rgbColors),
-                               Section(type: .SpecialControls, items: Command.rgbControls),
-                               Section(type: .BasicControls, items: Command.basicControls),
-                               Section(type: .BasicColors, items: Command.basicColors)]
+    let sections: [Section] = [Section(type: .effects, items: Command.effects),
+                               Section(type: .specialColors, items: Command.rgbColors),
+                               Section(type: .specialControls, items: Command.rgbControls),
+                               Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .basicColors, items: Command.basicColors)]
 }
 
 

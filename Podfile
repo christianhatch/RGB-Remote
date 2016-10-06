@@ -2,12 +2,17 @@
 use_frameworks!
 
 
+def rgb_pods
+    #internal
+    pod 'Alamofire', '~> 4.0'
+end
+
+
 target 'RGB Remote OSX' do
     
-    platform :osx, '10.10'
+    platform :osx, '10.12'
 
-    #internal
-    pod 'Alamofire', '~> 3.5.0'
+    rgb_pods
 
     #UI
     pod 'OBMenuBarWindow'
@@ -17,17 +22,15 @@ end
 
 target 'RGB Remote' do
     
-    platform :ios, '8.0'
+    platform :ios, '9.0'
 
-    #internal
-    pod 'Alamofire', '~> 3.5.0'
+    rgb_pods
 
     #UI
     pod 'SVProgressHUD'
     pod 'ChameleonFramework'
 
 end
-
 
 
 
