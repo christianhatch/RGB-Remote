@@ -13,6 +13,7 @@ enum SectionType {
     case basicControls
     case basicColors
     case effects
+    
     case specialControls
     case specialColors
 }
@@ -26,6 +27,7 @@ struct Section {
 
 protocol DataSource {
     var sections: [Section] { get }
+    var lastIndexPath: IndexPath { get }
 }
 
 extension DataSource {
@@ -42,6 +44,11 @@ extension DataSource {
         APIManager.sendCommand(command)
     }
     
+    var lastIndexPath: IndexPath {
+        let section = sections.count-1
+        let item = sections[section].items.count-1
+        return IndexPath(item: item, section: section)
+    }
 }
 
 
@@ -49,7 +56,16 @@ extension DataSource {
 
 
 
+//MARK: - RGB
 
+class RGBDataSource: DataSource {
+    
+    let sections: [Section] = [Section(type: .effects, items: Command.effects),
+                               Section(type: .specialColors, items: Command.rgbColors),
+                               Section(type: .specialControls, items: Command.rgbControls),
+                               Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .basicColors, items: Command.basicColors)]
+}
 
 //MARK: - RGBWW
 
@@ -63,16 +79,18 @@ class RGBWWDataSource: DataSource {
 }
 
 
-//MARK: - RGB 
-
-class RGBDataSource: DataSource {
+class CoreDataSource: DataSource {
     
-    let sections: [Section] = [Section(type: .effects, items: Command.effects),
-                               Section(type: .specialColors, items: Command.rgbColors),
-                               Section(type: .specialControls, items: Command.rgbControls),
-                               Section(type: .basicControls, items: Command.basicControls),
+    let sections: [Section] = [Section(type: .basicControls, items: Command.basicControls),
                                Section(type: .basicColors, items: Command.basicColors)]
 }
+
+
+
+
+
+
+
 
 
 

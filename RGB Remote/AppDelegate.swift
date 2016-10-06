@@ -17,9 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         if let tabbar = window?.rootViewController as? UITabBarController {
-            
-            tabbar.delegate = tabbarManager
-            tabbar.selectedIndex = TabbarManager.lastSelectedIndex()
+            tabbarManager.setup(tabBarController: tabbar)
         }
         
         return true
@@ -68,6 +66,30 @@ class TabbarManager: NSObject, UITabBarControllerDelegate {
         TabbarManager.setLastSelectedIndex(tabBarController.selectedIndex)
     }
     
+    
+    func setup(tabBarController tabbar: UITabBarController) {
+        
+        let rgb = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(dataSource: RGBDataSource()))
+        rgb.title = "RGB"
+        let rgbww = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(dataSource: RGBWWDataSource()))
+        rgbww.title = "RGBWW"
+        
+        var vcs = tabbar.viewControllers
+        vcs?.insert(rgb, at: 0)
+        vcs?.insert(rgbww, at: 1)
+        tabbar.viewControllers = vcs
+        
+        if let controllers = tabbar.viewControllers {
+            for (index, vc) in controllers.enumerated() {
+                let item = tabbar.tabBar.items?[index]
+                item?.title = vc.title
+                item?.image = UIImage(named: "first")
+            }
+        }
+        
+        tabbar.delegate = self
+        tabbar.selectedIndex = TabbarManager.lastSelectedIndex()
+    }
 }
 
 

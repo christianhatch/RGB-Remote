@@ -9,17 +9,41 @@
 import UIKit
 import NotificationCenter
 
-class TodayViewController: UIViewController, NCWidgetProviding {
-        
+class TodayViewController: UIViewController {
+    
+    fileprivate var dataSource: iOSCollectionViewDataSource = {
+        return iOSCollectionViewDataSource(dataSource: CoreDataSource())
+    }
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
+
+}
+
+//MARK: - UIKit 
+
+extension TodayViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+
+        func setupView() {
+            collectionView.backgroundColor = view.backgroundColor
+            
+            collectionView.dataSource = dataSource
+            collectionView.delegate = dataSource
+            dataSource.register(collectionView)
+            collectionView.reloadData()
+        }
+        
+        setupView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+}
+
+
+extension TodayViewController: NCWidgetProviding {
     
     func widgetPerformUpdate(_ completionHandler: ((NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.

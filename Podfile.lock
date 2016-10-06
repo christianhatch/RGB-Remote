@@ -1,23 +1,21 @@
 PODS:
   - Alamofire (4.0.1)
-  - ChameleonFramework (2.1.0):
-    - ChameleonFramework/Default (= 2.1.0)
-  - ChameleonFramework/Default (2.1.0)
   - OBMenuBarWindow (1.1.0)
+  - SnapKit (3.0.1)
   - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
-  - ChameleonFramework
   - OBMenuBarWindow
+  - SnapKit (~> 3.0)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   OBMenuBarWindow: 2be54c06ba113abffb5d59327b0a57f4c3e3146b
+  SnapKit: f818b8326d45b4e1c777d0ab27b5c0a3624bfdeb
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
-PODFILE CHECKSUM: cd4fd4e336c50aad2780150708e70972d2b08412
+PODFILE CHECKSUM: d451437f2a6771121bc7e2bf13fdbcc37080db75
 
 COCOAPODS: 1.1.0.rc.1

@@ -22,7 +22,7 @@ extension LogViewController {
         view.backgroundColor = Style.Color.backgroundColor.uicolor()
         tableView.backgroundColor = Style.Color.backgroundColor.uicolor()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(LogViewController.reloadAndScrollToBottom), name: NSNotification.Name(rawValue: LoggerNotification.NewMessage.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadAndScrollToBottom), name: NSNotification.Name(rawValue: LoggerNotification.NewMessage.rawValue), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,11 +82,16 @@ extension LogViewController: UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    @objc(tableView:heightForRowAtIndexPath:) func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-    
 }
+
+
+
+
+
+
 
 
 

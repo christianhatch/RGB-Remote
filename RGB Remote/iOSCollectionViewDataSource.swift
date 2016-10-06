@@ -11,8 +11,18 @@ import UIKit
 
 
 class iOSCollectionViewDataSource: NSObject {
-    
-    fileprivate let dataSource: DataSource
+    enum DisplayType {
+        case grid
+        case list
+    }
+
+    var displayType: DisplayType = .grid {
+        didSet {
+            collectionViewRef?.reloadData()
+        }
+    }
+    let dataSource: DataSource
+    fileprivate var collectionViewRef: UICollectionView?
     
     init(dataSource: DataSource) {
         self.dataSource = dataSource
@@ -26,9 +36,9 @@ class iOSCollectionViewDataSource: NSObject {
 extension iOSCollectionViewDataSource {
     
     func register(_ collectionView: UICollectionView) {
+        self.collectionViewRef = collectionView
         collectionView.register(UINib(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCell")
     }
-    
     
     func buttonTouchDown(_ sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
@@ -44,7 +54,6 @@ extension iOSCollectionViewDataSource {
         guard let command = Command(rawValue: sender.tag) else { return }
         dataSource.buttonTapped(command)
     }
-    
 }
 
 
@@ -104,18 +113,33 @@ extension iOSCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
         
         var desiredButtonsPerRow: CGFloat = 4
         
-        let command = dataSource.sections[(indexPath as NSIndexPath).section].items[(indexPath as NSIndexPath).item]
+        let section = dataSource.sections[indexPath.section]
+        let command = section.items[indexPath.item]
+        
+        
         switch command {
         case .red, .green, .blue:
             desiredButtonsPerRow = 3
 
         case .white:
-            desiredButtonsPerRow = 1
+            desiredButtonsPerRow = 2
+            
+        case .candle:
+            if section.type == .basicColors {
+                desiredButtonsPerRow = 2
+            }
+            
+        case .diy1, .diy2, .diy3, .diy4, .diy5, .diy6, .redUp, .redDown, .greenUp, .greenDown, .blueUp, .blueDown:
+            desiredButtonsPerRow = 3
 
         default:
             desiredButtonsPerRow = 4
         }
-        
+
+        if case .list = displayType {
+            desiredButtonsPerRow = 1
+        }
+    
         let size = CGSize(width: collectionView.bounds.width / desiredButtonsPerRow, height: 50)
         return size
     }
@@ -132,70 +156,6 @@ class ButtonCell: UICollectionViewCell {
             button.titleLabel?.textAlignment = .center
         }
     }
-}
-
-
-
-
-
-
-
-
-
-
-import ChameleonFramework
-
-//MARK: - Color Model
-
-extension Command {
-    
-    func color() -> UIColor {
-        
-        switch self {
-        case .red:
-            return UIColor.flatRed()
-        case .green:
-            return UIColor.flatGreen()
-        case .blue:
-            return UIColor.flatBlue()
-        case .white:
-            return UIColor.flatWhite().darken(byPercentage: 0.1)
-            
-        case .whiteOn, .whiteOff:
-            return UIColor.flatYellow()
-            
-        case .yellowOrange, .yellowGreen, .greenYellow:
-            return UIColor.flatOrange()
-            
-        case .candle, .orange, .orangeYellow, .yellow:
-            return UIColor.flatOrange()
-            
-        case .tealBlue, .indigoBlue:
-            return UIColor.flatPowderBlue()
-            
-        case .mossGreen, .turquoise:
-            return UIColor.flatGreen()
-            
-        case .lightBlue, .lightBlueWW, .skyBlue, .skyBlueWW:
-            return UIColor.flatBlue().lighten(byPercentage: 0.5)
-            
-        case .deepPurple, .indigo, .violet, .purple:
-            return UIColor.flatPurple().lighten(byPercentage: 0.3)
-            
-        case .uv, .indigoWW, .violetWW, .purpleWW:
-            return UIColor.flatPurple().lighten(byPercentage: 0.3)
-            
-        case .tealWhite, .indigoWhite, .tealWhiteWW, .indigoWhiteWW:
-            return UIColor.flatTeal().lighten(byPercentage: 0.2)
-            
-        case .pinkWhite, .purpleWhite, .pinkWhiteWW, .purpleWhiteWW:
-            return UIColor.flatPink().lighten(byPercentage: 0.5)
-            
-        default:
-            return UIColor.white
-        }
-    }
-    
 }
 
 

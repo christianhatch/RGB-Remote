@@ -30,7 +30,7 @@ class APIManager {
         let logMessage = "\(#function) \(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
         
-        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start", .post)
+        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_start", method: .post)
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
             })
@@ -40,7 +40,7 @@ class APIManager {
         let logMessage = "\(#function) \(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
 
-        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop", .post)
+        sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())/send_stop", method: .post)
             .responseString(completionHandler: { (response) in
                 Logger.sharedLogger.printMessage(response.description)
             })
@@ -52,7 +52,7 @@ class APIManager {
 
         switch command {
         default:
-            sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())", .post)
+            sharedManager.manager.request("\(APIManager.baseEndpoint())/remotes/rgbww/\(command.apiKey())", method: .post)
                 .responseString(completionHandler: { (response) in
                     Logger.sharedLogger.printMessage(response.description)
                 })

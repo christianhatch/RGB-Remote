@@ -14,11 +14,11 @@ enum Command: Int {
     static let basicControls: [Command] = [.on, .off, .brightnessUp, .brightnessDown]
     static let basicColors: [Command] = [.red, .blue, .green, .white, .candle]
     static let effects: [Command] = [.jump3, .jump7, .fade3, .fade7, .flash, .auto, .quick, .slow]
-    
 
+    
     //rgb
     static let rgbControls: [Command] = [.diy1, .diy2, .diy3, .diy4, .diy5, .diy6,
-                                         .redUp, .redDown, .greenUp, .greenDown, .blueUp, .blueDown]
+                                         .redUp, .greenUp, .blueUp, .redDown, .greenDown, .blueDown]
     static let rgbColors: [Command] = [.candle, .yellowOrange, .yellowGreen, .greenYellow,
                                        .tealBlue, .skyBlue, .indigoBlue, .lightBlue,
                                        .indigo, .violet, .purple, .deepPurple,
@@ -32,8 +32,8 @@ enum Command: Int {
                                          .uv, .indigoWW, .violetWW, .purpleWW,
                                          .pinkWhiteWW, .purpleWhiteWW, .tealWhiteWW, .indigoWhiteWW]
 
-//    static let rgbww: [Command] = basicControls + basicColors + effects + wwControlsFull + rgbwwColors
-    static let rgbww: [Command] = [.on, .off, .brightnessUp, .brightnessDown, .red, .blue, .green, .white, .whiteOn, .whiteOff, .whiteUp, .whiteDown, .white100, .white75, .white50, .white25,
+    static let rgbww: [Command] = [.on, .off, .brightnessUp, .brightnessDown, .red, .blue, .green, .white,
+                                   .whiteOn, .whiteOff, .whiteUp, .whiteDown, .white100, .white75, .white50, .white25,
                                    .candle, .orange, .orangeYellow, .yellow,
                                    .mossGreen, .turquoise, .lightBlueWW, .skyBlueWW,
                                    .uv, .indigoWW, .violetWW, .purpleWW,
@@ -144,9 +144,9 @@ extension Command {
         case .off:
             return "Off"
         case .brightnessUp:
-            return "Brightness Up"
+            return "Brighter"
         case .brightnessDown:
-            return "Brightness Down"
+            return "Dimmer"
         case .red:
             return "Red"
         case .green:
@@ -161,9 +161,9 @@ extension Command {
         case .whiteOff:
             return "WW Off"
         case .whiteUp:
-            return "WW Up"
+            return "WW Brighter"
         case .whiteDown:
-            return "WW Down"
+            return "WW Dimmer"
         case .white25:
             return "WW 25%"
         case .white50:
@@ -279,6 +279,72 @@ extension Command {
     }
     
 }
+
+//MARK: - Color Model
+
+extension Command {
+    
+    func color() -> UIColor {
+        
+        switch self {
+        case .red:
+            return Style.Color.red.color()
+        case .green:
+            return .flatGreen()
+        case .blue:
+            return .flatBlue()
+        case .white:
+            return UIColor.flatWhite().darken(byPercentage: 0.1)
+            
+        case .whiteOn, .whiteOff:
+            return .flatYellow()
+            
+        case .yellowOrange, .yellowGreen, .greenYellow:
+            return .flatOrange()
+            
+        case .candle, .orange, .orangeYellow, .yellow:
+            return .flatOrange()
+            
+        case .tealBlue, .indigoBlue:
+            return .flatPowderBlue()
+            
+        case .mossGreen, .turquoise:
+            return .flatGreen()
+            
+        case .lightBlue, .lightBlueWW, .skyBlue, .skyBlueWW:
+            return UIColor.flatBlue().lighten(byPercentage: 0.5)
+            
+        case .deepPurple, .indigo, .violet, .purple:
+            return UIColor.flatPurple().lighten(byPercentage: 0.3)
+            
+        case .uv, .indigoWW, .violetWW, .purpleWW:
+            return UIColor.flatPurple().lighten(byPercentage: 0.3)
+            
+        case .tealWhite, .indigoWhite, .tealWhiteWW, .indigoWhiteWW:
+            return UIColor.flatTeal().lighten(byPercentage: 0.2)
+            
+        case .pinkWhite, .purpleWhite, .pinkWhiteWW, .purpleWhiteWW:
+            return UIColor.flatPink().lighten(byPercentage: 0.5)
+            
+        case .redUp, .redDown:
+            return .flatRed()
+            
+        case .greenUp, .greenDown:
+            return .flatGreen()
+            
+        case .blueUp, .blueDown:
+            return .flatBlue()
+            
+        default:
+            return .white
+        }
+    }
+    
+}
+
+
+
+//MARK: - API 
 
 extension Command {
     

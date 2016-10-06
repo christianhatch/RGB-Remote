@@ -16,7 +16,8 @@ target 'RGB Remote OSX' do
 
     #UI
     pod 'OBMenuBarWindow'
-    
+    pod 'SnapKit', '~> 3.0'
+
 end
 
 
@@ -28,10 +29,17 @@ target 'RGB Remote' do
 
     #UI
     pod 'SVProgressHUD'
-    pod 'ChameleonFramework'
+    pod 'SnapKit', '~> 3.0'
 
 end
 
+target 'RGB Remote Widget iOS' do
+    
+    platform :ios, '9.0'
+    
+    rgb_pods
+
+end
 
 
 #post_install do | installer |
