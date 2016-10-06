@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Keypad-->
+        <!--RGBWW-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="ButtonGridViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="ButtonGridViewController" customModule="RGB_Remote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RGBWWButtonGridViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" customClass="RGBWWButtonGridViewController" customModule="RGB_Remote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -43,7 +43,7 @@
                             <constraint firstItem="Rmd-dR-IGu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ia1-K6-d13" secondAttribute="bottom" priority="250" constant="15" id="oMR-HP-Mbj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Keypad" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="RGBWW" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="collectionView" destination="Rmd-dR-IGu" id="H8k-s6-QLd"/>
                         <outlet property="collectionViewHeight" destination="TrZ-DJ-H79" id="q59-hz-oUr"/>
@@ -72,11 +72,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q7N-2l-bm2" id="kPE-8u-0Hx">
-                                            <frame key="frameInset" width="375" height="59.5"/>
+                                            <frame key="frameInset" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="CPD-mL-lVC">
-                                                    <frame key="frameInset" minX="15" width="345" height="59.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.99987119436264038" green="0.99998223781585693" blue="0.99984109401702881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,11 +137,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iel-F1-1GG" id="Lch-cI-fBl">
-                                            <frame key="frameInset" width="375" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BV6-Wl-ca2">
-                                                    <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -193,6 +193,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="ykn-Q7-KyC" kind="relationship" relationship="viewControllers" id="crE-Nt-obx"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="d8y-RX-QRc" kind="relationship" relationship="viewControllers" id="Xt4-eE-nw3"/>
@@ -220,6 +221,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfN-6B-d0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="1086"/>
+        </scene>
+        <!--RGB-->
+        <scene sceneID="exi-3t-QfL">
+            <objects>
+                <viewController storyboardIdentifier="RGBButtonGridViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ykn-Q7-KyC" customClass="RGBButtonGridViewController" customModule="RGB_Remote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hNX-SS-PcN"/>
+                        <viewControllerLayoutGuide type="bottom" id="yK2-tQ-TXT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yua-TC-qvv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PQG-Wb-YxN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="381" id="a8q-2c-OzN"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="6" minimumInteritemSpacing="6" id="vXC-vC-aP3">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ykn-Q7-KyC" id="Idt-Vq-3tL"/>
+                                    <outlet property="delegate" destination="ykn-Q7-KyC" id="k3H-Qp-e5A"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15000000599999999" green="0.15000000599999999" blue="0.15000000599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yK2-tQ-TXT" firstAttribute="top" secondItem="PQG-Wb-YxN" secondAttribute="bottom" constant="15" id="J0h-s6-63z"/>
+                            <constraint firstAttribute="trailing" secondItem="PQG-Wb-YxN" secondAttribute="trailing" constant="15" id="RKH-O6-vLK"/>
+                            <constraint firstItem="PQG-Wb-YxN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hNX-SS-PcN" secondAttribute="bottom" priority="250" constant="15" id="Rs2-yx-zlj"/>
+                            <constraint firstItem="PQG-Wb-YxN" firstAttribute="leading" secondItem="yua-TC-qvv" secondAttribute="leading" constant="15" id="xam-0o-KJ6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="RGB" image="first" id="S0Q-jO-vNL"/>
+                    <connections>
+                        <outlet property="collectionView" destination="PQG-Wb-YxN" id="N38-Oe-wxq"/>
+                        <outlet property="collectionViewHeight" destination="a8q-2c-OzN" id="N29-2x-jhU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62n-M7-UEs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-1036"/>
         </scene>
     </scenes>
     <resources>

@@ -25,18 +25,22 @@
 		4506E5501CA3867F006F5694 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E54F1CA3867F006F5694 /* TextViewController.swift */; };
 		4506E5521CA3869F006F5694 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E5511CA3869F006F5694 /* Logger.swift */; };
 		4506E5531CA3869F006F5694 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E5511CA3869F006F5694 /* Logger.swift */; };
-		45372E941CAE56F30063C288 /* RGBWWDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* RGBWWDataSource.swift */; };
-		45372E951CAE56F30063C288 /* RGBWWDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* RGBWWDataSource.swift */; };
+		4521EB3F1DA6029700042458 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4501F7ED1C8FFC3600386E55 /* NotificationCenter.framework */; };
+		4521EB421DA6029700042458 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521EB411DA6029700042458 /* TodayViewController.swift */; };
+		4521EB451DA6029700042458 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4521EB431DA6029700042458 /* MainInterface.storyboard */; };
+		4521EB491DA6029700042458 /* RGB Remote Widget iOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4521EB3E1DA6029700042458 /* RGB Remote Widget iOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4521EB4F1DA6060700042458 /* ButtonGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521EB4E1DA6060700042458 /* ButtonGridViewController.swift */; };
+		45372E941CAE56F30063C288 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* DataSource.swift */; };
+		45372E951CAE56F30063C288 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* DataSource.swift */; };
 		45372E981CAECDFF0063C288 /* OSXDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E961CAECDFF0063C288 /* OSXDataSource.swift */; };
 		453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C427C1C5AE40B001D2D7E /* AppDelegate.swift */; };
-		453C427F1C5AE40B001D2D7E /* ButtonGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C427E1C5AE40B001D2D7E /* ButtonGridViewController.swift */; };
 		453C42811C5AE40B001D2D7E /* ButtonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C42801C5AE40B001D2D7E /* ButtonListViewController.swift */; };
 		453C42841C5AE40B001D2D7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453C42821C5AE40B001D2D7E /* Main.storyboard */; };
 		453C42861C5AE40B001D2D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453C42851C5AE40B001D2D7E /* Assets.xcassets */; };
 		453C42891C5AE40B001D2D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453C42871C5AE40B001D2D7E /* LaunchScreen.storyboard */; };
 		453C42911C5AE595001D2D7E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C42901C5AE595001D2D7E /* APIManager.swift */; };
 		458797C11C69B9D90075B511 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458797C01C69B9D90075B511 /* Util.swift */; };
-		45C604921CA3C453007E18D7 /* iOSDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C604911CA3C453007E18D7 /* iOSDataSource.swift */; };
+		45C604921CA3C453007E18D7 /* iOSCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C604911CA3C453007E18D7 /* iOSCollectionViewDataSource.swift */; };
 		A98A9B4C3437E1EBF4C7BFFA /* Pods_RGB_Remote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC028D39F11A0341D1609F90 /* Pods_RGB_Remote.framework */; };
 		B1FD473662C3A234F7D1874C /* Pods_RGB_Remote_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173ABFBA79792066695492FA /* Pods_RGB_Remote_OSX.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +53,13 @@
 			remoteGlobalIDString = 4501F7EB1C8FFC3600386E55;
 			remoteInfo = "RGB Remote Widget";
 		};
+		4521EB471DA6029700042458 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 453C42711C5AE40B001D2D7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4521EB3D1DA6029700042458;
+			remoteInfo = "RGB Remote Widget iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +70,17 @@
 			dstSubfolderSpec = 13;
 			files = (
 				4501F7FD1C8FFC3600386E55 /* RGB Remote Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4521EB4D1DA6029700042458 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4521EB491DA6029700042458 /* RGB Remote Widget iOS.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,11 +108,15 @@
 		4506E54D1CA36F24006F5694 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		4506E54F1CA3867F006F5694 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		4506E5511CA3869F006F5694 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		45372E931CAE56F30063C288 /* RGBWWDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBWWDataSource.swift; sourceTree = "<group>"; };
+		4521EB3E1DA6029700042458 /* RGB Remote Widget iOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RGB Remote Widget iOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4521EB411DA6029700042458 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		4521EB441DA6029700042458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4521EB461DA6029700042458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4521EB4E1DA6060700042458 /* ButtonGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonGridViewController.swift; sourceTree = "<group>"; };
+		45372E931CAE56F30063C288 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		45372E961CAECDFF0063C288 /* OSXDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSXDataSource.swift; sourceTree = "<group>"; };
 		453C42791C5AE40B001D2D7E /* RGB Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RGB Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		453C427C1C5AE40B001D2D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		453C427E1C5AE40B001D2D7E /* ButtonGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGridViewController.swift; sourceTree = "<group>"; };
 		453C42801C5AE40B001D2D7E /* ButtonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonListViewController.swift; sourceTree = "<group>"; };
 		453C42831C5AE40B001D2D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		453C42851C5AE40B001D2D7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,7 +124,7 @@
 		453C428A1C5AE40B001D2D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		453C42901C5AE595001D2D7E /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		458797C01C69B9D90075B511 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		45C604911CA3C453007E18D7 /* iOSDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSDataSource.swift; sourceTree = "<group>"; };
+		45C604911CA3C453007E18D7 /* iOSCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		6F40296C6AAB7E683E246D29 /* Pods-RGB Remote OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB Remote OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-RGB Remote OSX/Pods-RGB Remote OSX.release.xcconfig"; sourceTree = "<group>"; };
 		CC028D39F11A0341D1609F90 /* Pods_RGB_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96AB52CA1D59C2FE8F2527E /* Pods-RGB Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB Remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RGB Remote/Pods-RGB Remote.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +145,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4501F7EE1C8FFC3600386E55 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4521EB3B1DA6029700042458 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4521EB3F1DA6029700042458 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +182,6 @@
 		4501F7E71C8FEF6100386E55 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				45372E931CAE56F30063C288 /* RGBWWDataSource.swift */,
 				455DF0291D349A0E00B5FB6B /* Controllers */,
 				455DF0281D349A0500B5FB6B /* Models */,
 			);
@@ -176,11 +209,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4521EB401DA6029700042458 /* RGB Remote Widget iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4521EB411DA6029700042458 /* TodayViewController.swift */,
+				4521EB431DA6029700042458 /* MainInterface.storyboard */,
+				4521EB461DA6029700042458 /* Info.plist */,
+			);
+			path = "RGB Remote Widget iOS";
+			sourceTree = "<group>";
+		};
 		453C42701C5AE40B001D2D7E = {
 			isa = PBXGroup;
 			children = (
 				4501F7E71C8FEF6100386E55 /* Common */,
 				453C427B1C5AE40B001D2D7E /* RGB Remote iOS */,
+				4521EB401DA6029700042458 /* RGB Remote Widget iOS */,
 				4501F7D81C8FDE4900386E55 /* RGB Remote OSX */,
 				4501F7EF1C8FFC3600386E55 /* RGB Remote Widget */,
 				453C427A1C5AE40B001D2D7E /* Products */,
@@ -195,6 +239,7 @@
 				453C42791C5AE40B001D2D7E /* RGB Remote.app */,
 				4501F7D71C8FDE4900386E55 /* RGB Remote OSX.app */,
 				4501F7EC1C8FFC3600386E55 /* RGB Remote Widget.appex */,
+				4521EB3E1DA6029700042458 /* RGB Remote Widget iOS.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,7 +249,7 @@
 			children = (
 				458797C01C69B9D90075B511 /* Util.swift */,
 				453C427C1C5AE40B001D2D7E /* AppDelegate.swift */,
-				45C604911CA3C453007E18D7 /* iOSDataSource.swift */,
+				45C604911CA3C453007E18D7 /* iOSCollectionViewDataSource.swift */,
 				453C42821C5AE40B001D2D7E /* Main.storyboard */,
 				4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */,
 				455DF0271D3499F700B5FB6B /* ViewControllers */,
@@ -217,7 +262,7 @@
 		455DF0271D3499F700B5FB6B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				453C427E1C5AE40B001D2D7E /* ButtonGridViewController.swift */,
+				4521EB4E1DA6060700042458 /* ButtonGridViewController.swift */,
 				453C42801C5AE40B001D2D7E /* ButtonListViewController.swift */,
 				4506E54D1CA36F24006F5694 /* LogViewController.swift */,
 				4506E54F1CA3867F006F5694 /* TextViewController.swift */,
@@ -228,6 +273,7 @@
 		455DF0281D349A0500B5FB6B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				45372E931CAE56F30063C288 /* DataSource.swift */,
 				4501425B1CA0BEB200DE77E6 /* Command.swift */,
 			);
 			name = Models;
@@ -324,6 +370,23 @@
 			productReference = 4501F7EC1C8FFC3600386E55 /* RGB Remote Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		4521EB3D1DA6029700042458 /* RGB Remote Widget iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4521EB4C1DA6029700042458 /* Build configuration list for PBXNativeTarget "RGB Remote Widget iOS" */;
+			buildPhases = (
+				4521EB3A1DA6029700042458 /* Sources */,
+				4521EB3B1DA6029700042458 /* Frameworks */,
+				4521EB3C1DA6029700042458 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RGB Remote Widget iOS";
+			productName = "RGB Remote Widget iOS";
+			productReference = 4521EB3E1DA6029700042458 /* RGB Remote Widget iOS.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		453C42781C5AE40B001D2D7E /* RGB Remote */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 453C428D1C5AE40B001D2D7E /* Build configuration list for PBXNativeTarget "RGB Remote" */;
@@ -334,10 +397,12 @@
 				453C42771C5AE40B001D2D7E /* Resources */,
 				8960C1E85818AF0326D9BAD4 /* [CP] Embed Pods Frameworks */,
 				523687B9FBDAE371FC83D8BD /* [CP] Copy Pods Resources */,
+				4521EB4D1DA6029700042458 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4521EB481DA6029700042458 /* PBXTargetDependency */,
 			);
 			name = "RGB Remote";
 			productName = "RGB Remote";
@@ -350,7 +415,7 @@
 		453C42711C5AE40B001D2D7E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Knot Labs";
 				TargetAttributes = {
@@ -359,6 +424,11 @@
 					};
 					4501F7EB1C8FFC3600386E55 = {
 						CreatedOnToolsVersion = 7.2.1;
+					};
+					4521EB3D1DA6029700042458 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YWKER65N63;
+						ProvisioningStyle = Automatic;
 					};
 					453C42781C5AE40B001D2D7E = {
 						CreatedOnToolsVersion = 7.2;
@@ -383,6 +453,7 @@
 				453C42781C5AE40B001D2D7E /* RGB Remote */,
 				4501F7D61C8FDE4900386E55 /* RGB Remote OSX */,
 				4501F7EB1C8FFC3600386E55 /* RGB Remote Widget */,
+				4521EB3D1DA6029700042458 /* RGB Remote Widget iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -403,6 +474,14 @@
 			files = (
 				4501F7F61C8FFC3600386E55 /* TodayViewController.xib in Resources */,
 				4501F7FA1C8FFC3600386E55 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4521EB3C1DA6029700042458 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4521EB451DA6029700042458 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45372E951CAE56F30063C288 /* RGBWWDataSource.swift in Sources */,
+				45372E951CAE56F30063C288 /* DataSource.swift in Sources */,
 				4506E5531CA3869F006F5694 /* Logger.swift in Sources */,
 				4501F7E61C8FEF5800386E55 /* APIManager.swift in Sources */,
 				45372E981CAECDFF0063C288 /* OSXDataSource.swift in Sources */,
@@ -536,20 +615,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4521EB3A1DA6029700042458 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4521EB421DA6029700042458 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		453C42751C5AE40B001D2D7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4521EB4F1DA6060700042458 /* ButtonGridViewController.swift in Sources */,
 				453C42911C5AE595001D2D7E /* APIManager.swift in Sources */,
 				453C42811C5AE40B001D2D7E /* ButtonListViewController.swift in Sources */,
 				458797C11C69B9D90075B511 /* Util.swift in Sources */,
 				453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */,
 				4506E5521CA3869F006F5694 /* Logger.swift in Sources */,
-				45C604921CA3C453007E18D7 /* iOSDataSource.swift in Sources */,
-				453C427F1C5AE40B001D2D7E /* ButtonGridViewController.swift in Sources */,
+				45C604921CA3C453007E18D7 /* iOSCollectionViewDataSource.swift in Sources */,
 				4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */,
 				4501425C1CA0BEB200DE77E6 /* Command.swift in Sources */,
-				45372E941CAE56F30063C288 /* RGBWWDataSource.swift in Sources */,
+				45372E941CAE56F30063C288 /* DataSource.swift in Sources */,
 				4506E5501CA3867F006F5694 /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +648,11 @@
 			isa = PBXTargetDependency;
 			target = 4501F7EB1C8FFC3600386E55 /* RGB Remote Widget */;
 			targetProxy = 4501F7FB1C8FFC3600386E55 /* PBXContainerItemProxy */;
+		};
+		4521EB481DA6029700042458 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4521EB3D1DA6029700042458 /* RGB Remote Widget iOS */;
+			targetProxy = 4521EB471DA6029700042458 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -587,6 +679,14 @@
 				4501F7F91C8FFC3600386E55 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4521EB431DA6029700042458 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4521EB441DA6029700042458 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		453C42821C5AE40B001D2D7E /* Main.storyboard */ = {
@@ -677,6 +777,43 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		4521EB4A1DA6029700042458 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = YWKER65N63;
+				INFOPLIST_FILE = "RGB Remote Widget iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knotlabs.RGB-Remote.RGB-Remote-Widget-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4521EB4B1DA6029700042458 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = YWKER65N63;
+				INFOPLIST_FILE = "RGB Remote Widget iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knotlabs.RGB-Remote.RGB-Remote-Widget-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -822,6 +959,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4521EB4C1DA6029700042458 /* Build configuration list for PBXNativeTarget "RGB Remote Widget iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4521EB4A1DA6029700042458 /* Debug */,
+				4521EB4B1DA6029700042458 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		453C42741C5AE40B001D2D7E /* Build configuration list for PBXProject "RGB Remote" */ = {
 			isa = XCConfigurationList;

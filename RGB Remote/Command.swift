@@ -10,37 +10,34 @@ import Foundation
 
 enum Command: Int {
     
-    static let rgbww: [Command] = [.On, .Off, .BrightnessUp, .BrightnessDown, .Red, .Blue, .Green, .White, .WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown, .White100, .White75, .White50, .White25,
-                                    .RedOrange, .Orange, .OrangeYellow, .Yellow,
-                                    .MossGreen, .Turquoise, .LightBlueWW, .SkyBlueWW,
-                                    .UV, .IndigoWW, .VioletWW, .PurpleWW,
-                                    .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW, .Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
-    
-    static func rgb() -> [Command] {
-        return Command.basicControls + Command.basicColors + Command.rgbControls + Command.rgbColors + Command.effects
-    }
-    
-//    static var rgb: [Command] = Command.basicControls + Command.basicColors + Command.rgbControls + Command.rgbColors + Command.effects
-
-//    static let rgbww: [Command] = Command.basicControls + Command.basicColors + Command.wwControls + Command.rgbwwColors + Command.effects
-
-    static let effects: [Command] = [.Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
+    //generic
     static let basicControls: [Command] = [.On, .Off, .BrightnessUp, .BrightnessDown]
-    static let basicColors: [Command] = [.Red, .Blue, .Green, .White]
+    static let basicColors: [Command] = [.Red, .Blue, .Green, .White, .Candle]
+    static let effects: [Command] = [.Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
+    
 
-    static let wwControlsFull: [Command] = [.WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown, .White100, .White75, .White50, .White25]
-    static let wwControls: [Command] = [.WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown]
-    static let rgbControls: [Command] = [.DIY1, .DIY2, .DIY3, .DIY4, .DIY5, .DIY6, .RedUp, .RedDown, .GreenUp, .GreenDown, .BlueUp, .BlueDown]
-
-    static let rgbColors: [Command] = [.OrangeYellow, .YellowOrange, .YellowGreen, .GreenYellow,
+    //rgb
+    static let rgbControls: [Command] = [.DIY1, .DIY2, .DIY3, .DIY4, .DIY5, .DIY6,
+                                         .RedUp, .RedDown, .GreenUp, .GreenDown, .BlueUp, .BlueDown]
+    static let rgbColors: [Command] = [.Candle, .YellowOrange, .YellowGreen, .GreenYellow,
                                        .TealBlue, .SkyBlue, .IndigoBlue, .LightBlue,
                                        .Indigo, .Violet, .Purple, .DeepPurple,
                                        .PinkWhite, .PurpleWhite, .TealWhite, .IndigoWhite]
 
-    static let rgbwwColors: [Command] = [.RedOrange, .Orange, .OrangeYellow, .Yellow,
+    //rgbww
+    static let wwControls: [Command] = [.WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown]
+    static let wwControlsFull: [Command] = wwControls + [.White100, .White75, .White50, .White25]
+    static let rgbwwColors: [Command] = [.Candle, .Orange, .OrangeYellow, .Yellow,
                                          .MossGreen, .Turquoise, .LightBlueWW, .SkyBlueWW,
                                          .UV, .IndigoWW, .VioletWW, .PurpleWW,
                                          .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW]
+
+//    static let rgbww: [Command] = basicControls + basicColors + effects + wwControlsFull + rgbwwColors
+    static let rgbww: [Command] = [.On, .Off, .BrightnessUp, .BrightnessDown, .Red, .Blue, .Green, .White, .WhiteOn, .WhiteOff, .WhiteUp, .WhiteDown, .White100, .White75, .White50, .White25,
+                                   .Candle, .Orange, .OrangeYellow, .Yellow,
+                                   .MossGreen, .Turquoise, .LightBlueWW, .SkyBlueWW,
+                                   .UV, .IndigoWW, .VioletWW, .PurpleWW,
+                                   .PinkWhiteWW, .PurpleWhiteWW, .TealWhiteWW, .IndigoWhiteWW, .Jump3, .Jump7, .Fade3, .Fade7, .Flash, .Auto, .Quick, .Slow]
 
     case On = 1
     case Off
@@ -74,7 +71,7 @@ enum Command: Int {
     case Slow
     
     //rgbww
-    case RedOrange
+    case Candle //25
     case Orange
     case OrangeYellow
     case Yellow
@@ -96,7 +93,7 @@ enum Command: Int {
     
     
     //rgb
-    case RichOrange
+//    case RichOrange
     case YellowOrange
     case YellowGreen
     case GreenYellow
@@ -198,8 +195,8 @@ extension Command {
             
             
         //rgbww
-        case .RedOrange:
-            return "Red Orange"
+        case .Candle:
+            return "Candle"
         case .Orange:
             return "Orange"
         case .OrangeYellow:
@@ -211,33 +208,13 @@ extension Command {
             return "Moss Green"
         case .Turquoise:
             return "Turquoise"
-            //        case .LightBlue:
-            //            return "Light Blue"
-            //        case .SkyBlue:
-            //            return "Sky Blue"
             
         case .UV:
             return "UV"
-            //        case .Indigo:
-            //            return "Indigo"
-            //        case .Violet:
-            //            return "Violet"
-            //        case .Purple:
-            //            return "Purple"
-            
-            //        case .PinkWhite:
-            //            return "Pink White"
-            //        case .PurpleWhite:
-            //            return "Purple White"
-            //        case .TealWhite:
-            //            return "Teal White"
-            //        case .IndigoWhite:
-            //            return "Indigo White"
-            
             
         //rgb
-        case .RichOrange:
-            return "Rich Orange"
+//        case .RichOrange:
+//            return "Rich Orange"
         case .YellowOrange:
             return "Yellow Orange"
         case .YellowGreen:
@@ -364,7 +341,7 @@ extension Command {
             
             
         //rgbww
-        case .RedOrange:
+        case .Candle:
             return "1"
         case .Orange:
             return "5"
@@ -393,8 +370,8 @@ extension Command {
             
             
         //rgb
-        case .RichOrange:
-            return "1"
+//        case .RichOrange:
+//            return "1"
         case .YellowOrange:
             return "5"
         case .YellowGreen:

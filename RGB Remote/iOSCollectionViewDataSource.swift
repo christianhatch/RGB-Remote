@@ -10,13 +10,20 @@ import Foundation
 import UIKit
 
 
-class iOSDataSource: NSObject {
-    private let dataSource = RGBWWDataSource()
+class iOSCollectionViewDataSource: NSObject {
+    
+    private let dataSource: DataSource
+    
+    init(dataSource: DataSource) {
+        self.dataSource = dataSource
+        super.init()
+    }
 }
+
 
 //MARK: - Custom Methods
 
-extension iOSDataSource {
+extension iOSCollectionViewDataSource {
     
     func register(collectionView: UICollectionView) {
         collectionView.registerNib(UINib(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCell")
@@ -43,7 +50,7 @@ extension iOSDataSource {
 
 //MARK: - UICollectionView DataSource
 
-extension iOSDataSource: UICollectionViewDataSource {
+extension iOSCollectionViewDataSource: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
@@ -56,12 +63,11 @@ extension iOSDataSource: UICollectionViewDataSource {
         
         switch command {
         case .BrightnessUp, .BrightnessDown, .WhiteUp, .WhiteDown:
-            cell.button.addTarget(self, action: #selector(iOSDataSource.buttonTouchDown(_:)), forControlEvents: .TouchDown)
-            cell.button.addTarget(self, action: #selector(iOSDataSource.buttonTouchUp(_:)), forControlEvents: .TouchUpOutside)
-            cell.button.addTarget(self, action: #selector(iOSDataSource.buttonTouchUp(_:)), forControlEvents: .TouchUpInside)
+            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchDown(_:)), forControlEvents: .TouchDown)
+            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchUp(_:)), forControlEvents: .TouchUpOutside)
+            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchUp(_:)), forControlEvents: .TouchUpInside)
         default:
-            cell.button.addTarget(self, action: #selector(iOSDataSource.buttonTapped(_:)), forControlEvents: .TouchUpInside)
-            break
+            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTapped(_:)), forControlEvents: .TouchUpInside)
         }
         return cell
     }
@@ -80,7 +86,7 @@ extension iOSDataSource: UICollectionViewDataSource {
 
 //MARK: - UICollectionView Delegate
 
-extension iOSDataSource: UICollectionViewDelegateFlowLayout {
+extension iOSCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: 10)
@@ -102,13 +108,12 @@ extension iOSDataSource: UICollectionViewDelegateFlowLayout {
         switch command {
         case .Red, .Green, .Blue:
             desiredButtonsPerRow = 3
-            break
+
         case .White:
             desiredButtonsPerRow = 1
-            break
+
         default:
             desiredButtonsPerRow = 4
-            break
         }
         
         let size = CGSize(width: collectionView.bounds.width / desiredButtonsPerRow, height: 50)
@@ -117,16 +122,15 @@ extension iOSDataSource: UICollectionViewDelegateFlowLayout {
 }
 
 
+
 //MARK: - Cell Class
 
 class ButtonCell: UICollectionViewCell {
-    @IBOutlet weak var button: UIButton!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        button.titleLabel?.numberOfLines = 2
-        button.titleLabel?.textAlignment = .Center
+    @IBOutlet weak var button: UIButton! {
+        didSet {
+            button.titleLabel?.numberOfLines = 2
+            button.titleLabel?.textAlignment = .Center
+        }
     }
 }
 
@@ -163,7 +167,7 @@ extension Command {
         case .YellowOrange, .YellowGreen, .GreenYellow:
             return UIColor.flatOrangeColor()
             
-        case .RedOrange, .Orange, .OrangeYellow, .Yellow:
+        case .Candle, .Orange, .OrangeYellow, .Yellow:
             return UIColor.flatOrangeColor()
             
         case .TealBlue, .IndigoBlue:

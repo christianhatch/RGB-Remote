@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        if let tabbar = self.window?.rootViewController as? UITabBarController {
+        if let tabbar = window?.rootViewController as? UITabBarController {
+            
             tabbar.delegate = tabbarManager
             tabbar.selectedIndex = TabbarManager.lastSelectedIndex()
         }
