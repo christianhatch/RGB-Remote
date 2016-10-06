@@ -67,16 +67,26 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "453C42781C5AE40B001D2D7E"
-            BuildableName = "RGB Remote.app"
-            BlueprintName = "RGB Remote"
+            BlueprintIdentifier = "4521EB3D1DA6029700042458"
+            BuildableName = "RGB Remote Widget iOS.appex"
+            BlueprintName = "RGB Remote Widget iOS"
             ReferencedContainer = "container:RGB Remote.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4521EB3D1DA6029700042458"
+            BuildableName = "RGB Remote Widget iOS.appex"
+            BlueprintName = "RGB Remote Widget iOS"
+            ReferencedContainer = "container:RGB Remote.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

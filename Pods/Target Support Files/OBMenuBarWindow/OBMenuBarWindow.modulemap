@@ -1,0 +1,6 @@
+framework module OBMenuBarWindow {
+  umbrella header "OBMenuBarWindow-umbrella.h"
+
+  export *
+  module * { export * }
+}

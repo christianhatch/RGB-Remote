@@ -12,27 +12,30 @@ class ButtonGridViewController: NSViewController {
 
     @IBOutlet weak var collectionView: NSCollectionView!
 
+    private let dataSource = MacOSDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureCollectionView()
+        func setupView() {
+//            let flowLayout = NSCollectionViewFlowLayout()
+//            flowLayout.itemSize = NSSize(width: 50, height: 50)
+//            flowLayout.sectionInset = EdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//            flowLayout.minimumInteritemSpacing = 0
+//            flowLayout.minimumLineSpacing = 0
+            collectionView.collectionViewLayout = NSCollectionViewFlowLayout()
+            
+            
+            view.wantsLayer = true
+            collectionView.layer?.backgroundColor = NSColor.gray.cgColor
+            
+            collectionView.dataSource = dataSource
+            collectionView.delegate = dataSource
+        }
+        
+        setupView()
     }
 
-    private func configureCollectionView() {
-
-        let flowLayout = NSCollectionViewFlowLayout()
-        flowLayout.itemSize = NSSize(width: 50, height: 50)
-        flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
-        flowLayout.minimumInteritemSpacing = 5
-        flowLayout.minimumLineSpacing = 5
-        collectionView.collectionViewLayout = flowLayout
-
-        view.wantsLayer = true
-
-        collectionView.layer?.backgroundColor = .gray
-    }
-
-
+    
 }
 

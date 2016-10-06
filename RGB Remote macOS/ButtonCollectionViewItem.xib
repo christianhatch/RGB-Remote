@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ButtonCollectionViewItem" customModule="RGB_Remote_macOS" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="gDc-uQ-e1D" id="vWy-Rt-HTE"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gDc-uQ-e1D">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" drawsBackground="YES" id="An0-og-JC7">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gDc-uQ-e1D" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="EXW-eJ-0a6"/>
+                <constraint firstAttribute="trailing" secondItem="gDc-uQ-e1D" secondAttribute="trailing" id="L9l-ZS-mzt"/>
+                <constraint firstAttribute="bottom" secondItem="gDc-uQ-e1D" secondAttribute="bottom" id="TgV-jX-PWI"/>
+                <constraint firstItem="gDc-uQ-e1D" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="U74-3y-Nb5"/>
+            </constraints>
+            <point key="canvasLocation" x="-165" y="-19.5"/>
+        </customView>
+        <collectionViewItem id="k6H-fS-Syj" customClass="ButtonCollectionViewItem" customModule="RGB_Remote_macOS" customModuleProvider="target"/>
+    </objects>
+</document>
