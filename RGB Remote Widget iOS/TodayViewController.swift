@@ -69,7 +69,7 @@ extension TodayViewController: NCWidgetProviding {
             dataSource = CoreCollectionViewDataSource()
 
         case .expanded:
-            dataSource = iOSCollectionViewDataSource(dataSource: RGBWWDataSource())
+            dataSource = iOSCollectionViewDataSource(dataSource: RGBWWNoEffectsDataSource())
         }
     }
 }

@@ -78,6 +78,14 @@ class RGBWWDataSource: DataSource {
                                Section(type: .basicColors, items: Command.basicColors)]
 }
 
+class RGBWWNoEffectsDataSource: DataSource {
+    
+    let sections: [Section] = [Section(type: .specialColors, items: Command.rgbwwColors),
+                               Section(type: .specialControls, items: Command.wwControls),
+                               Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .basicColors, items: Command.basicColors)]
+}
+
 
 class CoreDataSource: DataSource {
     
