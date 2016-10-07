@@ -12,12 +12,13 @@
 		03402704A5EBCF0EBDACF0BA611E4F2B /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D8DA86ACC5CCD2CB969FE0E6C6CAE /* ConstraintLayoutSupport.swift */; };
 		0410B625B3619E1074108CA7E2CA42D7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3304D022F3060E1DE940D4F3447B9 /* Notifications.swift */; };
 		0A6D32DC0432DDD23CB8BD7EDCE09A2F /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A651BB5FE9810DFDFA277EDB12A567 /* NetworkReachabilityManager.swift */; };
+		0BFD353F1C9C237A81BE561FC8843F70 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8B39DF5675EC08C93F33555326CDD8 /* Cocoa.framework */; };
 		11BB27421680C3E9343C511807969636 /* OBMenuBarWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54B1336D7BC75D618AE5213A862CE /* OBMenuBarWindow.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		12E97CE5877AD96157866875A6A73640 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675DA60EA63813F42FF9F254EEFFE245 /* ConstraintMakerFinalizable.swift */; };
 		13511CD13577A98A2F29FEF70226F6EA /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9EA7A7E2E8BE20B068A9E0F92B9D7A /* ConstraintMultiplierTarget.swift */; };
 		136F434129B12740B3676159ACC3AF03 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D2EC13E6980D65E56FA9CEC942236E /* ConstraintRelatableTarget.swift */; };
 		158015D9C7FAF33228135A64F7402745 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE3E9FFBDE02B30342878952F436F1 /* ConstraintRelation.swift */; };
-		15FBDF246EBE5601D8954AC3686EB9C2 /* Pods-RGB Remote macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E925B1671B53AB8342CC6BCCFF537CCB /* Pods-RGB Remote macOS-dummy.m */; };
+		15FBDF246EBE5601D8954AC3686EB9C2 /* Pods-RGB Remote macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E132B863779B7BA253C26D56768D64A /* Pods-RGB Remote macOS-dummy.m */; };
 		17AEC71F1665E7621EB21E5E5E1CF700 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2353D3E6B79F64993504084148837FA1 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19878AB0BB76A63885CADC1807BCD49D /* SnapKit-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FA452D0250201981DB8ACBEDA520DC8 /* SnapKit-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BB66B75B7390C6F81F8716FB3905DF6 /* OBMenuBarWindow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF804C50A7C05FAF2CB28F745D1B07AB /* OBMenuBarWindow-dummy.m */; };
@@ -29,12 +30,13 @@
 		2A00745A9F66F05ADBA0575074E0368A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352469794D0A086516B8D51559E8781 /* Request.swift */; };
 		2C209DBCF8E2F514CA92567B8041CDBD /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687ABC3FAFED2C2DCF690876AD2C262 /* ConstraintMakerExtendable.swift */; };
 		2C6F6A6FB333EC035615C15DB4BF2F9D /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B93B5868F7F5EEAC52992F15235705 /* ConstraintViewDSL.swift */; };
-		31C15CFF18CAB06C4772B107534ABB92 /* Pods-RGB Remote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 023EDF2951C1BE150109ED9452BF87EF /* Pods-RGB Remote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31C15CFF18CAB06C4772B107534ABB92 /* Pods-RGB Remote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0B4471E1D98DC805DC8DD0721AFDFB /* Pods-RGB Remote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		326C6A3DFD8F7D2AEF05005C1865EF4F /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3540EFD7EE49D2D9E76E042ADFE09 /* ParameterEncoding.swift */; };
 		3285719BB4825F43C64756805810EAD8 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B1BF998555347BB27F2E8778B9C6D6 /* LayoutConstraint.swift */; };
+		336DFB5F4CEC3D75ACA528C071DADD53 /* Pods-RGB Remote Widget macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F0BD54A0BE6B272F8226018A830D97 /* Pods-RGB Remote Widget macOS-dummy.m */; };
 		36424334597CD373505C165C65180B7E /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2784BF48A70AE49AB874F1AF96CC09 /* ConstraintItem.swift */; };
 		3802F14E5398075C85891C371C7E92D8 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A017317F29D8655C4211A5B870E532 /* ConstraintDSL.swift */; };
-		39D2F24AEDFC3F24BCFCFEF69F67E260 /* Pods-RGB Remote macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB595A2E6F59C98359BAB574D7BCE15 /* Pods-RGB Remote macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39D2F24AEDFC3F24BCFCFEF69F67E260 /* Pods-RGB Remote macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9BE15511115B031D4ABC8CF2E463CB /* Pods-RGB Remote macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A095D412AD524574908EF7A543337A0 /* UILayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215CD93A22C18C67D674A70DCEDF3349 /* UILayoutGuide+Extensions.swift */; };
 		3A1C23F41D3B2C784D903BB7F6CDACEC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C697A6D1F0E04DF82FB4CD54545E4 /* Result.swift */; };
 		3BEF15EA94810EEB2B9BF8CA23CEAAF2 /* OBMenuBarWindow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D3E18E51B7D6431E41DC66B528F450 /* OBMenuBarWindow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,7 +51,7 @@
 		4C4ABF867C9EF895DAE8B9AA82702D6B /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434520FBE223B8C5C63F481AC3764F32 /* SessionDelegate.swift */; };
 		4F95E3C23D2A7BBADCB1EB8ED684B28D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8B39DF5675EC08C93F33555326CDD8 /* Cocoa.framework */; };
 		5095D164DF3414948F0E1EF7277DC06C /* Alamofire-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E637D286769C1A9FAF80940386B26BFC /* Alamofire-iOS-dummy.m */; };
-		50F31BE4668A1276FFA8D8264F207AAB /* Pods-RGB Remote Widget iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5AE77F1D681AF665B423E17A47B44C /* Pods-RGB Remote Widget iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50F31BE4668A1276FFA8D8264F207AAB /* Pods-RGB Remote Widget iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2864F3B16D777607D2A21F20D674806 /* Pods-RGB Remote Widget iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51F301AD9AFEFFAF7E41BE6FF8E472DF /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9DE16657A1DDCB807019E9C72ADA2C /* ConstraintView.swift */; };
 		553B670405CE655A51698FDF84671CFD /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBEB88C07DE694A190F29C95186991 /* ConstraintMaker.swift */; };
 		557509645CDE5548F47590159378EA77 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EDE546B9607F05031B3FD8C73052DC /* ConstraintMakerPriortizable.swift */; };
@@ -66,6 +68,7 @@
 		675E48F981D57E5647E68773DA16E7A8 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C398BF0A34BDE3BD830BB171D52A470 /* ConstraintLayoutGuideDSL.swift */; };
 		6848F505D6562CB98D758B78CCC2ECE4 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA494523B7F3D67895B29C81AA6C556C /* ConstraintConfig.swift */; };
 		6BA82F1E15FDA588243518704297FC6E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3304D022F3060E1DE940D4F3447B9 /* Notifications.swift */; };
+		6C3A339AA831A2C44D3646C045E37D1D /* Pods-RGB Remote Widget macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C35E13914365F24F4AF28B6C75BD969C /* Pods-RGB Remote Widget macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6ED570BD9EAB6B99D9E9B62016705943 /* SnapKit-OSX-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBFDCB0D0EF570D45DEBD1DF00FF119B /* SnapKit-OSX-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70C1580CF9804D8DE50D218A576DBC5B /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B27A296B094DA7AB39176D955A5F2 /* Debugging.swift */; };
 		728D2D784CC3F8B03F8146CE702CC769 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2784BF48A70AE49AB874F1AF96CC09 /* ConstraintItem.swift */; };
@@ -79,7 +82,7 @@
 		891E57AAF68213808AE242194199F3F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11711466DCD4AD5240CE3BD6A8CE262 /* Foundation.framework */; };
 		899E61749063008773D72C2436980BD1 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEB6A278E69CAFF41AD0C004CDF69A /* ConstraintInsets.swift */; };
 		8F8A738E42A3617BAA1189F009BC106B /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB001DEE3C1BF2EC7485D0F397DAF9E6 /* SVIndefiniteAnimatedView.m */; };
-		93079F3F87A115DBAFF09795494D05A2 /* Pods-RGB Remote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAFAE89B5DD4DCF61FA65F309FDA4F5 /* Pods-RGB Remote-dummy.m */; };
+		93079F3F87A115DBAFF09795494D05A2 /* Pods-RGB Remote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46405575D0A0FACA367FEE5202D55CF8 /* Pods-RGB Remote-dummy.m */; };
 		963E3074EC4E35C88E5396BD96519ADB /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AFC8AC2420FB1CE258C877CCED5E4C /* ConstraintLayoutSupportDSL.swift */; };
 		97BEA89F9D56DC9084AA9911F48AEF99 /* UILayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215CD93A22C18C67D674A70DCEDF3349 /* UILayoutGuide+Extensions.swift */; };
 		99CB931116484B19DAF87EDF5F924908 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE3E9FFBDE02B30342878952F436F1 /* ConstraintRelation.swift */; };
@@ -98,7 +101,7 @@
 		B04B34D542946B76A0D355677858EBCC /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 348B46023C13C206ACF32CC758E8D539 /* SVProgressHUD.bundle */; };
 		B3B02B5E4A08E85ACFF487612D9F7950 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16177D13187C83516FA81F7E6AA70F3 /* UILayoutSupport+Extensions.swift */; };
 		B670572D7D967B4431B0106E3CFDE511 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D25E6C711CD5FC4EFBCC6C8A233750E /* SVProgressHUD-dummy.m */; };
-		B707FD24130B3707D4D068605086670E /* Pods-RGB Remote Widget iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1390358CA8A9152AA8E0425017F30 /* Pods-RGB Remote Widget iOS-dummy.m */; };
+		B707FD24130B3707D4D068605086670E /* Pods-RGB Remote Widget iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66105DDD4CBC9C1EC0EFDE10117448 /* Pods-RGB Remote Widget iOS-dummy.m */; };
 		B77F6FB50583752419FE28172C61A367 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D936F804849E822B73D122A023AF31 /* Alamofire.swift */; };
 		B7DD0425D7CFE59550F49E355B411590 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC60160EB2E1AD8CD5ADCC7DAE7DAC9 /* ConstraintMakerEditable.swift */; };
 		B9C10FE0D607F8150B94EF3FC61807FC /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B3603BF0CF4FE84C1CA415F90297FB /* ConstraintConstantTarget.swift */; };
@@ -190,28 +193,36 @@
 			remoteGlobalIDString = 6102E89EC00D81B2869FB4D33CEB0451;
 			remoteInfo = "SnapKit-OSX";
 		};
+		E4B4311782B14C6FE8B88A0E6C9E13D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A46F3686C46DC9D9C11D7DE4BDDBB54;
+			remoteInfo = "Alamofire-OSX";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		023EDF2951C1BE150109ED9452BF87EF /* Pods-RGB Remote-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RGB Remote-umbrella.h"; sourceTree = "<group>"; };
-		03208D9388697695BF2D1EDE63A8C032 /* Pods-RGB Remote macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RGB Remote macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0030760203C3443D28AFF71BBD90FA1E /* Pods-RGB Remote Widget iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote Widget iOS-resources.sh"; sourceTree = "<group>"; };
+		014F39567C87CC5E05BF9DA593C53CB8 /* Pods-RGB Remote Widget macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RGB Remote Widget macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		055987C9FF63D7ACC4788E5470A93F93 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		076A46EF2A143C95CBB9C5F2D0CEF628 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		09117E8D5A768C771FDD2D0D5ADEAE56 /* Pods-RGB Remote macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0569A30C269D53FF28B1005D320C51F8 /* Pods-RGB Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote.debug.xcconfig"; sourceTree = "<group>"; };
+		058865AC4D94DF1C602C66359335B579 /* Pods-RGB Remote Widget macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote Widget macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		05F7D12B62D496DBD09E93683D156A14 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0991BD8D3512CF2E4B3384D53473F1D9 /* Pods-RGB Remote macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RGB Remote macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		09B4833A45536100DB74D0F490F45217 /* SnapKit-OSX.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SnapKit-OSX.xcconfig"; sourceTree = "<group>"; };
 		0A112D787F3560A7A2E926BFBCD1776D /* OBMenuBarWindow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OBMenuBarWindow.xcconfig; sourceTree = "<group>"; };
 		0BEB73063488DB2B272B3DE1B399714A /* Alamofire-OSX.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Alamofire-OSX.modulemap"; sourceTree = "<group>"; };
 		0D06E9BF4E0CBFC79462CECE2F22B5AD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DB595A2E6F59C98359BAB574D7BCE15 /* Pods-RGB Remote macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RGB Remote macOS-umbrella.h"; sourceTree = "<group>"; };
+		117ACA1E0A84ED15DFDE7AA7FFBD6E91 /* Pods-RGB Remote-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote-resources.sh"; sourceTree = "<group>"; };
 		12EADBC43A26F5838A23A349FC662FBE /* Alamofire-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-iOS-umbrella.h"; path = "../Alamofire-iOS/Alamofire-iOS-umbrella.h"; sourceTree = "<group>"; };
 		1352469794D0A086516B8D51559E8781 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		15C3540EFD7EE49D2D9E76E042ADFE09 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		1729F97DC8F65182B2068752CA92E69D /* Pods-RGB Remote Widget macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RGB Remote Widget macOS.modulemap"; sourceTree = "<group>"; };
 		180EC4283D61AB32254977E6708EF949 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		19D666F95BF723D237E63DDEBC004432 /* Alamofire-OSX-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-OSX-umbrella.h"; sourceTree = "<group>"; };
 		1BBBEB88C07DE694A190F29C95186991 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		1C338512241775777C9D7A02743950A8 /* Alamofire-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Alamofire-iOS.xcconfig"; path = "../Alamofire-iOS/Alamofire-iOS.xcconfig"; sourceTree = "<group>"; };
-		1CB52AF9C41B4B8E2C76099F5C8FE0EA /* Pods_RGB_Remote_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB_Remote_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		20221149787EB899CAEE2B09ABF4FC47 /* Pods-RGB Remote Widget iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote Widget iOS.release.xcconfig"; sourceTree = "<group>"; };
 		207F7C5D4A568FC5BEA257C17796425D /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		2102D0145391B447C395D3FB1B56FC3E /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
 		211BBAEA1F456F07269E6658542E07B7 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
@@ -219,59 +230,62 @@
 		229A998821538B7ECC4DD05252B9887F /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		2353D3E6B79F64993504084148837FA1 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
 		269C1494BD67ACD860B27767C0077B04 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		28ADA19C80EE8D5C59777F1F0448DE1F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A209BB6A0CB52F6CAC9FFF8F6ED44CE /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
 		2A9D8DA86ACC5CCD2CB969FE0E6C6CAE /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		2AA346740C634DB1C2ECEC2650D665B0 /* SnapKit-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SnapKit-iOS.xcconfig"; path = "../SnapKit-iOS/SnapKit-iOS.xcconfig"; sourceTree = "<group>"; };
-		2DFD3A20BB66891419F62658A810E973 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EAEB402EE74B77185E1534A3B221888 /* Pods-RGB Remote-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote-resources.sh"; sourceTree = "<group>"; };
-		323BBEC9766B2A458DDD860E7902D9C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32D2EC13E6980D65E56FA9CEC942236E /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		348B46023C13C206ACF32CC758E8D539 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		34D689AD7A21A3D698761605D95A3BEB /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		3B05FB607D96B67D696FBB248255D08F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Alamofire-iOS/Info.plist"; sourceTree = "<group>"; };
-		3B37F2895E60C54618476DA17473B0E6 /* Pods-RGB Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote.debug.xcconfig"; sourceTree = "<group>"; };
 		3CFE7470321E15AC0E947E6A6DA74445 /* Alamofire-OSX-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-OSX-prefix.pch"; sourceTree = "<group>"; };
-		3DAFAE89B5DD4DCF61FA65F309FDA4F5 /* Pods-RGB Remote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RGB Remote-dummy.m"; sourceTree = "<group>"; };
-		3F027E8294F9EBF2BB33C64BC1730F26 /* Pods-RGB Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote.release.xcconfig"; sourceTree = "<group>"; };
-		3F6D92A61E9A021F0D49B21B9E9E2EED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FAE61774C4C51A86BB06D9DC98D01E1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SnapKit-iOS/Info.plist"; sourceTree = "<group>"; };
+		413A9BDB68F84BDB385A5D009E9552E5 /* Pods_RGB_Remote_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB_Remote_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D8523E38408293C46D7BB88C4D2BBC /* Alamofire-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-iOS-prefix.pch"; path = "../Alamofire-iOS/Alamofire-iOS-prefix.pch"; sourceTree = "<group>"; };
 		42D936F804849E822B73D122A023AF31 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		434520FBE223B8C5C63F481AC3764F32 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		44BF57CFA47C74FB48EED92BB2C77B8C /* Pods-RGB Remote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RGB Remote-acknowledgements.plist"; sourceTree = "<group>"; };
+		46405575D0A0FACA367FEE5202D55CF8 /* Pods-RGB Remote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RGB Remote-dummy.m"; sourceTree = "<group>"; };
 		4644FFD7F6876DD852B661F032E0DBA2 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
 		47B93B5868F7F5EEAC52992F15235705 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		47F5EA8A1E7999D5D5486DB6C2B5E273 /* SnapKit-OSX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-OSX-dummy.m"; sourceTree = "<group>"; };
-		4848B3164547CE79C5C8A77815C1C7B3 /* Pods-RGB Remote macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RGB Remote macOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		4D3725CF0A0198DD0F5F8D442079A564 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DC1390358CA8A9152AA8E0425017F30 /* Pods-RGB Remote Widget iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RGB Remote Widget iOS-dummy.m"; sourceTree = "<group>"; };
+		4E9BE15511115B031D4ABC8CF2E463CB /* Pods-RGB Remote macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RGB Remote macOS-umbrella.h"; sourceTree = "<group>"; };
+		538D6450502596139C7A4F4BFEE30252 /* Pods-RGB Remote Widget iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RGB Remote Widget iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		53A651BB5FE9810DFDFA277EDB12A567 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		54D3E18E51B7D6431E41DC66B528F450 /* OBMenuBarWindow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OBMenuBarWindow-umbrella.h"; sourceTree = "<group>"; };
 		56010D8AE82807455A7E4884CFD5B56E /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		566FE59C3F6BB35874EC98ABA5DA083A /* Pods-RGB Remote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RGB Remote-acknowledgements.plist"; sourceTree = "<group>"; };
 		5687ABC3FAFED2C2DCF690876AD2C262 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		57F0BD54A0BE6B272F8226018A830D97 /* Pods-RGB Remote Widget macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RGB Remote Widget macOS-dummy.m"; sourceTree = "<group>"; };
+		582A52A6020D13ECDB4308315EE17DCC /* OBMenuBarWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OBMenuBarWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59F3A75D50F3FE5E08667A204E24641E /* Pods_RGB_Remote_Widget_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB_Remote_Widget_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBE3E9FFBDE02B30342878952F436F1 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		5D236738C76E13892B721691E4F4794E /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		627DCFF914A646B82286E83639C58EF2 /* Pods-RGB Remote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote-frameworks.sh"; sourceTree = "<group>"; };
 		63F5F06B4F91A6BDEBAFF9A24CF13DB2 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		675DA60EA63813F42FF9F254EEFFE245 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		67A70AB93AF3FA0F564E8015F55F96DF /* Pods-RGB Remote-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RGB Remote-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6C5B27A296B094DA7AB39176D955A5F2 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
+		6C6F77BF53C13C7793DEFA4BB97F29B9 /* Pods-RGB Remote macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RGB Remote macOS.modulemap"; sourceTree = "<group>"; };
 		6D5F249E61B7EB77C33EB27B5B576F65 /* Alamofire-OSX.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Alamofire-OSX.xcconfig"; sourceTree = "<group>"; };
+		6DB523E76EB37DC0C8F21157C2017F56 /* Pods-RGB Remote Widget iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote Widget iOS.release.xcconfig"; sourceTree = "<group>"; };
+		6E132B863779B7BA253C26D56768D64A /* Pods-RGB Remote macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RGB Remote macOS-dummy.m"; sourceTree = "<group>"; };
 		6E3507B8BC660D3B2D778F2ED8F4B500 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		703018F3178180B8DC3B201DA01BB72A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70A9F89927CFD8AE47A490F40F297290 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70EFDD7B6A5319ED8763A4F20C1A8685 /* Pods_RGB_Remote_Widget_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB_Remote_Widget_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B1BF998555347BB27F2E8778B9C6D6 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
 		744A38C6B5548A8EFA7A40CE3B3CCCA4 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		773C2E1367A99D85D16EDF4D7C46999C /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3EBA958A93D1718AB45B74C4EA3D8F /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
+		7E2971E97C1E61E558BAA1ABAEEA3A26 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F18E9E129C88679592FCD0978832BB2 /* Alamofire-OSX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-OSX-dummy.m"; sourceTree = "<group>"; };
 		7FA452D0250201981DB8ACBEDA520DC8 /* SnapKit-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SnapKit-iOS-umbrella.h"; path = "../SnapKit-iOS/SnapKit-iOS-umbrella.h"; sourceTree = "<group>"; };
 		84578865A63223C58EB9AB9D510330D4 /* SnapKit-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SnapKit-iOS-dummy.m"; path = "../SnapKit-iOS/SnapKit-iOS-dummy.m"; sourceTree = "<group>"; };
 		84DB6ED7070D3C7052FEE9AE631E43CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		856E22C2A26BBEF010A8240CCC6D1A9A /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		85E54B1336D7BC75D618AE5213A862CE /* OBMenuBarWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OBMenuBarWindow.m; path = Classes/OBMenuBarWindow.m; sourceTree = "<group>"; };
-		89F54AD1DC4D9DBD572C3F2E346A8464 /* Pods-RGB Remote Widget iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote Widget iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		87DF06111F0B6C6ADCD3EBA579FAB747 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		884071717FA0273A094077E7C43736FF /* Pods-RGB Remote macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote macOS.release.xcconfig"; sourceTree = "<group>"; };
+		8A7CEA399FA17D141F02BAF9F82B6C07 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C398BF0A34BDE3BD830BB171D52A470 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		8C756FA78761D5B3802F8D581CA8FC5D /* Pods-RGB Remote macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote macOS.release.xcconfig"; sourceTree = "<group>"; };
 		9365CF3829FF530C777D2AC654952D07 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		984A75ED63B504FED9DBECC1EF1E718E /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
@@ -279,51 +293,57 @@
 		9AD0E1A742C49E682C621E686134CEF3 /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		9C2784BF48A70AE49AB874F1AF96CC09 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		9C2C2BDE7289E597FC13C04737C7C330 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		9C5F6E93CE415233D0CDFB77BE9FE64D /* Pods-RGB Remote macOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote macOS-resources.sh"; sourceTree = "<group>"; };
 		9D25E6C711CD5FC4EFBCC6C8A233750E /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		9E621E5C02D5B66412535F59A2688642 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		9E83DB7F615E53101406C80899ECC9D6 /* Pods-RGB Remote macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9E8B39DF5675EC08C93F33555326CDD8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		B02A55675A6DD1B2585BB0BF0D8FED1F /* Pods_RGB_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B35D5208AA097D712B1FC441561AC59E /* Pods-RGB Remote Widget iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RGB Remote Widget iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A1C185A98608370C765923E91F716090 /* Pods-RGB Remote Widget iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RGB Remote Widget iOS.modulemap"; sourceTree = "<group>"; };
+		A446914807C77A4DF64EB5C97B713B5F /* Pods-RGB Remote.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RGB Remote.modulemap"; sourceTree = "<group>"; };
+		AA7E7803038F52DD0FD40820E4CD493E /* Pods_RGB_Remote_Widget_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB_Remote_Widget_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC86EE342ABC7DCFD38849CE0EDF3A15 /* Pods-RGB Remote macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RGB Remote macOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		B2864F3B16D777607D2A21F20D674806 /* Pods-RGB Remote Widget iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RGB Remote Widget iOS-umbrella.h"; sourceTree = "<group>"; };
 		B484A5D926EC2D50A2C63C3486A209E9 /* SnapKit-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SnapKit-iOS-prefix.pch"; path = "../SnapKit-iOS/SnapKit-iOS-prefix.pch"; sourceTree = "<group>"; };
+		B4D7B7E01CC823750D05375544036BD4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5EDE546B9607F05031B3FD8C73052DC /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
+		B904E6CD62305E4FCD756CB93174FAEE /* Pods_RGB_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RGB_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB001DEE3C1BF2EC7485D0F397DAF9E6 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		BCC60160EB2E1AD8CD5ADCC7DAE7DAC9 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
-		BD3E9C679FD533FA53154ECB17B782EE /* OBMenuBarWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OBMenuBarWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7B0FD9267C3B9F5998C91AF8D00ECB /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
 		BE9C697A6D1F0E04DF82FB4CD54545E4 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		BF7FE8D338B4CA8487B1A96DF9CF24DC /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF804C50A7C05FAF2CB28F745D1B07AB /* OBMenuBarWindow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OBMenuBarWindow-dummy.m"; sourceTree = "<group>"; };
+		C148E80C7A956995B8AACC664B544AA2 /* Pods-RGB Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote.release.xcconfig"; sourceTree = "<group>"; };
 		C23F3067CDD656ED3A68D5646A20307D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7D129B3FE2463E2AF81B2126386C941 /* Pods-RGB Remote-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RGB Remote-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C35E13914365F24F4AF28B6C75BD969C /* Pods-RGB Remote Widget macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RGB Remote Widget macOS-umbrella.h"; sourceTree = "<group>"; };
+		C41607F850E0680E4256281ACED31827 /* Pods-RGB Remote Widget macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote Widget macOS.release.xcconfig"; sourceTree = "<group>"; };
 		C9B3304D022F3060E1DE940D4F3447B9 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		CAEEB6A278E69CAFF41AD0C004CDF69A /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
 		CB28A9EF5C74F640C137DFAE65237A46 /* SnapKit-OSX.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "SnapKit-OSX.modulemap"; sourceTree = "<group>"; };
 		CF9DE16657A1DDCB807019E9C72ADA2C /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
-		D09CA78F3765A089850A7F693A622516 /* Pods-RGB Remote Widget iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RGB Remote Widget iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		D277361EA1D8D6151136C6A5CD125CFF /* Pods-RGB Remote.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RGB Remote.modulemap"; sourceTree = "<group>"; };
-		D3A5D4A14B581CE985629BAD8AC2FCDD /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A017317F29D8655C4211A5B870E532 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		D93262688B92DC684FABA5AFBEB8BE77 /* OBMenuBarWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OBMenuBarWindow.h; path = Classes/OBMenuBarWindow.h; sourceTree = "<group>"; };
 		DA494523B7F3D67895B29C81AA6C556C /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
-		DA5AE77F1D681AF665B423E17A47B44C /* Pods-RGB Remote Widget iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RGB Remote Widget iOS-umbrella.h"; sourceTree = "<group>"; };
 		DBFDCB0D0EF570D45DEBD1DF00FF119B /* SnapKit-OSX-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-OSX-umbrella.h"; sourceTree = "<group>"; };
+		E30F076002474EEBE1F29EDEE7FAB44E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E637D286769C1A9FAF80940386B26BFC /* Alamofire-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Alamofire-iOS-dummy.m"; path = "../Alamofire-iOS/Alamofire-iOS-dummy.m"; sourceTree = "<group>"; };
+		E6A28687362F2F2C7CCAB48DE77635EF /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AFC8AC2420FB1CE258C877CCED5E4C /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		E925B1671B53AB8342CC6BCCFF537CCB /* Pods-RGB Remote macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RGB Remote macOS-dummy.m"; sourceTree = "<group>"; };
 		E93F443DA67FCA95AE1636C79CF0E5EF /* OBMenuBarWindow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OBMenuBarWindow-prefix.pch"; sourceTree = "<group>"; };
-		E956A896D785E138836EE78D62263715 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDE2A6779D55607F2FC8B4853C806970 /* Pods-RGB Remote Widget iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RGB Remote Widget iOS.modulemap"; sourceTree = "<group>"; };
+		EA66105DDD4CBC9C1EC0EFDE10117448 /* Pods-RGB Remote Widget iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RGB Remote Widget iOS-dummy.m"; sourceTree = "<group>"; };
+		EB0B4471E1D98DC805DC8DD0721AFDFB /* Pods-RGB Remote-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RGB Remote-umbrella.h"; sourceTree = "<group>"; };
+		EFC47C7E242797E966A42517BB9DA6F1 /* Pods-RGB Remote macOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote macOS-frameworks.sh"; sourceTree = "<group>"; };
 		F01AE0F4CB350345EF768B4A188184E2 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		F06EB94BD3F97F23AF12CC0F361B6CCD /* Pods-RGB Remote macOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote macOS-frameworks.sh"; sourceTree = "<group>"; };
 		F11711466DCD4AD5240CE3BD6A8CE262 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F15390AB4B092A564AF7C4EB95E76222 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		F16177D13187C83516FA81F7E6AA70F3 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		F1DD1298178A04ACC8720491D48971F5 /* OBMenuBarWindow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = OBMenuBarWindow.modulemap; sourceTree = "<group>"; };
+		F2D4860AFDDB20103D0F282F5104CAD9 /* Pods-RGB Remote Widget macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RGB Remote Widget macOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		F2FF6C04689657E59CD2D6328B32B5A2 /* Alamofire-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Alamofire-iOS.modulemap"; path = "../Alamofire-iOS/Alamofire-iOS.modulemap"; sourceTree = "<group>"; };
-		F7A814262B41DFEB84AF006C5C137DEC /* Pods-RGB Remote macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RGB Remote macOS.modulemap"; sourceTree = "<group>"; };
+		F6721BE98AB7795D767F67D187DC836E /* Pods-RGB Remote Widget iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RGB Remote Widget iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F7B3603BF0CF4FE84C1CA415F90297FB /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
-		F842FE0E2096EC410D02A93C41E070C0 /* Pods-RGB Remote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote-frameworks.sh"; sourceTree = "<group>"; };
-		FC687849A68E1D67960AD90D8C5B4CE2 /* Pods-RGB Remote Widget iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote Widget iOS-resources.sh"; sourceTree = "<group>"; };
+		F7B8F7408C9F14C0719BF4494FD072AB /* Pods-RGB Remote Widget macOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote Widget macOS-resources.sh"; sourceTree = "<group>"; };
+		F861BD9A9B83A358F7BE2E71D059060A /* Pods-RGB Remote macOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RGB Remote macOS-resources.sh"; sourceTree = "<group>"; };
+		FAA9C4CD4A68375F849C5D935BF3EAC1 /* Pods-RGB Remote Widget iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RGB Remote Widget iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FD77E84077E43B7ADC3955E2041E0045 /* SnapKit-OSX-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-OSX-prefix.pch"; sourceTree = "<group>"; };
 		FE082749A4312DEFDF0F0CF03F3A04ED /* SnapKit-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "SnapKit-iOS.modulemap"; path = "../SnapKit-iOS/SnapKit-iOS.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -342,6 +362,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8EA709EFDA0CAFE1E4A6DE0ECB27C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		205586A3FF529596D5AC1644CC642EEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BFD353F1C9C237A81BE561FC8843F70 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,21 +446,39 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		2FD7D578D5DAC343C4E4208ECDB5DD5B /* Pods-RGB Remote Widget iOS */ = {
+		280BF93ADCE853D98EECD829A2973EE1 /* Pods-RGB Remote Widget macOS */ = {
 			isa = PBXGroup;
 			children = (
-				323BBEC9766B2A458DDD860E7902D9C2 /* Info.plist */,
-				EDE2A6779D55607F2FC8B4853C806970 /* Pods-RGB Remote Widget iOS.modulemap */,
-				B35D5208AA097D712B1FC441561AC59E /* Pods-RGB Remote Widget iOS-acknowledgements.markdown */,
-				D09CA78F3765A089850A7F693A622516 /* Pods-RGB Remote Widget iOS-acknowledgements.plist */,
-				4DC1390358CA8A9152AA8E0425017F30 /* Pods-RGB Remote Widget iOS-dummy.m */,
-				FC687849A68E1D67960AD90D8C5B4CE2 /* Pods-RGB Remote Widget iOS-resources.sh */,
-				DA5AE77F1D681AF665B423E17A47B44C /* Pods-RGB Remote Widget iOS-umbrella.h */,
-				89F54AD1DC4D9DBD572C3F2E346A8464 /* Pods-RGB Remote Widget iOS.debug.xcconfig */,
-				20221149787EB899CAEE2B09ABF4FC47 /* Pods-RGB Remote Widget iOS.release.xcconfig */,
+				7E2971E97C1E61E558BAA1ABAEEA3A26 /* Info.plist */,
+				1729F97DC8F65182B2068752CA92E69D /* Pods-RGB Remote Widget macOS.modulemap */,
+				014F39567C87CC5E05BF9DA593C53CB8 /* Pods-RGB Remote Widget macOS-acknowledgements.markdown */,
+				F2D4860AFDDB20103D0F282F5104CAD9 /* Pods-RGB Remote Widget macOS-acknowledgements.plist */,
+				57F0BD54A0BE6B272F8226018A830D97 /* Pods-RGB Remote Widget macOS-dummy.m */,
+				F7B8F7408C9F14C0719BF4494FD072AB /* Pods-RGB Remote Widget macOS-resources.sh */,
+				C35E13914365F24F4AF28B6C75BD969C /* Pods-RGB Remote Widget macOS-umbrella.h */,
+				058865AC4D94DF1C602C66359335B579 /* Pods-RGB Remote Widget macOS.debug.xcconfig */,
+				C41607F850E0680E4256281ACED31827 /* Pods-RGB Remote Widget macOS.release.xcconfig */,
 			);
-			name = "Pods-RGB Remote Widget iOS";
-			path = "Target Support Files/Pods-RGB Remote Widget iOS";
+			name = "Pods-RGB Remote Widget macOS";
+			path = "Target Support Files/Pods-RGB Remote Widget macOS";
+			sourceTree = "<group>";
+		};
+		2CA55E0A52E956CB22DBF41BD833DCC6 /* Pods-RGB Remote macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B4D7B7E01CC823750D05375544036BD4 /* Info.plist */,
+				6C6F77BF53C13C7793DEFA4BB97F29B9 /* Pods-RGB Remote macOS.modulemap */,
+				0991BD8D3512CF2E4B3384D53473F1D9 /* Pods-RGB Remote macOS-acknowledgements.markdown */,
+				AC86EE342ABC7DCFD38849CE0EDF3A15 /* Pods-RGB Remote macOS-acknowledgements.plist */,
+				6E132B863779B7BA253C26D56768D64A /* Pods-RGB Remote macOS-dummy.m */,
+				EFC47C7E242797E966A42517BB9DA6F1 /* Pods-RGB Remote macOS-frameworks.sh */,
+				F861BD9A9B83A358F7BE2E71D059060A /* Pods-RGB Remote macOS-resources.sh */,
+				4E9BE15511115B031D4ABC8CF2E463CB /* Pods-RGB Remote macOS-umbrella.h */,
+				9E83DB7F615E53101406C80899ECC9D6 /* Pods-RGB Remote macOS.debug.xcconfig */,
+				884071717FA0273A094077E7C43736FF /* Pods-RGB Remote macOS.release.xcconfig */,
+			);
+			name = "Pods-RGB Remote macOS";
+			path = "Target Support Files/Pods-RGB Remote macOS";
 			sourceTree = "<group>";
 		};
 		3BC8D680676C2CA13F08D6120BB9F1AC /* OBMenuBarWindow */ = {
@@ -443,6 +489,17 @@
 				8D284D46BDAB028024EF4246112F4963 /* Support Files */,
 			);
 			path = OBMenuBarWindow;
+			sourceTree = "<group>";
+		};
+		40D1714E20A06704DADA85AAB9E9A8B6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFBA63EA9F30EC5F9329988F948EAFF2 /* Pods-RGB Remote */,
+				2CA55E0A52E956CB22DBF41BD833DCC6 /* Pods-RGB Remote macOS */,
+				A834DB2AB40DA154B36FC0A174F79BFA /* Pods-RGB Remote Widget iOS */,
+				280BF93ADCE853D98EECD829A2973EE1 /* Pods-RGB Remote Widget macOS */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		42EA3585A4F940B441AF557234647C2B /* SnapKit */ = {
@@ -529,27 +586,9 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BFEF163CB0C80F5BE6FDC6A6BD227D67 /* Frameworks */,
 				C276A8A62F6F2117B65826EE08512134 /* Pods */,
-				B8687BE06A9288AF856F9F2A8126007E /* Products */,
-				B093B142949C3130DA3D7B019DACB8E1 /* Targets Support Files */,
+				9DE2E4C703A2C40422F2E7F69E415E7A /* Products */,
+				40D1714E20A06704DADA85AAB9E9A8B6 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		7E2495F377A1A23F2695F63E22E0F635 /* Pods-RGB Remote macOS */ = {
-			isa = PBXGroup;
-			children = (
-				3F6D92A61E9A021F0D49B21B9E9E2EED /* Info.plist */,
-				F7A814262B41DFEB84AF006C5C137DEC /* Pods-RGB Remote macOS.modulemap */,
-				03208D9388697695BF2D1EDE63A8C032 /* Pods-RGB Remote macOS-acknowledgements.markdown */,
-				4848B3164547CE79C5C8A77815C1C7B3 /* Pods-RGB Remote macOS-acknowledgements.plist */,
-				E925B1671B53AB8342CC6BCCFF537CCB /* Pods-RGB Remote macOS-dummy.m */,
-				F06EB94BD3F97F23AF12CC0F361B6CCD /* Pods-RGB Remote macOS-frameworks.sh */,
-				9C5F6E93CE415233D0CDFB77BE9FE64D /* Pods-RGB Remote macOS-resources.sh */,
-				0DB595A2E6F59C98359BAB574D7BCE15 /* Pods-RGB Remote macOS-umbrella.h */,
-				09117E8D5A768C771FDD2D0D5ADEAE56 /* Pods-RGB Remote macOS.debug.xcconfig */,
-				8C756FA78761D5B3802F8D581CA8FC5D /* Pods-RGB Remote macOS.release.xcconfig */,
-			);
-			name = "Pods-RGB Remote macOS";
-			path = "Target Support Files/Pods-RGB Remote macOS";
 			sourceTree = "<group>";
 		};
 		8D284D46BDAB028024EF4246112F4963 /* Support Files */ = {
@@ -566,6 +605,40 @@
 			path = "../Target Support Files/OBMenuBarWindow";
 			sourceTree = "<group>";
 		};
+		9DE2E4C703A2C40422F2E7F69E415E7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28ADA19C80EE8D5C59777F1F0448DE1F /* Alamofire.framework */,
+				E30F076002474EEBE1F29EDEE7FAB44E /* Alamofire.framework */,
+				582A52A6020D13ECDB4308315EE17DCC /* OBMenuBarWindow.framework */,
+				B904E6CD62305E4FCD756CB93174FAEE /* Pods_RGB_Remote.framework */,
+				413A9BDB68F84BDB385A5D009E9552E5 /* Pods_RGB_Remote_macOS.framework */,
+				AA7E7803038F52DD0FD40820E4CD493E /* Pods_RGB_Remote_Widget_iOS.framework */,
+				59F3A75D50F3FE5E08667A204E24641E /* Pods_RGB_Remote_Widget_macOS.framework */,
+				E6A28687362F2F2C7CCAB48DE77635EF /* SnapKit.framework */,
+				87DF06111F0B6C6ADCD3EBA579FAB747 /* SnapKit.framework */,
+				BF7FE8D338B4CA8487B1A96DF9CF24DC /* SVProgressHUD.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A834DB2AB40DA154B36FC0A174F79BFA /* Pods-RGB Remote Widget iOS */ = {
+			isa = PBXGroup;
+			children = (
+				05F7D12B62D496DBD09E93683D156A14 /* Info.plist */,
+				A1C185A98608370C765923E91F716090 /* Pods-RGB Remote Widget iOS.modulemap */,
+				FAA9C4CD4A68375F849C5D935BF3EAC1 /* Pods-RGB Remote Widget iOS-acknowledgements.markdown */,
+				538D6450502596139C7A4F4BFEE30252 /* Pods-RGB Remote Widget iOS-acknowledgements.plist */,
+				EA66105DDD4CBC9C1EC0EFDE10117448 /* Pods-RGB Remote Widget iOS-dummy.m */,
+				0030760203C3443D28AFF71BBD90FA1E /* Pods-RGB Remote Widget iOS-resources.sh */,
+				B2864F3B16D777607D2A21F20D674806 /* Pods-RGB Remote Widget iOS-umbrella.h */,
+				F6721BE98AB7795D767F67D187DC836E /* Pods-RGB Remote Widget iOS.debug.xcconfig */,
+				6DB523E76EB37DC0C8F21157C2017F56 /* Pods-RGB Remote Widget iOS.release.xcconfig */,
+			);
+			name = "Pods-RGB Remote Widget iOS";
+			path = "Target Support Files/Pods-RGB Remote Widget iOS";
+			sourceTree = "<group>";
+		};
 		A980645E75837D0F9FCF1232FFEC9656 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,50 +646,6 @@
 				84DB6ED7070D3C7052FEE9AE631E43CC /* QuartzCore.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		B093B142949C3130DA3D7B019DACB8E1 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BE4C19CF8AAB00F585A32B6ACE96ACA6 /* Pods-RGB Remote */,
-				7E2495F377A1A23F2695F63E22E0F635 /* Pods-RGB Remote macOS */,
-				2FD7D578D5DAC343C4E4208ECDB5DD5B /* Pods-RGB Remote Widget iOS */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B8687BE06A9288AF856F9F2A8126007E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2DFD3A20BB66891419F62658A810E973 /* Alamofire.framework */,
-				076A46EF2A143C95CBB9C5F2D0CEF628 /* Alamofire.framework */,
-				BD3E9C679FD533FA53154ECB17B782EE /* OBMenuBarWindow.framework */,
-				B02A55675A6DD1B2585BB0BF0D8FED1F /* Pods_RGB_Remote.framework */,
-				1CB52AF9C41B4B8E2C76099F5C8FE0EA /* Pods_RGB_Remote_macOS.framework */,
-				70EFDD7B6A5319ED8763A4F20C1A8685 /* Pods_RGB_Remote_Widget_iOS.framework */,
-				773C2E1367A99D85D16EDF4D7C46999C /* SnapKit.framework */,
-				D3A5D4A14B581CE985629BAD8AC2FCDD /* SnapKit.framework */,
-				4D3725CF0A0198DD0F5F8D442079A564 /* SVProgressHUD.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BE4C19CF8AAB00F585A32B6ACE96ACA6 /* Pods-RGB Remote */ = {
-			isa = PBXGroup;
-			children = (
-				E956A896D785E138836EE78D62263715 /* Info.plist */,
-				D277361EA1D8D6151136C6A5CD125CFF /* Pods-RGB Remote.modulemap */,
-				C7D129B3FE2463E2AF81B2126386C941 /* Pods-RGB Remote-acknowledgements.markdown */,
-				44BF57CFA47C74FB48EED92BB2C77B8C /* Pods-RGB Remote-acknowledgements.plist */,
-				3DAFAE89B5DD4DCF61FA65F309FDA4F5 /* Pods-RGB Remote-dummy.m */,
-				F842FE0E2096EC410D02A93C41E070C0 /* Pods-RGB Remote-frameworks.sh */,
-				2EAEB402EE74B77185E1534A3B221888 /* Pods-RGB Remote-resources.sh */,
-				023EDF2951C1BE150109ED9452BF87EF /* Pods-RGB Remote-umbrella.h */,
-				3B37F2895E60C54618476DA17473B0E6 /* Pods-RGB Remote.debug.xcconfig */,
-				3F027E8294F9EBF2BB33C64BC1730F26 /* Pods-RGB Remote.release.xcconfig */,
-			);
-			name = "Pods-RGB Remote";
-			path = "Target Support Files/Pods-RGB Remote";
 			sourceTree = "<group>";
 		};
 		BFEF163CB0C80F5BE6FDC6A6BD227D67 /* Frameworks */ = {
@@ -695,6 +724,24 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		EFBA63EA9F30EC5F9329988F948EAFF2 /* Pods-RGB Remote */ = {
+			isa = PBXGroup;
+			children = (
+				8A7CEA399FA17D141F02BAF9F82B6C07 /* Info.plist */,
+				A446914807C77A4DF64EB5C97B713B5F /* Pods-RGB Remote.modulemap */,
+				67A70AB93AF3FA0F564E8015F55F96DF /* Pods-RGB Remote-acknowledgements.markdown */,
+				566FE59C3F6BB35874EC98ABA5DA083A /* Pods-RGB Remote-acknowledgements.plist */,
+				46405575D0A0FACA367FEE5202D55CF8 /* Pods-RGB Remote-dummy.m */,
+				627DCFF914A646B82286E83639C58EF2 /* Pods-RGB Remote-frameworks.sh */,
+				117ACA1E0A84ED15DFDE7AA7FFBD6E91 /* Pods-RGB Remote-resources.sh */,
+				EB0B4471E1D98DC805DC8DD0721AFDFB /* Pods-RGB Remote-umbrella.h */,
+				0569A30C269D53FF28B1005D320C51F8 /* Pods-RGB Remote.debug.xcconfig */,
+				C148E80C7A956995B8AACC664B544AA2 /* Pods-RGB Remote.release.xcconfig */,
+			);
+			name = "Pods-RGB Remote";
+			path = "Target Support Files/Pods-RGB Remote";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -755,6 +802,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CBB3CD47434B13DFD04D40657F4344D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C3A339AA831A2C44D3646C045E37D1D /* Pods-RGB Remote Widget macOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E21A2B4A4BE6535602D856AD11783E1C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -790,7 +845,7 @@
 			);
 			name = OBMenuBarWindow;
 			productName = OBMenuBarWindow;
-			productReference = BD3E9C679FD533FA53154ECB17B782EE /* OBMenuBarWindow.framework */;
+			productReference = 582A52A6020D13ECDB4308315EE17DCC /* OBMenuBarWindow.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4181F51F77819190EE61755F7CC050DF /* Pods-RGB Remote Widget iOS */ = {
@@ -808,7 +863,7 @@
 			);
 			name = "Pods-RGB Remote Widget iOS";
 			productName = "Pods-RGB Remote Widget iOS";
-			productReference = 70EFDD7B6A5319ED8763A4F20C1A8685 /* Pods_RGB_Remote_Widget_iOS.framework */;
+			productReference = AA7E7803038F52DD0FD40820E4CD493E /* Pods_RGB_Remote_Widget_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6102E89EC00D81B2869FB4D33CEB0451 /* SnapKit-OSX */ = {
@@ -825,7 +880,7 @@
 			);
 			name = "SnapKit-OSX";
 			productName = "SnapKit-OSX";
-			productReference = D3A5D4A14B581CE985629BAD8AC2FCDD /* SnapKit.framework */;
+			productReference = E6A28687362F2F2C7CCAB48DE77635EF /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		66BE16F7EFF8DCC2E960F341354024C5 /* Pods-RGB Remote */ = {
@@ -845,7 +900,7 @@
 			);
 			name = "Pods-RGB Remote";
 			productName = "Pods-RGB Remote";
-			productReference = B02A55675A6DD1B2585BB0BF0D8FED1F /* Pods_RGB_Remote.framework */;
+			productReference = B904E6CD62305E4FCD756CB93174FAEE /* Pods_RGB_Remote.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7A413915981CCF0B736FAC0AFF7D9090 /* SVProgressHUD */ = {
@@ -863,7 +918,7 @@
 			);
 			name = SVProgressHUD;
 			productName = SVProgressHUD;
-			productReference = 4D3725CF0A0198DD0F5F8D442079A564 /* SVProgressHUD.framework */;
+			productReference = BF7FE8D338B4CA8487B1A96DF9CF24DC /* SVProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8169E6DF6E16684D177E7D99D67CDE0F /* Pods-RGB Remote macOS */ = {
@@ -883,7 +938,7 @@
 			);
 			name = "Pods-RGB Remote macOS";
 			productName = "Pods-RGB Remote macOS";
-			productReference = 1CB52AF9C41B4B8E2C76099F5C8FE0EA /* Pods_RGB_Remote_macOS.framework */;
+			productReference = 413A9BDB68F84BDB385A5D009E9552E5 /* Pods_RGB_Remote_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8530253909CC812ECC6BD9B05A187DED /* SnapKit-iOS */ = {
@@ -900,7 +955,7 @@
 			);
 			name = "SnapKit-iOS";
 			productName = "SnapKit-iOS";
-			productReference = 773C2E1367A99D85D16EDF4D7C46999C /* SnapKit.framework */;
+			productReference = 87DF06111F0B6C6ADCD3EBA579FAB747 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		89C69EB624EC8137588D9568F2E11964 /* Alamofire-iOS */ = {
@@ -917,7 +972,7 @@
 			);
 			name = "Alamofire-iOS";
 			productName = "Alamofire-iOS";
-			productReference = 076A46EF2A143C95CBB9C5F2D0CEF628 /* Alamofire.framework */;
+			productReference = E30F076002474EEBE1F29EDEE7FAB44E /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8A46F3686C46DC9D9C11D7DE4BDDBB54 /* Alamofire-OSX */ = {
@@ -934,7 +989,25 @@
 			);
 			name = "Alamofire-OSX";
 			productName = "Alamofire-OSX";
-			productReference = 2DFD3A20BB66891419F62658A810E973 /* Alamofire.framework */;
+			productReference = 28ADA19C80EE8D5C59777F1F0448DE1F /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CB45ADFB07936BD040EEC6FF2D7D3C67 /* Pods-RGB Remote Widget macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D79B2DF2EBF5D03B438B9C3F5739F8C0 /* Build configuration list for PBXNativeTarget "Pods-RGB Remote Widget macOS" */;
+			buildPhases = (
+				7438EFFCE8C5B01FD3FA74DAEFF315E8 /* Sources */,
+				205586A3FF529596D5AC1644CC642EEE /* Frameworks */,
+				CBB3CD47434B13DFD04D40657F4344D9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA60368272FD9330A0C4441BD5DBFD48 /* PBXTargetDependency */,
+			);
+			name = "Pods-RGB Remote Widget macOS";
+			productName = "Pods-RGB Remote Widget macOS";
+			productReference = 59F3A75D50F3FE5E08667A204E24641E /* Pods_RGB_Remote_Widget_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -954,7 +1027,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B8687BE06A9288AF856F9F2A8126007E /* Products */;
+			productRefGroup = 9DE2E4C703A2C40422F2E7F69E415E7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -964,6 +1037,7 @@
 				66BE16F7EFF8DCC2E960F341354024C5 /* Pods-RGB Remote */,
 				8169E6DF6E16684D177E7D99D67CDE0F /* Pods-RGB Remote macOS */,
 				4181F51F77819190EE61755F7CC050DF /* Pods-RGB Remote Widget iOS */,
+				CB45ADFB07936BD040EEC6FF2D7D3C67 /* Pods-RGB Remote Widget macOS */,
 				8530253909CC812ECC6BD9B05A187DED /* SnapKit-iOS */,
 				6102E89EC00D81B2869FB4D33CEB0451 /* SnapKit-OSX */,
 				7A413915981CCF0B736FAC0AFF7D9090 /* SVProgressHUD */,
@@ -1088,6 +1162,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7438EFFCE8C5B01FD3FA74DAEFF315E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336DFB5F4CEC3D75ACA528C071DADD53 /* Pods-RGB Remote Widget macOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A883A69C61DA18C8268A0A6244DFDB4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1187,6 +1269,12 @@
 			target = 89C69EB624EC8137588D9568F2E11964 /* Alamofire-iOS */;
 			targetProxy = 043F76306BC3CDAB7AF0E9536BE8D759 /* PBXContainerItemProxy */;
 		};
+		BA60368272FD9330A0C4441BD5DBFD48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire-OSX";
+			target = 8A46F3686C46DC9D9C11D7DE4BDDBB54 /* Alamofire-OSX */;
+			targetProxy = E4B4311782B14C6FE8B88A0E6C9E13D2 /* PBXContainerItemProxy */;
+		};
 		C2F3BE97E4E2DE9DC335A18EA2D136B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OBMenuBarWindow;
@@ -1269,9 +1357,118 @@
 			};
 			name = Debug;
 		};
+		085359564A52248F5340B951B9A51C54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C41607F850E0680E4256281ACED31827 /* Pods-RGB Remote Widget macOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RGB Remote Widget macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-RGB Remote Widget macOS/Pods-RGB Remote Widget macOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RGB_Remote_Widget_macOS;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		16473B9BB45D26CC2F6A2771DF76EC6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D5F249E61B7EB77C33EB27B5B576F65 /* Alamofire-OSX.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-OSX/Alamofire-OSX-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Alamofire-OSX/Alamofire-OSX.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		26CCBC46FCE7D6FE4827FB6DA888C86F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D5F249E61B7EB77C33EB27B5B576F65 /* Alamofire-OSX.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-OSX/Alamofire-OSX-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Alamofire-OSX/Alamofire-OSX.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		36A4032B291C59B8C23D133A5D830528 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20221149787EB899CAEE2B09ABF4FC47 /* Pods-RGB Remote Widget iOS.release.xcconfig */;
+			baseConfigurationReference = 6DB523E76EB37DC0C8F21157C2017F56 /* Pods-RGB Remote Widget iOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1337,6 +1534,45 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		43F730D0B5732B2E4D900014DB2B0941 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 058865AC4D94DF1C602C66359335B579 /* Pods-RGB Remote Widget macOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RGB Remote Widget macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-RGB Remote Widget macOS/Pods-RGB Remote Widget macOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RGB_Remote_Widget_macOS;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		56F4FF8227D87F1CF62E78D03A59AFF6 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1447,7 +1683,7 @@
 		};
 		6D51F5070D37E3EC182BFA4BDB366C1E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C756FA78761D5B3802F8D581CA8FC5D /* Pods-RGB Remote macOS.release.xcconfig */;
+			baseConfigurationReference = 884071717FA0273A094077E7C43736FF /* Pods-RGB Remote macOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1595,7 +1831,7 @@
 		};
 		C24A51862595BD68D9696DE52D73EC75 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09117E8D5A768C771FDD2D0D5ADEAE56 /* Pods-RGB Remote macOS.debug.xcconfig */;
+			baseConfigurationReference = 9E83DB7F615E53101406C80899ECC9D6 /* Pods-RGB Remote macOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1666,40 +1902,6 @@
 			};
 			name = Debug;
 		};
-		D46260C68CCC7B6942294F6CD71A8CC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D5F249E61B7EB77C33EB27B5B576F65 /* Alamofire-OSX.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-OSX/Alamofire-OSX-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire-OSX/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/Alamofire-OSX/Alamofire-OSX.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		DD2D8ED18EF16A03A1E17F9C9A59FACE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AA346740C634DB1C2ECEC2650D665B0 /* SnapKit-iOS.xcconfig */;
@@ -1768,7 +1970,7 @@
 		};
 		E96AF1FF617F4D8718DE159D5F405797 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F027E8294F9EBF2BB33C64BC1730F26 /* Pods-RGB Remote.release.xcconfig */;
+			baseConfigurationReference = C148E80C7A956995B8AACC664B544AA2 /* Pods-RGB Remote.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1803,7 +2005,7 @@
 		};
 		EBDBB3E8CF151A079666613E89A731F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B37F2895E60C54618476DA17473B0E6 /* Pods-RGB Remote.debug.xcconfig */;
+			baseConfigurationReference = 0569A30C269D53FF28B1005D320C51F8 /* Pods-RGB Remote.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1839,7 +2041,7 @@
 		};
 		EEDC6CB7A497D90DC190CD914CECE9B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89F54AD1DC4D9DBD572C3F2E346A8464 /* Pods-RGB Remote Widget iOS.debug.xcconfig */;
+			baseConfigurationReference = F6721BE98AB7795D767F67D187DC836E /* Pods-RGB Remote Widget iOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1869,41 +2071,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F6181A38ABF0483CC0E9F62A7C1C43E0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D5F249E61B7EB77C33EB27B5B576F65 /* Alamofire-OSX.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-OSX/Alamofire-OSX-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire-OSX/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/Alamofire-OSX/Alamofire-OSX.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1960,8 +2127,8 @@
 		50E1D5A927DDC08080C2621991EA3C27 /* Build configuration list for PBXNativeTarget "Alamofire-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6181A38ABF0483CC0E9F62A7C1C43E0 /* Debug */,
-				D46260C68CCC7B6942294F6CD71A8CC4 /* Release */,
+				16473B9BB45D26CC2F6A2771DF76EC6A /* Debug */,
+				26CCBC46FCE7D6FE4827FB6DA888C86F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1989,6 +2156,15 @@
 			buildConfigurations = (
 				5E71117736B53CA36B25748F471BA0DC /* Debug */,
 				7269AAEE366FF2632255FD2B38C3C23A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D79B2DF2EBF5D03B438B9C3F5739F8C0 /* Build configuration list for PBXNativeTarget "Pods-RGB Remote Widget macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43F730D0B5732B2E4D900014DB2B0941 /* Debug */,
+				085359564A52248F5340B951B9A51C54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,6 @@
+framework module Pods_RGB_Remote_Widget_macOS {
+  umbrella header "Pods-RGB Remote Widget macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

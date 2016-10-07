@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-RGB Remote Widget macOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RGB Remote macOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -93,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>8A46F3686C46DC9D9C11D7DE4BDDBB54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB45ADFB07936BD040EEC6FF2D7D3C67</key>
 		<dict>
 			<key>primary</key>
 			<true/>
