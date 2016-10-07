@@ -11,30 +11,24 @@ import Cocoa
 
 class MacOSDataSource: NSObject {
     
-    fileprivate let remoteControl = RGBWWRemoteControl()
+    fileprivate let remoteControl: RemoteControl
     
+    init(remoteControl: RemoteControl) {
+        self.remoteControl = remoteControl
+        super.init()
+    }
 }
+
 
 //MARK: - Custom Methods
 
 extension MacOSDataSource {
         
-    func buttonTouchDown(sender: AnyObject) {
-        guard let command = Command(rawValue: sender.tag) else { return }
-        remoteControl.buttonTouchDown(command)
-    }
-    
-    func buttonTouchUp(sender: AnyObject) {
-        guard let command = Command(rawValue: sender.tag) else { return }
-        remoteControl.buttonTouchUp(command)
-    }
-    
     func buttonTapped(sender: AnyObject) {
         guard let item = sender as? ButtonCollectionViewItem, let tag = item.textField?.tag else { return }
         guard let command = Command(rawValue: tag) else { return }
         remoteControl.buttonTapped(command)
     }
-    
 }
 
 
@@ -57,6 +51,10 @@ extension MacOSDataSource: NSCollectionViewDataSource {
         item.textField?.textColor = command.color()
         item.textField?.tag = command.rawValue
         
+        item.view.layer?.backgroundColor = Style.Color.black.color().cgColor
+        item.textField?.backgroundColor = Style.Color.darkGray.color()
+        item.decorationView?.layer?.backgroundColor = Style.Color.darkGray.color().cgColor
+
         return item
     }
 }
@@ -128,17 +126,13 @@ extension MacOSDataSource: NSCollectionViewDelegate {
 
 class ButtonCollectionViewItem: NSCollectionViewItem {
     
-    @IBOutlet fileprivate weak var decorationView: NSView!
-//    var tag: Int?
-    
+    @IBOutlet weak var decorationView: NSView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.wantsLayer = true
-        view.layer?.backgroundColor = Style.Color.black.color().cgColor
-        textField?.backgroundColor = Style.Color.darkGray.color()
-        decorationView?.layer?.backgroundColor = Style.Color.darkGray.color().cgColor
+        decorationView.layer?.cornerRadius = 5
     }
 }
 

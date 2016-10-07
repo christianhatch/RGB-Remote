@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="ButtonCollectionViewItem" customModule="RGB_Remote_macOS" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="ButtonCollectionViewItem" customModule="RGB_Remote_Widget_macOS" customModuleProvider="target">
             <connections>
                 <outlet property="decorationView" destination="ZNb-gA-Dwt" id="mW2-WM-g82"/>
                 <outlet property="textField" destination="gDc-uQ-e1D" id="vWy-Rt-HTE"/>
@@ -42,8 +42,8 @@
                 <constraint firstItem="ZNb-gA-Dwt" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="2" id="rg6-O2-qXj"/>
                 <constraint firstAttribute="bottom" secondItem="ZNb-gA-Dwt" secondAttribute="bottom" constant="2" id="tCC-kZ-ka0"/>
             </constraints>
-            <point key="canvasLocation" x="-150.5" y="9"/>
+            <point key="canvasLocation" x="-486" y="-40"/>
         </customView>
-        <collectionViewItem id="k6H-fS-Syj" customClass="ButtonCollectionViewItem" customModule="RGB_Remote_macOS" customModuleProvider="target"/>
+        <collectionViewItem nibName="ButtonCollectionViewItem" id="k6H-fS-Syj" customClass="ButtonCollectionViewItem" customModule="RGB_Remote_Widget_macOS" customModuleProvider="target"/>
     </objects>
 </document>

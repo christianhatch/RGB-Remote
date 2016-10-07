@@ -13,6 +13,7 @@ class TodayViewController: UIViewController {
     
     fileprivate var dataSource: iOSCollectionViewDataSource {
         didSet {
+            @IBOutlet weak var collectionView: NSCollectionView!
             collectionView.dataSource = dataSource
             collectionView.delegate = dataSource
             collectionView.reloadData()
@@ -60,7 +61,7 @@ extension TodayViewController: NCWidgetProviding {
     func widgetPerformUpdate(_ completionHandler: ((NCUpdateResult) -> Void)) {
         collectionView.reloadData()
         
-        completionHandler(NCUpdateResult.newData)
+        completionHandler(.newData)
     }
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
@@ -107,7 +108,7 @@ class CoreCollectionViewDataSource: TodayWidgetCollectionViewDataSource {
     }
     //we dont want any spacing, because the today widget has a fixed small size
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 0)
+        return .zero
     }
 }
 

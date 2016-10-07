@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="RGB_Remote_Widget_macOS" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="rrl-FU-5KW" id="8Ca-cc-pMt"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="330"/>
+            <subviews>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoV-Eo-czk">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="330"/>
+                    <clipView key="contentView" id="uIb-dc-1Wa">
+                        <rect key="frame" x="1" y="1" width="318" height="328"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView selectable="YES" id="rrl-FU-5KW">
+                                <rect key="frame" x="0.0" y="0.0" width="318" height="328"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="dv2-SR-1LU">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="oRV-Qo-8wm">
+                        <rect key="frame" x="303" y="1" width="16" height="78"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LoV-Eo-czk" secondAttribute="bottom" id="69n-0E-pnL"/>
+                <constraint firstItem="LoV-Eo-czk" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="T4Q-af-N59"/>
+                <constraint firstAttribute="trailing" secondItem="LoV-Eo-czk" secondAttribute="trailing" id="loq-SA-MW6"/>
+                <constraint firstItem="LoV-Eo-czk" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="tf8-XA-LhL"/>
+            </constraints>
+            <point key="canvasLocation" x="15" y="56"/>
+        </customView>
+    </objects>
+</document>

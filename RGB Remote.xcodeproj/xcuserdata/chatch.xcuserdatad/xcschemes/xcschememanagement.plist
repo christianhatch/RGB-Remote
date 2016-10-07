@@ -9,10 +9,15 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>RGB Remote Widget macOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>RGB Remote macOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>RGB Remote.xcscheme</key>
 		<dict>
@@ -38,6 +43,11 @@
 			<true/>
 		</dict>
 		<key>453C42781C5AE40B001D2D7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>457DF4641DA734F4004DED76</key>
 		<dict>
 			<key>primary</key>
 			<true/>

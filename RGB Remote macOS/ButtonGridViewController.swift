@@ -19,7 +19,7 @@ class ButtonGridViewController: NSViewController {
             collectionView.delegate = dataSource
         }
     }
-    private let dataSource = MacOSDataSource()
+    private let dataSource = MacOSDataSource(remoteControl: RGBWWRemoteControl())
     
     
     override func viewDidLoad() {

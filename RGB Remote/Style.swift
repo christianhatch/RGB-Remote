@@ -23,9 +23,11 @@ enum Style {
     enum Color {
         case textColor
         case tintColor
+        case lightGray
         case mediumGray
         case darkGray
         case black
+        case clear
         
         case red
         case green
@@ -42,12 +44,16 @@ enum Style {
             switch self {
             case .textColor, .tintColor:
                 return Style.Color.white.color().withAlphaComponent(0.66)
+            case .lightGray:
+                return XColor.hsb(h: 0, s: 0, b: 50)
             case .mediumGray:
                 return XColor.hsb(h: 0, s: 0, b: 35)
             case .darkGray:
                 return XColor.hsb(h: 0, s: 0, b: 20)
             case .black:
                 return .black
+            case .clear:
+                return .clear
                 
             case .red:
                 return XColor.hsb(h: 6, s: 74, b: 91)
