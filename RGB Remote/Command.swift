@@ -287,14 +287,10 @@ extension Command {
 
 
 //MARK: - Color Model
-#if !os(macOS)
-    import UIKit
-#endif
+
 extension Command {
     
-    #if !os(macOS)
-    
-    func color() -> UIColor {
+    func color() -> XColor {
         
         switch self {
         case .red:
@@ -349,8 +345,6 @@ extension Command {
             return Style.Color.white.color()
         }
     }
-    
-    #endif
 }
 
 

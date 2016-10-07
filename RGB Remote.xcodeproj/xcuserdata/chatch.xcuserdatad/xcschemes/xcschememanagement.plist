@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>RGB Remote OSX.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>RGB Remote Widget iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>RGB Remote Widget.xcscheme</key>
+		<key>RGB Remote macOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
@@ -43,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>453C42781C5AE40B001D2D7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>45FB34671DA6E1A400238535</key>
 		<dict>
 			<key>primary</key>
 			<true/>

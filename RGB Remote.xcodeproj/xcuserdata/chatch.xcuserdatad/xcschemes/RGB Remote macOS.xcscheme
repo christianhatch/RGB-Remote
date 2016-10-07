@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4501F7D61C8FDE4900386E55"
-               BuildableName = "RGB Remote OSX.app"
-               BlueprintName = "RGB Remote OSX"
+               BlueprintIdentifier = "45FB34671DA6E1A400238535"
+               BuildableName = "RGB Remote macOS.app"
+               BlueprintName = "RGB Remote macOS"
                ReferencedContainer = "container:RGB Remote.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4501F7D61C8FDE4900386E55"
-            BuildableName = "RGB Remote OSX.app"
-            BlueprintName = "RGB Remote OSX"
+            BlueprintIdentifier = "45FB34671DA6E1A400238535"
+            BuildableName = "RGB Remote macOS.app"
+            BlueprintName = "RGB Remote macOS"
             ReferencedContainer = "container:RGB Remote.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4501F7D61C8FDE4900386E55"
-            BuildableName = "RGB Remote OSX.app"
-            BlueprintName = "RGB Remote OSX"
+            BlueprintIdentifier = "45FB34671DA6E1A400238535"
+            BuildableName = "RGB Remote macOS.app"
+            BlueprintName = "RGB Remote macOS"
             ReferencedContainer = "container:RGB Remote.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4501F7D61C8FDE4900386E55"
-            BuildableName = "RGB Remote OSX.app"
-            BlueprintName = "RGB Remote OSX"
+            BlueprintIdentifier = "45FB34671DA6E1A400238535"
+            BuildableName = "RGB Remote macOS.app"
+            BlueprintName = "RGB Remote macOS"
             ReferencedContainer = "container:RGB Remote.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

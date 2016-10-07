@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "46817F5AEE1F52308F756F106730C3C0"
-               BuildableName = "Pods_RGB_Remote_OSX.framework"
-               BlueprintName = "Pods-RGB Remote OSX"
+               BlueprintIdentifier = "8169E6DF6E16684D177E7D99D67CDE0F"
+               BuildableName = "Pods_RGB_Remote_macOS.framework"
+               BlueprintName = "Pods-RGB Remote macOS"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "46817F5AEE1F52308F756F106730C3C0"
-            BuildableName = "Pods_RGB_Remote_OSX.framework"
-            BlueprintName = "Pods-RGB Remote OSX"
+            BlueprintIdentifier = "8169E6DF6E16684D177E7D99D67CDE0F"
+            BuildableName = "Pods_RGB_Remote_macOS.framework"
+            BlueprintName = "Pods-RGB Remote macOS"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

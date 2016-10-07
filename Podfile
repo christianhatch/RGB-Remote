@@ -9,7 +9,7 @@ end
 
 #macos
 
-target 'RGB Remote OSX' do
+target 'RGB Remote macOS' do
     
     platform :osx, '10.12'
 
@@ -21,13 +21,13 @@ target 'RGB Remote OSX' do
 
 end
 
-target 'RGB Remote Widget' do
-    
-    platform :osx, '10.12'
-    
-    rgb_pods
-    
-end
+#target 'RGB Remote Widget macOS' do
+#    
+#    platform :osx, '10.12'
+#    
+#    rgb_pods
+#    
+#end
 
 
 #ios

@@ -75,14 +75,15 @@ extension iOSCollectionViewDataSource: UICollectionViewDataSource {
         cell.button.setTitle(command.humanReadableDescription(), for: UIControlState())
         cell.button.tag = command.rawValue
         cell.button.setTitleColor(command.color(), for: UIControlState())
+        cell.button.backgroundColor = Style.Color.darkGray.color()
         
         switch command {
         case .brightnessUp, .brightnessDown, .whiteUp, .whiteDown:
-            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchDown(_:)), for: .touchDown)
-            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchUp(_:)), for: .touchUpOutside)
-            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTouchUp(_:)), for: .touchUpInside)
+            cell.button.addTarget(self, action: #selector(self.buttonTouchDown(_:)), for: .touchDown)
+            cell.button.addTarget(self, action: #selector(self.buttonTouchUp(_:)), for: .touchUpOutside)
+            cell.button.addTarget(self, action: #selector(self.buttonTouchUp(_:)), for: .touchUpInside)
         default:
-            cell.button.addTarget(self, action: #selector(iOSCollectionViewDataSource.buttonTapped(_:)), for: .touchUpInside)
+            cell.button.addTarget(self, action: #selector(self.buttonTapped(_:)), for: .touchUpInside)
         }
         return cell
     }

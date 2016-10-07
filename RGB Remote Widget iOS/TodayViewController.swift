@@ -79,8 +79,27 @@ extension TodayViewController: NCWidgetProviding {
 
 
 
+//MARK: - RemoteControl 
+
+class RGBWWNoEffectsRemoteControl: RemoteControl {
+    
+    let sections: [Section] = [Section(type: .specialColors, items: Command.rgbwwColors),
+                               Section(type: .specialControls, items: Command.wwControls),
+                               Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .basicColors, items: Command.basicColors)]
+    let device: RemoteControlDevice = .rgbww
+}
 
 
+class CoreRemoteControl: RemoteControl {
+    
+    let sections: [Section] = [Section(type: .basicControls, items: Command.basicControls),
+                               Section(type: .basicColors, items: [.white, .candle])]
+    let device: RemoteControlDevice = .rgbww
+}
+
+
+//MARK: - DataSource
 
 class CoreCollectionViewDataSource: TodayWidgetCollectionViewDataSource {
     init() {
@@ -97,7 +116,7 @@ class TodayWidgetCollectionViewDataSource: iOSCollectionViewDataSource {
     //make the cells a bit lighter color to match the today widget color scheme
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! ButtonCell
-        cell.button.backgroundColor = Style.Color.darkGray.color()
+        cell.button.backgroundColor = Style.Color.mediumGray.color()
         return cell
     }
 }
