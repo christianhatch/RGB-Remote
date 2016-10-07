@@ -19,18 +19,19 @@ class MacOSDataSource: NSObject {
 
 extension MacOSDataSource {
         
-    func buttonTouchDown(_ sender: AnyObject) {
+    func buttonTouchDown(sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
         remoteControl.buttonTouchDown(command)
     }
     
-    func buttonTouchUp(_ sender: AnyObject) {
+    func buttonTouchUp(sender: AnyObject) {
         guard let command = Command(rawValue: sender.tag) else { return }
         remoteControl.buttonTouchUp(command)
     }
     
-    func buttonTapped(_ sender: AnyObject) {
-        guard let command = Command(rawValue: sender.tag) else { return }
+    func buttonTapped(sender: AnyObject) {
+        guard let item = sender as? ButtonCollectionViewItem, let tag = item.textField?.tag else { return }
+        guard let command = Command(rawValue: tag) else { return }
         remoteControl.buttonTapped(command)
     }
     
@@ -54,7 +55,7 @@ extension MacOSDataSource: NSCollectionViewDataSource {
 
         item.textField?.stringValue = command.humanReadableDescription()
         item.textField?.textColor = command.color()
-        item.tag = command.rawValue
+        item.textField?.tag = command.rawValue
         
         return item
     }
@@ -111,12 +112,15 @@ extension MacOSDataSource: NSCollectionViewDelegate {
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         guard let indexPath = indexPaths.first else { return }
         guard let item = collectionView.item(at: indexPath) as? ButtonCollectionViewItem else { return }
-        buttonTapped(item)
+        buttonTapped(sender: item)
+        collectionView.deselectItems(at: indexPaths)
     }
     
-    func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
-        
-    }
+//    func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
+//        guard let indexPath = indexPaths.first else { return }
+//        guard let item = collectionView.item(at: indexPath) as? ButtonCollectionViewItem else { return }
+//        buttonTapped(sender: item)
+//    }
 }
 
 
@@ -124,7 +128,9 @@ extension MacOSDataSource: NSCollectionViewDelegate {
 
 class ButtonCollectionViewItem: NSCollectionViewItem {
     
-    var tag: Int?
+    @IBOutlet fileprivate weak var decorationView: NSView!
+//    var tag: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,6 +138,7 @@ class ButtonCollectionViewItem: NSCollectionViewItem {
         view.wantsLayer = true
         view.layer?.backgroundColor = Style.Color.black.color().cgColor
         textField?.backgroundColor = Style.Color.darkGray.color()
+        decorationView?.layer?.backgroundColor = Style.Color.darkGray.color().cgColor
     }
 }
 
