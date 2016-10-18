@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire-iOS/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CocoaAsyncSocket-iOS/CocoaAsyncSocket.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit-iOS/SnapKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire-iOS/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CocoaAsyncSocket-iOS/CocoaAsyncSocket.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit-iOS/SnapKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
 fi

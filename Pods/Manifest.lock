@@ -1,21 +1,26 @@
 PODS:
   - Alamofire (4.0.1)
+  - CocoaAsyncSocket (7.5.0):
+    - CocoaAsyncSocket/GCD (= 7.5.0)
+  - CocoaAsyncSocket/GCD (7.5.0)
   - OBMenuBarWindow (1.1.0)
   - SnapKit (3.0.1)
   - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - CocoaAsyncSocket
   - OBMenuBarWindow
   - SnapKit (~> 3.0)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  CocoaAsyncSocket: 3baeb1ddd969f81cf9fca81053ae49ef2d1cbbfa
   OBMenuBarWindow: 2be54c06ba113abffb5d59327b0a57f4c3e3146b
   SnapKit: f818b8326d45b4e1c777d0ab27b5c0a3624bfdeb
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
-PODFILE CHECKSUM: 71a51a7409af9de7980651efac12f82110909f17
+PODFILE CHECKSUM: 57445e4216f035015cc7f4ba8306539615c5598c
 
 COCOAPODS: 1.1.0.rc.1

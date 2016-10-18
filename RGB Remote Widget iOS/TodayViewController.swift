@@ -13,7 +13,6 @@ class TodayViewController: UIViewController {
     
     fileprivate var dataSource: iOSCollectionViewDataSource {
         didSet {
-            @IBOutlet weak var collectionView: NSCollectionView!
             collectionView.dataSource = dataSource
             collectionView.delegate = dataSource
             collectionView.reloadData()

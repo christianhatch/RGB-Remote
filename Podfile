@@ -5,6 +5,7 @@ use_frameworks!
 def rgb_pods
     #internal
     pod 'Alamofire', '~> 4.0'
+    pod 'CocoaAsyncSocket'
 end
 
 #macos

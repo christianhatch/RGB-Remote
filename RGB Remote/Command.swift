@@ -508,99 +508,163 @@ extension Command {
     
 }
 
-//proposed new organization:
-
-//enum CommandLED: Int {
-//    case on = 1
-//    case off
-//    case brightnessUp
-//    case brightnessDown //4
+//extension Command {
 //    
-//    case red //5
-//    case green
-//    case blue
-//    case white //8
+//    func wifiKey() -> UInt8 {
+//        switch self {
+//        case .on:
+//            return 0x23
+//        case .off:
+//            return 0x24
+//        case .brightnessUp:
+//            return "up"
+//        case .brightnessDown:
+//            return "down"
+//        case .red:
+//            return "red"
+//        case .green:
+//            return "green"
+//        case .blue:
+//            return "blue"
+//        case .white:
+//            return "white"
+//            
+//        case .whiteOn:
+//            return "white_on"
+//        case .whiteOff:
+//            return "white_off"
+//        case .whiteUp:
+//            return "white_up"
+//        case .whiteDown:
+//            return "white_down"
+//        case .white25:
+//            return "white_25"
+//        case .white50:
+//            return "white_50"
+//        case .white75:
+//            return "white_75"
+//        case .white100:
+//            return "white_100"
+//            
+//        case .jump3:
+//            return "jump_3"
+//        case .jump7:
+//            return "jump_7"
+//            
+//        case .fade3:
+//            return "fade_3"
+//        case .fade7:
+//            return "fade_7"
+//            
+//        case .flash:
+//            return "flash"
+//        case .auto:
+//            return "auto"
+//            
+//        case .quick:
+//            return "quick"
+//        case .slow:
+//            return "slow"
+//            
+//            
+//            
+//        //rgbww
+//        case .candle:
+//            return "1"
+//        case .orange:
+//            return "5"
+//        case .orangeYellow:
+//            return "9"
+//        case .yellow:
+//            return "13"
+//            
+//        case .mossGreen:
+//            return "2"
+//        case .turquoise:
+//            return "6"
+//        case .lightBlueWW:
+//            return "10"
+//        case .skyBlueWW:
+//            return "14"
+//            
+//        case .uv:
+//            return "3"
+//        case .indigoWW:
+//            return "7"
+//        case .violetWW:
+//            return "11"
+//        case .purpleWW:
+//            return "15"
+//            
+//            
+//            //rgb
+//            //        case .RichOrange:
+//        //            return "1"
+//        case .yellowOrange:
+//            return "5"
+//        case .yellowGreen:
+//            return "9"
+//        case .greenYellow:
+//            return "13"
+//            
+//        case .tealBlue:
+//            return "2"
+//        case .skyBlue:
+//            return "6"
+//        case .indigoBlue:
+//            return "10"
+//        case .lightBlue:
+//            return "14"
+//            
+//        case .indigo:
+//            return "3"
+//        case .violet:
+//            return "7"
+//        case .purple:
+//            return "11"
+//        case .deepPurple:
+//            return "15"
+//            
+//        case .pinkWhite, .pinkWhiteWW:
+//            return "4"
+//        case .purpleWhite, .purpleWhiteWW:
+//            return "8"
+//        case .tealWhite, .tealWhiteWW:
+//            return "12"
+//        case .indigoWhite, .indigoWhiteWW:
+//            return "16"
+//            
+//        case .diy1:
+//            return "diy_1"
+//        case .diy2:
+//            return "diy_2"
+//        case .diy3:
+//            return "diy_3"
+//        case .diy4:
+//            return "diy_4"
+//        case .diy5:
+//            return "diy_5"
+//        case .diy6:
+//            return "diy_6"
+//            
+//        case .redUp:
+//            return "red_up"
+//        case .redDown:
+//            return "red_down"
+//        case .greenUp:
+//            return "green_up"
+//        case .greenDown:
+//            return "green_down"
+//        case .blueUp:
+//            return "blue_up"
+//        case .blueDown:
+//            return "blue_down"
+//            
+//        }
+//    }
 //    
-//    case whiteOn
-//    case whiteOff //10
-//    case whiteUp  //11
-//    case whiteDown
-//    case white25
-//    case white50
-//    case white75
-//    case white100 //16
-//    
-//    case jump3 //17
-//    case jump7
-//    
-//    case fade3 //19
-//    case fade7
-//    
-//    case flash //21
-//    case auto
-//    
-//    case quick //23
-//    case slow
 //}
 //
-//enum CommandRGB: Int {
-//    //    case RichOrange
-//    case yellowOrange
-//    case yellowGreen
-//    case greenYellow
-//    
-//    case tealBlue
-//    case skyBlue
-//    case indigoBlue
-//    case lightBlue
-//    
-//    case indigo
-//    case violet
-//    case purple
-//    case deepPurple
-//    
-//    case pinkWhite
-//    case purpleWhite
-//    case tealWhite
-//    case indigoWhite
-//    
-//    case diy1
-//    case diy2
-//    case diy3
-//    case diy4
-//    case diy5
-//    case diy6
-//    
-//    case redUp
-//    case redDown
-//    case greenUp
-//    case greenDown
-//    case blueUp
-//    case blueDown
-//}
-//
-//enum CommandRGBWW: Int {
-//    case candle //25
-//    case orange
-//    case orangeYellow
-//    case yellow
-//    
-//    case mossGreen
-//    case turquoise
-//    case lightBlueWW
-//    case skyBlueWW
-//    
-//    case uv
-//    case indigoWW
-//    case violetWW
-//    case purpleWW
-//    
-//    case pinkWhiteWW
-//    case purpleWhiteWW
-//    case tealWhiteWW
-//    case indigoWhiteWW
-//}
-
 
 
 

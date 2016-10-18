@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaAsyncSocket-OSX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CocoaAsyncSocket-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OBMenuBarWindow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,37 +67,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0BC657AE0A0962E3377C566D28995B9A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37DCE09323EDAA0EA81B30472EA22B71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>399F5CDC37A3AD9F1475B8044305EDC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4181F51F77819190EE61755F7CC050DF</key>
+		<key>5F7297F9697E2E00141C6BA25B73D382</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6102E89EC00D81B2869FB4D33CEB0451</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>66BE16F7EFF8DCC2E960F341354024C5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7A413915981CCF0B736FAC0AFF7D9090</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8169E6DF6E16684D177E7D99D67CDE0F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8530253909CC812ECC6BD9B05A187DED</key>
+		<key>63537CAA79781398C056311B7CD0D2AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +102,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB45ADFB07936BD040EEC6FF2D7D3C67</key>
+		<key>8EF15B6A59B3F0D069923100C74FBE68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C544C0B57C6C5774BA98145A37BE6D36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD4424D2ED6D8F29883DB5DA363E9F4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DAC72208FF79BF8246978CB8652AD83F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7ABD981F3F60727F0CB9DFD0CFE5271</key>
 		<dict>
 			<key>primary</key>
 			<true/>

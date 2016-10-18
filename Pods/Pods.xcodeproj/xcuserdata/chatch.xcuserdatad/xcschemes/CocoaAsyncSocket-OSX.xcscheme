@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0BC657AE0A0962E3377C566D28995B9A"
-               BuildableName = "Pods_RGB_Remote.framework"
-               BlueprintName = "Pods-RGB Remote"
+               BlueprintIdentifier = "F7ABD981F3F60727F0CB9DFD0CFE5271"
+               BuildableName = "CocoaAsyncSocket.framework"
+               BlueprintName = "CocoaAsyncSocket-OSX"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BC657AE0A0962E3377C566D28995B9A"
-            BuildableName = "Pods_RGB_Remote.framework"
-            BlueprintName = "Pods-RGB Remote"
+            BlueprintIdentifier = "F7ABD981F3F60727F0CB9DFD0CFE5271"
+            BuildableName = "CocoaAsyncSocket.framework"
+            BlueprintName = "CocoaAsyncSocket-OSX"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

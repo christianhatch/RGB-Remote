@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire-OSX/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CocoaAsyncSocket-OSX/CocoaAsyncSocket.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OBMenuBarWindow/OBMenuBarWindow.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit-OSX/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire-OSX/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CocoaAsyncSocket-OSX/CocoaAsyncSocket.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OBMenuBarWindow/OBMenuBarWindow.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit-OSX/SnapKit.framework"
 fi

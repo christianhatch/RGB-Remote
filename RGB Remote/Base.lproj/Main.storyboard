@@ -69,10 +69,43 @@
             </objects>
             <point key="canvasLocation" x="1332" y="97"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Wifi-->
+        <scene sceneID="cW0-dS-XpQ">
+            <objects>
+                <viewController storyboardIdentifier="WifiViewController" title="Wifi" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lx9-wH-riy" customClass="WifiViewController" customModule="RGB_Remote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HMP-1N-rRk"/>
+                        <viewControllerLayoutGuide type="bottom" id="qGy-VR-4GQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Suw-dZ-4DG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g55-5M-xAe">
+                                <frame key="frameInset" minX="131" minY="315" width="113" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Toggle Power">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="redButtonTapped:" destination="Lx9-wH-riy" eventType="touchUpInside" id="2Sg-SZ-0bm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Wifi" selectedImage="first" id="I5d-j7-z3L"/>
+                    <navigationItem key="navigationItem" id="TT1-ye-7KA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1W-cu-Rwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="801"/>
+        </scene>
+        <!--Tabbar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+                <tabBarController storyboardIdentifier="TabbarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" customClass="TabbarController" customModule="RGB_Remote" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
@@ -82,9 +115,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="d8y-RX-QRc" kind="relationship" relationship="viewControllers" id="Xt4-eE-nw3"/>
+                        <segue destination="Lx9-wH-riy" kind="relationship" relationship="viewControllers" id="wYT-a9-fAX"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-684" y="97"/>
         </scene>
