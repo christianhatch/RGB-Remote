@@ -83,8 +83,8 @@ extension TodayViewController: NCWidgetProviding {
 
 class RGBWWNoEffectsRemoteControl: RemoteControl {
     
-    let sections: [Section] = [Section(type: .specialColors, items: Command.rgbwwColors),
-                               Section(type: .specialControls, items: Command.wwControls),
+    let sections: [Section] = [Section(type: .basicControls, items: Command.wwControlsFull),
+                               Section(type: .specialColors, items: Command.rgbwwColors),
                                Section(type: .basicControls, items: Command.basicControls),
                                Section(type: .basicColors, items: Command.basicColors)]
     let device: RemoteControlDevice = .rgbww
@@ -93,8 +93,7 @@ class RGBWWNoEffectsRemoteControl: RemoteControl {
 
 class CoreRemoteControl: RemoteControl {
     
-    let sections: [Section] = [Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: [.white, .candle])]
+    let sections: [Section] = [Section(type: .basicControls, items: Command.wwControlsFull)]
     let device: RemoteControlDevice = .rgbww
 }
 

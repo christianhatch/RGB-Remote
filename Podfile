@@ -41,7 +41,8 @@ target 'RGB Remote' do
 
     #UI
     pod 'SVProgressHUD'
-    pod 'SnapKit', '~> 3.0'
+    pod 'SnapKit'
+    pod 'ColorMix'
 
 end
 

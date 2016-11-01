@@ -17,7 +17,24 @@ enum SectionType {
     
     case specialControls
     case specialColors
+    
+    
+    func numberOfRows() -> Float {
+        switch self {
+        case .basicControls:
+            return 4
+        case .basicColors:
+            return 3
+        case .effects:
+            return 4
+        case .specialControls:
+            return 4
+        case .specialColors:
+            return 4
+        }
+    }
 }
+
 
 //A Section is a collection of Commands organized by a particular type.
 struct Section {

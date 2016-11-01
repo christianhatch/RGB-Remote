@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ColorMix.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OBMenuBarWindow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,11 +72,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0BC657AE0A0962E3377C566D28995B9A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>37DCE09323EDAA0EA81B30472EA22B71</key>
 		<dict>
 			<key>primary</key>
@@ -92,6 +92,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>75C754132E7828776EDDE75CA55031DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>89C69EB624EC8137588D9568F2E11964</key>
 		<dict>
 			<key>primary</key>
@@ -102,17 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8EF15B6A59B3F0D069923100C74FBE68</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C544C0B57C6C5774BA98145A37BE6D36</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>CD4424D2ED6D8F29883DB5DA363E9F4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE50100F36185E3EB10F3B9475D5713C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -123,6 +123,16 @@
 			<true/>
 		</dict>
 		<key>F7ABD981F3F60727F0CB9DFD0CFE5271</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCA8983A290FEDF4FCF3204870D332D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD1693D3E1B178892C83CAF7F2DC34D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

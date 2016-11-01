@@ -84,8 +84,7 @@ extension TodayViewController: NCWidgetProviding {
 
 class CoreRemoteControl: RemoteControl {
     
-    let sections: [Section] = [Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: [.white, .candle])]
+    let sections: [Section] = [Section(type: .basicControls, items: Command.wwControlsFull)]
     let device: RemoteControlDevice = .rgbww
 }
 

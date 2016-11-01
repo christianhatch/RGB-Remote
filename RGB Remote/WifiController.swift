@@ -9,58 +9,68 @@
 import Foundation
 import CocoaAsyncSocket
 
-typealias Packet = [UInt8]
+
 
 class WifiController: NSObject {
-    fileprivate var socket = GCDAsyncSocket()
+    fileprivate static let port: UInt16 = 5577
+    
+    fileprivate let socket = GCDAsyncSocket()
+    fileprivate let ipAddress: String
+    
+    
+    //MARK: - Public API
 
-    
-    static let sharedController = WifiController()
-    
-    override init() {
+    init(ipAddress: String) {
+        self.ipAddress = ipAddress
         super.init()
-        socket.synchronouslySetDelegate(self, delegateQueue: DispatchQueue(label: "WifiController"))
+        socket.synchronouslySetDelegate(self, delegateQueue: DispatchQueue(label: "WifiControllerTCP"))
     }
     
-    func sendCommand(command: Command) {
-        print(#function, command)
-        
-        if !socket.isConnected {
-            connect()
-        }
+    func send(command: WifiCommand) {
         send(packet: command.packet())
     }
 }
 
+
+
+
+//MARK: - Private Implementation
+
 fileprivate extension WifiController {
 
-    func connect() {
+    private func connect() {
         do {
-            try socket.connect(toHost: "10.0.0.56", onPort: 5577, withTimeout: 5)
+            try socket.connect(toHost: ipAddress, onPort: WifiController.port, withTimeout: 5)
         } catch {
             print(#function, error)
         }
     }
     
     func send(packet: Packet) {
-        let data = Data(bytes: checkSum(data: packet))
-        socket.write(data, withTimeout: 5, tag: 1)
+        if !socket.isConnected {
+            connect()
+        }
+
+        //something like this, but make sure to also always execute the last request;
+        //this way when you lift your finger from the slider, the final position of the slider is always updated to the lights
+//        RateLimit.execute(name: "SendPacket", limit: 0.5) {
+            let data = Data(bytes: packet)
+            self.write(data: data)
+//        }
     }
     
-    func checkSum(data: Packet) -> Packet {
-        var data = data
-        
-        let theSum: UInt8 = data.reduce(0, &+)
-        data.append(theSum)
-        return data
+    @objc func write(data: Data) {
+        print(Date(), #function, data)
+        socket.write(data, withTimeout: 0.5, tag: 1)
     }
 }
 
+//MARK: - TCP Delegate
 
 extension WifiController: GCDAsyncSocketDelegate {
     
     func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
-        print(#function, err)
+//        print(#function, err)
     }
     
     func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
@@ -74,30 +84,70 @@ extension WifiController: GCDAsyncSocketDelegate {
     func socket(_ sock: GCDAsyncSocket, didWriteDataWithTag tag: Int) {
         print(#function, tag)
     }
-    
-//    func socket(_ sock: GCDAsyncSocket, shouldTimeoutWriteWithTag tag: Int, elapsed: TimeInterval, bytesDone length: UInt) -> TimeInterval {
-//        print(#function, tag, elapsed, length)
+}
+
+
+
+
+//open class RateLimit: NSObject {
+//    
+//    @discardableResult open class func execute(name: String, limit: TimeInterval, block: (Void) -> ()) -> Bool {
+//        var executed = false
+//        
+//        queue.sync {
+//            let now = Date()
+//            
+//            // Lookup last executed
+//            let timeInterval = now.timeIntervalSince(dictionary[name] ?? .distantPast)
+//            
+//            // If the time since last execution is greater than the limit, execute
+//            if timeInterval > limit {
+//                // Record execution
+//                dictionary[name] = now
+//                
+//                // Execute
+//                block()
+//                executed = true
+//            }
+//        }
+//        
+//        return executed
 //    }
-}
+//    
+//    open class func resetLimitForName(_ name: String) {
+//        queue.sync {
+//            let _ = dictionary.removeValue(forKey: name)
+//        }
+//    }
+//    
+//    open class func resetAllLimits() {
+//        queue.sync {
+//            dictionary.removeAll()
+//        }
+//    }
+//    
+//    
+//    // MARK: - Internal
+//    
+//    static let queue = DispatchQueue(label: "com.samsoffes.ratelimit", attributes: [])
+//    
+//    static var dictionary = [String: Date]() {
+//        didSet {
+//            didChangeDictionary()
+//        }
+//    }
+//    
+//    class func didChangeDictionary() {
+//        // Do nothing
+//    }
+//}
+//
 
 
 
-fileprivate extension Command {
-    func packet() -> Packet {
-        switch self {
-        case .on:
-            return [0x71, 0x23, 0x0f]
-        case .off:
-            return [0x71, 0x24, 0x0f]
-        
-        case .blue:
-            return [0x31, 0x00, 0x00, 0xff, 0x00, 0xf0, 0x0f]
-            
-        default:
-            return [0x71, 0x23, 0x0f]
-        }
-    }
-}
+
+
+
 
 
 

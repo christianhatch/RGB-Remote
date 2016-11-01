@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -81,21 +82,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g55-5M-xAe">
-                                <frame key="frameInset" minX="131" minY="315" width="113" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a33-71-VCc">
+                                <state key="normal" title="Discover Devices">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="redButtonTapped:" destination="Lx9-wH-riy" eventType="touchUpInside" id="eMB-n4-lwM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdf-qg-Qsf">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNz-qg-xl2">
+                                <state key="normal" title="Select Color">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectColorTapped:" destination="Lx9-wH-riy" eventType="touchUpInside" id="Wja-z7-pX4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g55-5M-xAe">
                                 <state key="normal" title="Toggle Power">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="redButtonTapped:" destination="Lx9-wH-riy" eventType="touchUpInside" id="2Sg-SZ-0bm"/>
+                                    <action selector="togglePowerTapped:" destination="Lx9-wH-riy" eventType="touchUpInside" id="4Ae-Et-b1n"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g55-5M-xAe" firstAttribute="top" secondItem="fNz-qg-xl2" secondAttribute="bottom" constant="10" id="CR5-ba-Bhi"/>
+                            <constraint firstItem="qGy-VR-4GQ" firstAttribute="top" secondItem="hdf-qg-Qsf" secondAttribute="bottom" constant="10" id="Hry-U3-XTj"/>
+                            <constraint firstItem="a33-71-VCc" firstAttribute="centerX" secondItem="Suw-dZ-4DG" secondAttribute="centerX" id="Kpr-Hf-Mxd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hdf-qg-Qsf" secondAttribute="trailing" constant="10" id="c5m-27-Kt7"/>
+                            <constraint firstItem="hdf-qg-Qsf" firstAttribute="leading" secondItem="Suw-dZ-4DG" secondAttribute="leadingMargin" constant="10" id="eER-mZ-GwR"/>
+                            <constraint firstItem="a33-71-VCc" firstAttribute="top" secondItem="g55-5M-xAe" secondAttribute="bottom" constant="10" id="eam-fa-ExJ"/>
+                            <constraint firstItem="g55-5M-xAe" firstAttribute="centerY" secondItem="Suw-dZ-4DG" secondAttribute="centerY" id="ebI-vm-C9l"/>
+                            <constraint firstItem="g55-5M-xAe" firstAttribute="centerX" secondItem="Suw-dZ-4DG" secondAttribute="centerX" id="gnR-14-Hf2"/>
+                            <constraint firstItem="fNz-qg-xl2" firstAttribute="centerX" secondItem="Suw-dZ-4DG" secondAttribute="centerX" id="gpE-3i-AVF"/>
+                            <constraint firstItem="hdf-qg-Qsf" firstAttribute="top" secondItem="a33-71-VCc" secondAttribute="bottom" constant="10" id="vYQ-ec-rhb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wifi" selectedImage="first" id="I5d-j7-z3L"/>
                     <navigationItem key="navigationItem" id="TT1-ye-7KA"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="hdf-qg-Qsf" id="lMl-8L-7fV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1W-cu-Rwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,7 +139,6 @@
         <!--Tabbar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="TabbarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" customClass="TabbarController" customModule="RGB_Remote" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -118,6 +152,7 @@
                         <segue destination="Lx9-wH-riy" kind="relationship" relationship="viewControllers" id="wYT-a9-fAX"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-684" y="97"/>
         </scene>

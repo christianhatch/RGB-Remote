@@ -31,7 +31,7 @@ enum Command: Int {
 
     //rgbww
     static let wwControls: [Command] = [.whiteOn, .whiteOff, .whiteUp, .whiteDown]
-    static let wwControlsFull: [Command] = wwControls + [.white100, .white75, .white50, .white25]
+    static let wwControlsFull: [Command] = wwControls + [.white25, .white50, .white75, .white100]
     static let rgbwwColors: [Command] = [.candle, .orange, .orangeYellow, .yellow,
                                          .mossGreen, .turquoise, .lightBlueWW, .skyBlueWW,
                                          .uv, .indigoWW, .violetWW, .purpleWW,
