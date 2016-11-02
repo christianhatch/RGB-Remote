@@ -11,7 +11,7 @@ import NotificationCenter
 
 class TodayViewController: UIViewController {
     
-    fileprivate var dataSource: iOSCollectionViewDataSource {
+    fileprivate var dataSource: RGBDataSource {
         didSet {
             collectionView.dataSource = dataSource
             collectionView.delegate = dataSource
@@ -38,7 +38,7 @@ extension TodayViewController {
             extensionContext?.widgetLargestAvailableDisplayMode = .expanded
             
             collectionView.backgroundColor = view.backgroundColor
-            dataSource.register(collectionView)
+            dataSource.register(collectionView: collectionView)
 
             collectionView.dataSource = dataSource
             collectionView.delegate = dataSource
@@ -104,6 +104,9 @@ class CoreCollectionViewDataSource: TodayWidgetCollectionViewDataSource {
     init() {
         super.init(remoteControl: CoreRemoteControl())
     }
+    required init(remoteControl: RemoteControl) {
+        fatalError("init(remoteControl:) has not been implemented")
+    }
     //we dont want any spacing, because the today widget has a fixed small size
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return .zero
@@ -111,7 +114,7 @@ class CoreCollectionViewDataSource: TodayWidgetCollectionViewDataSource {
 }
 
 
-class TodayWidgetCollectionViewDataSource: iOSCollectionViewDataSource {
+class TodayWidgetCollectionViewDataSource: RGBDataSource {
     //make the cells a bit lighter color to match the today widget color scheme
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! ButtonCell

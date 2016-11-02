@@ -29,9 +29,9 @@ extension TabbarController {
         super.viewDidLoad()
         
         func setupView() {
-            let rgb = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(remoteControl: RGBRemoteControl()))
+            let rgb = RGBButtonGridViewController(dataSource: RGBDataSource(remoteControl: RGBRemoteControl()))
             rgb.title = "RGB"
-            let rgbww = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(remoteControl: RGBWWRemoteControl()))
+            let rgbww = RGBButtonGridViewController(dataSource: RGBDataSource(remoteControl: RGBWWRemoteControl()))
             rgbww.title = "RGBWW"
             
             var vcs = viewControllers

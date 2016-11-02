@@ -95,7 +95,7 @@ extension WifiDeviceDiscoverer: GCDAsyncUdpSocketDelegate {
         
         guard let string = String(data: data, encoding: .utf8),
             string != WifiDeviceDiscoverer.discoveryString
-            else { return }
+        else { return }
         
         let device = WifiDevice(discoveredString: string)
         discoveredDevices.append(device)

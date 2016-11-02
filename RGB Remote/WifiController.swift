@@ -29,6 +29,11 @@ class WifiController: NSObject {
     func send(command: WifiCommand) {
         send(packet: command.packet())
     }
+    
+    func getStatus(completion: ((String) -> Void)?) {
+        
+    }
+    
 }
 
 
@@ -51,12 +56,8 @@ fileprivate extension WifiController {
             connect()
         }
 
-        //something like this, but make sure to also always execute the last request;
-        //this way when you lift your finger from the slider, the final position of the slider is always updated to the lights
-//        RateLimit.execute(name: "SendPacket", limit: 0.5) {
-            let data = Data(bytes: packet)
-            self.write(data: data)
-//        }
+        let data = Data(bytes: packet)
+        self.write(data: data)
     }
     
     @objc func write(data: Data) {
@@ -64,6 +65,7 @@ fileprivate extension WifiController {
         socket.write(data, withTimeout: 0.5, tag: 1)
     }
 }
+
 
 //MARK: - TCP Delegate
 
@@ -89,59 +91,96 @@ extension WifiController: GCDAsyncSocketDelegate {
 
 
 
-//open class RateLimit: NSObject {
-//    
-//    @discardableResult open class func execute(name: String, limit: TimeInterval, block: (Void) -> ()) -> Bool {
-//        var executed = false
-//        
-//        queue.sync {
-//            let now = Date()
-//            
-//            // Lookup last executed
-//            let timeInterval = now.timeIntervalSince(dictionary[name] ?? .distantPast)
-//            
-//            // If the time since last execution is greater than the limit, execute
-//            if timeInterval > limit {
-//                // Record execution
-//                dictionary[name] = now
-//                
-//                // Execute
-//                block()
-//                executed = true
-//            }
-//        }
-//        
-//        return executed
-//    }
-//    
-//    open class func resetLimitForName(_ name: String) {
-//        queue.sync {
-//            let _ = dictionary.removeValue(forKey: name)
-//        }
-//    }
-//    
-//    open class func resetAllLimits() {
-//        queue.sync {
-//            dictionary.removeAll()
-//        }
-//    }
-//    
-//    
-//    // MARK: - Internal
-//    
-//    static let queue = DispatchQueue(label: "com.samsoffes.ratelimit", attributes: [])
-//    
-//    static var dictionary = [String: Date]() {
-//        didSet {
-//            didChangeDictionary()
-//        }
-//    }
-//    
-//    class func didChangeDictionary() {
-//        // Do nothing
-//    }
-//}
-//
+
+
+
+
+extension WifiCommand {
+    
+    func packet() -> Packet {
+        switch self {
+        case .on:
+            return PacketFactory.on()
+        case .off:
+            return PacketFactory.off()
+        case .color(let color, let persist):
+            return PacketFactory.color(color: color, persist: persist)
+        }
+    }
+}
+
+
+
+
+
+
+
+
+typealias Byte = UInt8
+typealias Packet = [Byte]
+
+fileprivate struct PacketFactory {
+    
+    static let local: UInt8 = 0x0f
+    static let power: UInt8 = 0x71
+    static let colorPersisted: UInt8 = 0x31
+    static let colorTemporary: UInt8 = 0x41
+    
+}
+
+fileprivate extension PacketFactory {
+    
+    static func on() -> Packet {
+        return checkSum([power, 0x23, local])
+    }
+    
+    static func off() -> Packet {
+        return checkSum([power, 0x24, local])
+    }
+    
+    static func color(color aColor: UIColor, persist: Bool) -> Packet {
+        var redFloat: CGFloat = 0
+        var greenFloat: CGFloat = 0
+        var blueFloat: CGFloat = 0
+        
+        aColor.getRed(&redFloat, green: &greenFloat, blue: &blueFloat, alpha: nil)
+        
+        let red = toByte(float: redFloat)
+        let green = toByte(float: greenFloat)
+        let blue = toByte(float: blueFloat)
+        let warmWhite: UInt8 = 0x00
+        let coolWhite: UInt8 = 0x00
+        let setRGB: UInt8 = 0xf0
+        
+        return checkSum([persist ? colorPersisted : colorTemporary, red, green, blue, warmWhite, coolWhite, setRGB, local])
+    }
+}
+
+
+//MARK: - Helpers
+
+fileprivate extension PacketFactory {
+    
+    static func toByte(float: CGFloat) -> Byte {
+        let f2 = max(0.0, min(1.0, float))
+        let byte = floor(f2 == 1.0 ? 255 : f2 * 256.0)
+        return Byte(byte)
+    }
+    
+    static func checkSum(_ packet: Packet) -> Packet {
+        var packet = packet
+        
+        let theSum: UInt8 = packet.reduce(0, &+)
+        packet.append(theSum)
+        return packet
+    }
+}
+
+
+
+
+
+
 
 
 

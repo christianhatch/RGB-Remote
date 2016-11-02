@@ -17,7 +17,6 @@ import Foundation
 #endif
 
 
-
 enum Style {
     
     enum Color {

@@ -32,6 +32,10 @@ class WifiViewController: UIViewController {
         discover.discover { (result) in
             switch result {
             case .devices(let devices):
+                guard devices.count > 0 else {
+                    self.statusLabel.text = "No Devices Found"
+                    return
+                }
                 self.statusLabel.text = devices.map{$0.asString()}.reduce("", { $0 == "" ? $1 : $0 + "\n\n" + $1 })
                 self.devices = devices
                 
@@ -54,6 +58,21 @@ class WifiViewController: UIViewController {
     }
 }
 
+//MARK: - UIKit
+
+extension WifiViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = Style.Color.darkGray.color()
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+}
+
 extension WifiViewController: ColorPickerViewDelegate {
     
     func colorPickerView(_ view: ColorPickerView, pickedColorDidChange color: UIColor) {
@@ -68,20 +87,6 @@ extension WifiViewController: ColorPickerViewDelegate {
 
 
 
-//MARK: - UIKit 
-
-extension WifiViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = Style.Color.darkGray.color()
-    }
-    
-    override var preferredStatusBarStyle : UIStatusBarStyle {
-        return .lightContent
-    }
-}
 
 
 
