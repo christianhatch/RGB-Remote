@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DAC72208FF79BF8246978CB8652AD83F"
+               BlueprintIdentifier = "046A1FCDB84D04E2EA0F1F46CD92D874"
                BuildableName = "Pods_RGB_Remote_Widget_iOS.framework"
                BlueprintName = "Pods-RGB Remote Widget iOS"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DAC72208FF79BF8246978CB8652AD83F"
+            BlueprintIdentifier = "046A1FCDB84D04E2EA0F1F46CD92D874"
             BuildableName = "Pods_RGB_Remote_Widget_iOS.framework"
             BlueprintName = "Pods-RGB Remote Widget iOS"
             ReferencedContainer = "container:Pods.xcodeproj">

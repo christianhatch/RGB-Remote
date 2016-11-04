@@ -43,16 +43,15 @@ struct Section {
 }
 
 //A RemoteControlDevice is the device to which the Commands of that RemoteControl will be directed.
-enum RemoteControlDevice: String {
+enum RGBRemoteControlDevice: String {
     case rgb
     case rgbww
 }
 
-
-//A Remote Control is a collection of sections of Commands, and a device type. Think of it as the physical remote control that you would hold in your hand. 
+//A Remote Control is a collection of sections of Commands, and a device type. Think of it as the physical remote control that you would hold in your hand.
 protocol RemoteControl {
     var sections: [Section] { get }
-    var device: RemoteControlDevice { get }
+    var device: RGBRemoteControlDevice { get }
     
     func buttonTouchDown(_ command: Command)
     func buttonTouchUp(_ command: Command)

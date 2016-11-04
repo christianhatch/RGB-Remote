@@ -9,7 +9,26 @@
 import Foundation
 import UIKit
 
-class RGBDataSource: NSObject, iOSCollectionViewDataSource {
+protocol RGBCollectionViewDataSource: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func lastIndexPath() -> IndexPath
+    func register(collectionView: UICollectionView)
+    
+    init(remoteControl: RemoteControl)
+    var remoteControl: RemoteControl { get }
+}
+
+extension RGBCollectionViewDataSource {
+    func lastIndexPath() -> IndexPath {
+        let section = remoteControl.sections.count-1
+        let item = remoteControl.sections[section].items.count-1
+        return IndexPath(item: item, section: section)
+    }
+}
+
+
+
+
+class RGBDataSource: NSObject, RGBCollectionViewDataSource {
     enum DisplayType {
         case grid
         case list
@@ -157,4 +176,10 @@ class ButtonCell: UICollectionViewCell {
         }
     }
 }
+
+
+
+
+
+
 

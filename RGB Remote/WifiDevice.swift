@@ -20,7 +20,14 @@ struct WifiDevice {
         self.hardwareAddress = parts[1]
         self.model = parts[2]
     }
+}
+
+extension WifiDevice {
     
+}
+
+
+extension WifiDevice {
     func asString() -> String {
         return "Wifi Device: IP = \(ipAddress)\nMAC = \(hardwareAddress)\nModel = \(model)"
     }

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,17 +22,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KLS-LF-H3j">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.15000000599999999" green="0.15000000599999999" blue="0.15000000599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoggerCell" textLabel="BV6-Wl-ca2" style="IBUITableViewCellStyleDefault" id="Iel-F1-1GG">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iel-F1-1GG" id="Lch-cI-fBl">
-                                            <frame key="frameInset" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BV6-Wl-ca2">
-                                                    <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,72 +73,6 @@
             </objects>
             <point key="canvasLocation" x="1332" y="97"/>
         </scene>
-        <!--Wifi-->
-        <scene sceneID="cW0-dS-XpQ">
-            <objects>
-                <viewController storyboardIdentifier="WifiViewController" title="Wifi" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lx9-wH-riy" customClass="WifiViewController" customModule="RGB_Remote" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HMP-1N-rRk"/>
-                        <viewControllerLayoutGuide type="bottom" id="qGy-VR-4GQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Suw-dZ-4DG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a33-71-VCc">
-                                <state key="normal" title="Discover Devices">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="redButtonTapped:" destination="Lx9-wH-riy" eventType="touchUpInside" id="eMB-n4-lwM"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdf-qg-Qsf">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNz-qg-xl2">
-                                <state key="normal" title="Select Color">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="selectColorTapped:" destination="Lx9-wH-riy" eventType="touchUpInside" id="Wja-z7-pX4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g55-5M-xAe">
-                                <state key="normal" title="Toggle Power">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="togglePowerTapped:" destination="Lx9-wH-riy" eventType="touchUpInside" id="4Ae-Et-b1n"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="g55-5M-xAe" firstAttribute="top" secondItem="fNz-qg-xl2" secondAttribute="bottom" constant="10" id="CR5-ba-Bhi"/>
-                            <constraint firstItem="qGy-VR-4GQ" firstAttribute="top" secondItem="hdf-qg-Qsf" secondAttribute="bottom" constant="10" id="Hry-U3-XTj"/>
-                            <constraint firstItem="a33-71-VCc" firstAttribute="centerX" secondItem="Suw-dZ-4DG" secondAttribute="centerX" id="Kpr-Hf-Mxd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hdf-qg-Qsf" secondAttribute="trailing" constant="10" id="c5m-27-Kt7"/>
-                            <constraint firstItem="hdf-qg-Qsf" firstAttribute="leading" secondItem="Suw-dZ-4DG" secondAttribute="leadingMargin" constant="10" id="eER-mZ-GwR"/>
-                            <constraint firstItem="a33-71-VCc" firstAttribute="top" secondItem="g55-5M-xAe" secondAttribute="bottom" constant="10" id="eam-fa-ExJ"/>
-                            <constraint firstItem="g55-5M-xAe" firstAttribute="centerY" secondItem="Suw-dZ-4DG" secondAttribute="centerY" id="ebI-vm-C9l"/>
-                            <constraint firstItem="g55-5M-xAe" firstAttribute="centerX" secondItem="Suw-dZ-4DG" secondAttribute="centerX" id="gnR-14-Hf2"/>
-                            <constraint firstItem="fNz-qg-xl2" firstAttribute="centerX" secondItem="Suw-dZ-4DG" secondAttribute="centerX" id="gpE-3i-AVF"/>
-                            <constraint firstItem="hdf-qg-Qsf" firstAttribute="top" secondItem="a33-71-VCc" secondAttribute="bottom" constant="10" id="vYQ-ec-rhb"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Wifi" selectedImage="first" id="I5d-j7-z3L"/>
-                    <navigationItem key="navigationItem" id="TT1-ye-7KA"/>
-                    <connections>
-                        <outlet property="statusLabel" destination="hdf-qg-Qsf" id="lMl-8L-7fV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u1W-cu-Rwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="377" y="801"/>
-        </scene>
         <!--Tabbar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -149,7 +86,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="d8y-RX-QRc" kind="relationship" relationship="viewControllers" id="Xt4-eE-nw3"/>
-                        <segue destination="Lx9-wH-riy" kind="relationship" relationship="viewControllers" id="wYT-a9-fAX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

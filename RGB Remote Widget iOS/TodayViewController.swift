@@ -87,18 +87,27 @@ class RGBWWNoEffectsRemoteControl: RemoteControl {
                                Section(type: .specialColors, items: Command.rgbwwColors),
                                Section(type: .basicControls, items: Command.basicControls),
                                Section(type: .basicColors, items: Command.basicColors)]
-    let device: RemoteControlDevice = .rgbww
+    let device: RGBRemoteControlDevice = .rgbww
 }
 
 
 class CoreRemoteControl: RemoteControl {
     
     let sections: [Section] = [Section(type: .basicControls, items: Command.wwControlsFull)]
-    let device: RemoteControlDevice = .rgbww
+    let device: RGBRemoteControlDevice = .rgbww
 }
 
 
 //MARK: - DataSource
+
+class TodayWidgetCollectionViewDataSource: RGBDataSource {
+    //make the cells a bit lighter color to match the today widget color scheme
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! ButtonCell
+        cell.button.backgroundColor = Style.Color.mediumGray.color()
+        return cell
+    }
+}
 
 class CoreCollectionViewDataSource: TodayWidgetCollectionViewDataSource {
     init() {
@@ -114,14 +123,6 @@ class CoreCollectionViewDataSource: TodayWidgetCollectionViewDataSource {
 }
 
 
-class TodayWidgetCollectionViewDataSource: RGBDataSource {
-    //make the cells a bit lighter color to match the today widget color scheme
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! ButtonCell
-        cell.button.backgroundColor = Style.Color.mediumGray.color()
-        return cell
-    }
-}
 
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD1693D3E1B178892C83CAF7F2DC34D9"
+               BlueprintIdentifier = "86052CEB0C02B5BF64EE2918E88D40D6"
                BuildableName = "SnapKit.framework"
                BlueprintName = "SnapKit-iOS"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD1693D3E1B178892C83CAF7F2DC34D9"
+            BlueprintIdentifier = "86052CEB0C02B5BF64EE2918E88D40D6"
             BuildableName = "SnapKit.framework"
             BlueprintName = "SnapKit-iOS"
             ReferencedContainer = "container:Pods.xcodeproj">

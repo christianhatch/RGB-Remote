@@ -15,3 +15,5 @@ enum WifiCommand {
     case off
     case color(UIColor, Bool)
 }
+
+

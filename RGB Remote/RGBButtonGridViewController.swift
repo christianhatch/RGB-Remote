@@ -106,7 +106,7 @@ class RGBRemoteControl: RemoteControl {
                                Section(type: .specialControls, items: Command.rgbControls),
                                Section(type: .basicControls, items: Command.basicControls),
                                Section(type: .basicColors, items: Command.basicColors)]
-    let device: RemoteControlDevice = .rgb
+    let device: RGBRemoteControlDevice = .rgb
 }
 
 class RGBWWRemoteControl: RemoteControl {
@@ -116,7 +116,7 @@ class RGBWWRemoteControl: RemoteControl {
                                Section(type: .specialControls, items: Command.wwControls),
                                Section(type: .basicControls, items: Command.basicControls),
                                Section(type: .basicColors, items: Command.basicColors)]
-    let device: RemoteControlDevice = .rgbww
+    let device: RGBRemoteControlDevice = .rgbww
 }
 
 

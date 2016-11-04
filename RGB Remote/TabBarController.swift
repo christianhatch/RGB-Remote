@@ -33,10 +33,13 @@ extension TabbarController {
             rgb.title = "RGB"
             let rgbww = RGBButtonGridViewController(dataSource: RGBDataSource(remoteControl: RGBWWRemoteControl()))
             rgbww.title = "RGBWW"
+            let wifi = WifiDeviceListViewController()
+            wifi.title = "Wifi"
             
             var vcs = viewControllers
             vcs?.insert(rgb, at: 0)
             vcs?.insert(rgbww, at: 1)
+            vcs?.append(wifi)
             viewControllers = vcs
             
             if let controllers = viewControllers {

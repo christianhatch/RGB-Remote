@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F7ABD981F3F60727F0CB9DFD0CFE5271"
+               BlueprintIdentifier = "138ABCBD783777E2A656A1776E30A0E5"
                BuildableName = "CocoaAsyncSocket.framework"
                BlueprintName = "CocoaAsyncSocket-OSX"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F7ABD981F3F60727F0CB9DFD0CFE5271"
+            BlueprintIdentifier = "138ABCBD783777E2A656A1776E30A0E5"
             BuildableName = "CocoaAsyncSocket.framework"
             BlueprintName = "CocoaAsyncSocket-OSX"
             ReferencedContainer = "container:Pods.xcodeproj">

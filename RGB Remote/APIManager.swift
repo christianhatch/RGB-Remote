@@ -26,7 +26,7 @@ class APIManager {
         return "http://10.0.0.51:3000"
     }
 
-    static func startSending(command: Command, forRemote: RemoteControlDevice) {
+    static func startSending(command: Command, forRemote: RGBRemoteControlDevice) {
         let logMessage = "\(#function) \(forRemote.rawValue)/\(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
         
@@ -36,7 +36,7 @@ class APIManager {
             })
     }
     
-    static func stopSending(command: Command, forRemote: RemoteControlDevice) {
+    static func stopSending(command: Command, forRemote: RGBRemoteControlDevice) {
         let logMessage = "\(#function) \(forRemote.rawValue)/\(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
 
@@ -46,7 +46,7 @@ class APIManager {
             })
     }
     
-    static func send(command: Command, forRemote: RemoteControlDevice) {
+    static func send(command: Command, forRemote: RGBRemoteControlDevice) {
         let logMessage = "\(#function) \(forRemote.rawValue)/\(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
 

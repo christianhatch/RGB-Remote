@@ -121,21 +121,23 @@ typealias Packet = [Byte]
 
 fileprivate struct PacketFactory {
     
-    static let local: UInt8 = 0x0f
-    static let power: UInt8 = 0x71
-    static let colorPersisted: UInt8 = 0x31
-    static let colorTemporary: UInt8 = 0x41
+    static let local: Byte = 0x0f
+    static let power: Byte = 0x71
+    static let colorPersisted: Byte = 0x31
+    static let colorTemporary: Byte = 0x41
     
 }
 
 fileprivate extension PacketFactory {
     
     static func on() -> Packet {
-        return checkSum([power, 0x23, local])
+        let on: Byte = 0x23
+        return checkSum(packet: [power, on, local])
     }
     
     static func off() -> Packet {
-        return checkSum([power, 0x24, local])
+        let off: Byte = 0x24
+        return checkSum(packet: [power, off, local])
     }
     
     static func color(color aColor: UIColor, persist: Bool) -> Packet {
@@ -148,11 +150,12 @@ fileprivate extension PacketFactory {
         let red = toByte(float: redFloat)
         let green = toByte(float: greenFloat)
         let blue = toByte(float: blueFloat)
-        let warmWhite: UInt8 = 0x00
-        let coolWhite: UInt8 = 0x00
-        let setRGB: UInt8 = 0xf0
+        let warmWhite: Byte = 0x00
+        let coolWhite: Byte = 0x00
+        let setRGB: Byte = 0xf0
         
-        return checkSum([persist ? colorPersisted : colorTemporary, red, green, blue, warmWhite, coolWhite, setRGB, local])
+        let first = persist ? colorPersisted : colorTemporary
+        return checkSum(packet: [first, red, green, blue, warmWhite, coolWhite, setRGB, local])
     }
 }
 
@@ -167,10 +170,10 @@ fileprivate extension PacketFactory {
         return Byte(byte)
     }
     
-    static func checkSum(_ packet: Packet) -> Packet {
+    static func checkSum(packet: Packet) -> Packet {
         var packet = packet
         
-        let theSum: UInt8 = packet.reduce(0, &+)
+        let theSum: Byte = packet.reduce(0, &+)
         packet.append(theSum)
         return packet
     }
