@@ -18,7 +18,7 @@ enum Macro: String {
 
 
 
-enum RGBCommand: CommandConvertible {
+enum RGBCommand: Command {
     
     //generic
     static let basicControls: [RGBCommand] = [.on, .off, .brightnessUp, .brightnessDown]
@@ -146,7 +146,7 @@ enum RGBCommand: CommandConvertible {
 
 extension RGBCommand {
     
-    func humanReadableName() -> String {
+    func displayName() -> String {
         switch self {
         case .on:
             return "On"

@@ -27,7 +27,7 @@ class APIManager {
     }
 
     
-    static func startSending(command: CommandConvertible, forRemote: IRDeviceType) {
+    static func startSending(command: Command, forRemote: IRDeviceType) {
         let logMessage = "\(#function) \(forRemote.apiName())/\(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
         
@@ -37,7 +37,7 @@ class APIManager {
             })
     }
     
-    static func stopSending(command: CommandConvertible, forRemote: IRDeviceType) {
+    static func stopSending(command: Command, forRemote: IRDeviceType) {
         let logMessage = "\(#function) \(forRemote.apiName())/\(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
 
@@ -47,7 +47,7 @@ class APIManager {
             })
     }
     
-    static func send(command: CommandConvertible, forRemote: IRDeviceType) {
+    static func send(command: Command, forRemote: IRDeviceType) {
         let logMessage = "\(#function) \(forRemote.apiName())/\(command.apiKey())"
         Logger.sharedLogger.printMessage(logMessage)
 

@@ -61,7 +61,7 @@ extension IRRemoteDataSource {
         collectionView.register(ButtonCell.self, forCellWithReuseIdentifier: ButtonCell.reuseIdentifier)
     }
     
-    fileprivate func command(forIndexPath indexPath: IndexPath) -> CommandConvertible {
+    fileprivate func command(forIndexPath indexPath: IndexPath) -> Command {
         let command = remoteControl.sections[indexPath.section].items[indexPath.item]
         return command
     }
@@ -141,7 +141,7 @@ extension IRRemoteDataSource: UICollectionViewDelegateFlowLayout {
 class ButtonCell: UICollectionViewCell {
     static var reuseIdentifier: String = "ButtonCell"
     
-    private var command: CommandConvertible!
+    private var command: Command!
     
     private lazy var label: UILabel = {
         let label = UILabel()
@@ -156,10 +156,10 @@ class ButtonCell: UICollectionViewCell {
     }()
     
     
-    func updateUI(command: CommandConvertible) {
+    func updateUI(command: Command) {
         self.command = command
         
-        label.text = command.humanReadableName()
+        label.text = command.displayName()
         label.textColor = command.color()
     }
     

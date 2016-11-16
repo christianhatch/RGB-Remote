@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol CommandConvertible {
-    func humanReadableName() -> String
+protocol Command {
+    func displayName() -> String
     func apiKey() -> String
     func color() -> XColor
 }

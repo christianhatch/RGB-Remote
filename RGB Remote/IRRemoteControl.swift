@@ -7,6 +7,31 @@
 //
 
 import Foundation
+import UIKit
+
+struct Section {
+    let itemsPerRow: CGFloat
+    let items: [Command]
+}
+
+enum IRDeviceType: String {
+    case rgb
+    case rgbww
+    case projector
+    case hdmiSwitch
+    case soundbar
+    
+    func apiName() -> String {
+        return rawValue
+    }
+}
+
+protocol IRRemoteControl {
+    var sections: [Section] { get }
+    var device: IRDeviceType { get }
+}
+
+
 
 //MARK: - RemoteControl
 
@@ -52,3 +77,17 @@ class HDMISwitchRemoteControl: IRRemoteControl {
     
     let device: IRDeviceType = .soundbar
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
