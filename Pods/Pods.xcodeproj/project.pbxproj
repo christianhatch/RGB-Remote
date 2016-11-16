@@ -23,8 +23,8 @@
 		0FFE9C28474C738D160ABA21A2CE27CE /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD66E76A9B9B9016967093BCD4D6AD55 /* ConstraintMultiplierTarget.swift */; };
 		104674EB0FA76187570EBF104EC78755 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C1A4525A95FAFB7282AE77A97ED0C /* ConstraintItem.swift */; };
 		10F1A3DDBBCA3534197445AE8D391B23 /* ColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFAA7624130D1E6FB873CC4B599CADA /* ColorPickerView.m */; };
-		1111C965A31E68708AD2DB581EC02024 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD688CB6D13CE650474238A735A4E95 /* Foundation.framework */; };
 		1B79B3BFB3B46C82BF37F288F0F16E58 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF26C3BB1BFC5EF889C9CC0A83B5DC /* SessionManager.swift */; };
+		1DFB5E9F06905A46F8EE752789066808 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD688CB6D13CE650474238A735A4E95 /* Foundation.framework */; };
 		1F7BDD26E07C649DE25543FCE4A272AC /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1E6A413FE58E0330687FE2E95808 /* Notifications.swift */; };
 		20D1DCB500F552AE7FD9205FABB48239 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E1C5F151907EA546B6DBD1DC3826C /* Debugging.swift */; };
 		21E9EF557773B7906A0696A914041D68 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568956398B09AFB6A19E8229FD4BB163 /* ParameterEncoding.swift */; };
@@ -68,7 +68,6 @@
 		5A740AF88D5E9EAE4C65DFF51963AFC5 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0A19A560CE4E6E00C5539E7175052 /* ConstraintViewDSL.swift */; };
 		5A80253CF6A4AB95DD8098517AFAA52D /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF881E03012E49CF19A7BBCD62A33372 /* ConstraintDSL.swift */; };
 		5F1CBA346871223FD0E20DD45DFC2136 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF53451D1A3E124521CA7BC2EB08AC /* SessionDelegate.swift */; };
-		5F511EE9E9532E385CBCCAAB221E37DD /* Pods-RGB Remote Widget iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66105DDD4CBC9C1EC0EFDE10117448 /* Pods-RGB Remote Widget iOS-dummy.m */; };
 		5FE890BFD11AF27AADF1157435606005 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6274DCBF6728C48C056ECD25177B4449 /* Cocoa.framework */; };
 		620B2E729592DD4F7D3EBACFCCF532D7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F8F1F1596509B1E0A2B88336F8985 /* Result.swift */; };
 		64752743A74F1FB5F30F38D6531FD2A2 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C2FEBAF86FCED242C03913AFB83BA /* Timeline.swift */; };
@@ -84,7 +83,6 @@
 		7916E56C96C703EBF384C9561B25FDC9 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCF0210C21B18973B9365B16780E77 /* ConstraintLayoutSupportDSL.swift */; };
 		7BDB754921D58181BD431D5A604BA4A4 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49E5D6BED20BE7E914BB486EE9BB5 /* AFError.swift */; };
 		7C60E64EE63746D8995E7C7B71B16078 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 474CFD52DC844453343AC2E3685F6A07 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7D905A7107C7C3FF34FA00AB5D46127D /* Pods-RGB Remote Widget iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2864F3B16D777607D2A21F20D674806 /* Pods-RGB Remote Widget iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E7FADAD6B3BEE9682A6BD0AD8B66A95 /* ColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544F194D315726B4F257025E3664C05 /* ColorPickerView.xib */; };
 		7EA9F1A6E8F8159604B096C6C3AFC134 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F265B5C1FD2B27A5414A6DA48AAC3 /* LayoutConstraint.swift */; };
 		80584CFB4594C0E14C52FF5721A9752E /* CocoaAsyncSocket-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6C29B9C9CE0D853C38D58EC22E3F0C /* CocoaAsyncSocket-iOS-dummy.m */; };
@@ -111,8 +109,10 @@
 		9DFA1D25C44C5E9131FF606B23C35208 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08926F39E492CF854BABDAD1B91120 /* ConstraintConfig.swift */; };
 		9EA606FC357137F4DD7C70B1C82F0CCA /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F543E8DE9E5E7E930E6E559A0286BD /* DispatchQueue+Alamofire.swift */; };
 		9EAB661F5889B98DDFD17FDF0CC26D5D /* OBMenuBarWindow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38082FE7F2E1210A8632155C72EEF11A /* OBMenuBarWindow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A14C7651D1907F360586A5532FD3DC88 /* Pods-RGB Remote Widget iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66105DDD4CBC9C1EC0EFDE10117448 /* Pods-RGB Remote Widget iOS-dummy.m */; };
 		A19694F70267B7EA1DC896561669DBC6 /* Pods-RGB Remote macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9BE15511115B031D4ABC8CF2E463CB /* Pods-RGB Remote macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1FDFBF7543209A84445B1B0BDF15EC5 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 5386DDDA804950D3D5166451DB6E8019 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A21FA9A63F0D5D4D95C1EB4DAB278CC5 /* Pods-RGB Remote Widget iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2864F3B16D777607D2A21F20D674806 /* Pods-RGB Remote Widget iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A30C527E5DDE028CCD2A7BB35D1271C8 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC576267D50C8CA12D09D39E49DF1F /* ConstraintMakerPriortizable.swift */; };
 		A5721FCF4BDEC6A926F2A717902099B2 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEFA44669A70B9B51EA2621B1BD42 /* ConstraintMakerFinalizable.swift */; };
 		A7E3A5C03D01EDFF95B41C1ADE65320A /* Pods-RGB Remote macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E132B863779B7BA253C26D56768D64A /* Pods-RGB Remote macOS-dummy.m */; };
@@ -187,6 +187,13 @@
 			remoteGlobalIDString = 4D8199C20C1BE5F5BCDBC8F8CB4BF089;
 			remoteInfo = "Alamofire-iOS";
 		};
+		1B823DA8D4DA959D0BC8BD55520A96A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86052CEB0C02B5BF64EE2918E88D40D6;
+			remoteInfo = "SnapKit-iOS";
+		};
 		277261F452303CAC06B09B96BFC2120C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -208,13 +215,6 @@
 			remoteGlobalIDString = B5972CB42C666D32D52D92E9D6F5CFE0;
 			remoteInfo = "CocoaAsyncSocket-iOS";
 		};
-		53DB4102B42E5C468A217D9EF8AE65AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B5972CB42C666D32D52D92E9D6F5CFE0;
-			remoteInfo = "CocoaAsyncSocket-iOS";
-		};
 		5D5418C47569DA5D8816A825555928E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -222,12 +222,12 @@
 			remoteGlobalIDString = 138ABCBD783777E2A656A1776E30A0E5;
 			remoteInfo = "CocoaAsyncSocket-OSX";
 		};
-		618E86FB0AC279A854E3FE2F2EC31552 /* PBXContainerItemProxy */ = {
+		742B6A40800FF3D90BEB69F364E88B6E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4D8199C20C1BE5F5BCDBC8F8CB4BF089;
-			remoteInfo = "Alamofire-iOS";
+			remoteGlobalIDString = B5972CB42C666D32D52D92E9D6F5CFE0;
+			remoteInfo = "CocoaAsyncSocket-iOS";
 		};
 		8D139FB2A324FC43B3E3BF38BF89C319 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -242,6 +242,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = BD4894A7C3859C9AB7C4822A425463EA;
 			remoteInfo = "SnapKit-OSX";
+		};
+		95E6BD6CFD894ADFFB3BE5385C94312F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D8199C20C1BE5F5BCDBC8F8CB4BF089;
+			remoteInfo = "Alamofire-iOS";
 		};
 		991D4B778ACA1806498EED7AADBC6381 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -507,6 +514,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B625006D907FB03A03480FD75C2030D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DFB5E9F06905A46F8EE752789066808 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		833BE15FA942867398232C0573E7EF27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,14 +551,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFEF1B9EB70B04B3BD2248C7F5A8808D /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CABA7C17F5C56F10E11E535974B2555E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1111C965A31E68708AD2DB581EC02024 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,14 +1047,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		06CB2B2D4B4EC8A57A28734605266968 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D905A7107C7C3FF34FA00AB5D46127D /* Pods-RGB Remote Widget iOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6D20D43D9792F1F7E2EAA9A5FCE9A91D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1107,6 +1106,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9BEAAC321C40B6DE1AB41E01A5F98CA3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A21FA9A63F0D5D4D95C1EB4DAB278CC5 /* Pods-RGB Remote Widget iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5D48294018A244AFC7ABC377BF9A31D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1160,25 +1167,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		046A1FCDB84D04E2EA0F1F46CD92D874 /* Pods-RGB Remote Widget iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 69829442A60D086F8B8202D5F8F39960 /* Build configuration list for PBXNativeTarget "Pods-RGB Remote Widget iOS" */;
-			buildPhases = (
-				CF81FE8659037893B8494A709A08166C /* Sources */,
-				CABA7C17F5C56F10E11E535974B2555E /* Frameworks */,
-				06CB2B2D4B4EC8A57A28734605266968 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5E0E8B354BA93D48C50070BCD0B1FF52 /* PBXTargetDependency */,
-				1B1CCBCCC17B5AFB9C2013A055686649 /* PBXTargetDependency */,
-			);
-			name = "Pods-RGB Remote Widget iOS";
-			productName = "Pods-RGB Remote Widget iOS";
-			productReference = C16E66D950DAA18186B72C2F96B67D1F /* Pods_RGB_Remote_Widget_iOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		138ABCBD783777E2A656A1776E30A0E5 /* CocoaAsyncSocket-OSX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48A4B12A0B073398D1E0D3E1B3B3BEB8 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket-OSX" */;
@@ -1194,6 +1182,26 @@
 			name = "CocoaAsyncSocket-OSX";
 			productName = "CocoaAsyncSocket-OSX";
 			productReference = 12BB4FA1A04CBB17D7550C60DDAB7136 /* CocoaAsyncSocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2E58E17CB9CD2274E407A64AC6DEDD7F /* Pods-RGB Remote Widget iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03BA19830B35E6F688AFEE239B3D148C /* Build configuration list for PBXNativeTarget "Pods-RGB Remote Widget iOS" */;
+			buildPhases = (
+				C4791A8AE2E22850C6FE46A1CCAE0615 /* Sources */,
+				2B625006D907FB03A03480FD75C2030D /* Frameworks */,
+				9BEAAC321C40B6DE1AB41E01A5F98CA3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3659038CE9D7C1A33C99C9543141A5C /* PBXTargetDependency */,
+				A8592FFEBAE0A6A613429FACFCCFE61D /* PBXTargetDependency */,
+				35E23E4ADBFC39014D0B46D3C11608AD /* PBXTargetDependency */,
+			);
+			name = "Pods-RGB Remote Widget iOS";
+			productName = "Pods-RGB Remote Widget iOS";
+			productReference = C16E66D950DAA18186B72C2F96B67D1F /* Pods_RGB_Remote_Widget_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		382E561C5692522A8AD8D95C6841218F /* Alamofire-OSX */ = {
@@ -1425,7 +1433,7 @@
 				DB75B4143D2403F69B92CD3D9F13B5E5 /* OBMenuBarWindow */,
 				A16F41D3E98953FFA4A2DC1F0AC1DE93 /* Pods-RGB Remote */,
 				871E4FC258D304178CAE954ECF085B00 /* Pods-RGB Remote macOS */,
-				046A1FCDB84D04E2EA0F1F46CD92D874 /* Pods-RGB Remote Widget iOS */,
+				2E58E17CB9CD2274E407A64AC6DEDD7F /* Pods-RGB Remote Widget iOS */,
 				88E1745AEDFAEDD5E8F2EA73E99EFDF2 /* Pods-RGB Remote Widget macOS */,
 				86052CEB0C02B5BF64EE2918E88D40D6 /* SnapKit-iOS */,
 				BD4894A7C3859C9AB7C4822A425463EA /* SnapKit-OSX */,
@@ -1643,11 +1651,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF81FE8659037893B8494A709A08166C /* Sources */ = {
+		C4791A8AE2E22850C6FE46A1CCAE0615 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F511EE9E9532E385CBCCAAB221E37DD /* Pods-RGB Remote Widget iOS-dummy.m in Sources */,
+				A14C7651D1907F360586A5532FD3DC88 /* Pods-RGB Remote Widget iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1684,29 +1692,23 @@
 			target = 382E561C5692522A8AD8D95C6841218F /* Alamofire-OSX */;
 			targetProxy = 454E9F2C47B4BD45DDE7B67DD013133D /* PBXContainerItemProxy */;
 		};
-		1B1CCBCCC17B5AFB9C2013A055686649 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CocoaAsyncSocket-iOS";
-			target = B5972CB42C666D32D52D92E9D6F5CFE0 /* CocoaAsyncSocket-iOS */;
-			targetProxy = 53DB4102B42E5C468A217D9EF8AE65AF /* PBXContainerItemProxy */;
-		};
 		2427A9D4180586C43E41A3BBBDFF98AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "CocoaAsyncSocket-iOS";
 			target = B5972CB42C666D32D52D92E9D6F5CFE0 /* CocoaAsyncSocket-iOS */;
 			targetProxy = 4A41968DDC03BFC5A95913C28533A3D6 /* PBXContainerItemProxy */;
 		};
+		35E23E4ADBFC39014D0B46D3C11608AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SnapKit-iOS";
+			target = 86052CEB0C02B5BF64EE2918E88D40D6 /* SnapKit-iOS */;
+			targetProxy = 1B823DA8D4DA959D0BC8BD55520A96A1 /* PBXContainerItemProxy */;
+		};
 		48A4DAC2DF92D0128EE449D56774EEC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire-iOS";
 			target = 4D8199C20C1BE5F5BCDBC8F8CB4BF089 /* Alamofire-iOS */;
 			targetProxy = 0C00E5ABBD63CAB8AF68F490EB563C96 /* PBXContainerItemProxy */;
-		};
-		5E0E8B354BA93D48C50070BCD0B1FF52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire-iOS";
-			target = 4D8199C20C1BE5F5BCDBC8F8CB4BF089 /* Alamofire-iOS */;
-			targetProxy = 618E86FB0AC279A854E3FE2F2EC31552 /* PBXContainerItemProxy */;
 		};
 		5E43EA87CDDAF7E3CA7E8DEB3861684B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1726,11 +1728,23 @@
 			target = 138ABCBD783777E2A656A1776E30A0E5 /* CocoaAsyncSocket-OSX */;
 			targetProxy = A83EA663261F0AAE958934C8132B70A9 /* PBXContainerItemProxy */;
 		};
+		A8592FFEBAE0A6A613429FACFCCFE61D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CocoaAsyncSocket-iOS";
+			target = B5972CB42C666D32D52D92E9D6F5CFE0 /* CocoaAsyncSocket-iOS */;
+			targetProxy = 742B6A40800FF3D90BEB69F364E88B6E /* PBXContainerItemProxy */;
+		};
 		CE40BB060C4498B02B6F33165BEE52F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire-OSX";
 			target = 382E561C5692522A8AD8D95C6841218F /* Alamofire-OSX */;
 			targetProxy = E296AF0823A7F080530295814182812C /* PBXContainerItemProxy */;
+		};
+		D3659038CE9D7C1A33C99C9543141A5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire-iOS";
+			target = 4D8199C20C1BE5F5BCDBC8F8CB4BF089 /* Alamofire-iOS */;
+			targetProxy = 95E6BD6CFD894ADFFB3BE5385C94312F /* PBXContainerItemProxy */;
 		};
 		E59AA5FC5F5096CBC05648DEAFDDE604 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1892,6 +1906,43 @@
 			};
 			name = Debug;
 		};
+		3E8D15D85798CEADAD02E1F454F4A170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6721BE98AB7795D767F67D187DC836E /* Pods-RGB Remote Widget iOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RGB Remote Widget iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RGB Remote Widget iOS/Pods-RGB Remote Widget iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RGB_Remote_Widget_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		50552AB96A80271C4880743F6E3E535D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D25040E86913C69E892ED3A1B86EE8E /* Alamofire-iOS.xcconfig */;
@@ -1959,39 +2010,6 @@
 			};
 			name = Release;
 		};
-		565B4F3FD112D9A16ACB931E27A95AD2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CCDAAC94BC0CFBF86AA6782DA2B49B1 /* SnapKit-iOS.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit-iOS/SnapKit-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit-iOS/SnapKit-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SnapKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		56F4FF8227D87F1CF62E78D03A59AFF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2032,6 +2050,40 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		5EC5EC6ED14F3BC1D81094A863BEE35F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCDAAC94BC0CFBF86AA6782DA2B49B1 /* SnapKit-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SnapKit-iOS/SnapKit-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapKit-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapKit-iOS/SnapKit-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SnapKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		60C0D9F5C682E43C0C65065F86471BDB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2356,79 +2408,6 @@
 			};
 			name = Release;
 		};
-		A48D1C0F3D0E9D7656171BAEF9FE64C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6721BE98AB7795D767F67D187DC836E /* Pods-RGB Remote Widget iOS.debug.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-RGB Remote Widget iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RGB Remote Widget iOS/Pods-RGB Remote Widget iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_RGB_Remote_Widget_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A5159DAC63F21566DE56AC535168C218 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DB523E76EB37DC0C8F21157C2017F56 /* Pods-RGB Remote Widget iOS.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-RGB Remote Widget iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RGB Remote Widget iOS/Pods-RGB Remote Widget iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_RGB_Remote_Widget_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		A6905DE4F63925555FCC90C6608BC8E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D25040E86913C69E892ED3A1B86EE8E /* Alamofire-iOS.xcconfig */;
@@ -2453,6 +2432,39 @@
 				MODULEMAP_FILE = "Target Support Files/Alamofire-iOS/Alamofire-iOS.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEF1253901919399924C0F845596F4D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCDAAC94BC0CFBF86AA6782DA2B49B1 /* SnapKit-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SnapKit-iOS/SnapKit-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapKit-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapKit-iOS/SnapKit-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SnapKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -2568,38 +2580,6 @@
 			};
 			name = Debug;
 		};
-		CF6B1116D82CEE943AF172F7AD08965D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CCDAAC94BC0CFBF86AA6782DA2B49B1 /* SnapKit-iOS.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit-iOS/SnapKit-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit-iOS/SnapKit-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SnapKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		D4663E91A3ABB2BC4EAE2933BB912E00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F4E9D59BCBF185F8B2AF5C0E72AD6B1 /* OBMenuBarWindow.xcconfig */;
@@ -2633,6 +2613,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		DBB26934F02A53241AE3EB67BEC4A65E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB523E76EB37DC0C8F21157C2017F56 /* Pods-RGB Remote Widget iOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RGB Remote Widget iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RGB Remote Widget iOS/Pods-RGB Remote Widget iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RGB_Remote_Widget_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		E0A1CDBFE70B3D4E52626214658668A8 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2742,6 +2758,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		03BA19830B35E6F688AFEE239B3D148C /* Build configuration list for PBXNativeTarget "Pods-RGB Remote Widget iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E8D15D85798CEADAD02E1F454F4A170 /* Debug */,
+				DBB26934F02A53241AE3EB67BEC4A65E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2787,15 +2812,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69829442A60D086F8B8202D5F8F39960 /* Build configuration list for PBXNativeTarget "Pods-RGB Remote Widget iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A48D1C0F3D0E9D7656171BAEF9FE64C8 /* Debug */,
-				A5159DAC63F21566DE56AC535168C218 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		7AA5F69E9C142AE28436FFAB807B85E0 /* Build configuration list for PBXNativeTarget "OBMenuBarWindow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2808,8 +2824,8 @@
 		7C48A821F06FDDB3396503FAF722F65B /* Build configuration list for PBXNativeTarget "SnapKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				565B4F3FD112D9A16ACB931E27A95AD2 /* Debug */,
-				CF6B1116D82CEE943AF172F7AD08965D /* Release */,
+				5EC5EC6ED14F3BC1D81094A863BEE35F /* Debug */,
+				AEF1253901919399924C0F845596F4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

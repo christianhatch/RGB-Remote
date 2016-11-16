@@ -11,7 +11,7 @@ import NotificationCenter
 
 class TodayViewController: UIViewController {
     
-    fileprivate var dataSource: RGBDataSource {
+    fileprivate var dataSource: IRRemoteDataSource {
         didSet {
             collectionView.dataSource = dataSource
             collectionView.delegate = dataSource
@@ -81,30 +81,33 @@ extension TodayViewController: NCWidgetProviding {
 
 //MARK: - RemoteControl 
 
-class RGBWWNoEffectsRemoteControl: RemoteControl {
+class RGBWWNoEffectsRemoteControl: IRRemoteControl {
     
-    let sections: [Section] = [Section(type: .basicControls, items: Command.wwControlsFull),
-                               Section(type: .specialColors, items: Command.rgbwwColors),
-                               Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: Command.basicColors)]
-    let device: RGBRemoteControlDevice = .rgbww
+    let sections: [Section] = [Section(itemsPerRow: 4, items: RGBCommand.wwControlsFull),
+                               Section(itemsPerRow: 4, items: RGBCommand.rgbwwColors),
+                               Section(itemsPerRow: 4, items: RGBCommand.basicControls),
+                               Section(itemsPerRow: 3, items: RGBCommand.basicColors)]
+    let device: IRDeviceType = .rgbww
 }
 
 
-class CoreRemoteControl: RemoteControl {
+class CoreRemoteControl: IRRemoteControl {
     
-    let sections: [Section] = [Section(type: .basicControls, items: Command.wwControlsFull)]
-    let device: RGBRemoteControlDevice = .rgbww
+    let sections: [Section] = [Section(itemsPerRow: 4, items: RGBCommand.wwControlsFull)]
+    let device: IRDeviceType = .rgbww
 }
+
+
+
 
 
 //MARK: - DataSource
 
-class TodayWidgetCollectionViewDataSource: RGBDataSource {
+class TodayWidgetCollectionViewDataSource: IRRemoteDataSource {
     //make the cells a bit lighter color to match the today widget color scheme
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! ButtonCell
-        cell.button.backgroundColor = Style.Color.mediumGray.color()
+        cell.contentView.backgroundColor = Style.Color.mediumGray.color()
         return cell
     }
 }
@@ -113,7 +116,7 @@ class CoreCollectionViewDataSource: TodayWidgetCollectionViewDataSource {
     init() {
         super.init(remoteControl: CoreRemoteControl())
     }
-    required init(remoteControl: RemoteControl) {
+    required init(remoteControl: IRRemoteControl) {
         fatalError("init(remoteControl:) has not been implemented")
     }
     //we dont want any spacing, because the today widget has a fixed small size

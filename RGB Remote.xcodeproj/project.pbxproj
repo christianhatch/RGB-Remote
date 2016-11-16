@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0E0C3F5707283C5ABA3605E2 /* Pods_RGB_Remote_Widget_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C1D7DCABB92201B11759D0 /* Pods_RGB_Remote_Widget_iOS.framework */; };
 		4501425C1CA0BEB200DE77E6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501425B1CA0BEB200DE77E6 /* Command.swift */; };
-		450142601CA0D0F100DE77E6 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */; };
 		4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E54D1CA36F24006F5694 /* LogViewController.swift */; };
 		4506E5501CA3867F006F5694 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E54F1CA3867F006F5694 /* TextViewController.swift */; };
 		4506E5521CA3869F006F5694 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506E5511CA3869F006F5694 /* Logger.swift */; };
@@ -21,10 +20,10 @@
 		450A8D051DA736F8006D380A /* MacOSDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E961CAECDFF0063C288 /* MacOSDataSource.swift */; };
 		450A8D061DA73BBF006D380A /* ButtonCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45FB347D1DA6E5FB00238535 /* ButtonCollectionViewItem.xib */; };
 		451AAD9A1DCA39A900FF235B /* WifiDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AAD991DCA39A900FF235B /* WifiDeviceViewController.swift */; };
-		451AADA31DCA675300FF235B /* RGBButtonGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AADA21DCA675300FF235B /* RGBButtonGridViewController.swift */; };
+		451AADA31DCA675300FF235B /* IRButtonGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AADA21DCA675300FF235B /* IRButtonGridViewController.swift */; };
 		451AADA51DCA69C200FF235B /* WifiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AADA41DCA69C200FF235B /* WifiDataSource.swift */; };
-		451AADA81DCA6A1B00FF235B /* RGBDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AADA71DCA6A1B00FF235B /* RGBDataSource.swift */; };
-		451AADA91DCA6A1B00FF235B /* RGBDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AADA71DCA6A1B00FF235B /* RGBDataSource.swift */; };
+		451AADA81DCA6A1B00FF235B /* IRRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AADA71DCA6A1B00FF235B /* IRRemoteDataSource.swift */; };
+		451AADA91DCA6A1B00FF235B /* IRRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AADA71DCA6A1B00FF235B /* IRRemoteDataSource.swift */; };
 		4521EB3F1DA6029700042458 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4501F7ED1C8FFC3600386E55 /* NotificationCenter.framework */; };
 		4521EB421DA6029700042458 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521EB411DA6029700042458 /* TodayViewController.swift */; };
 		4521EB451DA6029700042458 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4521EB431DA6029700042458 /* MainInterface.storyboard */; };
@@ -47,6 +46,14 @@
 		457DF4721DA734F4004DED76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 457DF4701DA734F4004DED76 /* InfoPlist.strings */; };
 		457DF4751DA734F4004DED76 /* RGB Remote Widget macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 457DF4651DA734F4004DED76 /* RGB Remote Widget macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		458797C11C69B9D90075B511 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458797C01C69B9D90075B511 /* Util.swift */; };
+		4597B87E1DDC1BBA00A091B6 /* RGBCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B87D1DDC1BBA00A091B6 /* RGBCommand.swift */; };
+		4597B87F1DDC1BBA00A091B6 /* RGBCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B87D1DDC1BBA00A091B6 /* RGBCommand.swift */; };
+		4597B8801DDC1BBA00A091B6 /* RGBCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B87D1DDC1BBA00A091B6 /* RGBCommand.swift */; };
+		4597B8811DDC1BBA00A091B6 /* RGBCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B87D1DDC1BBA00A091B6 /* RGBCommand.swift */; };
+		4597B8831DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */; };
+		4597B8841DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */; };
+		4597B8851DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */; };
+		4597B8861DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */; };
 		45ED85151DB81FD2000F9B66 /* WifiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED85141DB81FD2000F9B66 /* WifiCommand.swift */; };
 		45ED85161DB81FD2000F9B66 /* WifiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED85141DB81FD2000F9B66 /* WifiCommand.swift */; };
 		45ED85171DB81FD2000F9B66 /* WifiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED85141DB81FD2000F9B66 /* WifiCommand.swift */; };
@@ -64,7 +71,6 @@
 		45EE26E01DA6345300ED634C /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45372E931CAE56F30063C288 /* RemoteControl.swift */; };
 		45EE26E11DA6345300ED634C /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501425B1CA0BEB200DE77E6 /* Command.swift */; };
 		45EE26E51DA63B6600ED634C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458797C01C69B9D90075B511 /* Util.swift */; };
-		45EE26E81DA63F0600ED634C /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */; };
 		45F6547D1DB9C5E00021D8EC /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F6547C1DB9C5E00021D8EC /* ColorPickerViewController.swift */; };
 		45FB346B1DA6E1A400238535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB346A1DA6E1A400238535 /* AppDelegate.swift */; };
 		45FB346D1DA6E1A400238535 /* ButtonGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB346C1DA6E1A400238535 /* ButtonGridViewController.swift */; };
@@ -132,15 +138,14 @@
 		1AF213CD61FA6611BCEC6D1B /* Pods-RGB Remote macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB Remote macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RGB Remote macOS/Pods-RGB Remote macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		261461961B9AD6D3D0B5B21F /* Pods-RGB Remote Widget macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGB Remote Widget macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RGB Remote Widget macOS/Pods-RGB Remote Widget macOS.release.xcconfig"; sourceTree = "<group>"; };
 		4501425B1CA0BEB200DE77E6 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		4501F7ED1C8FFC3600386E55 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		4506E54D1CA36F24006F5694 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		4506E54F1CA3867F006F5694 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		4506E5511CA3869F006F5694 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		451AAD991DCA39A900FF235B /* WifiDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiDeviceViewController.swift; sourceTree = "<group>"; };
-		451AADA21DCA675300FF235B /* RGBButtonGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBButtonGridViewController.swift; sourceTree = "<group>"; };
+		451AADA21DCA675300FF235B /* IRButtonGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRButtonGridViewController.swift; sourceTree = "<group>"; };
 		451AADA41DCA69C200FF235B /* WifiDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiDataSource.swift; sourceTree = "<group>"; };
-		451AADA71DCA6A1B00FF235B /* RGBDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBDataSource.swift; sourceTree = "<group>"; };
+		451AADA71DCA6A1B00FF235B /* IRRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRemoteDataSource.swift; sourceTree = "<group>"; };
 		4521EB3E1DA6029700042458 /* RGB Remote Widget iOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RGB Remote Widget iOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4521EB411DA6029700042458 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		4521EB441DA6029700042458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -164,6 +169,8 @@
 		457DF46F1DA734F4004DED76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457DF4711DA734F4004DED76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		458797C01C69B9D90075B511 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		4597B87D1DDC1BBA00A091B6 /* RGBCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBCommand.swift; sourceTree = "<group>"; };
+		4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRemoteControl.swift; sourceTree = "<group>"; };
 		45ED85141DB81FD2000F9B66 /* WifiCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiCommand.swift; sourceTree = "<group>"; };
 		45ED85191DB81FDD000F9B66 /* WifiDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiDevice.swift; sourceTree = "<group>"; };
 		45ED851E1DB84E41000F9B66 /* WifiDeviceDiscoverer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiDeviceDiscoverer.swift; sourceTree = "<group>"; };
@@ -245,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				455DF0291D349A0E00B5FB6B /* Controllers */,
-				451AADAA1DCA732800FF235B /* RGB */,
+				451AADAA1DCA732800FF235B /* IR */,
 				455DF0281D349A0500B5FB6B /* Wifi */,
 			);
 			name = Common;
@@ -263,24 +270,24 @@
 			name = Wifi;
 			sourceTree = "<group>";
 		};
-		451AADA11DCA674800FF235B /* RGB */ = {
+		451AADA11DCA674800FF235B /* IR */ = {
 			isa = PBXGroup;
 			children = (
-				451AADA71DCA6A1B00FF235B /* RGBDataSource.swift */,
-				451AADA21DCA675300FF235B /* RGBButtonGridViewController.swift */,
-				4501425F1CA0D0F100DE77E6 /* ButtonCell.xib */,
+				4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */,
+				451AADA71DCA6A1B00FF235B /* IRRemoteDataSource.swift */,
+				451AADA21DCA675300FF235B /* IRButtonGridViewController.swift */,
 			);
-			name = RGB;
+			name = IR;
 			sourceTree = "<group>";
 		};
-		451AADAA1DCA732800FF235B /* RGB */ = {
+		451AADAA1DCA732800FF235B /* IR */ = {
 			isa = PBXGroup;
 			children = (
 				453C42901C5AE595001D2D7E /* APIManager.swift */,
-				4501425B1CA0BEB200DE77E6 /* Command.swift */,
+				4597B87D1DDC1BBA00A091B6 /* RGBCommand.swift */,
 				45372E931CAE56F30063C288 /* RemoteControl.swift */,
 			);
-			name = RGB;
+			name = IR;
 			sourceTree = "<group>";
 		};
 		4521EB401DA6029700042458 /* RGB Remote Widget iOS */ = {
@@ -326,7 +333,7 @@
 				453C42821C5AE40B001D2D7E /* Main.storyboard */,
 				45FB34881DA6F5BD00238535 /* ViewControllers */,
 				451AADA01DCA673400FF235B /* Wifi */,
-				451AADA11DCA674800FF235B /* RGB */,
+				451AADA11DCA674800FF235B /* IR */,
 				455DF02B1D349A3A00B5FB6B /* Supporting Files */,
 			);
 			name = "RGB Remote iOS";
@@ -349,6 +356,7 @@
 			children = (
 				45FB34811DA6EBB200238535 /* Style.swift */,
 				4506E5511CA3869F006F5694 /* Logger.swift */,
+				4501425B1CA0BEB200DE77E6 /* Command.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -574,7 +582,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4521EB451DA6029700042458 /* MainInterface.storyboard in Resources */,
-				45EE26E81DA63F0600ED634C /* ButtonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,7 +592,6 @@
 				453C42891C5AE40B001D2D7E /* LaunchScreen.storyboard in Resources */,
 				453C42861C5AE40B001D2D7E /* Assets.xcassets in Resources */,
 				453C42841C5AE40B001D2D7E /* Main.storyboard in Resources */,
-				450142601CA0D0F100DE77E6 /* ButtonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,9 +793,11 @@
 				45EE26DE1DA6345300ED634C /* APIManager.swift in Sources */,
 				4521EB421DA6029700042458 /* TodayViewController.swift in Sources */,
 				4537370C1DB1C70C005DDB21 /* WifiController.swift in Sources */,
-				451AADA91DCA6A1B00FF235B /* RGBDataSource.swift in Sources */,
+				451AADA91DCA6A1B00FF235B /* IRRemoteDataSource.swift in Sources */,
 				45EE26E01DA6345300ED634C /* RemoteControl.swift in Sources */,
 				45EE26E51DA63B6600ED634C /* Util.swift in Sources */,
+				4597B87F1DDC1BBA00A091B6 /* RGBCommand.swift in Sources */,
+				4597B8841DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */,
 				45ED85161DB81FD2000F9B66 /* WifiCommand.swift in Sources */,
 				45ED851B1DB81FDD000F9B66 /* WifiDevice.swift in Sources */,
 				45EE26DF1DA6345300ED634C /* Logger.swift in Sources */,
@@ -802,17 +810,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				451AADA31DCA675300FF235B /* RGBButtonGridViewController.swift in Sources */,
+				451AADA31DCA675300FF235B /* IRButtonGridViewController.swift in Sources */,
 				451AADA51DCA69C200FF235B /* WifiDataSource.swift in Sources */,
+				4597B8831DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */,
 				453737301DB1C963005DDB21 /* WifiDeviceListViewController.swift in Sources */,
 				45F6547D1DB9C5E00021D8EC /* ColorPickerViewController.swift in Sources */,
 				451AAD9A1DCA39A900FF235B /* WifiDeviceViewController.swift in Sources */,
 				453C42911C5AE595001D2D7E /* APIManager.swift in Sources */,
 				4537370B1DB1C70C005DDB21 /* WifiController.swift in Sources */,
-				451AADA81DCA6A1B00FF235B /* RGBDataSource.swift in Sources */,
+				451AADA81DCA6A1B00FF235B /* IRRemoteDataSource.swift in Sources */,
 				458797C11C69B9D90075B511 /* Util.swift in Sources */,
 				453C427D1C5AE40B001D2D7E /* AppDelegate.swift in Sources */,
 				4506E5521CA3869F006F5694 /* Logger.swift in Sources */,
+				4597B87E1DDC1BBA00A091B6 /* RGBCommand.swift in Sources */,
 				4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */,
 				45ED85151DB81FD2000F9B66 /* WifiCommand.swift in Sources */,
 				45ED851A1DB81FDD000F9B66 /* WifiDevice.swift in Sources */,
@@ -834,8 +844,10 @@
 				457DF46B1DA734F4004DED76 /* TodayViewController.swift in Sources */,
 				45ED85181DB81FD2000F9B66 /* WifiCommand.swift in Sources */,
 				4537370E1DB1C70C005DDB21 /* WifiController.swift in Sources */,
+				4597B8811DDC1BBA00A091B6 /* RGBCommand.swift in Sources */,
 				450A8D051DA736F8006D380A /* MacOSDataSource.swift in Sources */,
 				450A8D001DA73673006D380A /* Style.swift in Sources */,
+				4597B8861DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */,
 				45ED85221DB84E41000F9B66 /* WifiDeviceDiscoverer.swift in Sources */,
 				450A8D031DA73673006D380A /* Command.swift in Sources */,
 				450A8D021DA73673006D380A /* Logger.swift in Sources */,
@@ -858,6 +870,8 @@
 				45ED851C1DB81FDD000F9B66 /* WifiDevice.swift in Sources */,
 				4537370D1DB1C70C005DDB21 /* WifiController.swift in Sources */,
 				45FB347B1DA6E2B100238535 /* RemoteControl.swift in Sources */,
+				4597B8801DDC1BBA00A091B6 /* RGBCommand.swift in Sources */,
+				4597B8851DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */,
 				45FB34801DA6E9C300238535 /* MacOSDataSource.swift in Sources */,
 				45FB34841DA6EBB200238535 /* Style.swift in Sources */,
 			);

@@ -10,20 +10,20 @@ import Foundation
 import UIKit
 import SnapKit
 
-class RGBButtonGridViewController: UIViewController {
+class IRButtonGridViewController: UIViewController {
     
-    fileprivate let dataSource: RGBDataSource
+    fileprivate let dataSource: IRRemoteDataSource
     fileprivate let collectionView: UICollectionView
     
     
-    init(dataSource: RGBDataSource) {
+    init(dataSource: IRRemoteDataSource) {
         self.dataSource = dataSource
         self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.dataSource = RGBDataSource(remoteControl: RGBWWRemoteControl())
+        self.dataSource = IRRemoteDataSource(remoteControl: RGBWWRemoteControl())
         self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         super.init(coder: aDecoder)
     }
@@ -32,7 +32,7 @@ class RGBButtonGridViewController: UIViewController {
 
 //MARK: - UIKit
 
-extension RGBButtonGridViewController {
+extension IRButtonGridViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +44,8 @@ extension RGBButtonGridViewController {
             
             view.addSubview(collectionView)
             collectionView.snp.makeConstraints { (make) in
-                make.leading.equalToSuperview()
-                make.trailing.equalToSuperview()
+                make.leading.equalTo(view.snp.leading)
+                make.trailing.equalTo(view.snp.trailing)
                 make.top.greaterThanOrEqualTo(topLayoutGuide.snp.bottom)
                 make.bottom.equalTo(bottomLayoutGuide.snp.top)
                 make.height.equalTo(collectionView.collectionViewLayout.collectionViewContentSize.height)
@@ -81,7 +81,7 @@ extension RGBButtonGridViewController {
 }
 
 
-extension RGBButtonGridViewController {
+extension IRButtonGridViewController {
     
     func showList() {
         if case .list = dataSource.displayType {
@@ -97,27 +97,12 @@ extension RGBButtonGridViewController {
 
 
 
-//MARK: - RemoteControl
 
-class RGBRemoteControl: RemoteControl {
-    
-    let sections: [Section] = [Section(type: .effects, items: Command.effects),
-                               Section(type: .specialColors, items: Command.rgbColors),
-                               Section(type: .specialControls, items: Command.rgbControls),
-                               Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: Command.basicColors)]
-    let device: RGBRemoteControlDevice = .rgb
-}
 
-class RGBWWRemoteControl: RemoteControl {
-    
-    let sections: [Section] = [Section(type: .effects, items: Command.effects),
-                               Section(type: .specialColors, items: Command.rgbwwColors),
-                               Section(type: .specialControls, items: Command.wwControls),
-                               Section(type: .basicControls, items: Command.basicControls),
-                               Section(type: .basicColors, items: Command.basicColors)]
-    let device: RGBRemoteControlDevice = .rgbww
-}
+
+
+
+
 
 
 

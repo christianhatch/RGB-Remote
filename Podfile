@@ -42,4 +42,5 @@ target 'RGB Remote Widget iOS' do
     platform :ios, '9.0'
     
     rgb_pods
+    pod 'SnapKit'
 end
