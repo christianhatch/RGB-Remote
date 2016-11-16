@@ -14,6 +14,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaAsyncSocket-OSX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CocoaAsyncSocket-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ColorMix.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OBMenuBarWindow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,52 +72,67 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>399F5CDC37A3AD9F1475B8044305EDC3</key>
+		<key>138ABCBD783777E2A656A1776E30A0E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4181F51F77819190EE61755F7CC050DF</key>
+		<key>2E58E17CB9CD2274E407A64AC6DEDD7F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6102E89EC00D81B2869FB4D33CEB0451</key>
+		<key>382E561C5692522A8AD8D95C6841218F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66BE16F7EFF8DCC2E960F341354024C5</key>
+		<key>4D8199C20C1BE5F5BCDBC8F8CB4BF089</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A413915981CCF0B736FAC0AFF7D9090</key>
+		<key>84F4C5812839307ACCCEBAE052D271CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8169E6DF6E16684D177E7D99D67CDE0F</key>
+		<key>86052CEB0C02B5BF64EE2918E88D40D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8530253909CC812ECC6BD9B05A187DED</key>
+		<key>871E4FC258D304178CAE954ECF085B00</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>89C69EB624EC8137588D9568F2E11964</key>
+		<key>88E1745AEDFAEDD5E8F2EA73E99EFDF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A46F3686C46DC9D9C11D7DE4BDDBB54</key>
+		<key>91E4E9FDBBF34377CDBEFB709387D137</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB45ADFB07936BD040EEC6FF2D7D3C67</key>
+		<key>A16F41D3E98953FFA4A2DC1F0AC1DE93</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5972CB42C666D32D52D92E9D6F5CFE0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD4894A7C3859C9AB7C4822A425463EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB75B4143D2403F69B92CD3D9F13B5E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

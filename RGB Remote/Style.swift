@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 #if os(macOS)
     import Cocoa
     typealias XColor = NSColor
@@ -17,8 +16,32 @@ import Foundation
 #endif
 
 
-
 enum Style {
+    
+    enum Font {
+        case regular
+        case bold
+        case light
+        case italic
+        
+        func standard() -> UIFont {
+            return size(16)
+        }
+        
+        func size(_ size: CGFloat) -> UIFont {
+            switch self {
+            case .regular:
+                return UIFont.systemFont(ofSize: size)
+            case .bold:
+                return UIFont.boldSystemFont(ofSize: size)
+            case .light:
+                return UIFont.systemFont(ofSize: size, weight: UIFontWeightLight)
+            case .italic:
+                return UIFont.italicSystemFont(ofSize: size)
+            }
+        }
+    }
+
     
     enum Color {
         case textColor

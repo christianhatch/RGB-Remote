@@ -7,19 +7,16 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let tabbarManager = TabbarManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        if let tabbar = window?.rootViewController as? UITabBarController {
-            tabbarManager.setup(tabBarController: tabbar)
-        }
-        
+        Fabric.with([Crashlytics.self])
         return true
     }
 
@@ -47,48 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-class TabbarManager: NSObject, UITabBarControllerDelegate {
-    fileprivate static let userDefaultsKey = "TabbarManagerLastSelectedIndexKey"
-    
-    static func lastSelectedIndex() -> Int {
-        let index = UserDefaults.standard.integer(forKey: TabbarManager.userDefaultsKey)
-        return index
-    }
-    
-    static fileprivate func setLastSelectedIndex(_ index: Int) {
-        UserDefaults.standard.set(index, forKey: TabbarManager.userDefaultsKey)
-    }
-    
-    
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        TabbarManager.setLastSelectedIndex(tabBarController.selectedIndex)
-    }
-    
-    
-    func setup(tabBarController tabbar: UITabBarController) {
-        
-        let rgb = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(remoteControl: RGBRemoteControl()))
-        rgb.title = "RGB"
-        let rgbww = ButtonGridViewController(dataSource: iOSCollectionViewDataSource(remoteControl: RGBWWRemoteControl()))
-        rgbww.title = "RGBWW"
-        
-        var vcs = tabbar.viewControllers
-        vcs?.insert(rgb, at: 0)
-        vcs?.insert(rgbww, at: 1)
-        tabbar.viewControllers = vcs
-        
-        if let controllers = tabbar.viewControllers {
-            for (index, vc) in controllers.enumerated() {
-                let item = tabbar.tabBar.items?[index]
-                item?.title = vc.title
-                item?.image = UIImage(named: "first")
-            }
-        }
-        
-        tabbar.delegate = self
-        tabbar.selectedIndex = TabbarManager.lastSelectedIndex()
-    }
-}
+
+
+
+
+
+
+
+
 
 
 

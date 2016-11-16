@@ -12,6 +12,10 @@ import UIKit
 class LogViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    class func logViewController() -> LogViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: self)) as! LogViewController
+    }
 }
 
 extension LogViewController {
