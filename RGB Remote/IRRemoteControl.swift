@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 struct Section {
     let itemsPerRow: CGFloat
     let items: [Command]
@@ -22,7 +23,12 @@ enum IRDeviceType: String {
     case soundbar
     
     func apiName() -> String {
-        return rawValue
+        switch self {
+        case .hdmiSwitch:
+            return "hdmi_switch"
+        default:
+            return rawValue
+        }
     }
 }
 
@@ -30,6 +36,7 @@ protocol IRRemoteControl {
     var sections: [Section] { get }
     var device: IRDeviceType { get }
 }
+
 
 
 
@@ -58,7 +65,8 @@ class RGBWWRemoteControl: IRRemoteControl {
 
 class SoundbarRemoteControl: IRRemoteControl {
     
-    let sections: [Section] = []
+    let sections: [Section] = [Section(itemsPerRow: 2, items: SoundbarCommand.powerGroup),
+                               Section(itemsPerRow: 2, items: SoundbarCommand.mainGroup)]
     
     let device: IRDeviceType = .soundbar
 }
@@ -66,16 +74,18 @@ class SoundbarRemoteControl: IRRemoteControl {
 
 class ProjectorRemoteControl: IRRemoteControl {
     
-    let sections: [Section] = []
+    let sections: [Section] = [Section(itemsPerRow: 2, items: ProjectorCommand.powerGroup),
+                               Section(itemsPerRow: 2, items: ProjectorCommand.mainGroup)]
     
     let device: IRDeviceType = .projector
 }
 
 class HDMISwitchRemoteControl: IRRemoteControl {
     
-    let sections: [Section] = []
+    let sections: [Section] = [Section(itemsPerRow: 1, items: HDMISwitchCommand.powerGroup),
+                               Section(itemsPerRow: 3, items: HDMISwitchCommand.mainGroup)]
     
-    let device: IRDeviceType = .soundbar
+    let device: IRDeviceType = .hdmiSwitch
 }
 
 

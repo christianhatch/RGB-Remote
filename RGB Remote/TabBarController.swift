@@ -31,10 +31,13 @@ extension TabbarController {
         func setupView() {
             let rgbww = IRButtonGridViewController(dataSource: IRRemoteDataSource(remoteControl: RGBWWRemoteControl()))
             rgbww.title = "Lights"
+       
             let projector = IRButtonGridViewController(dataSource: IRRemoteDataSource(remoteControl: ProjectorRemoteControl()))
             projector.title = "Projector"
+          
             let soundbar = IRButtonGridViewController(dataSource: IRRemoteDataSource(remoteControl: SoundbarRemoteControl()))
             soundbar.title = "Sound"
+           
             let hdmiSwitch = IRButtonGridViewController(dataSource: IRRemoteDataSource(remoteControl: HDMISwitchRemoteControl()))
             hdmiSwitch.title = "HDMI Switch"
 

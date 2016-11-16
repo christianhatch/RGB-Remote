@@ -52,6 +52,18 @@
 		4597B8841DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */; };
 		4597B8851DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */; };
 		4597B8861DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */; };
+		4597B8881DDC26FE00A091B6 /* SoundbarCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8871DDC26FE00A091B6 /* SoundbarCommand.swift */; };
+		4597B8891DDC26FE00A091B6 /* SoundbarCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8871DDC26FE00A091B6 /* SoundbarCommand.swift */; };
+		4597B88A1DDC26FE00A091B6 /* SoundbarCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8871DDC26FE00A091B6 /* SoundbarCommand.swift */; };
+		4597B88B1DDC26FE00A091B6 /* SoundbarCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8871DDC26FE00A091B6 /* SoundbarCommand.swift */; };
+		4597B88D1DDC270B00A091B6 /* ProjectorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B88C1DDC270B00A091B6 /* ProjectorCommand.swift */; };
+		4597B88E1DDC270B00A091B6 /* ProjectorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B88C1DDC270B00A091B6 /* ProjectorCommand.swift */; };
+		4597B88F1DDC270B00A091B6 /* ProjectorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B88C1DDC270B00A091B6 /* ProjectorCommand.swift */; };
+		4597B8901DDC270B00A091B6 /* ProjectorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B88C1DDC270B00A091B6 /* ProjectorCommand.swift */; };
+		4597B8921DDC271700A091B6 /* HDMISwitchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8911DDC271700A091B6 /* HDMISwitchCommand.swift */; };
+		4597B8931DDC271700A091B6 /* HDMISwitchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8911DDC271700A091B6 /* HDMISwitchCommand.swift */; };
+		4597B8941DDC271700A091B6 /* HDMISwitchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8911DDC271700A091B6 /* HDMISwitchCommand.swift */; };
+		4597B8951DDC271700A091B6 /* HDMISwitchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597B8911DDC271700A091B6 /* HDMISwitchCommand.swift */; };
 		45ED85151DB81FD2000F9B66 /* WifiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED85141DB81FD2000F9B66 /* WifiCommand.swift */; };
 		45ED85161DB81FD2000F9B66 /* WifiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED85141DB81FD2000F9B66 /* WifiCommand.swift */; };
 		45ED85171DB81FD2000F9B66 /* WifiCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED85141DB81FD2000F9B66 /* WifiCommand.swift */; };
@@ -166,6 +178,9 @@
 		458797C01C69B9D90075B511 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4597B87D1DDC1BBA00A091B6 /* RGBCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBCommand.swift; sourceTree = "<group>"; };
 		4597B8821DDC1DC300A091B6 /* IRRemoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRemoteControl.swift; sourceTree = "<group>"; };
+		4597B8871DDC26FE00A091B6 /* SoundbarCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundbarCommand.swift; sourceTree = "<group>"; };
+		4597B88C1DDC270B00A091B6 /* ProjectorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectorCommand.swift; sourceTree = "<group>"; };
+		4597B8911DDC271700A091B6 /* HDMISwitchCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDMISwitchCommand.swift; sourceTree = "<group>"; };
 		45ED85141DB81FD2000F9B66 /* WifiCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiCommand.swift; sourceTree = "<group>"; };
 		45ED85191DB81FDD000F9B66 /* WifiDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiDevice.swift; sourceTree = "<group>"; };
 		45ED851E1DB84E41000F9B66 /* WifiDeviceDiscoverer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiDeviceDiscoverer.swift; sourceTree = "<group>"; };
@@ -280,6 +295,9 @@
 			children = (
 				453C42901C5AE595001D2D7E /* APIManager.swift */,
 				4597B87D1DDC1BBA00A091B6 /* RGBCommand.swift */,
+				4597B8871DDC26FE00A091B6 /* SoundbarCommand.swift */,
+				4597B88C1DDC270B00A091B6 /* ProjectorCommand.swift */,
+				4597B8911DDC271700A091B6 /* HDMISwitchCommand.swift */,
 			);
 			name = IR;
 			sourceTree = "<group>";
@@ -788,12 +806,15 @@
 				4521EB421DA6029700042458 /* TodayViewController.swift in Sources */,
 				4537370C1DB1C70C005DDB21 /* WifiController.swift in Sources */,
 				451AADA91DCA6A1B00FF235B /* IRRemoteDataSource.swift in Sources */,
+				4597B8931DDC271700A091B6 /* HDMISwitchCommand.swift in Sources */,
 				45EE26E51DA63B6600ED634C /* Util.swift in Sources */,
 				4597B87F1DDC1BBA00A091B6 /* RGBCommand.swift in Sources */,
 				4597B8841DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */,
 				45ED85161DB81FD2000F9B66 /* WifiCommand.swift in Sources */,
 				45ED851B1DB81FDD000F9B66 /* WifiDevice.swift in Sources */,
 				45EE26DF1DA6345300ED634C /* Logger.swift in Sources */,
+				4597B8891DDC26FE00A091B6 /* SoundbarCommand.swift in Sources */,
+				4597B88E1DDC270B00A091B6 /* ProjectorCommand.swift in Sources */,
 				45EE26E11DA6345300ED634C /* Command.swift in Sources */,
 				45FB34831DA6EBB200238535 /* Style.swift in Sources */,
 			);
@@ -808,6 +829,8 @@
 				4597B8831DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */,
 				453737301DB1C963005DDB21 /* WifiDeviceListViewController.swift in Sources */,
 				45F6547D1DB9C5E00021D8EC /* ColorPickerViewController.swift in Sources */,
+				4597B8921DDC271700A091B6 /* HDMISwitchCommand.swift in Sources */,
+				4597B8881DDC26FE00A091B6 /* SoundbarCommand.swift in Sources */,
 				451AAD9A1DCA39A900FF235B /* WifiDeviceViewController.swift in Sources */,
 				453C42911C5AE595001D2D7E /* APIManager.swift in Sources */,
 				4537370B1DB1C70C005DDB21 /* WifiController.swift in Sources */,
@@ -818,6 +841,7 @@
 				4597B87E1DDC1BBA00A091B6 /* RGBCommand.swift in Sources */,
 				4506E54E1CA36F24006F5694 /* LogViewController.swift in Sources */,
 				45ED85151DB81FD2000F9B66 /* WifiCommand.swift in Sources */,
+				4597B88D1DDC270B00A091B6 /* ProjectorCommand.swift in Sources */,
 				45ED851A1DB81FDD000F9B66 /* WifiDevice.swift in Sources */,
 				4501425C1CA0BEB200DE77E6 /* Command.swift in Sources */,
 				45ED851F1DB84E41000F9B66 /* WifiDeviceDiscoverer.swift in Sources */,
@@ -838,10 +862,13 @@
 				4537370E1DB1C70C005DDB21 /* WifiController.swift in Sources */,
 				4597B8811DDC1BBA00A091B6 /* RGBCommand.swift in Sources */,
 				450A8D051DA736F8006D380A /* MacOSDataSource.swift in Sources */,
+				4597B88B1DDC26FE00A091B6 /* SoundbarCommand.swift in Sources */,
 				450A8D001DA73673006D380A /* Style.swift in Sources */,
 				4597B8861DDC1DC300A091B6 /* IRRemoteControl.swift in Sources */,
 				45ED85221DB84E41000F9B66 /* WifiDeviceDiscoverer.swift in Sources */,
+				4597B8951DDC271700A091B6 /* HDMISwitchCommand.swift in Sources */,
 				450A8D031DA73673006D380A /* Command.swift in Sources */,
+				4597B8901DDC270B00A091B6 /* ProjectorCommand.swift in Sources */,
 				450A8D021DA73673006D380A /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -851,12 +878,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ED85211DB84E41000F9B66 /* WifiDeviceDiscoverer.swift in Sources */,
+				4597B8941DDC271700A091B6 /* HDMISwitchCommand.swift in Sources */,
 				45FB34781DA6E2B100238535 /* APIManager.swift in Sources */,
+				4597B88A1DDC26FE00A091B6 /* SoundbarCommand.swift in Sources */,
 				45FB34871DA6F2FE00238535 /* WindowController.swift in Sources */,
 				45FB346D1DA6E1A400238535 /* ButtonGridViewController.swift in Sources */,
 				45FB346B1DA6E1A400238535 /* AppDelegate.swift in Sources */,
 				45FB347A1DA6E2B100238535 /* Command.swift in Sources */,
 				45FB34791DA6E2B100238535 /* Logger.swift in Sources */,
+				4597B88F1DDC270B00A091B6 /* ProjectorCommand.swift in Sources */,
 				45ED85171DB81FD2000F9B66 /* WifiCommand.swift in Sources */,
 				45ED851C1DB81FDD000F9B66 /* WifiDevice.swift in Sources */,
 				4537370D1DB1C70C005DDB21 /* WifiController.swift in Sources */,
